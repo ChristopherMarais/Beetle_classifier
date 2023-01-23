@@ -1,5 +1,2 @@
 # Beetle_classifier
 A Repo for the beetle classification model and data capturing techniques.
-
-
-conda install -c conda-forge py-opencv
