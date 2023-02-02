@@ -31,7 +31,6 @@
                                                                                 # 'axis_minor_length'
                                                                                 # 'area'
                                                                                 # 'area_filled'
-                # image_properties_df = ()
                 # col_image_lst = (list) a list with all the segmented images in color
                 # inv_bw_image_lst = (list) a list with all the segmented images in inverted binary black and white
                 # image_segment_count = (int) number of segmented images extracted from the compound image
