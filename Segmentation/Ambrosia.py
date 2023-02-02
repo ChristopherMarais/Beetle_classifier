@@ -31,6 +31,7 @@
                                                                                 # 'axis_minor_length'
                                                                                 # 'area'
                                                                                 # 'area_filled'
+                # image_properties_df = ()
                 # col_image_lst = (list) a list with all the segmented images in color
                 # inv_bw_image_lst = (list) a list with all the segmented images in inverted binary black and white
                 # image_segment_count = (int) number of segmented images extracted from the compound image
@@ -120,7 +121,8 @@ class pre_process_image:
         image_selected_df = image_properties_df[image_properties_df['kmeans_label']==self.max_kmeans_label]
         # enlarge the boxes around blobs with buffer
         coord_df = image_selected_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']].copy()
-        coord_df = coord_df.reset_index()
+        coord_df = coord_df.reset_index(drop = True)
+        image_selected_df = image_selected_df.reset_index(drop = True)
         coord_df.loc[:,['bbox-0','bbox-1']] = coord_df.loc[:,['bbox-0','bbox-1']]-self.image_edge_buffer
         coord_df.loc[:,['bbox-2','bbox-3']] = coord_df.loc[:,['bbox-2','bbox-3']]+self.image_edge_buffer
         image_selected_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']] = coord_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']]
@@ -150,7 +152,7 @@ class pre_process_image:
         all_ar_lst = []
         for l in range(self.image_segment_count):
             # flatten arrays
-            img_var = image_array[l]
+            img_var = self.image_array[l]
             r_ar = img_var[:,:,0].flatten() # red
             g_ar = img_var[:,:,1].flatten() # green
             b_ar = img_var[:,:,2].flatten() # blue
@@ -190,7 +192,7 @@ class pre_process_image:
         self.outlier_bw_image = np.invert(self.outlier_inv_bw_image)
         # update metadata dataframe
         self.image_selected_df['circle_class'] = 'non_circle'
-        self.image_selected_df['circle_class'][self.outlier_idx] = 'circle'
+        self.image_selected_df.loc[self.outlier_idx, 'circle_class'] = 'circle'
         
     def estimate_size(self, outlier_bw_image, outlier_idx, known_radius=1, canny_sigma=5):
         self.outlier_idx = outlier_idx
@@ -206,8 +208,8 @@ class pre_process_image:
         # change outlier_bw_image if this is not the ball bearing
         edges = canny(outlier_bw_image, sigma=canny_sigma)
         # Detect radius
-        max_r = int((max(bw_inv_img.shape)/2) + (buffer_size/2)) # max radius
-        min_r = int((max_r-buffer_size) - (buffer_size/2)) # min radius
+        max_r = int((max(inv_bw_image.shape)/2) + (self.image_edge_buffer/2)) # max radius
+        min_r = int((max_r-self.image_edge_buffer) - (self.image_edge_buffer/2)) # min radius
         hough_radii = np.arange(min_r, max_r, 10)
         hough_res = hough_circle(edges, hough_radii)
         # Select the most prominent circle
@@ -219,7 +221,7 @@ class pre_process_image:
         # get the area of the ball bearing based on the known radius
         circle_area = np.pi*(known_radius**2)
         px_count_lst = []
-        for bw_img in inv_bw_image_lst:
+        for bw_img in clean_bw_image_lst:
             px_count = np.unique(bw_img, return_counts=True)[1][1]
             px_count_lst.append(px_count)
         self.image_selected_df['pixel_count'] = px_count_lst
