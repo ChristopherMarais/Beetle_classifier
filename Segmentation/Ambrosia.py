@@ -62,7 +62,7 @@
             # OUTPUT(ATTRIBUTES):
                 # outlier_bw_image = (np.array) an updated version of the outlier iamge with a clean circle clear of artifacts
                 # outlier_idx = (int) same as the input
-                # clean_bw_image_lst = (list) a list of cleaned white on black images no blobs touching hte border
+                # clean_inv_bw_image_lst = (list) a list of cleaned white on black images no blobs touching hte border
                 # image_selected_df = (pd.DataFrame) an update to the dataframe of metadata containing pixel counts and relative area in mm^2 of all segmented images
 # *black and white is white on black
 
@@ -198,11 +198,11 @@ class pre_process_image:
         self.outlier_bw_image = outlier_bw_image
         outlier_inv_bw_image = np.invert(outlier_bw_image)
         # remove the border touching blobs of all b&w images
-        clean_bw_image_lst = self.inv_bw_image_lst# [] ##############################
-        # for inv_bw_image in self.inv_bw_image_lst:
-        #     bw_image = np.invert(inv_bw_image)
-        #     clean_bw_image = clear_border(bw_image) #################### change sensitivity here to only cut things that really touch border ^^ same for up top
-        #     clean_bw_image_lst.append(clean_bw_image)
+        clean_inv_bw_image_lst = []
+        for inv_bw_image in self.inv_bw_image_lst:
+            # bw_image = np.invert(inv_bw_image)
+            clean_inv_bw_image = clear_border(inv_bw_image)
+            clean_inv_bw_image_lst.append(clean_inv_bw_image)
         # default is the image detected with detect_outlier
         # change outlier_bw_image if this is not the ball bearing
         edges = canny(outlier_bw_image, sigma=canny_sigma)
@@ -217,18 +217,18 @@ class pre_process_image:
         # change the outlier image to fill in the circle
         outlier_inv_bw_image[circy, circx] = True
         self.outlier_inv_bw_image = outlier_inv_bw_image
-        clean_bw_image_lst[outlier_idx] = outlier_inv_bw_image
-        self.clean_bw_image_lst = clean_bw_image_lst
+        clean_inv_bw_image_lst[outlier_idx] = outlier_inv_bw_image
+        self.clean_inv_bw_image_lst = clean_inv_bw_image_lst
         # get the area of the ball bearing based on the known radius
         circle_area = np.pi*(known_radius**2)
         px_count_lst = []
-        for bw_img in clean_bw_image_lst:
+        for bw_img in clean_inv_bw_image_lst:
             px_count = np.unique(bw_img, return_counts=True)[1][1]
             px_count_lst.append(px_count)
         self.image_selected_df['pixel_count'] = px_count_lst
         circle_px_count = px_count_lst[outlier_idx]
-        area_ar = (np.array(circle_px_count)/circle_px_count)*circle_area ####################### fix the area calculation
+        area_ar = (np.array(px_count_lst)/circle_px_count)*circle_area
         self.image_selected_df['area'] = area_ar
         # NB If outlier_bw_image is changed from default
-        # make sure to update clean_bw_image_lst[selected iamge index] = self.outlier_bw_image
+        # make sure to update clean_inv_bw_image_lst[selected iamge index] = self.outlier_bw_image
         # outside of the method
