@@ -31,6 +31,7 @@
                                                                                 # 'axis_minor_length'
                                                                                 # 'area'
                                                                                 # 'area_filled'
+                # image_properties_df = (pd.DataFrame) similar to the image_selected_df, but inlcudes all the artefacts that are picked up
                 # col_image_lst = (list) a list with all the segmented images in color
                 # inv_bw_image_lst = (list) a list with all the segmented images in inverted binary black and white
                 # image_segment_count = (int) number of segmented images extracted from the compound image
@@ -118,6 +119,7 @@ class pre_process_image:
         # keep only the largest cluster (ball bearing needs to be a similar size as the beetles)
         self.max_kmeans_label = int(image_properties_df.kmeans_label[image_properties_df['area'] == image_properties_df['area'].max()])
         image_selected_df = image_properties_df[image_properties_df['kmeans_label']==self.max_kmeans_label]
+        self.image_properties_df = image_properties_df
         # enlarge the boxes around blobs with buffer
         coord_df = image_selected_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']].copy()
         coord_df = coord_df.reset_index(drop = True)
