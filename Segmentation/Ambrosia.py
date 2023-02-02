@@ -13,49 +13,58 @@
                 # clear_inv_bw_image = (np.array) the inverted black and white binary original image with all components touching the border removed
         # segment
             # INPUT:
-                # cluster_num = () {default=2}
-                # image_edge_buffer = () {default=50}
+                # cluster_num = (int) {default=2} the number of clusters used for kmeans to pick only the cluster with alrgest blobs
+                # image_edge_buffer = (int) {default=50} number of pixels to add to box borders
             # OUTPUT(ATTRIBUTES):
-                # cluster_num = ()
-                # image_edge_buffer = ()
-                # labeled_image = ()
-                # max_kmeans_label = ()
-                # image_selected_df = ()
-                # col_image_lst = ()
-                # inv_bw_image_lst = ()
-                # image_segment_count = ()
+                # cluster_num = (int) the same as the input
+                # image_edge_buffer = (int) the same as the input
+                # labeled_image = (np.array) the original compound image that is labelled
+                # max_kmeans_label = (int) the label of the cluster with the largest object/blob
+                # image_selected_df = (pd.DataFrame) a dataframe with columns describing each segmented image: 
+                                                                                # 'centroid' = centre of the image
+                                                                                # 'bbox-0' = border 0
+                                                                                # 'bbox-1' = border 1
+                                                                                # 'bbox-2' = border 2
+                                                                                # 'bbox-3' = border 3
+                                                                                # 'orientation' = angle of image segment
+                                                                                # 'axis_major_length'
+                                                                                # 'axis_minor_length'
+                                                                                # 'area'
+                                                                                # 'area_filled'
+                # col_image_lst = (list) a list with all the segmented images in color
+                # inv_bw_image_lst = (list) a list with all the segmented images in inverted binary black and white
+                # image_segment_count = (int) number of segmented images extracted from the compound image
         # detect_outlier
             # INPUT:
                 # None
             # OUTPUT(ATTRIBUTES):
-                # image_array = ()
-                # r_ar_lst = ()
-                # g_ar_lst = ()
-                # b_ar_lst = ()
-                # all_ar_lst = ()
-                # px_dens_dist = ()
-                # corr_coef = ()
-                # self.corr_coef = ()
-                # corr_pval = ()
-                # corr_coef_sum = ()
-                # outlier_idx = ()
-                # outlier_val = ()
-                # outlier_col_image = ()
-                # outlier_inv_bw_image = ()
-                # outlier_bw_image = ()
-                # image_selected_df = ()
+                # image_array = (np.array) an array of the list of color segemented images (number of images, (R,G,B))
+                # r_ar_lst = (list) a list of arrays with flattened images red values
+                # g_ar_lst = (list) a list of arrays with flattened images green values
+                # b_ar_lst = (list) a list of arrays with flattened images blue values
+                # all_ar_lst = (list) a list of arrays with flattened images all red, green, and blue values
+                # px_dens_dist = (np.array) frequency distribution at 0-255 of all the values for each pixel
+                # corr_coef = (np.array) a square array of length equal to the number of segmented images showing the spearman correlation bewteen images
+                # corr_pval = (np.array) the pvalues associatedwith each correlation
+                # corr_coef_sum = (np.array) the sum of the correlations across each iamge compared to all others
+                # outlier_idx = (int) the index of the image with the lowest spearman correlation sum
+                # outlier_val = (float) the lowest sum correlation value
+                # outlier_col_image = (np.array) the color image of what is detected as the outlier
+                # outlier_inv_bw_image = (np.array) the inverted black on white image of the outlier segmented image
+                # outlier_bw_image = (np.array) the white on black image of the outlier segmented image
+                # image_selected_df = (pd.DataFrame) an updated dataframe that contains the circle identification data
         # estimate_size
             # INPUT:
-                # known_radius = () {default=1}
-                # canny_sigma = () {default=5}
-                # outlier_bw_image = () {default=self.outlier_bw_image}
-                # outlier_idx = () {default=self.outlier_idx}
+                # known_radius = (int) {default=1} the radius of the reference circle (shoudl be approximately the same size as the specimens to work best)
+                # canny_sigma = (int) {default=5} this describes how strict the cleaning border is for identifying the circle to place over the reference circle
+                # outlier_bw_image = (np.array) {default should be self.outlier_bw_image} change this when the circle is falsely detected
+                # outlier_idx = (int) {default should be self.outlier_idx} change this when the circle is falsely detected
             # OUTPUT(ATTRIBUTES):
-                # outlier_bw_image
-                # outlier_idx
-                # clean_bw_image_lst
-                # outlier_bw_image
-                # image_selected_df
+                # outlier_bw_image = (np.array) an updated version of the outlier iamge with a clean circle clear of artifacts
+                # outlier_idx = (int) same as the input
+                # clean_bw_image_lst = (list) a list of cleaned white on black images no blobs touching hte border
+                # image_selected_df = (pd.DataFrame) an update to the dataframe of metadata containing pixel counts and relative area in mm^2 of all segmented images
+# *black and white is white on black
 
 # import requirements
 import numpy as np
@@ -78,7 +87,7 @@ class pre_process_image:
         self.image_dir = image_dir.replace('\\','/') # full directory path to image
         self.image = io.imread(image_dir) # read image from directory
         self.grey_image = rgb2gray(self.image) #convert image to greyscale
-        self.bw_image = self.grey_image > threshold_otsu(image_gray) # binarize image ot be black & white
+        self.bw_image = self.grey_image > threshold_otsu(self.grey_image) # binarize image ot be black & white
         self.inv_bw_image = np.invert(self.bw_image) # invert black and white image
         self.clear_inv_bw_image = clear_border(self.inv_bw_image) # remove anything touching image border
     
@@ -100,7 +109,7 @@ class pre_process_image:
                                     )
                                 )
         # cluster boxes of blobs by size
-        kmean_result = KMeans(n_clusters=clust_count).fit(
+        kmean_result = KMeans(n_clusters=cluster_num).fit(
             np.array(
                 image_properties_df[['axis_major_length', 'axis_minor_length']]
             )
@@ -122,10 +131,10 @@ class pre_process_image:
         for i in range(len(image_selected_df)):
             coord_i = image_selected_df.iloc[i]
             # color images
-            crop_img = image[coord_i['bbox-0']:coord_i['bbox-2'], coord_i['bbox-1']:coord_i['bbox-3']]
+            crop_img = self.image[int(coord_i['bbox-0']):int(coord_i['bbox-2']), int(coord_i['bbox-1']):int(coord_i['bbox-3'])]
             col_image_lst.append(crop_img)
             # inverted black and white images
-            crop_bw_img = self.inv_bw_image[coord_i['bbox-0']:coord_i['bbox-2'], coord_i['bbox-1']:coord_i['bbox-3']]
+            crop_bw_img = self.inv_bw_image[int(coord_i['bbox-0']):int(coord_i['bbox-2']), int(coord_i['bbox-1']):int(coord_i['bbox-3'])]
             inv_bw_image_lst.append(crop_bw_img)
         self.col_image_lst = col_image_lst
         self.inv_bw_image_lst = inv_bw_image_lst
@@ -180,12 +189,12 @@ class pre_process_image:
         self.outlier_inv_bw_image = self.inv_bw_image_lst[self.outlier_idx]
         self.outlier_bw_image = np.invert(self.outlier_inv_bw_image)
         # update metadata dataframe
-        self.image_selected_df['circle_class'] = 'beetle'
+        self.image_selected_df['circle_class'] = 'non_circle'
         self.image_selected_df['circle_class'][self.outlier_idx] = 'circle'
         
-    def estimate_size(self, known_radius=1 canny_sigma=5, outlier_bw_image=self.outlier_bw_image, outlier_idx=self.outlier_idx):
-        self.outlier_bw_image = outlier_bw_image
+    def estimate_size(self, outlier_bw_image, outlier_idx, known_radius=1, canny_sigma=5):
         self.outlier_idx = outlier_idx
+        self.outlier_bw_image = outlier_bw_image
         # remove the border touching blobs of all b&w images
         clean_bw_image_lst = []
         for inv_bw_image in self.inv_bw_image_lst:
