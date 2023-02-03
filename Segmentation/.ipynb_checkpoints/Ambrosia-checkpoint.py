@@ -218,8 +218,8 @@ class pre_process_image:
         circy, circx = disk((cy[0], cx[0]), radii[0])
         # change the outlier image to fill in the circle
         outlier_inv_bw_image[circy, circx] = True
-        self.outlier_inv_bw_image = outlier_inv_bw_image
-        clean_inv_bw_image_lst[outlier_idx] = outlier_inv_bw_image
+        self.outlier_inv_bw_image = clear_border(outlier_inv_bw_image)
+        clean_inv_bw_image_lst[outlier_idx] = self.outlier_inv_bw_image
         self.clean_inv_bw_image_lst = clean_inv_bw_image_lst
         # get the area of the ball bearing based on the known radius
         circle_area = np.pi*(known_radius**2)
