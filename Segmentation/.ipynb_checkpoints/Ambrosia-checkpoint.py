@@ -4,6 +4,9 @@
         # __init__
             # INPUT:
                 # image_dir = (str) a full path to an image with multiple beetles and possibly a size reference circle
+                # manual_thresh_buffer (float) {optional} this is a manual way to control the binarizxing threshold. 
+                    # use this when beetles are broken up into multiple images\
+                    # inputs should range from -1 to 1. higehr vlaues include lighter colors into the blobs and lower values reduce blob size
             # OUTPUT(ATTRIBUTES):
                 # image_dir = (str) the same directory as is given as an input to the iamge that is being processed
                 # image = (np.array) the original compound image
@@ -84,11 +87,11 @@ from scipy.stats import spearmanr
 
 class pre_process_image:
     # initialize image to be segmented from path
-    def __init__(self, image_dir):
+    def __init__(self, image_dir, manual_thresh_buffer=0):
         self.image_dir = image_dir.replace('\\','/') # full directory path to image
         self.image = io.imread(image_dir) # read image from directory
         self.grey_image = rgb2gray(self.image) #convert image to greyscale
-        self.bw_image = self.grey_image > threshold_otsu(self.grey_image) # binarize image to be black & white
+        self.bw_image = self.grey_image > threshold_otsu(self.grey_image) + manual_thresh_buffer # binarize image to be black & white
         self.inv_bw_image = np.invert(self.bw_image) # invert black and white image
         self.clear_inv_bw_image = clear_border(self.inv_bw_image) # remove anything touching image border
     
@@ -127,7 +130,7 @@ class pre_process_image:
         coord_df.loc[:,['bbox-0','bbox-1']] = coord_df.loc[:,['bbox-0','bbox-1']]-self.image_edge_buffer
         coord_df.loc[:,['bbox-2','bbox-3']] = coord_df.loc[:,['bbox-2','bbox-3']]+self.image_edge_buffer
         image_selected_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']] = coord_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']]
-        # limit boundaries to the initial image size
+        # limit boundaries to the initial image size without this the iamge size bugs out when the boundaries are negative and it removes the image
         mask = image_selected_df[['bbox-0','bbox-1','bbox-2','bbox-3']]>=0
         image_selected_df[['bbox-0','bbox-1','bbox-2','bbox-3']] = image_selected_df[['bbox-0','bbox-1','bbox-2','bbox-3']].where(mask, other=0)
         self.image_selected_df = image_selected_df
