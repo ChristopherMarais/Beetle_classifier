@@ -88,7 +88,7 @@ class pre_process_image:
         self.image_dir = image_dir.replace('\\','/') # full directory path to image
         self.image = io.imread(image_dir) # read image from directory
         self.grey_image = rgb2gray(self.image) #convert image to greyscale
-        self.bw_image = self.grey_image > threshold_otsu(self.grey_image) # binarize image ot be black & white
+        self.bw_image = self.grey_image > threshold_otsu(self.grey_image) # binarize image to be black & white
         self.inv_bw_image = np.invert(self.bw_image) # invert black and white image
         self.clear_inv_bw_image = clear_border(self.inv_bw_image) # remove anything touching image border
     
@@ -127,6 +127,9 @@ class pre_process_image:
         coord_df.loc[:,['bbox-0','bbox-1']] = coord_df.loc[:,['bbox-0','bbox-1']]-self.image_edge_buffer
         coord_df.loc[:,['bbox-2','bbox-3']] = coord_df.loc[:,['bbox-2','bbox-3']]+self.image_edge_buffer
         image_selected_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']] = coord_df.loc[:,['bbox-0','bbox-1','bbox-2','bbox-3']]
+        # limit boundaries to the initial image size
+        mask = image_selected_df[['bbox-0','bbox-1','bbox-2','bbox-3']]>=0
+        image_selected_df[['bbox-0','bbox-1','bbox-2','bbox-3']] = image_selected_df[['bbox-0','bbox-1','bbox-2','bbox-3']].where(mask, other=0)
         self.image_selected_df = image_selected_df
         # crop blobs from image based on box sizes and add to list
         col_image_lst = []
@@ -141,8 +144,8 @@ class pre_process_image:
             inv_bw_image_lst.append(crop_bw_img)
         
         #clear all images that are empty
-        col_image_lst = [x for x in col_image_lst if x.shape[0] != 0] 
-        inv_bw_image_lst = [x for x in inv_bw_image_lst if x.shape[0] != 0]
+        # col_image_lst = [x for x in col_image_lst if x.shape[0] != 0] 
+        # inv_bw_image_lst = [x for x in inv_bw_image_lst if x.shape[0] != 0]
         
         self.col_image_lst = col_image_lst
         self.inv_bw_image_lst = inv_bw_image_lst
