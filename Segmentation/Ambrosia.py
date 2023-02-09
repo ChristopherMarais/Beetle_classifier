@@ -139,6 +139,11 @@ class pre_process_image:
             # inverted black and white images
             crop_bw_img = self.inv_bw_image[int(coord_i['bbox-0']):int(coord_i['bbox-2']), int(coord_i['bbox-1']):int(coord_i['bbox-3'])]
             inv_bw_image_lst.append(crop_bw_img)
+        
+        #clear all images that are empty
+        col_image_lst = [x for x in col_image_lst if x.shape[0] != 0] 
+        inv_bw_image_lst = [x for x in inv_bw_image_lst if x.shape[0] != 0]
+        
         self.col_image_lst = col_image_lst
         self.inv_bw_image_lst = inv_bw_image_lst
         self.image_segment_count = len(col_image_lst)
