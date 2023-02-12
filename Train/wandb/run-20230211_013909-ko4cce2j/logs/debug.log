@@ -28,3 +28,4 @@ config: {}
 2023-02-11 01:39:11,266 INFO    MainThread:21872 [wandb_run.py:_config_callback():1250] config_cb None None {'n_classes': 10, 'acc_task': 'multiclass', 'lr': 0.001}
 2023-02-11 01:39:14,408 INFO    MainThread:21872 [jupyter.py:save_ipynb():379] not saving jupyter notebook
 2023-02-11 01:39:14,408 INFO    MainThread:21872 [wandb_init.py:_pause_backend():403] pausing backend
+2023-02-12 15:34:14,708 WARNING MsgRouterThr:21872 [router.py:message_loop():77] message_loop has been closed

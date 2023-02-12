@@ -1,0 +1,418 @@
+2023-02-12 15:49:04,396 INFO    StreamThr :3360 [internal.py:wandb_internal():87] W&B internal server running at pid: 3360, started at: 2023-02-12 15:49:04.395819
+2023-02-12 15:49:04,398 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: status
+2023-02-12 15:49:04,416 INFO    WriterThread:3360 [datastore.py:open_for_write():85] open: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\run-53hz7hjf.wandb
+2023-02-12 15:49:04,417 DEBUG   SenderThread:3360 [sender.py:send():336] send: header
+2023-02-12 15:49:04,466 DEBUG   SenderThread:3360 [sender.py:send():336] send: run
+2023-02-12 15:49:05,196 INFO    SenderThread:3360 [dir_watcher.py:__init__():216] watching files in: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files
+2023-02-12 15:49:05,196 INFO    SenderThread:3360 [sender.py:_start_run_threads():1067] run started: 53hz7hjf with start time 1676234944.396319
+2023-02-12 15:49:05,197 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:05,198 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:05,201 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: check_version
+2023-02-12 15:49:05,201 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: check_version
+2023-02-12 15:49:05,389 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: run_start
+2023-02-12 15:49:05,422 DEBUG   HandlerThread:3360 [system_info.py:__init__():31] System info init
+2023-02-12 15:49:05,423 DEBUG   HandlerThread:3360 [system_info.py:__init__():46] System info init done
+2023-02-12 15:49:05,423 INFO    HandlerThread:3360 [system_monitor.py:start():151] Starting system monitor
+2023-02-12 15:49:05,423 INFO    SystemMonitor:3360 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-02-12 15:49:05,423 INFO    HandlerThread:3360 [system_monitor.py:probe():172] Collecting system info
+2023-02-12 15:49:05,431 INFO    SystemMonitor:3360 [interfaces.py:start():168] Started cpu
+2023-02-12 15:49:05,431 INFO    SystemMonitor:3360 [interfaces.py:start():168] Started disk
+2023-02-12 15:49:05,432 INFO    SystemMonitor:3360 [interfaces.py:start():168] Started gpu
+2023-02-12 15:49:05,432 INFO    SystemMonitor:3360 [interfaces.py:start():168] Started memory
+2023-02-12 15:49:05,450 INFO    SystemMonitor:3360 [interfaces.py:start():168] Started network
+2023-02-12 15:49:05,458 DEBUG   HandlerThread:3360 [system_info.py:probe():195] Probing system
+2023-02-12 15:49:05,459 DEBUG   HandlerThread:3360 [system_info.py:_probe_git():180] Probing git
+2023-02-12 15:49:05,558 DEBUG   HandlerThread:3360 [system_info.py:_probe_git():188] Probing git done
+2023-02-12 15:49:05,558 DEBUG   HandlerThread:3360 [system_info.py:probe():241] Probing system done
+2023-02-12 15:49:05,558 DEBUG   HandlerThread:3360 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-02-12T20:49:05.458319', 'startedAt': '2023-02-12T20:49:04.361819', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'GIT_REPOS/LAB/Beetle_classifier/Train/PyLi_wanb_sweep.ipynb', 'root': 'E:/GIT_REPOS/LAB/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': '4bb3e1859ae60ff04cf7b4742e93425aea1d1c4b'}, 'email': 'u13033663@tuks.co.za', 'host': 'GCM', 'username': 'GCM', 'executable': 'C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3800.0, 'min': 0.0, 'max': 3800.0}, 'cpu_freq_per_core': [{'current': 3800.0, 'min': 0.0, 'max': 3800.0}], 'disk': {'total': 447.11425399780273, 'used': 368.3013687133789}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.87503433227539}}
+2023-02-12 15:49:05,558 INFO    HandlerThread:3360 [system_monitor.py:probe():182] Finished collecting system info
+2023-02-12 15:49:05,558 INFO    HandlerThread:3360 [system_monitor.py:probe():185] Publishing system info
+2023-02-12 15:49:05,558 DEBUG   HandlerThread:3360 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-02-12 15:49:05,559 DEBUG   HandlerThread:3360 [system_info.py:_save_pip():67] Saving pip packages done
+2023-02-12 15:49:05,559 DEBUG   HandlerThread:3360 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-02-12 15:49:05,563 ERROR   HandlerThread:3360 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-02-12 15:49:05,565 DEBUG   HandlerThread:3360 [system_info.py:_save_conda():86] Saving conda packages done
+2023-02-12 15:49:05,566 INFO    HandlerThread:3360 [system_monitor.py:probe():187] Finished publishing system info
+2023-02-12 15:49:05,573 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:05,573 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-02-12 15:49:05,607 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: stop_status
+2023-02-12 15:49:05,608 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: stop_status
+2023-02-12 15:49:05,826 DEBUG   SenderThread:3360 [sender.py:send():336] send: telemetry
+2023-02-12 15:49:05,885 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:06,123 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:06,209 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:06,210 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:06,210 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\conda-environment.yaml
+2023-02-12 15:49:06,210 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-metadata.json
+2023-02-12 15:49:06,211 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\requirements.txt
+2023-02-12 15:49:06,250 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\v6fz1u45-wandb-metadata.json
+2023-02-12 15:49:06,484 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:06,484 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:06,503 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:07,215 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_0_4d934345d20324a25095.table.json
+2023-02-12 15:49:07,215 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:07,216 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media
+2023-02-12 15:49:07,284 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:07,304 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:07,310 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:07,977 INFO    wandb-upload_0:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpgwq1v52m
+2023-02-12 15:49:08,222 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:08,222 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_1_be9c8abddb22468686d2.table.json
+2023-02-12 15:49:08,223 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:08,913 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwNjkx', 'digest': '1fe87b48ec959537379ece28b2cb1dca', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': None}, 'version': 'latest'}
+2023-02-12 15:49:08,914 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:08,914 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_0_4d934345d20324a25095.table.json with policy now
+2023-02-12 15:49:08,915 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:08,915 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:08,916 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:08,916 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:08,916 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:09,226 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:09,464 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\98f40f9n-media/table/val_conf_mat_table_0_4d934345d20324a25095.table.json
+2023-02-12 15:49:09,896 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:09,923 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:09,928 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:10,234 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:10,235 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_3_047199e1e6caa82f184d.table.json
+2023-02-12 15:49:10,235 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:10,545 INFO    wandb-upload_0:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp9f6jlbi7
+2023-02-12 15:49:11,427 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwNzI0', 'digest': '8c8c9877c9cc09f095247d61d99e083c', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwNjkx', 'versionIndex': 0}}, 'version': 'latest'}
+2023-02-12 15:49:11,428 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:11,428 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: status_report
+2023-02-12 15:49:11,428 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_1_be9c8abddb22468686d2.table.json with policy now
+2023-02-12 15:49:11,429 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:11,430 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:11,430 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:11,430 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:11,431 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:11,432 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:11,432 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:11,433 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:12,080 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\eupg21mp-media/table/val_conf_mat_table_1_be9c8abddb22468686d2.table.json
+2023-02-12 15:49:12,248 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:12,248 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:12,553 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:12,574 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:12,578 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:12,776 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp126e1c00
+2023-02-12 15:49:13,255 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_5_9b91a99b9d677b5ffcb9.table.json
+2023-02-12 15:49:13,256 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:13,680 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwNzY1', 'digest': '91d1afb0e52b4529e7602c5fd6a2c16b', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwNzI0', 'versionIndex': 1}}, 'version': 'latest'}
+2023-02-12 15:49:13,680 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:13,680 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_3_047199e1e6caa82f184d.table.json with policy now
+2023-02-12 15:49:13,681 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:13,681 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:13,682 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:13,682 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:13,682 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:13,683 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:13,683 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:13,684 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:14,247 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\05wx4x4j-media/table/val_conf_mat_table_3_047199e1e6caa82f184d.table.json
+2023-02-12 15:49:14,262 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:15,198 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:15,220 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:15,225 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:15,269 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_7_1fd2ce14ae1fc8ec1eea.table.json
+2023-02-12 15:49:15,269 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:15,276 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp29qgko8l
+2023-02-12 15:49:16,190 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwODA2', 'digest': 'c8e4459f272634dbfda6707e74a21e39', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwNzY1', 'versionIndex': 2}}, 'version': 'latest'}
+2023-02-12 15:49:16,190 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:16,190 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_5_9b91a99b9d677b5ffcb9.table.json with policy now
+2023-02-12 15:49:16,191 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:16,192 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:16,192 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:16,192 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:16,193 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:16,193 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:16,194 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:16,194 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:16,275 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:16,275 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:16,670 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\nm99c8lc-media/table/val_conf_mat_table_5_9b91a99b9d677b5ffcb9.table.json
+2023-02-12 15:49:17,860 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpiuyihr0p
+2023-02-12 15:49:18,284 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:18,351 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:18,371 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:18,375 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:18,892 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwODQy', 'digest': 'b30d234a727c20ee4a935ea7981fbe01', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwODA2', 'versionIndex': 3}}, 'version': 'latest'}
+2023-02-12 15:49:18,893 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:18,893 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: status_report
+2023-02-12 15:49:18,893 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_7_1fd2ce14ae1fc8ec1eea.table.json with policy now
+2023-02-12 15:49:18,894 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:18,895 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:18,896 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:18,896 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:18,896 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:18,898 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:18,898 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:18,899 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:19,292 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:19,293 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_9_11c7b916efddf4944860.table.json
+2023-02-12 15:49:19,293 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:19,390 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\e5nyuy2b-media/table/val_conf_mat_table_7_1fd2ce14ae1fc8ec1eea.table.json
+2023-02-12 15:49:20,294 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:20,394 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpg_kmnq0w
+2023-02-12 15:49:20,620 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-12 15:49:20,620 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-12 15:49:20,749 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:20,770 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:20,774 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:21,302 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_11_18086b99e61cd0162846.table.json
+2023-02-12 15:49:21,302 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:21,413 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwODgx', 'digest': '7ef78a116b9085fc30804f2e63c5a627', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwODQy', 'versionIndex': 4}}, 'version': 'latest'}
+2023-02-12 15:49:21,413 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:21,413 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_9_11c7b916efddf4944860.table.json with policy now
+2023-02-12 15:49:21,415 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:21,415 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:21,416 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:21,418 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:21,418 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:21,418 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:21,419 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:21,419 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:21,916 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\2e8r59fr-media/table/val_conf_mat_table_9_11c7b916efddf4944860.table.json
+2023-02-12 15:49:22,306 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:22,307 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:22,757 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpqwhfbuej
+2023-02-12 15:49:23,237 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:23,259 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:23,265 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:23,313 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_13_98d718ff233bd7a7e10a.table.json
+2023-02-12 15:49:23,313 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:23,605 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwOTE5', 'digest': '8703c91c6cd7373c255a95ac0e5589cc', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwODgx', 'versionIndex': 5}}, 'version': 'latest'}
+2023-02-12 15:49:23,606 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:23,606 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_11_18086b99e61cd0162846.table.json with policy now
+2023-02-12 15:49:23,607 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:23,607 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:23,609 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:23,609 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:23,610 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:23,610 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:23,611 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:23,611 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:24,250 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\zowu2xs6-media/table/val_conf_mat_table_11_18086b99e61cd0162846.table.json
+2023-02-12 15:49:24,318 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:24,319 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:24,957 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp0466b0sw
+2023-02-12 15:49:25,713 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-12 15:49:25,740 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:25,767 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:25,773 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:25,801 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwOTU4', 'digest': 'e6aa88bb5712d84e1d3d3c3e50f89fef', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwOTE5', 'versionIndex': 6}}, 'version': 'latest'}
+2023-02-12 15:49:25,801 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:25,802 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: status_report
+2023-02-12 15:49:25,802 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_13_98d718ff233bd7a7e10a.table.json with policy now
+2023-02-12 15:49:25,805 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:25,805 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:25,809 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:25,810 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:25,810 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:25,812 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:25,813 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:25,813 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:26,326 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\1lshvza0-media/table/val_conf_mat_table_13_98d718ff233bd7a7e10a.table.json
+2023-02-12 15:49:26,333 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:26,333 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:26,334 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_15_48f593a97945244f144b.table.json
+2023-02-12 15:49:26,334 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:27,534 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpr6gd2rs8
+2023-02-12 15:49:28,549 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgwOTky', 'digest': '9baee693163ed8064f5550fb726c879a', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwOTU4', 'versionIndex': 7}}, 'version': 'latest'}
+2023-02-12 15:49:28,549 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:28,549 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_15_48f593a97945244f144b.table.json with policy now
+2023-02-12 15:49:28,550 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:28,551 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:28,553 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:28,554 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:28,555 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:28,556 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:28,557 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:28,564 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:28,566 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:28,593 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:28,600 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:29,052 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\6pm1dd6k-media/table/val_conf_mat_table_15_48f593a97945244f144b.table.json
+2023-02-12 15:49:29,355 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:29,356 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_17_7d0b5785dd56d6961040.table.json
+2023-02-12 15:49:29,356 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:30,161 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp864juttt
+2023-02-12 15:49:30,360 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:31,044 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgxMDMz', 'digest': 'b4021fa74d3165052043bc7f4390928a', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgwOTky', 'versionIndex': 8}}, 'version': 'latest'}
+2023-02-12 15:49:31,044 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:31,044 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: status_report
+2023-02-12 15:49:31,044 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_17_7d0b5785dd56d6961040.table.json with policy now
+2023-02-12 15:49:31,045 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:31,046 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:31,047 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:31,048 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:31,048 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:31,048 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:31,049 DEBUG   SenderThread:3360 [sender.py:send():336] send: config
+2023-02-12 15:49:31,119 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-12 15:49:31,367 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:31,584 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-12 15:49:31,585 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: log_artifact
+2023-02-12 15:49:31,623 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:31,632 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-12 15:49:31,922 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\xot756r5-media/table/val_conf_mat_table_17_7d0b5785dd56d6961040.table.json
+2023-02-12 15:49:32,375 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:32,375 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_19_3e3b18f4d9d9af63b45a.table.json
+2023-02-12 15:49:32,376 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table
+2023-02-12 15:49:33,117 INFO    wandb-upload_1:3360 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpdudw53an
+2023-02-12 15:49:34,122 INFO    SenderThread:3360 [sender.py:send_request_log_artifact():1381] logged artifact run-53hz7hjf-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzY0MTgxMDcx', 'digest': '1c7c05dc567101ed6518d54304f95421', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNzQ4MDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzY0MTgxMDMz', 'versionIndex': 9}}, 'version': 'latest'}
+2023-02-12 15:49:34,122 DEBUG   SenderThread:3360 [sender.py:send():336] send: files
+2023-02-12 15:49:34,123 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_19_3e3b18f4d9d9af63b45a.table.json with policy now
+2023-02-12 15:49:34,123 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:34,124 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:34,124 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:34,125 DEBUG   SenderThread:3360 [sender.py:send():336] send: history
+2023-02-12 15:49:34,125 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: summary_record
+2023-02-12 15:49:34,125 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:34,126 DEBUG   SenderThread:3360 [sender.py:send():336] send: telemetry
+2023-02-12 15:49:34,126 DEBUG   SenderThread:3360 [sender.py:send():336] send: exit
+2023-02-12 15:49:34,126 INFO    SenderThread:3360 [sender.py:send_exit():559] handling exit code: 0
+2023-02-12 15:49:34,126 INFO    SenderThread:3360 [sender.py:send_exit():561] handling runtime: 28
+2023-02-12 15:49:34,126 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:34,127 INFO    SenderThread:3360 [sender.py:send_exit():567] send defer
+2023-02-12 15:49:34,127 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,127 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 0
+2023-02-12 15:49:34,130 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,131 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-02-12 15:49:34,131 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 1
+2023-02-12 15:49:34,131 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,131 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 1
+2023-02-12 15:49:34,132 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,132 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-02-12 15:49:34,132 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 2
+2023-02-12 15:49:34,132 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,132 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 2
+2023-02-12 15:49:34,132 INFO    HandlerThread:3360 [system_monitor.py:finish():161] Stopping system monitor
+2023-02-12 15:49:34,132 DEBUG   SystemMonitor:3360 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-02-12 15:49:34,133 DEBUG   SystemMonitor:3360 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-02-12 15:49:34,133 DEBUG   SystemMonitor:3360 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-02-12 15:49:34,143 INFO    HandlerThread:3360 [interfaces.py:finish():175] Joined cpu
+2023-02-12 15:49:34,144 INFO    HandlerThread:3360 [interfaces.py:finish():175] Joined disk
+2023-02-12 15:49:34,201 INFO    HandlerThread:3360 [interfaces.py:finish():175] Joined gpu
+2023-02-12 15:49:34,201 INFO    HandlerThread:3360 [interfaces.py:finish():175] Joined memory
+2023-02-12 15:49:34,201 INFO    HandlerThread:3360 [interfaces.py:finish():175] Joined network
+2023-02-12 15:49:34,202 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,202 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-02-12 15:49:34,202 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 3
+2023-02-12 15:49:34,202 DEBUG   SenderThread:3360 [sender.py:send():336] send: stats
+2023-02-12 15:49:34,203 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,203 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 3
+2023-02-12 15:49:34,203 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,203 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-02-12 15:49:34,203 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 4
+2023-02-12 15:49:34,203 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,204 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 4
+2023-02-12 15:49:34,204 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,204 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-02-12 15:49:34,204 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 5
+2023-02-12 15:49:34,204 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,204 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 5
+2023-02-12 15:49:34,205 DEBUG   SenderThread:3360 [sender.py:send():336] send: summary
+2023-02-12 15:49:34,205 INFO    SenderThread:3360 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-12 15:49:34,206 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,206 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-02-12 15:49:34,206 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 6
+2023-02-12 15:49:34,206 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,206 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 6
+2023-02-12 15:49:34,206 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,206 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-02-12 15:49:34,212 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: status_report
+2023-02-12 15:49:34,386 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:34,404 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 7
+2023-02-12 15:49:34,404 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:34,404 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 7
+2023-02-12 15:49:34,404 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:34,405 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-02-12 15:49:34,648 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmphf8cwtbnwandb\1hu4vs3t-media/table/val_conf_mat_table_19_3e3b18f4d9d9af63b45a.table.json
+2023-02-12 15:49:34,757 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-12 15:49:35,391 INFO    Thread-17 :3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\config.yaml
+2023-02-12 15:49:36,193 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 8
+2023-02-12 15:49:36,193 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: poll_exit
+2023-02-12 15:49:36,193 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:36,193 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 8
+2023-02-12 15:49:36,194 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:36,194 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-02-12 15:49:36,194 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 9
+2023-02-12 15:49:36,194 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:36,195 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 9
+2023-02-12 15:49:36,195 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:36,195 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-02-12 15:49:36,195 INFO    SenderThread:3360 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-02-12 15:49:36,395 INFO    SenderThread:3360 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:36,396 INFO    SenderThread:3360 [dir_watcher.py:finish():392] scan: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files
+2023-02-12 15:49:36,396 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\conda-environment.yaml conda-environment.yaml
+2023-02-12 15:49:36,397 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\config.yaml config.yaml
+2023-02-12 15:49:36,397 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log output.log
+2023-02-12 15:49:36,400 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\requirements.txt requirements.txt
+2023-02-12 15:49:36,404 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-metadata.json wandb-metadata.json
+2023-02-12 15:49:36,404 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json wandb-summary.json
+2023-02-12 15:49:36,411 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_0_4d934345d20324a25095.table.json media\table\val_conf_mat_table_0_4d934345d20324a25095.table.json
+2023-02-12 15:49:36,412 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_11_18086b99e61cd0162846.table.json media\table\val_conf_mat_table_11_18086b99e61cd0162846.table.json
+2023-02-12 15:49:36,412 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_13_98d718ff233bd7a7e10a.table.json media\table\val_conf_mat_table_13_98d718ff233bd7a7e10a.table.json
+2023-02-12 15:49:36,413 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_15_48f593a97945244f144b.table.json media\table\val_conf_mat_table_15_48f593a97945244f144b.table.json
+2023-02-12 15:49:36,413 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_17_7d0b5785dd56d6961040.table.json media\table\val_conf_mat_table_17_7d0b5785dd56d6961040.table.json
+2023-02-12 15:49:36,413 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_19_3e3b18f4d9d9af63b45a.table.json media\table\val_conf_mat_table_19_3e3b18f4d9d9af63b45a.table.json
+2023-02-12 15:49:36,413 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_1_be9c8abddb22468686d2.table.json media\table\val_conf_mat_table_1_be9c8abddb22468686d2.table.json
+2023-02-12 15:49:36,413 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_3_047199e1e6caa82f184d.table.json media\table\val_conf_mat_table_3_047199e1e6caa82f184d.table.json
+2023-02-12 15:49:36,413 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_5_9b91a99b9d677b5ffcb9.table.json media\table\val_conf_mat_table_5_9b91a99b9d677b5ffcb9.table.json
+2023-02-12 15:49:36,413 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_7_1fd2ce14ae1fc8ec1eea.table.json media\table\val_conf_mat_table_7_1fd2ce14ae1fc8ec1eea.table.json
+2023-02-12 15:49:36,414 INFO    SenderThread:3360 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\media\table\val_conf_mat_table_9_11c7b916efddf4944860.table.json media\table\val_conf_mat_table_9_11c7b916efddf4944860.table.json
+2023-02-12 15:49:36,414 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 10
+2023-02-12 15:49:36,414 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:36,414 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 10
+2023-02-12 15:49:36,414 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:36,415 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-02-12 15:49:36,415 INFO    SenderThread:3360 [file_pusher.py:finish():162] shutting down file pusher
+2023-02-12 15:49:36,902 INFO    wandb-upload_3:3360 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\wandb-summary.json
+2023-02-12 15:49:37,040 INFO    wandb-upload_0:3360 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\output.log
+2023-02-12 15:49:37,243 INFO    wandb-upload_1:3360 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\config.yaml
+2023-02-12 15:49:37,445 INFO    wandb-upload_2:3360 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\files\requirements.txt
+2023-02-12 15:49:37,658 INFO    Thread-16 (_thread_body):3360 [sender.py:transition_state():587] send defer: 11
+2023-02-12 15:49:37,659 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:37,659 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 11
+2023-02-12 15:49:37,659 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:37,659 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-02-12 15:49:37,659 INFO    SenderThread:3360 [file_pusher.py:join():167] waiting for file pusher
+2023-02-12 15:49:37,659 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 12
+2023-02-12 15:49:37,660 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:37,660 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 12
+2023-02-12 15:49:37,660 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:37,660 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-02-12 15:49:37,737 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 13
+2023-02-12 15:49:37,737 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:37,737 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 13
+2023-02-12 15:49:37,738 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:37,738 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-02-12 15:49:37,738 INFO    SenderThread:3360 [sender.py:transition_state():587] send defer: 14
+2023-02-12 15:49:37,738 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: defer
+2023-02-12 15:49:37,738 DEBUG   SenderThread:3360 [sender.py:send():336] send: final
+2023-02-12 15:49:37,738 INFO    HandlerThread:3360 [handler.py:handle_request_defer():170] handle defer: 14
+2023-02-12 15:49:37,739 DEBUG   SenderThread:3360 [sender.py:send():336] send: footer
+2023-02-12 15:49:37,739 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: defer
+2023-02-12 15:49:37,739 INFO    SenderThread:3360 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-02-12 15:49:37,740 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-12 15:49:37,740 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: server_info
+2023-02-12 15:49:37,741 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: poll_exit
+2023-02-12 15:49:37,741 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: get_summary
+2023-02-12 15:49:37,741 DEBUG   SenderThread:3360 [sender.py:send_request():363] send_request: server_info
+2023-02-12 15:49:37,742 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: sampled_history
+2023-02-12 15:49:37,905 DEBUG   HandlerThread:3360 [handler.py:handle_request():144] handle_request: shutdown
+2023-02-12 15:49:37,906 INFO    HandlerThread:3360 [handler.py:finish():841] shutting down handler
+2023-02-12 15:49:38,755 INFO    WriterThread:3360 [datastore.py:close():299] close: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230212_154904-53hz7hjf\run-53hz7hjf.wandb
+2023-02-12 15:49:38,909 INFO    SenderThread:3360 [sender.py:finish():1493] shutting down sender
+2023-02-12 15:49:38,909 INFO    SenderThread:3360 [file_pusher.py:finish():162] shutting down file pusher
+2023-02-12 15:49:38,909 INFO    SenderThread:3360 [file_pusher.py:join():167] waiting for file pusher
