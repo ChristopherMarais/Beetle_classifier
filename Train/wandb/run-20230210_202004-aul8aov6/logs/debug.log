@@ -1,0 +1,39 @@
+2023-02-10 20:20:04,278 INFO    Thread-41 (_run_job):12272 [wandb_setup.py:_flush():68] Configure stats pid to 12272
+2023-02-10 20:20:04,278 INFO    Thread-41 (_run_job):12272 [wandb_setup.py:_flush():68] Loading settings from C:\Users\GCM\.config\wandb\settings
+2023-02-10 20:20:04,278 INFO    Thread-41 (_run_job):12272 [wandb_setup.py:_flush():68] Loading settings from E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\settings
+2023-02-10 20:20:04,278 INFO    Thread-41 (_run_job):12272 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'project': 'mnist_bc', 'entity': 'christopher-marais', 'root_dir': 'E:\\GIT_REPOS\\LAB\\Beetle_classifier\\Train', 'run_id': 'aul8aov6', 'sweep_param_path': 'E:\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\wandb\\sweep-gkdhv3rt\\config-aul8aov6.yaml', 'sweep_id': 'gkdhv3rt'}
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_init.py:_log_setup():492] Logging user logs to E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_202004-aul8aov6\logs\debug.log
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_init.py:_log_setup():493] Logging internal logs to E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_202004-aul8aov6\logs\debug-internal.log
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_init.py:_jupyter_setup():438] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001FB1C0C92A0>
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():532] calling init triggers
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():538] wandb.init called with sweep_config: {'lr': 0.004605252737575231, 'n_layer_1': 512, 'n_layer_2': 64}
+config: {}
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():588] starting backend
+2023-02-10 20:20:04,279 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():592] setting up manager
+2023-02-10 20:20:04,297 INFO    Thread-41 (_run_job):12272 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-02-10 20:20:04,304 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():599] backend started and connected
+2023-02-10 20:20:04,321 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_config_callback():1250] config_cb None None {'lr': 0.004605252737575231, 'n_layer_1': 512, 'n_layer_2': 64}
+2023-02-10 20:20:04,322 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_label_probe_notebook():1203] probe notebook
+2023-02-10 20:20:04,322 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_label_probe_notebook():1213] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-02-10 20:20:04,322 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():687] updated telemetry
+2023-02-10 20:20:04,370 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-02-10 20:20:04,897 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_on_init():2134] communicating current version
+2023-02-10 20:20:05,058 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_on_init():2143] got version response 
+2023-02-10 20:20:05,058 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():775] starting run threads in backend
+2023-02-10 20:20:05,254 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_console_start():2114] atexit reg
+2023-02-10 20:20:05,254 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-02-10 20:20:05,254 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-02-10 20:20:05,254 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-02-10 20:20:05,255 INFO    Thread-41 (_run_job):12272 [wandb_init.py:init():817] run started, returning control to user process
+2023-02-10 20:20:05,401 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_config_callback():1250] config_cb None None {'n_classes': 10, 'acc_task': 'multiclass'}
+2023-02-10 20:20:38,909 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_finish():1854] finishing run christopher-marais/mnist_bc/aul8aov6
+2023-02-10 20:20:38,909 INFO    Thread-41 (_run_job):12272 [jupyter.py:save_history():449] not saving jupyter history
+2023-02-10 20:20:38,909 INFO    Thread-41 (_run_job):12272 [jupyter.py:save_ipynb():379] not saving jupyter notebook
+2023-02-10 20:20:38,909 INFO    Thread-41 (_run_job):12272 [wandb_init.py:_jupyter_teardown():420] cleaning up jupyter logic
+2023-02-10 20:20:38,909 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 0
+2023-02-10 20:20:38,910 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_restore():2066] restore
+2023-02-10 20:20:38,910 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_restore():2072] restore done
+2023-02-10 20:20:42,839 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-02-10 20:20:42,840 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-02-10 20:20:42,846 INFO    Thread-41 (_run_job):12272 [wandb_run.py:_footer_sync_info():3398] logging synced files

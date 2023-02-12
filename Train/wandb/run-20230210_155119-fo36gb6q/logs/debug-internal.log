@@ -1,0 +1,1021 @@
+2023-02-10 15:51:19,600 INFO    StreamThr :12120 [internal.py:wandb_internal():87] W&B internal server running at pid: 12120, started at: 2023-02-10 15:51:19.599941
+2023-02-10 15:51:19,601 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status
+2023-02-10 15:51:19,608 INFO    WriterThread:12120 [datastore.py:open_for_write():85] open: .\wandb\run-20230210_155119-fo36gb6q\run-fo36gb6q.wandb
+2023-02-10 15:51:19,609 DEBUG   SenderThread:12120 [sender.py:send():336] send: header
+2023-02-10 15:51:19,917 DEBUG   SenderThread:12120 [sender.py:send():336] send: run
+2023-02-10 15:51:19,920 INFO    SenderThread:12120 [sender.py:_maybe_setup_resume():723] checking resume status for None/MNIST/fo36gb6q
+2023-02-10 15:51:20,735 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: check_version
+2023-02-10 15:51:20,735 INFO    SenderThread:12120 [dir_watcher.py:__init__():216] watching files in: .\wandb\run-20230210_155119-fo36gb6q\files
+2023-02-10 15:51:20,735 INFO    SenderThread:12120 [sender.py:_start_run_threads():1067] run started: fo36gb6q with start time 1676062279.596941
+2023-02-10 15:51:20,736 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:20,736 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:20,736 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: check_version
+2023-02-10 15:51:21,094 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: run_start
+2023-02-10 15:51:21,122 DEBUG   HandlerThread:12120 [system_info.py:__init__():31] System info init
+2023-02-10 15:51:21,122 DEBUG   HandlerThread:12120 [system_info.py:__init__():46] System info init done
+2023-02-10 15:51:21,122 INFO    HandlerThread:12120 [system_monitor.py:start():151] Starting system monitor
+2023-02-10 15:51:21,122 INFO    SystemMonitor:12120 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-02-10 15:51:21,123 INFO    HandlerThread:12120 [system_monitor.py:probe():172] Collecting system info
+2023-02-10 15:51:21,129 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started cpu
+2023-02-10 15:51:21,130 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started disk
+2023-02-10 15:51:21,131 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started gpu
+2023-02-10 15:51:21,131 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started memory
+2023-02-10 15:51:21,144 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started network
+2023-02-10 15:51:21,149 DEBUG   HandlerThread:12120 [system_info.py:probe():195] Probing system
+2023-02-10 15:51:21,151 DEBUG   HandlerThread:12120 [system_info.py:_probe_git():180] Probing git
+2023-02-10 15:51:21,234 DEBUG   HandlerThread:12120 [system_info.py:_probe_git():188] Probing git done
+2023-02-10 15:51:21,234 DEBUG   HandlerThread:12120 [system_info.py:probe():241] Probing system done
+2023-02-10 15:51:21,234 DEBUG   HandlerThread:12120 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-02-10T20:51:21.149920', 'startedAt': '2023-02-10T20:51:19.572442', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'GIT_REPOS/LAB/Beetle_classifier/Train/PyLi_wanb_sweep.ipynb', 'root': 'E:/GIT_REPOS/LAB/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': 'ca3418e6cb2e7b42998679b0226598761c4edbac'}, 'email': 'u13033663@tuks.co.za', 'host': 'GCM', 'username': 'GCM', 'executable': 'C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3800.0, 'min': 0.0, 'max': 3800.0}, 'cpu_freq_per_core': [{'current': 3800.0, 'min': 0.0, 'max': 3800.0}], 'disk': {'total': 447.11425399780273, 'used': 357.86748123168945}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.87503433227539}}
+2023-02-10 15:51:21,234 INFO    HandlerThread:12120 [system_monitor.py:probe():182] Finished collecting system info
+2023-02-10 15:51:21,234 INFO    HandlerThread:12120 [system_monitor.py:probe():185] Publishing system info
+2023-02-10 15:51:21,234 DEBUG   HandlerThread:12120 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-02-10 15:51:21,235 DEBUG   HandlerThread:12120 [system_info.py:_save_pip():67] Saving pip packages done
+2023-02-10 15:51:21,236 DEBUG   HandlerThread:12120 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-02-10 15:51:21,240 ERROR   HandlerThread:12120 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-02-10 15:51:21,241 DEBUG   HandlerThread:12120 [system_info.py:_save_conda():86] Saving conda packages done
+2023-02-10 15:51:21,242 INFO    HandlerThread:12120 [system_monitor.py:probe():187] Finished publishing system info
+2023-02-10 15:51:21,247 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:51:21,248 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-02-10 15:51:21,271 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: stop_status
+2023-02-10 15:51:21,271 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: stop_status
+2023-02-10 15:51:21,276 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: pause
+2023-02-10 15:51:21,276 INFO    HandlerThread:12120 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-02-10 15:51:21,276 INFO    HandlerThread:12120 [system_monitor.py:finish():161] Stopping system monitor
+2023-02-10 15:51:21,276 DEBUG   SystemMonitor:12120 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-02-10 15:51:21,287 DEBUG   SystemMonitor:12120 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-02-10 15:51:21,287 DEBUG   SystemMonitor:12120 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-02-10 15:51:21,289 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined cpu
+2023-02-10 15:51:21,289 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined disk
+2023-02-10 15:51:21,376 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined gpu
+2023-02-10 15:51:21,376 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined memory
+2023-02-10 15:51:21,376 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined network
+2023-02-10 15:51:21,376 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: resume
+2023-02-10 15:51:21,377 INFO    HandlerThread:12120 [handler.py:handle_request_resume():708] starting system metrics thread or process
+2023-02-10 15:51:21,377 INFO    HandlerThread:12120 [system_monitor.py:start():151] Starting system monitor
+2023-02-10 15:51:21,378 INFO    SystemMonitor:12120 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-02-10 15:51:21,386 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started cpu
+2023-02-10 15:51:21,387 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started disk
+2023-02-10 15:51:21,387 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started gpu
+2023-02-10 15:51:21,388 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started memory
+2023-02-10 15:51:21,403 INFO    SystemMonitor:12120 [interfaces.py:start():168] Started network
+2023-02-10 15:51:21,752 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-metadata.json
+2023-02-10 15:51:21,752 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\requirements.txt
+2023-02-10 15:51:21,753 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:21,753 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\conda-environment.yaml
+2023-02-10 15:51:22,231 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\n796wdpx-wandb-metadata.json
+2023-02-10 15:51:23,966 DEBUG   SenderThread:12120 [sender.py:send():336] send: telemetry
+2023-02-10 15:51:23,966 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:51:23,967 DEBUG   SenderThread:12120 [sender.py:send():336] send: telemetry
+2023-02-10 15:51:23,967 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:51:23,967 WARNING SenderThread:12120 [sender.py:send_metric():1272] Seen metric with glob (shouldn't happen)
+2023-02-10 15:51:23,968 DEBUG   SenderThread:12120 [sender.py:send():336] send: stats
+2023-02-10 15:51:23,970 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:51:24,772 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\output.log
+2023-02-10 15:51:25,085 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:51:26,347 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:26,350 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:51:26,350 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:51:26,350 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:51:26,350 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:26,351 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:26,352 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:26,788 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\output.log
+2023-02-10 15:51:26,788 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:28,527 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:28,529 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:28,529 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:28,529 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:28,803 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:30,539 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:51:30,884 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:30,886 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:30,886 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:30,886 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:31,825 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:33,064 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:33,066 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:33,066 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:33,067 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:33,840 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:34,552 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:34,554 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:51:34,555 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:51:34,555 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:34,555 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:34,556 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:34,847 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:35,559 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:51:36,138 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:36,139 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:36,140 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:36,141 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:36,288 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:51:36,288 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:51:36,861 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:38,410 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:38,412 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:38,413 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:38,413 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:38,877 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:40,738 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:40,740 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:40,740 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:40,740 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:51:40,741 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:40,891 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:41,324 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:51:43,271 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:43,273 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:43,273 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:43,274 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:43,913 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:45,369 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:45,371 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:45,372 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:45,372 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:45,928 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:46,261 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:46,263 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:46,263 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:46,263 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:51:46,264 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:46,362 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:51:46,935 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:48,449 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:48,451 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:48,451 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:48,452 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:48,950 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:50,949 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:50,951 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:50,951 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:50,951 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:50,965 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:51,400 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:51:51,968 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:51:52,980 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml
+2023-02-10 15:51:53,255 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:53,257 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:53,257 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:53,257 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:53,987 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:56,162 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:51:56,164 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:51:56,164 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:51:56,164 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:51:56,269 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:51:56,352 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:51:56,436 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:51:56,645 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:51:56,645 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:51:57,013 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\output.log
+2023-02-10 15:51:57,014 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:51:57,014 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_15_a8f391c78762ab5fa42a.table.json
+2023-02-10 15:51:57,014 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media
+2023-02-10 15:51:57,014 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:51:59,033 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\output.log
+2023-02-10 15:52:01,466 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:01,630 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:01,973 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:01,994 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:02,053 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_16_583511d7281cc511be97.table.json
+2023-02-10 15:52:02,054 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:02,367 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:02,388 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:02,789 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:02,816 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:03,058 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_17_3abbb2d32a685307842a.table.json
+2023-02-10 15:52:03,059 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_18_1720fdc47795cce6a7d5.table.json
+2023-02-10 15:52:03,059 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:03,272 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:03,369 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:04,061 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_19_996cca7e9c0d388b0eac.table.json
+2023-02-10 15:52:04,061 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:06,364 ERROR   SenderThread:12120 [internal_api.py:execute():245] 502 response executing GraphQL.
+2023-02-10 15:52:06,364 ERROR   SenderThread:12120 [internal_api.py:execute():246] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2023-02-10 15:52:06,483 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:11,513 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:12,462 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:12,484 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:12,992 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:13,054 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:13,089 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_21_9d4e05d5a6e2eccfef12.table.json
+2023-02-10 15:52:13,089 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_20_0e89a7f09cb2e59241ce.table.json
+2023-02-10 15:52:13,090 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:13,441 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:13,582 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:14,095 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_22_0c3f0590f45c42bc3281.table.json
+2023-02-10 15:52:14,095 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:14,139 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:14,235 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:15,102 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_23_46b0d474046b790c3b4f.table.json
+2023-02-10 15:52:15,102 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:15,178 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:15,216 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:16,109 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_24_53d396fb40914c7e36dd.table.json
+2023-02-10 15:52:16,110 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:16,542 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:17,140 INFO    wandb-upload_0:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp9car2z6k
+2023-02-10 15:52:18,247 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkyODc2', 'digest': '666e0851e7d6fc56c1ae8c509d054e9c', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': None}, 'version': 'latest'}
+2023-02-10 15:52:18,247 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:18,247 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:52:18,247 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_15_a8f391c78762ab5fa42a.table.json with policy now
+2023-02-10 15:52:18,248 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,249 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,249 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,249 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,249 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,249 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,249 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,250 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:52:18,250 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:18,250 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:18,252 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:18,252 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:18,253 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:18,997 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\ql0vn26k-media/table/test_conf_mat_table_15_a8f391c78762ab5fa42a.table.json
+2023-02-10 15:52:19,128 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:19,913 INFO    wandb-upload_0:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp29prtmiz
+2023-02-10 15:52:20,779 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:20,938 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:21,138 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_25_5c005f8bacdfc8c9329b.table.json
+2023-02-10 15:52:21,138 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:21,415 DEBUG   SystemMonitor:12120 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-02-10 15:52:21,431 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:21,455 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:21,571 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:22,126 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:22,144 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_26_8b2a02d1ec0dc4674ae5.table.json
+2023-02-10 15:52:22,144 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_27_6e105a38cbb9c06bf707.table.json
+2023-02-10 15:52:22,145 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:22,149 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:22,694 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:22,716 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:23,148 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_28_f5e73d7f9ea94efbc673.table.json
+2023-02-10 15:52:23,149 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:23,349 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:23,375 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:23,930 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:24,141 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:24,156 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_29_f493cc1753a35af27869.table.json
+2023-02-10 15:52:24,156 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_30_738b3313b8fa532541da.table.json
+2023-02-10 15:52:24,156 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:24,768 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:24,789 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:25,160 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_31_7d5423facf8315cd09cc.table.json
+2023-02-10 15:52:25,161 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:25,161 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkyOTY3', 'digest': '5f514dd6b088662d4e28d4ae34e9329e', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkyODc2', 'versionIndex': 0}}, 'version': 'latest'}
+2023-02-10 15:52:25,167 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:52:25,321 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:25,345 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:25,407 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:25,407 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_16_583511d7281cc511be97.table.json with policy now
+2023-02-10 15:52:25,408 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:25,408 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:25,409 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:25,409 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:25,409 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:25,854 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:25,875 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:26,119 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\hyaxim1o-media/table/test_conf_mat_table_16_583511d7281cc511be97.table.json
+2023-02-10 15:52:26,166 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml
+2023-02-10 15:52:26,166 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:26,167 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_32_156d544ce3efd9762287.table.json
+2023-02-10 15:52:26,167 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_33_b7e34ca30f4c8443d6d0.table.json
+2023-02-10 15:52:26,167 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:26,469 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:26,490 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:26,599 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:26,958 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:27,163 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:27,171 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_34_9d824fb5d9c52801cc33.table.json
+2023-02-10 15:52:27,172 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_35_e9fcce5687b55bb8eac4.table.json
+2023-02-10 15:52:27,172 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:27,546 INFO    wandb-upload_0:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpo_g7_qlb
+2023-02-10 15:52:28,054 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:28,086 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:28,176 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_36_525c3c23cb874d2b5c9c.table.json
+2023-02-10 15:52:28,177 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:28,519 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:28,540 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:28,736 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMDM5', 'digest': 'e6e2b42182b22285303120c500c6691b', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkyOTY3', 'versionIndex': 1}}, 'version': 'latest'}
+2023-02-10 15:52:28,736 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:28,736 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_17_3abbb2d32a685307842a.table.json with policy now
+2023-02-10 15:52:28,737 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:28,737 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:28,738 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:28,739 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:28,739 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:29,016 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:29,040 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:29,182 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:29,182 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_37_526533fea3f2f4409d76.table.json
+2023-02-10 15:52:29,182 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_38_2d208f48b56df9ad5b15.table.json
+2023-02-10 15:52:29,183 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:29,426 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:29,552 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\ibkgoz8g-media/table/test_conf_mat_table_17_3abbb2d32a685307842a.table.json
+2023-02-10 15:52:29,587 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:30,151 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:30,173 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:30,185 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_39_156fd0aac00832ca9e81.table.json
+2023-02-10 15:52:30,185 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_40_513606750d936939ea67.table.json
+2023-02-10 15:52:30,186 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:30,895 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpcfjk47ss
+2023-02-10 15:52:30,923 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:31,152 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:31,191 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_41_0a4a65f5c76aa75f6c66.table.json
+2023-02-10 15:52:31,191 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:31,624 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:31,894 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:31,996 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:32,198 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_42_985961cb6a41d15205da.table.json
+2023-02-10 15:52:32,198 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:32,226 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMDkx', 'digest': '7a1d968824e2dacc713a18abb28e596c', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMDM5', 'versionIndex': 2}}, 'version': 'latest'}
+2023-02-10 15:52:32,227 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:32,227 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:52:32,227 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_18_1720fdc47795cce6a7d5.table.json with policy now
+2023-02-10 15:52:32,228 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:32,228 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:32,229 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:32,229 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:32,230 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:32,815 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:32,862 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:33,179 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\cizxhaw8-media/table/test_conf_mat_table_18_1720fdc47795cce6a7d5.table.json
+2023-02-10 15:52:33,205 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:33,206 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_43_bfcb16389401f0ce18ad.table.json
+2023-02-10 15:52:33,206 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:33,700 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp8ifl842a
+2023-02-10 15:52:33,716 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:33,743 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:34,212 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_44_3975a71405db7ddf19db.table.json
+2023-02-10 15:52:34,212 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:34,597 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:34,619 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:34,779 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMTM5', 'digest': '4171ee4763fa19a95a7623a3d22464a5', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMDkx', 'versionIndex': 3}}, 'version': 'latest'}
+2023-02-10 15:52:34,779 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:34,779 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_19_996cca7e9c0d388b0eac.table.json with policy now
+2023-02-10 15:52:34,780 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:34,780 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:34,781 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:34,781 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:34,781 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:35,220 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:35,220 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_45_a3daa2cae9f11da35735.table.json
+2023-02-10 15:52:35,221 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:35,228 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:35,250 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:35,692 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\vsdg22g5-media/table/test_conf_mat_table_19_996cca7e9c0d388b0eac.table.json
+2023-02-10 15:52:36,170 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:36,194 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:36,237 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_46_bab69536bcea96a56812.table.json
+2023-02-10 15:52:36,237 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_47_286f6a79f87ba14cf05d.table.json
+2023-02-10 15:52:36,237 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:36,652 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:37,121 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:37,144 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:37,241 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_48_60fcdcb3a7984e236e19.table.json
+2023-02-10 15:52:37,241 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:37,895 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:37,914 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:38,244 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_49_63931c49d5644061ef39.table.json
+2023-02-10 15:52:38,244 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:38,471 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:38,494 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:38,987 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:39,008 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:39,248 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_51_dfca157a0479562d4643.table.json
+2023-02-10 15:52:39,248 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_50_cb27372264c2824c54c9.table.json
+2023-02-10 15:52:39,249 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:39,635 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:39,657 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:40,159 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:40,182 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:40,253 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_52_b2fc9136470791506230.table.json
+2023-02-10 15:52:40,253 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_53_1b6f83f4480a5e1efc0a.table.json
+2023-02-10 15:52:40,254 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:40,718 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: log_artifact
+2023-02-10 15:52:40,739 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:40,744 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 15:52:41,158 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpr68wpi4t
+2023-02-10 15:52:41,260 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_54_0acd30b6a5958a510834.table.json
+2023-02-10 15:52:41,260 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\media\table
+2023-02-10 15:52:41,766 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-10 15:52:42,439 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMjM1', 'digest': '2a5946920afe82492c56e23221faa4bf', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMTM5', 'versionIndex': 4}}, 'version': 'latest'}
+2023-02-10 15:52:42,439 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:42,439 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:52:42,439 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_20_0e89a7f09cb2e59241ce.table.json with policy now
+2023-02-10 15:52:42,440 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:42,441 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:42,441 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:42,441 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:42,442 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:43,116 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\zr4soxz0-media/table/test_conf_mat_table_20_0e89a7f09cb2e59241ce.table.json
+2023-02-10 15:52:43,279 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:44,279 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpw6whau_o
+2023-02-10 15:52:45,223 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMjcy', 'digest': '38d524785bbf79c80264e27796c3f4b4', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMjM1', 'versionIndex': 5}}, 'version': 'latest'}
+2023-02-10 15:52:45,223 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:45,223 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_21_9d4e05d5a6e2eccfef12.table.json with policy now
+2023-02-10 15:52:45,224 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:45,225 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:45,225 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:45,225 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:45,226 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:45,287 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:45,799 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\gbymdkib-media/table/test_conf_mat_table_21_9d4e05d5a6e2eccfef12.table.json
+2023-02-10 15:52:46,787 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:46,955 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpq9n9zw18
+2023-02-10 15:52:48,036 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzAz', 'digest': 'adefb103b80d446504736633ca6e754b', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMjcy', 'versionIndex': 6}}, 'version': 'latest'}
+2023-02-10 15:52:48,037 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:48,037 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:52:48,037 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_22_0c3f0590f45c42bc3281.table.json with policy now
+2023-02-10 15:52:48,038 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:48,039 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:48,039 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:48,039 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:48,040 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:48,307 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:48,999 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\uw1jrs4v-media/table/test_conf_mat_table_22_0c3f0590f45c42bc3281.table.json
+2023-02-10 15:52:49,801 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp_zom0sua
+2023-02-10 15:52:50,824 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzM0', 'digest': '8450c8c7e108d5294724e09ee40df9ed', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzAz', 'versionIndex': 7}}, 'version': 'latest'}
+2023-02-10 15:52:50,825 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:50,825 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_23_46b0d474046b790c3b4f.table.json with policy now
+2023-02-10 15:52:50,826 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:50,826 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:50,827 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:50,827 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:50,827 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:51,342 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:51,380 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\jullw7zm-media/table/test_conf_mat_table_23_46b0d474046b790c3b4f.table.json
+2023-02-10 15:52:51,820 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:52,531 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp0_zn55a9
+2023-02-10 15:52:53,885 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzYx', 'digest': '81ae82ff08fc28c1b2aace2cb89dd789', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzM0', 'versionIndex': 8}}, 'version': 'latest'}
+2023-02-10 15:52:53,886 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:53,886 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:52:53,886 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_24_53d396fb40914c7e36dd.table.json with policy now
+2023-02-10 15:52:53,887 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:53,888 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:53,888 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:53,889 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:53,889 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:54,384 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:54,659 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\dn0xkqc6-media/table/test_conf_mat_table_24_53d396fb40914c7e36dd.table.json
+2023-02-10 15:52:55,333 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpfl4xot9l
+2023-02-10 15:52:56,318 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzg5', 'digest': '94d3c6708fa5fa9e5c2dba3d61938ba2', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzYx', 'versionIndex': 9}}, 'version': 'latest'}
+2023-02-10 15:52:56,318 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:56,319 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_25_5c005f8bacdfc8c9329b.table.json with policy now
+2023-02-10 15:52:56,319 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:56,320 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:56,320 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:56,321 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:56,321 DEBUG   SenderThread:12120 [sender.py:send():336] send: stats
+2023-02-10 15:52:56,321 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:52:56,407 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:52:56,841 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:52:56,938 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\62btx9fx-media/table/test_conf_mat_table_25_5c005f8bacdfc8c9329b.table.json
+2023-02-10 15:52:58,591 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp_y_3j1xq
+2023-02-10 15:52:59,792 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNDIz', 'digest': 'd9323274b9b6e5592c1b06959a9f6be7', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzMzg5', 'versionIndex': 10}}, 'version': 'latest'}
+2023-02-10 15:52:59,797 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:52:59,990 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:52:59,990 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_26_8b2a02d1ec0dc4674ae5.table.json with policy now
+2023-02-10 15:52:59,990 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:52:59,991 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:52:59,991 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:52:59,992 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:52:59,992 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:00,452 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml
+2023-02-10 15:53:00,453 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:00,498 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\wd3pbsx1-media/table/test_conf_mat_table_26_8b2a02d1ec0dc4674ae5.table.json
+2023-02-10 15:53:01,733 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpeukte6bt
+2023-02-10 15:53:01,856 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:02,587 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNDU5', 'digest': '7c09c0e747d257669166328697482991', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNDIz', 'versionIndex': 11}}, 'version': 'latest'}
+2023-02-10 15:53:02,588 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:02,588 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_27_6e105a38cbb9c06bf707.table.json with policy now
+2023-02-10 15:53:02,589 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:02,589 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:02,590 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:02,590 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:02,590 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:03,483 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:03,564 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\ol7oc1o6-media/table/test_conf_mat_table_27_6e105a38cbb9c06bf707.table.json
+2023-02-10 15:53:04,185 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp43lldqtr
+2023-02-10 15:53:05,067 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNDk2', 'digest': '5e8eb0a6d7e02371e9b1d00d5a8f25b9', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNDU5', 'versionIndex': 12}}, 'version': 'latest'}
+2023-02-10 15:53:05,067 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:05,067 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:05,067 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_28_f5e73d7f9ea94efbc673.table.json with policy now
+2023-02-10 15:53:05,068 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:05,069 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:05,069 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:05,070 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:05,070 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:05,497 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:06,009 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\ut9cb1rf-media/table/test_conf_mat_table_28_f5e73d7f9ea94efbc673.table.json
+2023-02-10 15:53:06,663 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpdmcx9ur7
+2023-02-10 15:53:06,886 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:08,177 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNTM2', 'digest': '0d1ade062026a21aeba8782a92413c38', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNDk2', 'versionIndex': 13}}, 'version': 'latest'}
+2023-02-10 15:53:08,177 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:08,178 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_29_f493cc1753a35af27869.table.json with policy now
+2023-02-10 15:53:08,178 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:08,179 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:08,179 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:08,180 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:08,180 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:08,524 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:09,667 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\aeruel4b-media/table/test_conf_mat_table_29_f493cc1753a35af27869.table.json
+2023-02-10 15:53:09,925 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpdvtcmmzv
+2023-02-10 15:53:10,838 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNTcx', 'digest': 'f2ae8605598f041fc283efdf8400093e', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNTM2', 'versionIndex': 14}}, 'version': 'latest'}
+2023-02-10 15:53:10,838 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:10,839 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:10,839 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_30_738b3313b8fa532541da.table.json with policy now
+2023-02-10 15:53:10,840 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:10,840 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:10,841 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:10,841 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:10,841 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:11,324 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\qz0ubo6y-media/table/test_conf_mat_table_30_738b3313b8fa532541da.table.json
+2023-02-10 15:53:11,557 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:11,910 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:12,929 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpbfcb4z05
+2023-02-10 15:53:14,073 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNjEw', 'digest': 'a7d8c034d9dfd2ccd70cb9890c61dea3', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNTcx', 'versionIndex': 15}}, 'version': 'latest'}
+2023-02-10 15:53:14,074 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:14,074 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_31_7d5423facf8315cd09cc.table.json with policy now
+2023-02-10 15:53:14,075 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:14,075 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:14,075 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:14,076 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:14,076 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:14,593 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:14,958 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\92b13ixq-media/table/test_conf_mat_table_31_7d5423facf8315cd09cc.table.json
+2023-02-10 15:53:15,976 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmphcnzm_tz
+2023-02-10 15:53:16,930 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:17,091 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNjU2', 'digest': '389810dcef8ea2229b03d84b7dc7d506', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNjEw', 'versionIndex': 16}}, 'version': 'latest'}
+2023-02-10 15:53:17,091 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:17,091 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:17,091 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_32_156d544ce3efd9762287.table.json with policy now
+2023-02-10 15:53:17,092 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:17,093 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:17,093 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:17,094 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:17,094 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:17,644 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:18,997 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\e0xj34r4-media/table/test_conf_mat_table_32_156d544ce3efd9762287.table.json
+2023-02-10 15:53:19,058 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpzy0w4x12
+2023-02-10 15:53:20,296 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNjk4', 'digest': '8ee81410b1719a8246d1de6dbf36cac3', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNjU2', 'versionIndex': 17}}, 'version': 'latest'}
+2023-02-10 15:53:20,297 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:20,297 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_33_b7e34ca30f4c8443d6d0.table.json with policy now
+2023-02-10 15:53:20,298 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:20,298 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:20,299 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:20,299 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:20,299 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:20,665 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:21,329 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\zidf6186-media/table/test_conf_mat_table_33_b7e34ca30f4c8443d6d0.table.json
+2023-02-10 15:53:21,890 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpae93fw9f
+2023-02-10 15:53:21,965 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:22,946 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNzM5', 'digest': 'ffd5b1b86eb231408cc5db241b357b97', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNjk4', 'versionIndex': 18}}, 'version': 'latest'}
+2023-02-10 15:53:22,946 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:22,946 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:22,946 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_34_9d824fb5d9c52801cc33.table.json with policy now
+2023-02-10 15:53:22,947 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:22,948 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:22,949 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:22,949 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:22,950 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:23,458 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\s9zi9p6q-media/table/test_conf_mat_table_34_9d824fb5d9c52801cc33.table.json
+2023-02-10 15:53:23,695 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:24,677 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmphulop6iq
+2023-02-10 15:53:25,859 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzNzcx', 'digest': 'fff97cb191e1da4c6f47f85bf180c182', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNzM5', 'versionIndex': 19}}, 'version': 'latest'}
+2023-02-10 15:53:25,859 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:25,860 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_35_e9fcce5687b55bb8eac4.table.json with policy now
+2023-02-10 15:53:25,861 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:25,861 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:25,862 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:25,863 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:25,863 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:26,466 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\pea1jrs1-media/table/test_conf_mat_table_35_e9fcce5687b55bb8eac4.table.json
+2023-02-10 15:53:26,760 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:26,990 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:27,273 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpwn7j1syv
+2023-02-10 15:53:28,411 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzODEz', 'digest': 'cbb2be8fec51ec92ef045991e4695d9b', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzNzcx', 'versionIndex': 20}}, 'version': 'latest'}
+2023-02-10 15:53:28,411 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:28,411 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:28,411 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_36_525c3c23cb874d2b5c9c.table.json with policy now
+2023-02-10 15:53:28,412 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:28,412 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:28,413 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:28,414 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:28,414 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:28,779 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:29,132 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\ggv18g0y-media/table/test_conf_mat_table_36_525c3c23cb874d2b5c9c.table.json
+2023-02-10 15:53:29,995 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpq7ihzype
+2023-02-10 15:53:31,032 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzODQ4', 'digest': '048d7c8aa372aacb7f12d6c81a8dee9b', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzODEz', 'versionIndex': 21}}, 'version': 'latest'}
+2023-02-10 15:53:31,032 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:31,033 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_37_526533fea3f2f4409d76.table.json with policy now
+2023-02-10 15:53:31,034 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:31,034 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:31,034 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:31,035 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:31,035 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:31,692 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\71nr2h2x-media/table/test_conf_mat_table_37_526533fea3f2f4409d76.table.json
+2023-02-10 15:53:31,804 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:32,004 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:32,946 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpliasgoq4
+2023-02-10 15:53:34,252 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzODkx', 'digest': 'c86f460af460b4895a64fa23a9344dbc', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzODQ4', 'versionIndex': 22}}, 'version': 'latest'}
+2023-02-10 15:53:34,257 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:34,428 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:34,429 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_38_2d208f48b56df9ad5b15.table.json with policy now
+2023-02-10 15:53:34,429 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:34,429 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:34,431 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:34,432 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:34,432 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:34,842 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml
+2023-02-10 15:53:34,843 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:34,945 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\u55rfoi0-media/table/test_conf_mat_table_38_2d208f48b56df9ad5b15.table.json
+2023-02-10 15:53:35,845 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmphma7mmnp
+2023-02-10 15:53:37,028 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:37,307 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzOTI4', 'digest': '267f6081795abe9348d9073515ad0c0f', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzODkx', 'versionIndex': 23}}, 'version': 'latest'}
+2023-02-10 15:53:37,307 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:37,307 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_39_156fd0aac00832ca9e81.table.json with policy now
+2023-02-10 15:53:37,308 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:37,308 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:37,309 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:37,309 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:37,310 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:37,866 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:37,931 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\8fpon53u-media/table/test_conf_mat_table_39_156fd0aac00832ca9e81.table.json
+2023-02-10 15:53:39,537 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpf5c8qmmx
+2023-02-10 15:53:40,585 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzOTU1', 'digest': 'bc85b5f35cd7799673e6970d3c3752be', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzOTI4', 'versionIndex': 24}}, 'version': 'latest'}
+2023-02-10 15:53:40,586 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:40,586 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_40_513606750d936939ea67.table.json with policy now
+2023-02-10 15:53:40,586 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:40,587 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:40,587 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:40,588 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:40,588 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:40,588 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:40,902 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:41,246 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\0wow4jji-media/table/test_conf_mat_table_40_513606750d936939ea67.table.json
+2023-02-10 15:53:41,887 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpcvci3zdl
+2023-02-10 15:53:42,044 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:42,980 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjkzOTk2', 'digest': '610393943b9fbda191ddaa00181f3aad', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzOTU1', 'versionIndex': 25}}, 'version': 'latest'}
+2023-02-10 15:53:42,980 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:42,980 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_41_0a4a65f5c76aa75f6c66.table.json with policy now
+2023-02-10 15:53:42,981 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:42,981 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:42,982 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:42,982 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:42,982 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:43,549 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\k73dpnq2-media/table/test_conf_mat_table_41_0a4a65f5c76aa75f6c66.table.json
+2023-02-10 15:53:43,926 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:44,299 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpg55n0is7
+2023-02-10 15:53:45,232 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0MDM2', 'digest': 'c8a20fbba6acdd8be8538ee335707050', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjkzOTk2', 'versionIndex': 26}}, 'version': 'latest'}
+2023-02-10 15:53:45,232 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:45,232 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_42_985961cb6a41d15205da.table.json with policy now
+2023-02-10 15:53:45,233 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:45,233 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:45,235 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:45,235 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:45,235 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:45,785 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\f0q3h02l-media/table/test_conf_mat_table_42_985961cb6a41d15205da.table.json
+2023-02-10 15:53:45,949 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:46,842 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpjmybdu01
+2023-02-10 15:53:47,059 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:47,769 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0MDc2', 'digest': '69c0e95a7e4cb5c818baf421ce456dbd', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0MDM2', 'versionIndex': 27}}, 'version': 'latest'}
+2023-02-10 15:53:47,770 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:53:47,770 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:53:47,770 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_43_bfcb16389401f0ce18ad.table.json with policy now
+2023-02-10 15:53:47,771 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:53:47,771 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:53:47,772 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:53:47,772 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:53:47,772 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:53:47,972 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:53:48,324 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\5w82x9x0-media/table/test_conf_mat_table_43_bfcb16389401f0ce18ad.table.json
+2023-02-10 15:53:52,085 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:53:57,108 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:00,677 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp7jab6_dl
+2023-02-10 15:54:01,724 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0MjM5', 'digest': '0223ba8cab7995308a18e923e0967a0c', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0MDc2', 'versionIndex': 28}}, 'version': 'latest'}
+2023-02-10 15:54:01,725 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:01,725 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:54:01,725 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_44_3975a71405db7ddf19db.table.json with policy now
+2023-02-10 15:54:01,726 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:01,726 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:01,727 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:01,727 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:01,727 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:02,123 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:02,126 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:02,358 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\7likigdx-media/table/test_conf_mat_table_44_3975a71405db7ddf19db.table.json
+2023-02-10 15:54:03,626 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpyv46pcrq
+2023-02-10 15:54:04,648 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0MjYy', 'digest': 'f3a59c36f58cadc59ba9d9f4b02c45b2', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0MjM5', 'versionIndex': 29}}, 'version': 'latest'}
+2023-02-10 15:54:04,648 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:04,648 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_45_a3daa2cae9f11da35735.table.json with policy now
+2023-02-10 15:54:04,649 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:04,649 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:04,650 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:04,650 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:04,650 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:05,157 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:05,321 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\47fwwqm2-media/table/test_conf_mat_table_45_a3daa2cae9f11da35735.table.json
+2023-02-10 15:54:06,489 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp7z6ek11t
+2023-02-10 15:54:07,138 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:07,934 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0Mjkw', 'digest': 'ff839c71ca1dfcb9082cfb1f83f2f1bd', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0MjYy', 'versionIndex': 30}}, 'version': 'latest'}
+2023-02-10 15:54:07,941 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:54:08,297 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:08,298 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_46_bab69536bcea96a56812.table.json with policy now
+2023-02-10 15:54:08,298 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:08,299 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:08,299 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:08,300 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:08,300 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:08,899 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\fnwjz41i-media/table/test_conf_mat_table_46_bab69536bcea96a56812.table.json
+2023-02-10 15:54:09,201 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml
+2023-02-10 15:54:09,201 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:10,343 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp6_v5_fth
+2023-02-10 15:54:11,718 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0MzI4', 'digest': '8d32e691edf3ef1ad4f8d5e848fab2c3', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0Mjkw', 'versionIndex': 31}}, 'version': 'latest'}
+2023-02-10 15:54:11,718 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:11,718 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_47_286f6a79f87ba14cf05d.table.json with policy now
+2023-02-10 15:54:11,719 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:11,719 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:11,720 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:11,720 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:11,720 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:12,166 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:12,230 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:13,927 INFO    wandb-upload_1:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp3j2rpbbn
+2023-02-10 15:54:15,040 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0Mzcz', 'digest': 'fe97bed93eefc5373eb82a20e66b3db9', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0MzI4', 'versionIndex': 32}}, 'version': 'latest'}
+2023-02-10 15:54:15,040 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:15,041 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:54:15,041 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_48_60fcdcb3a7984e236e19.table.json with policy now
+2023-02-10 15:54:15,042 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:15,042 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:15,042 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:15,043 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:15,043 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:15,266 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:15,693 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\s3de6x2d-media/table/test_conf_mat_table_48_60fcdcb3a7984e236e19.table.json
+2023-02-10 15:54:17,007 INFO    wandb-upload_2:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpad8qpt63
+2023-02-10 15:54:17,183 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:17,973 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0NDA2', 'digest': '12120a22d26374bbd22ca74d5f9047a2', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0Mzcz', 'versionIndex': 33}}, 'version': 'latest'}
+2023-02-10 15:54:17,973 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:17,973 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_49_63931c49d5644061ef39.table.json with policy now
+2023-02-10 15:54:17,974 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:17,974 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:17,975 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:17,975 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:17,975 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:18,295 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:18,806 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\qtzdgfy8-media/table/test_conf_mat_table_49_63931c49d5644061ef39.table.json
+2023-02-10 15:54:19,605 INFO    wandb-upload_2:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp8rqehxot
+2023-02-10 15:54:20,598 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0NDQ4', 'digest': 'b31e4499f87cf27a9926d4c576afe50a', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0NDA2', 'versionIndex': 34}}, 'version': 'latest'}
+2023-02-10 15:54:20,599 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:20,599 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:54:20,599 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_50_cb27372264c2824c54c9.table.json with policy now
+2023-02-10 15:54:20,600 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:20,600 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:20,601 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:20,601 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:20,601 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:21,335 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:21,540 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\7hkcadbk-media/table/test_conf_mat_table_50_cb27372264c2824c54c9.table.json
+2023-02-10 15:54:22,201 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:22,610 INFO    wandb-upload_2:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp8twqvp15
+2023-02-10 15:54:23,802 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0NDgz', 'digest': 'fc04e60f881df7af68a07f75fc8d407e', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0NDQ4', 'versionIndex': 35}}, 'version': 'latest'}
+2023-02-10 15:54:23,802 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:23,802 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_51_dfca157a0479562d4643.table.json with policy now
+2023-02-10 15:54:23,803 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:23,803 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:23,804 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:23,805 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:23,805 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:24,372 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:24,969 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\6wy2kruj-media/table/test_conf_mat_table_51_dfca157a0479562d4643.table.json
+2023-02-10 15:54:25,021 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\75q2e0ki-media/table/test_conf_mat_table_47_286f6a79f87ba14cf05d.table.json
+2023-02-10 15:54:25,906 INFO    wandb-upload_2:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpnvru82qh
+2023-02-10 15:54:26,905 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0NTI0', 'digest': '9389bde3abfbacd9c2a9f4c5f37661e0', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0NDgz', 'versionIndex': 36}}, 'version': 'latest'}
+2023-02-10 15:54:26,905 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:26,905 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:54:26,905 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_52_b2fc9136470791506230.table.json with policy now
+2023-02-10 15:54:26,907 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:26,907 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:26,908 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:26,908 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:26,908 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:27,231 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:27,400 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:27,437 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\7n1pl87m-media/table/test_conf_mat_table_52_b2fc9136470791506230.table.json
+2023-02-10 15:54:28,456 INFO    wandb-upload_2:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpb651sfcn
+2023-02-10 15:54:29,503 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0NTU2', 'digest': 'ed9501177b1f5d690820c4eaa06e998e', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0NTI0', 'versionIndex': 37}}, 'version': 'latest'}
+2023-02-10 15:54:29,503 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:29,503 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_53_1b6f83f4480a5e1efc0a.table.json with policy now
+2023-02-10 15:54:29,504 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:29,504 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:29,505 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:29,505 DEBUG   SenderThread:12120 [sender.py:send():336] send: config
+2023-02-10 15:54:29,505 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: log_artifact
+2023-02-10 15:54:30,351 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\pmsuwe54-media/table/test_conf_mat_table_53_1b6f83f4480a5e1efc0a.table.json
+2023-02-10 15:54:30,429 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:31,177 INFO    wandb-upload_2:12120 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpnvzq5e5q
+2023-02-10 15:54:32,249 INFO    SenderThread:12120 [sender.py:send_request_log_artifact():1381] logged artifact run-fo36gb6q-test_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzYxNjk0NTky', 'digest': 'd2a5538b1c3389c6339f67ff38efd940', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyNTk0ODY3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzYxNjk0NTU2', 'versionIndex': 38}}, 'version': 'latest'}
+2023-02-10 15:54:32,250 DEBUG   SenderThread:12120 [sender.py:send():336] send: files
+2023-02-10 15:54:32,250 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:54:32,250 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file media\table\test_conf_mat_table_54_0acd30b6a5958a510834.table.json with policy now
+2023-02-10 15:54:32,251 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:32,251 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:32,252 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:32,252 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:54:32,252 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 15:54:32,253 DEBUG   SenderThread:12120 [sender.py:send():336] send: metric
+2023-02-10 15:54:32,253 DEBUG   SenderThread:12120 [sender.py:send():336] send: history
+2023-02-10 15:54:32,253 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 15:54:32,254 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:32,257 DEBUG   SenderThread:12120 [sender.py:send():336] send: telemetry
+2023-02-10 15:54:32,257 DEBUG   SenderThread:12120 [sender.py:send():336] send: exit
+2023-02-10 15:54:32,257 INFO    SenderThread:12120 [sender.py:send_exit():559] handling exit code: 0
+2023-02-10 15:54:32,258 INFO    SenderThread:12120 [sender.py:send_exit():561] handling runtime: 79
+2023-02-10 15:54:32,258 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:32,259 INFO    SenderThread:12120 [sender.py:send_exit():567] send defer
+2023-02-10 15:54:32,259 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: poll_exit
+2023-02-10 15:54:32,259 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,259 DEBUG   SenderThread:12120 [sender.py:send():336] send: stats
+2023-02-10 15:54:32,260 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 0
+2023-02-10 15:54:32,260 DEBUG   SenderThread:12120 [sender.py:send():336] send: stats
+2023-02-10 15:54:32,261 DEBUG   SenderThread:12120 [sender.py:send():336] send: stats
+2023-02-10 15:54:32,261 DEBUG   SenderThread:12120 [sender.py:send():336] send: stats
+2023-02-10 15:54:32,262 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,262 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-02-10 15:54:32,262 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 1
+2023-02-10 15:54:32,262 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,262 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 1
+2023-02-10 15:54:32,262 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,262 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-02-10 15:54:32,262 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 2
+2023-02-10 15:54:32,263 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,263 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 2
+2023-02-10 15:54:32,263 INFO    HandlerThread:12120 [system_monitor.py:finish():161] Stopping system monitor
+2023-02-10 15:54:32,264 DEBUG   SystemMonitor:12120 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-02-10 15:54:32,274 DEBUG   SystemMonitor:12120 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-02-10 15:54:32,275 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined cpu
+2023-02-10 15:54:32,275 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined disk
+2023-02-10 15:54:32,350 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined gpu
+2023-02-10 15:54:32,350 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined memory
+2023-02-10 15:54:32,350 INFO    HandlerThread:12120 [interfaces.py:finish():175] Joined network
+2023-02-10 15:54:32,352 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,352 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-02-10 15:54:32,352 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 3
+2023-02-10 15:54:32,352 DEBUG   SenderThread:12120 [sender.py:send():336] send: stats
+2023-02-10 15:54:32,352 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,352 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 3
+2023-02-10 15:54:32,353 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,353 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-02-10 15:54:32,353 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 4
+2023-02-10 15:54:32,353 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,353 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 4
+2023-02-10 15:54:32,353 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,353 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-02-10 15:54:32,354 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 5
+2023-02-10 15:54:32,354 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,354 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 5
+2023-02-10 15:54:32,355 DEBUG   SenderThread:12120 [sender.py:send():336] send: summary
+2023-02-10 15:54:32,355 INFO    SenderThread:12120 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 15:54:32,356 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,356 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-02-10 15:54:32,356 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 6
+2023-02-10 15:54:32,356 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,356 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 6
+2023-02-10 15:54:32,356 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,356 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-02-10 15:54:32,361 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 15:54:32,455 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:32,550 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 7
+2023-02-10 15:54:32,550 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:32,550 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 7
+2023-02-10 15:54:32,551 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:32,551 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-02-10 15:54:33,053 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmprfytmf55wandb\zkw065g8-media/table/test_conf_mat_table_54_0acd30b6a5958a510834.table.json
+2023-02-10 15:54:33,458 INFO    Thread-17 :12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml
+2023-02-10 15:54:34,262 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 8
+2023-02-10 15:54:34,263 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:34,263 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 8
+2023-02-10 15:54:34,263 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:34,263 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-02-10 15:54:34,264 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 9
+2023-02-10 15:54:34,264 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:34,264 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 9
+2023-02-10 15:54:34,264 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:34,264 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-02-10 15:54:34,264 INFO    SenderThread:12120 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-02-10 15:54:34,463 INFO    SenderThread:12120 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230210_155119-fo36gb6q\files\output.log
+2023-02-10 15:54:34,465 INFO    SenderThread:12120 [dir_watcher.py:finish():392] scan: .\wandb\run-20230210_155119-fo36gb6q\files
+2023-02-10 15:54:34,466 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\conda-environment.yaml conda-environment.yaml
+2023-02-10 15:54:34,466 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml config.yaml
+2023-02-10 15:54:34,466 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\output.log output.log
+2023-02-10 15:54:34,469 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\requirements.txt requirements.txt
+2023-02-10 15:54:34,472 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-metadata.json wandb-metadata.json
+2023-02-10 15:54:34,473 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json wandb-summary.json
+2023-02-10 15:54:34,480 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_15_a8f391c78762ab5fa42a.table.json media\table\test_conf_mat_table_15_a8f391c78762ab5fa42a.table.json
+2023-02-10 15:54:34,480 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_16_583511d7281cc511be97.table.json media\table\test_conf_mat_table_16_583511d7281cc511be97.table.json
+2023-02-10 15:54:34,480 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_17_3abbb2d32a685307842a.table.json media\table\test_conf_mat_table_17_3abbb2d32a685307842a.table.json
+2023-02-10 15:54:34,480 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_18_1720fdc47795cce6a7d5.table.json media\table\test_conf_mat_table_18_1720fdc47795cce6a7d5.table.json
+2023-02-10 15:54:34,480 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_19_996cca7e9c0d388b0eac.table.json media\table\test_conf_mat_table_19_996cca7e9c0d388b0eac.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_20_0e89a7f09cb2e59241ce.table.json media\table\test_conf_mat_table_20_0e89a7f09cb2e59241ce.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_21_9d4e05d5a6e2eccfef12.table.json media\table\test_conf_mat_table_21_9d4e05d5a6e2eccfef12.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_22_0c3f0590f45c42bc3281.table.json media\table\test_conf_mat_table_22_0c3f0590f45c42bc3281.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_23_46b0d474046b790c3b4f.table.json media\table\test_conf_mat_table_23_46b0d474046b790c3b4f.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_24_53d396fb40914c7e36dd.table.json media\table\test_conf_mat_table_24_53d396fb40914c7e36dd.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_25_5c005f8bacdfc8c9329b.table.json media\table\test_conf_mat_table_25_5c005f8bacdfc8c9329b.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_26_8b2a02d1ec0dc4674ae5.table.json media\table\test_conf_mat_table_26_8b2a02d1ec0dc4674ae5.table.json
+2023-02-10 15:54:34,481 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_27_6e105a38cbb9c06bf707.table.json media\table\test_conf_mat_table_27_6e105a38cbb9c06bf707.table.json
+2023-02-10 15:54:34,482 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_28_f5e73d7f9ea94efbc673.table.json media\table\test_conf_mat_table_28_f5e73d7f9ea94efbc673.table.json
+2023-02-10 15:54:34,482 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_29_f493cc1753a35af27869.table.json media\table\test_conf_mat_table_29_f493cc1753a35af27869.table.json
+2023-02-10 15:54:34,482 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_30_738b3313b8fa532541da.table.json media\table\test_conf_mat_table_30_738b3313b8fa532541da.table.json
+2023-02-10 15:54:34,482 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_31_7d5423facf8315cd09cc.table.json media\table\test_conf_mat_table_31_7d5423facf8315cd09cc.table.json
+2023-02-10 15:54:34,482 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_32_156d544ce3efd9762287.table.json media\table\test_conf_mat_table_32_156d544ce3efd9762287.table.json
+2023-02-10 15:54:34,482 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_33_b7e34ca30f4c8443d6d0.table.json media\table\test_conf_mat_table_33_b7e34ca30f4c8443d6d0.table.json
+2023-02-10 15:54:34,482 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_34_9d824fb5d9c52801cc33.table.json media\table\test_conf_mat_table_34_9d824fb5d9c52801cc33.table.json
+2023-02-10 15:54:34,483 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_35_e9fcce5687b55bb8eac4.table.json media\table\test_conf_mat_table_35_e9fcce5687b55bb8eac4.table.json
+2023-02-10 15:54:34,483 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_36_525c3c23cb874d2b5c9c.table.json media\table\test_conf_mat_table_36_525c3c23cb874d2b5c9c.table.json
+2023-02-10 15:54:34,483 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_37_526533fea3f2f4409d76.table.json media\table\test_conf_mat_table_37_526533fea3f2f4409d76.table.json
+2023-02-10 15:54:34,483 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_38_2d208f48b56df9ad5b15.table.json media\table\test_conf_mat_table_38_2d208f48b56df9ad5b15.table.json
+2023-02-10 15:54:34,483 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_39_156fd0aac00832ca9e81.table.json media\table\test_conf_mat_table_39_156fd0aac00832ca9e81.table.json
+2023-02-10 15:54:34,483 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_40_513606750d936939ea67.table.json media\table\test_conf_mat_table_40_513606750d936939ea67.table.json
+2023-02-10 15:54:34,483 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_41_0a4a65f5c76aa75f6c66.table.json media\table\test_conf_mat_table_41_0a4a65f5c76aa75f6c66.table.json
+2023-02-10 15:54:34,484 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_42_985961cb6a41d15205da.table.json media\table\test_conf_mat_table_42_985961cb6a41d15205da.table.json
+2023-02-10 15:54:34,484 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_43_bfcb16389401f0ce18ad.table.json media\table\test_conf_mat_table_43_bfcb16389401f0ce18ad.table.json
+2023-02-10 15:54:34,484 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_44_3975a71405db7ddf19db.table.json media\table\test_conf_mat_table_44_3975a71405db7ddf19db.table.json
+2023-02-10 15:54:34,484 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_45_a3daa2cae9f11da35735.table.json media\table\test_conf_mat_table_45_a3daa2cae9f11da35735.table.json
+2023-02-10 15:54:34,484 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_46_bab69536bcea96a56812.table.json media\table\test_conf_mat_table_46_bab69536bcea96a56812.table.json
+2023-02-10 15:54:34,484 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_47_286f6a79f87ba14cf05d.table.json media\table\test_conf_mat_table_47_286f6a79f87ba14cf05d.table.json
+2023-02-10 15:54:34,484 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_48_60fcdcb3a7984e236e19.table.json media\table\test_conf_mat_table_48_60fcdcb3a7984e236e19.table.json
+2023-02-10 15:54:34,485 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_49_63931c49d5644061ef39.table.json media\table\test_conf_mat_table_49_63931c49d5644061ef39.table.json
+2023-02-10 15:54:34,485 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_50_cb27372264c2824c54c9.table.json media\table\test_conf_mat_table_50_cb27372264c2824c54c9.table.json
+2023-02-10 15:54:34,485 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_51_dfca157a0479562d4643.table.json media\table\test_conf_mat_table_51_dfca157a0479562d4643.table.json
+2023-02-10 15:54:34,485 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_52_b2fc9136470791506230.table.json media\table\test_conf_mat_table_52_b2fc9136470791506230.table.json
+2023-02-10 15:54:34,485 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_53_1b6f83f4480a5e1efc0a.table.json media\table\test_conf_mat_table_53_1b6f83f4480a5e1efc0a.table.json
+2023-02-10 15:54:34,485 INFO    SenderThread:12120 [dir_watcher.py:finish():406] scan save: .\wandb\run-20230210_155119-fo36gb6q\files\media\table\test_conf_mat_table_54_0acd30b6a5958a510834.table.json media\table\test_conf_mat_table_54_0acd30b6a5958a510834.table.json
+2023-02-10 15:54:34,485 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 10
+2023-02-10 15:54:34,486 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:34,486 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 10
+2023-02-10 15:54:34,486 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:34,486 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-02-10 15:54:34,486 INFO    SenderThread:12120 [file_pusher.py:finish():162] shutting down file pusher
+2023-02-10 15:54:35,052 INFO    wandb-upload_2:12120 [upload_job.py:push():138] Uploaded file .\wandb\run-20230210_155119-fo36gb6q\files\config.yaml
+2023-02-10 15:54:35,062 INFO    wandb-upload_0:12120 [upload_job.py:push():138] Uploaded file .\wandb\run-20230210_155119-fo36gb6q\files\requirements.txt
+2023-02-10 15:54:35,286 INFO    wandb-upload_3:12120 [upload_job.py:push():138] Uploaded file .\wandb\run-20230210_155119-fo36gb6q\files\wandb-summary.json
+2023-02-10 15:54:35,830 INFO    wandb-upload_1:12120 [upload_job.py:push():138] Uploaded file .\wandb\run-20230210_155119-fo36gb6q\files\output.log
+2023-02-10 15:54:36,035 INFO    Thread-16 (_thread_body):12120 [sender.py:transition_state():587] send defer: 11
+2023-02-10 15:54:36,035 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:36,035 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 11
+2023-02-10 15:54:36,036 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:36,036 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-02-10 15:54:36,036 INFO    SenderThread:12120 [file_pusher.py:join():167] waiting for file pusher
+2023-02-10 15:54:36,036 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 12
+2023-02-10 15:54:36,036 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:36,036 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 12
+2023-02-10 15:54:36,037 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:36,037 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-02-10 15:54:36,541 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 13
+2023-02-10 15:54:36,542 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:36,542 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 13
+2023-02-10 15:54:36,542 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:36,542 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-02-10 15:54:36,542 INFO    SenderThread:12120 [sender.py:transition_state():587] send defer: 14
+2023-02-10 15:54:36,543 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 15:54:36,543 DEBUG   SenderThread:12120 [sender.py:send():336] send: final
+2023-02-10 15:54:36,543 INFO    HandlerThread:12120 [handler.py:handle_request_defer():170] handle defer: 14
+2023-02-10 15:54:36,543 DEBUG   SenderThread:12120 [sender.py:send():336] send: footer
+2023-02-10 15:54:36,543 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: defer
+2023-02-10 15:54:36,543 INFO    SenderThread:12120 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-02-10 15:54:36,545 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-10 15:54:36,545 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: server_info
+2023-02-10 15:54:36,546 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: poll_exit
+2023-02-10 15:54:36,546 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: get_summary
+2023-02-10 15:54:36,546 DEBUG   SenderThread:12120 [sender.py:send_request():363] send_request: server_info
+2023-02-10 15:54:36,547 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: sampled_history
+2023-02-10 15:54:36,695 DEBUG   HandlerThread:12120 [handler.py:handle_request():144] handle_request: shutdown
+2023-02-10 15:54:36,696 INFO    HandlerThread:12120 [handler.py:finish():841] shutting down handler
+2023-02-10 15:54:37,550 INFO    WriterThread:12120 [datastore.py:close():299] close: .\wandb\run-20230210_155119-fo36gb6q\run-fo36gb6q.wandb
+2023-02-10 15:54:37,705 INFO    SenderThread:12120 [sender.py:finish():1493] shutting down sender
+2023-02-10 15:54:37,705 INFO    SenderThread:12120 [file_pusher.py:finish():162] shutting down file pusher
+2023-02-10 15:54:37,705 INFO    SenderThread:12120 [file_pusher.py:join():167] waiting for file pusher

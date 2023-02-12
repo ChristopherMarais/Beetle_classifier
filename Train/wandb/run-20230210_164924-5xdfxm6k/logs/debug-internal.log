@@ -1,0 +1,271 @@
+2023-02-10 16:49:24,205 INFO    StreamThr :2784 [internal.py:wandb_internal():87] W&B internal server running at pid: 2784, started at: 2023-02-10 16:49:24.204690
+2023-02-10 16:49:24,206 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status
+2023-02-10 16:49:24,222 INFO    WriterThread:2784 [datastore.py:open_for_write():85] open: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\run-5xdfxm6k.wandb
+2023-02-10 16:49:24,223 DEBUG   SenderThread:2784 [sender.py:send():336] send: header
+2023-02-10 16:49:24,265 DEBUG   SenderThread:2784 [sender.py:send():336] send: run
+2023-02-10 16:49:26,102 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: check_version
+2023-02-10 16:49:26,103 INFO    SenderThread:2784 [dir_watcher.py:__init__():216] watching files in: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files
+2023-02-10 16:49:26,103 INFO    SenderThread:2784 [sender.py:_start_run_threads():1067] run started: 5xdfxm6k with start time 1676065764.20419
+2023-02-10 16:49:26,103 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:26,104 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:26,104 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: check_version
+2023-02-10 16:49:26,332 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: run_start
+2023-02-10 16:49:26,356 DEBUG   HandlerThread:2784 [system_info.py:__init__():31] System info init
+2023-02-10 16:49:26,357 DEBUG   HandlerThread:2784 [system_info.py:__init__():46] System info init done
+2023-02-10 16:49:26,357 INFO    HandlerThread:2784 [system_monitor.py:start():151] Starting system monitor
+2023-02-10 16:49:26,357 INFO    SystemMonitor:2784 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-02-10 16:49:26,357 INFO    HandlerThread:2784 [system_monitor.py:probe():172] Collecting system info
+2023-02-10 16:49:26,364 INFO    SystemMonitor:2784 [interfaces.py:start():168] Started cpu
+2023-02-10 16:49:26,365 INFO    SystemMonitor:2784 [interfaces.py:start():168] Started disk
+2023-02-10 16:49:26,365 INFO    SystemMonitor:2784 [interfaces.py:start():168] Started gpu
+2023-02-10 16:49:26,365 INFO    SystemMonitor:2784 [interfaces.py:start():168] Started memory
+2023-02-10 16:49:26,378 INFO    SystemMonitor:2784 [interfaces.py:start():168] Started network
+2023-02-10 16:49:26,382 DEBUG   HandlerThread:2784 [system_info.py:probe():195] Probing system
+2023-02-10 16:49:26,384 DEBUG   HandlerThread:2784 [system_info.py:_probe_git():180] Probing git
+2023-02-10 16:49:26,464 DEBUG   HandlerThread:2784 [system_info.py:_probe_git():188] Probing git done
+2023-02-10 16:49:26,464 DEBUG   HandlerThread:2784 [system_info.py:probe():241] Probing system done
+2023-02-10 16:49:26,464 DEBUG   HandlerThread:2784 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-02-10T21:49:26.383324', 'startedAt': '2023-02-10T21:49:24.175392', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'GIT_REPOS/LAB/Beetle_classifier/Train/PyLi_wanb_sweep.ipynb', 'root': 'E:/GIT_REPOS/LAB/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': 'ca3418e6cb2e7b42998679b0226598761c4edbac'}, 'email': 'u13033663@tuks.co.za', 'host': 'GCM', 'username': 'GCM', 'executable': 'C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3800.0, 'min': 0.0, 'max': 3800.0}, 'cpu_freq_per_core': [{'current': 3800.0, 'min': 0.0, 'max': 3800.0}], 'disk': {'total': 447.11425399780273, 'used': 357.87614822387695}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.87503433227539}}
+2023-02-10 16:49:26,464 INFO    HandlerThread:2784 [system_monitor.py:probe():182] Finished collecting system info
+2023-02-10 16:49:26,464 INFO    HandlerThread:2784 [system_monitor.py:probe():185] Publishing system info
+2023-02-10 16:49:26,464 DEBUG   HandlerThread:2784 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-02-10 16:49:26,465 DEBUG   HandlerThread:2784 [system_info.py:_save_pip():67] Saving pip packages done
+2023-02-10 16:49:26,465 DEBUG   HandlerThread:2784 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-02-10 16:49:26,468 ERROR   HandlerThread:2784 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-02-10 16:49:26,470 DEBUG   HandlerThread:2784 [system_info.py:_save_conda():86] Saving conda packages done
+2023-02-10 16:49:26,471 INFO    HandlerThread:2784 [system_monitor.py:probe():187] Finished publishing system info
+2023-02-10 16:49:26,476 DEBUG   SenderThread:2784 [sender.py:send():336] send: files
+2023-02-10 16:49:26,476 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-02-10 16:49:26,494 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: stop_status
+2023-02-10 16:49:26,494 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: stop_status
+2023-02-10 16:49:26,726 DEBUG   SenderThread:2784 [sender.py:send():336] send: telemetry
+2023-02-10 16:49:26,728 DEBUG   SenderThread:2784 [sender.py:send():336] send: config
+2023-02-10 16:49:27,119 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-metadata.json
+2023-02-10 16:49:27,119 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\requirements.txt
+2023-02-10 16:49:27,119 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\conda-environment.yaml
+2023-02-10 16:49:27,120 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\output.log
+2023-02-10 16:49:27,120 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:27,128 INFO    wandb-upload_0:2784 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpz4o8832dwandb\2tlpei1j-wandb-metadata.json
+2023-02-10 16:49:28,929 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:28,931 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:28,932 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:28,932 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:29,132 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\output.log
+2023-02-10 16:49:29,133 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:29,937 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 16:49:31,051 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:31,052 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:31,052 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:31,053 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:31,147 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:33,186 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:33,188 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:33,188 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:33,188 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:34,169 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:35,207 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 16:49:35,318 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:35,319 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:35,320 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:35,320 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:36,184 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:36,753 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:36,754 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:36,755 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:36,755 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:37,191 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:38,242 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:38,243 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:38,243 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:38,245 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:39,206 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:40,260 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 16:49:40,356 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:40,357 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:40,358 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:40,359 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:41,221 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:41,501 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 16:49:41,501 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 16:49:42,468 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:42,469 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:42,470 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:42,470 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:43,236 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:44,579 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:44,581 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:44,581 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:44,582 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:45,251 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:45,592 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 16:49:46,538 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 16:49:46,608 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:46,609 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:46,609 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:46,611 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:47,266 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:47,478 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:47,480 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:47,480 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:47,481 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:48,274 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:49,581 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:49,583 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:49,583 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:49,583 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:50,289 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:50,598 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 16:49:51,576 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 16:49:51,737 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:51,738 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:51,738 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:51,739 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:52,304 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:53,935 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:53,937 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:53,937 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:53,938 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:54,319 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:55,957 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 16:49:56,335 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\config.yaml
+2023-02-10 16:49:56,613 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-10 16:49:56,771 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: partial_history
+2023-02-10 16:49:56,773 DEBUG   SenderThread:2784 [sender.py:send():336] send: history
+2023-02-10 16:49:56,774 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: summary_record
+2023-02-10 16:49:56,774 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:56,801 DEBUG   SenderThread:2784 [sender.py:send():336] send: telemetry
+2023-02-10 16:49:56,802 DEBUG   SenderThread:2784 [sender.py:send():336] send: exit
+2023-02-10 16:49:56,802 INFO    SenderThread:2784 [sender.py:send_exit():559] handling exit code: 0
+2023-02-10 16:49:56,803 INFO    SenderThread:2784 [sender.py:send_exit():561] handling runtime: 30
+2023-02-10 16:49:56,803 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:56,804 INFO    SenderThread:2784 [sender.py:send_exit():567] send defer
+2023-02-10 16:49:56,804 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:56,804 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 0
+2023-02-10 16:49:56,804 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:56,804 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-02-10 16:49:56,804 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 1
+2023-02-10 16:49:56,805 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:56,805 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 1
+2023-02-10 16:49:56,805 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:56,805 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-02-10 16:49:56,805 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 2
+2023-02-10 16:49:56,806 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:56,806 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 2
+2023-02-10 16:49:56,806 INFO    HandlerThread:2784 [system_monitor.py:finish():161] Stopping system monitor
+2023-02-10 16:49:56,806 DEBUG   SystemMonitor:2784 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-02-10 16:49:56,807 DEBUG   SystemMonitor:2784 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-02-10 16:49:56,807 INFO    HandlerThread:2784 [interfaces.py:finish():175] Joined cpu
+2023-02-10 16:49:56,807 DEBUG   SystemMonitor:2784 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-02-10 16:49:56,818 INFO    HandlerThread:2784 [interfaces.py:finish():175] Joined disk
+2023-02-10 16:49:56,894 INFO    HandlerThread:2784 [interfaces.py:finish():175] Joined gpu
+2023-02-10 16:49:56,894 INFO    HandlerThread:2784 [interfaces.py:finish():175] Joined memory
+2023-02-10 16:49:56,894 INFO    HandlerThread:2784 [interfaces.py:finish():175] Joined network
+2023-02-10 16:49:56,895 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:56,895 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-02-10 16:49:56,895 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 3
+2023-02-10 16:49:56,895 DEBUG   SenderThread:2784 [sender.py:send():336] send: stats
+2023-02-10 16:49:56,895 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:56,896 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 3
+2023-02-10 16:49:56,896 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:56,896 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-02-10 16:49:56,896 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 4
+2023-02-10 16:49:56,896 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:56,897 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 4
+2023-02-10 16:49:56,897 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:56,897 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-02-10 16:49:56,897 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 5
+2023-02-10 16:49:56,897 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:56,897 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 5
+2023-02-10 16:49:56,898 DEBUG   SenderThread:2784 [sender.py:send():336] send: summary
+2023-02-10 16:49:56,898 INFO    SenderThread:2784 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-02-10 16:49:56,899 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:56,899 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-02-10 16:49:56,899 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 6
+2023-02-10 16:49:56,899 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:56,899 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 6
+2023-02-10 16:49:56,899 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:56,900 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-02-10 16:49:56,905 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: status_report
+2023-02-10 16:49:57,109 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 7
+2023-02-10 16:49:57,109 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:57,109 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 7
+2023-02-10 16:49:57,110 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:57,110 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-02-10 16:49:57,339 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\output.log
+2023-02-10 16:49:57,339 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\config.yaml
+2023-02-10 16:49:57,340 INFO    Thread-17 :2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:49:57,817 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-10 16:49:58,945 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 8
+2023-02-10 16:49:58,945 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: poll_exit
+2023-02-10 16:49:58,945 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:58,946 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 8
+2023-02-10 16:49:58,947 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:58,947 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-02-10 16:49:58,947 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 9
+2023-02-10 16:49:58,947 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:58,947 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 9
+2023-02-10 16:49:58,948 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:58,948 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-02-10 16:49:58,948 INFO    SenderThread:2784 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-02-10 16:49:59,345 INFO    SenderThread:2784 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\output.log
+2023-02-10 16:49:59,345 INFO    SenderThread:2784 [dir_watcher.py:finish():392] scan: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files
+2023-02-10 16:49:59,346 INFO    SenderThread:2784 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\conda-environment.yaml conda-environment.yaml
+2023-02-10 16:49:59,346 INFO    SenderThread:2784 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\config.yaml config.yaml
+2023-02-10 16:49:59,346 INFO    SenderThread:2784 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\output.log output.log
+2023-02-10 16:49:59,349 INFO    SenderThread:2784 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\requirements.txt requirements.txt
+2023-02-10 16:49:59,350 INFO    SenderThread:2784 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-metadata.json wandb-metadata.json
+2023-02-10 16:49:59,354 INFO    SenderThread:2784 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json wandb-summary.json
+2023-02-10 16:49:59,357 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 10
+2023-02-10 16:49:59,358 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:49:59,358 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 10
+2023-02-10 16:49:59,362 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:49:59,362 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-02-10 16:49:59,362 INFO    SenderThread:2784 [file_pusher.py:finish():162] shutting down file pusher
+2023-02-10 16:49:59,968 INFO    wandb-upload_0:2784 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\config.yaml
+2023-02-10 16:50:00,073 INFO    wandb-upload_3:2784 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\wandb-summary.json
+2023-02-10 16:50:00,086 INFO    wandb-upload_2:2784 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\requirements.txt
+2023-02-10 16:50:00,497 INFO    wandb-upload_1:2784 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\files\output.log
+2023-02-10 16:50:00,702 INFO    Thread-16 (_thread_body):2784 [sender.py:transition_state():587] send defer: 11
+2023-02-10 16:50:00,702 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:50:00,702 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 11
+2023-02-10 16:50:00,703 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:50:00,703 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-02-10 16:50:00,703 INFO    SenderThread:2784 [file_pusher.py:join():167] waiting for file pusher
+2023-02-10 16:50:00,703 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 12
+2023-02-10 16:50:00,703 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:50:00,703 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 12
+2023-02-10 16:50:00,704 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:50:00,704 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-02-10 16:50:00,779 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 13
+2023-02-10 16:50:00,779 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:50:00,779 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 13
+2023-02-10 16:50:00,780 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:50:00,780 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-02-10 16:50:00,780 INFO    SenderThread:2784 [sender.py:transition_state():587] send defer: 14
+2023-02-10 16:50:00,780 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: defer
+2023-02-10 16:50:00,780 DEBUG   SenderThread:2784 [sender.py:send():336] send: final
+2023-02-10 16:50:00,781 INFO    HandlerThread:2784 [handler.py:handle_request_defer():170] handle defer: 14
+2023-02-10 16:50:00,781 DEBUG   SenderThread:2784 [sender.py:send():336] send: footer
+2023-02-10 16:50:00,781 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: defer
+2023-02-10 16:50:00,781 INFO    SenderThread:2784 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-02-10 16:50:00,782 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-10 16:50:00,782 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: server_info
+2023-02-10 16:50:00,783 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: poll_exit
+2023-02-10 16:50:00,783 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: get_summary
+2023-02-10 16:50:00,783 DEBUG   SenderThread:2784 [sender.py:send_request():363] send_request: server_info
+2023-02-10 16:50:00,784 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: sampled_history
+2023-02-10 16:50:01,168 DEBUG   HandlerThread:2784 [handler.py:handle_request():144] handle_request: shutdown
+2023-02-10 16:50:01,168 INFO    HandlerThread:2784 [handler.py:finish():841] shutting down handler
+2023-02-10 16:50:01,784 INFO    WriterThread:2784 [datastore.py:close():299] close: E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230210_164924-5xdfxm6k\run-5xdfxm6k.wandb
+2023-02-10 16:50:02,170 INFO    SenderThread:2784 [sender.py:finish():1493] shutting down sender
+2023-02-10 16:50:02,170 INFO    SenderThread:2784 [file_pusher.py:finish():162] shutting down file pusher
+2023-02-10 16:50:02,170 INFO    SenderThread:2784 [file_pusher.py:join():167] waiting for file pusher

@@ -1,0 +1,1 @@
+{"train_loss": 0.1765996813774109, "train_acc": 0.9453125, "epoch": 2, "trainer/global_step": 644, "_timestamp": 1676065844.4159734, "_runtime": 32.26482653617859, "_step": 14, "valid_loss": 0.18905393779277802, "valid_acc": 0.9441999793052673, "_wandb": {"runtime": 31}}

@@ -1,0 +1,49 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.10.9",
+    "heartbeatAt": "2023-02-10T22:30:23.983968",
+    "startedAt": "2023-02-10T22:30:22.027730",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "GIT_REPOS/LAB/Beetle_classifier/Train/PyLi_wanb_sweep.ipynb",
+    "root": "E:/GIT_REPOS/LAB/Beetle_classifier",
+    "git": {
+        "remote": "https://github.com/ChristopherMarais/Beetle_classifier.git",
+        "commit": "ca3418e6cb2e7b42998679b0226598761c4edbac"
+    },
+    "email": "u13033663@tuks.co.za",
+    "host": "GCM",
+    "username": "GCM",
+    "executable": "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3800.0,
+        "min": 0.0,
+        "max": 3800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 3800.0
+        }
+    ],
+    "disk": {
+        "total": 447.11425399780273,
+        "used": 358.0466423034668
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.87503433227539
+    }
+}
