@@ -28,4 +28,6 @@ conda activate Seg_310
 
 jupyter lab
 ```
-This will open jupyter lab in your browser. Navigate to where you downloaded the `guide_notebook.ipynb` in jupyterlab and open it
+This will open jupyter lab in your browser. 
+
+5. Navigate to where you downloaded the `guide_notebook.ipynb` in jupyterlab and open it
