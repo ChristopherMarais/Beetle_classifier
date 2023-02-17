@@ -1,7 +1,7 @@
 # How to use Segmentation script
 
 ## Set up the environment and open the guide notebook:
-1. Download and install Anaconda [here](https://www.anaconda.com/products/distribution)
+1. Download and install [Anaconda](https://www.anaconda.com/products/distribution)
 
 
 2. Download this folder (Segmentation) and all its contents. The most important files to have are:
