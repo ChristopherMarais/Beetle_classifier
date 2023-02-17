@@ -4,7 +4,8 @@
 1. Download and install [Anaconda](https://www.anaconda.com/products/distribution)
 
 
-2. Download this folder (Segmentation) and all its contents. The most important files to have are:
+2. Download this folder (Segmentation) and all its contents. The easiest way to do this is to just download the full Beetle_classifier Github repo as a zipped file. you can do this by going to [Beetle_classifier](https://github.com/ChristopherMarais/Beetle_classifier) and clicking on the green code button and selecting Download ZIP.<br />
+The most important files to have are:
   - `Ambrosia.py`
   - `environemnt.yml`
   - `guide_notebook.ipynb`
