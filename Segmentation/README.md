@@ -9,7 +9,7 @@ The most important files to have are:
   - `Ambrosia.py`
   - `environemnt.yml`
   - `guide_notebook.ipynb`
-  - `example_dataset.zip` (unzip this in any directory this is just an example dataset to practice on.)
+  - `example_dataset.zip` (unzip this in any directory this is just an example dataset to practice on.) (if this is not available yet, jsut copy some of the data over from the server database)
 
 
 3. Create a new anaconda environment using the `environemnt.yml` file using the following command in the anaconda command prompt terminal:<br />
