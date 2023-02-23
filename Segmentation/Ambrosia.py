@@ -70,6 +70,8 @@
 # *black and white is white on black
 
 # import requirements
+import os
+os.environ["OMP_NUM_THREADS"] = '1' #use this line on windows machines to avoid memory leaks
 import numpy as np
 import pandas as pd
 from math import ceil
@@ -112,7 +114,7 @@ class pre_process_image:
                                     )
                                 )
         # cluster boxes of blobs by size
-        kmean_result = KMeans(n_clusters=cluster_num).fit(
+        kmean_result = KMeans(n_clusters=cluster_num, n_init='auto').fit(
             np.array(
                 image_properties_df[['axis_major_length', 'axis_minor_length']]
             )
