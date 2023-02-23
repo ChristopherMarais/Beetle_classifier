@@ -61,7 +61,6 @@
             # INPUT:
                 # known_radius = (int) {default=1} the radius of the reference circle (shoudl be approximately the same size as the specimens to work best)
                 # canny_sigma = (int) {default=5} this describes how strict the cleaning border is for identifying the circle to place over the reference circle
-                # outlier_bw_image = (np.array) {default should be self.outlier_bw_image} change this when the circle is falsely detected
                 # outlier_idx = (int) {default should be self.outlier_idx} change this when the circle is falsely detected
             # OUTPUT(ATTRIBUTES):
                 # outlier_bw_image = (np.array) an updated version of the outlier iamge with a clean circle clear of artifacts
@@ -206,29 +205,45 @@ class pre_process_image:
         self.image_selected_df['circle_class'] = 'non_circle'
         self.image_selected_df.loc[self.outlier_idx, 'circle_class'] = 'circle'
         
-    def estimate_size(self, outlier_bw_image, outlier_idx, known_radius=1, canny_sigma=5):
-        self.outlier_idx = outlier_idx
-        self.outlier_bw_image = outlier_bw_image
-        outlier_inv_bw_image = np.invert(outlier_bw_image)
-        # remove the border touching blobs of all b&w images
-        clean_inv_bw_image_lst = []
-        for inv_bw_image in self.inv_bw_image_lst:
-            # bw_image = np.invert(inv_bw_image)
-            clean_inv_bw_image = clear_border(inv_bw_image)
-            clean_inv_bw_image_lst.append(clean_inv_bw_image)
-        # default is the image detected with detect_outlier
-        # change outlier_bw_image if this is not the ball bearing
-        edges = canny(outlier_bw_image, sigma=canny_sigma)
-        # Detect radius
-        max_r = int((max(outlier_inv_bw_image.shape)/2) + (self.image_edge_buffer/2)) # max radius
-        min_r = int((max_r-self.image_edge_buffer) - (self.image_edge_buffer/2)) # min radius
-        hough_radii = np.arange(min_r, max_r, 10)
-        hough_res = hough_circle(edges, hough_radii)
-        # Select the most prominent circle
-        accums, cx, cy, radii = hough_circle_peaks(hough_res, hough_radii, total_num_peaks=1)
-        circy, circx = disk((cy[0], cx[0]), radii[0])
-        # change the outlier image to fill in the circle
-        outlier_inv_bw_image[circy, circx] = True
+    def estimate_size(self, outlier_idx, known_radius=1, canny_sigma=5):
+        for i in range(len(self.corr_coef_sum)):
+            try:
+                self.outlier_idx = np.argsort(self.corr_coef_sum)[i]
+                self.outlier_val = np.sort(self.corr_coef_sum)[i]
+                self.outlier_col_image = self.col_image_lst[self.outlier_idx]
+                self.outlier_inv_bw_image = self.inv_bw_image_lst[self.outlier_idx]
+                self.outlier_bw_image = np.invert(self.outlier_inv_bw_image)
+                # update metadata dataframe
+                self.image_selected_df['circle_class'] = 'non_circle'
+                self.image_selected_df.loc[self.outlier_idx, 'circle_class'] = 'circle'
+                outlier_inv_bw_image = np.invert(self.outlier_bw_image)
+                # remove the border touching blobs of all b&w images
+                clean_inv_bw_image_lst = []
+                for inv_bw_image in self.inv_bw_image_lst:
+                    # bw_image = np.invert(inv_bw_image)
+                    clean_inv_bw_image = clear_border(inv_bw_image)
+                    clean_inv_bw_image_lst.append(clean_inv_bw_image)
+                # default is the image detected with detect_outlier
+                # change outlier_bw_image if this is not the ball bearing
+                edges = canny(self.outlier_bw_image, sigma=canny_sigma)
+                # Detect radius
+                max_r = int((max(outlier_inv_bw_image.shape)/2) + (self.image_edge_buffer/2)) # max radius
+                min_r = int((max_r-self.image_edge_buffer) - (self.image_edge_buffer/2)) # min radius
+                hough_radii = np.arange(min_r, max_r, 10)
+                hough_res = hough_circle(edges, hough_radii)
+                # Select the most prominent circle
+                accums, cx, cy, radii = hough_circle_peaks(hough_res, hough_radii, total_num_peaks=1)
+                circy, circx = disk((cy[0], cx[0]), radii[0])
+                # change the outlier image to fill in the circle
+                outlier_inv_bw_image[circy, circx] = True
+                break
+        
+            except IndexError:
+                print('Updating circle classification for image: '+ str(self.image_dir))
+        
+            else:
+                print("No circle was found to estimate beetle size")
+            
         self.outlier_inv_bw_image = clear_border(outlier_inv_bw_image)
         clean_inv_bw_image_lst[outlier_idx] = self.outlier_inv_bw_image
         self.clean_inv_bw_image_lst = clean_inv_bw_image_lst
