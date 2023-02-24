@@ -240,7 +240,7 @@ class pre_process_image:
                 outlier_inv_bw_image[circy, circx] = True # this index error occurs when the outlier object circle does not fit into the image
                 
                 self.outlier_inv_bw_image = clear_border(outlier_inv_bw_image)
-                clean_inv_bw_image_lst[outlier_idx] = self.outlier_inv_bw_image
+                clean_inv_bw_image_lst[self.outlier_idx] = self.outlier_inv_bw_image
                 self.clean_inv_bw_image_lst = clean_inv_bw_image_lst
                 # get the area of the ball bearing based on the known radius
                 circle_area = np.pi*(known_radius**2)
@@ -256,7 +256,7 @@ class pre_process_image:
                 #         px_count = px_dict[True]
                     px_count_lst.append(px_count)
                 self.image_selected_df['pixel_count'] = px_count_lst
-                circle_px_count = px_count_lst[outlier_idx]
+                circle_px_count = px_count_lst[self.outlier_idx]
                 area_ar = (np.array(px_count_lst)/circle_px_count)*circle_area
                 self.image_selected_df['area'] = area_ar
                 
