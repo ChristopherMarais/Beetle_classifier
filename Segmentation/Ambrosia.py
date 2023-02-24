@@ -209,7 +209,8 @@ class pre_process_image:
         
     def estimate_size(self, outlier_idx, known_radius=1, canny_sigma=5):
         for i in range(len(self.corr_coef_sum)):
-            if i == len(self.corr_coef_sum):
+            # add appropriate data to dataframe when circle not detected at all
+            if i == (len(self.corr_coef_sum)-1):
                 self.outlier_idx = None
                 self.outlier_val = None
                 self.outlier_col_image = None
@@ -223,7 +224,7 @@ class pre_process_image:
                     # bw_image = np.invert(inv_bw_image)
                     clean_inv_bw_image = clear_border(inv_bw_image)
                     clean_inv_bw_image_lst.append(clean_inv_bw_image)
-                    
+                px_count_lst = []
                 for bw_img in clean_inv_bw_image_lst:
                     unique_px_count = np.unique(bw_img, return_counts=True)
                     px_dict = dict(zip(list(unique_px_count[0]), list(unique_px_count[1])))
@@ -231,7 +232,7 @@ class pre_process_image:
                         px_count = 0
                     else:
                         px_count = px_dict[True]
-                        px_count_lst.append(px_count)
+                    px_count_lst.append(px_count)
                 self.image_selected_df['pixel_count'] = px_count_lst
                 print("Circle could not be found: "+str(self.image_dir))
             else:
@@ -273,13 +274,6 @@ class pre_process_image:
                     px_count_lst = []
                     for bw_img in clean_inv_bw_image_lst:
                         px_count = np.unique(bw_img, return_counts=True)[1][1] # this index error occurs when the outlier object touches the edge of the image (forces recalculation of outlier)
-                    # for bw_img in clean_inv_bw_image_lst:
-                    #     unique_px_count = np.unique(bw_img, return_counts=True)
-                    #     px_dict = dict(zip(list(unique_px_count[0]), list(unique_px_count[1])))
-                    #     if len(px_dict) == 1:
-                    #         px_count = 0
-                    #     else:
-                    #         px_count = px_dict[True]
                         px_count_lst.append(px_count)
                     self.image_selected_df['pixel_count'] = px_count_lst
                     circle_px_count = px_count_lst[self.outlier_idx]
