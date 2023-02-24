@@ -209,61 +209,89 @@ class pre_process_image:
         
     def estimate_size(self, outlier_idx, known_radius=1, canny_sigma=5):
         for i in range(len(self.corr_coef_sum)):
-            try:
-                self.outlier_idx = np.argsort(self.corr_coef_sum)[i]
-                self.outlier_val = np.sort(self.corr_coef_sum)[i]
-                self.outlier_col_image = self.col_image_lst[self.outlier_idx]
-                self.outlier_inv_bw_image = self.inv_bw_image_lst[self.outlier_idx]
-                self.outlier_bw_image = np.invert(self.outlier_inv_bw_image)
+            if i == len(self.corr_coef_sum):
+                self.outlier_idx = None
+                self.outlier_val = None
+                self.outlier_col_image = None
+                self.outlier_inv_bw_image = None
+                self.outlier_bw_image = None
                 # update metadata dataframe
                 self.image_selected_df['circle_class'] = 'non_circle'
-                self.image_selected_df.loc[self.outlier_idx, 'circle_class'] = 'circle'
-                outlier_inv_bw_image = np.invert(self.outlier_bw_image)
-                # remove the border touching blobs of all b&w images
+                self.image_selected_df['area'] = 0
                 clean_inv_bw_image_lst = []
                 for inv_bw_image in self.inv_bw_image_lst:
                     # bw_image = np.invert(inv_bw_image)
                     clean_inv_bw_image = clear_border(inv_bw_image)
                     clean_inv_bw_image_lst.append(clean_inv_bw_image)
-                # default is the image detected with detect_outlier
-                # change outlier_bw_image if this is not the ball bearing
-                edges = canny(self.outlier_bw_image, sigma=canny_sigma)
-                # Detect radius
-                max_r = int((max(outlier_inv_bw_image.shape)/2) + (self.image_edge_buffer/2)) # max radius
-                min_r = int((max_r-self.image_edge_buffer) - (self.image_edge_buffer/2)) # min radius
-                hough_radii = np.arange(min_r, max_r, 10)
-                hough_res = hough_circle(edges, hough_radii)
-                # Select the most prominent circle
-                accums, cx, cy, radii = hough_circle_peaks(hough_res, hough_radii, total_num_peaks=1)
-                circy, circx = disk((cy[0], cx[0]), radii[0])
-                # change the outlier image to fill in the circle
-                outlier_inv_bw_image[circy, circx] = True # this index error occurs when the outlier object circle does not fit into the image
-                
-                self.outlier_inv_bw_image = clear_border(outlier_inv_bw_image)
-                clean_inv_bw_image_lst[self.outlier_idx] = self.outlier_inv_bw_image
-                self.clean_inv_bw_image_lst = clean_inv_bw_image_lst
-                # get the area of the ball bearing based on the known radius
-                circle_area = np.pi*(known_radius**2)
-                px_count_lst = []
+                    
                 for bw_img in clean_inv_bw_image_lst:
-                    px_count = np.unique(bw_img, return_counts=True)[1][1] # this index error occurs when the outlier object touches the edge of the image (forces recalculation of outlier)
-                # for bw_img in clean_inv_bw_image_lst:
-                #     unique_px_count = np.unique(bw_img, return_counts=True)
-                #     px_dict = dict(zip(list(unique_px_count[0]), list(unique_px_count[1])))
-                #     if len(px_dict) == 1:
-                #         px_count = 0
-                #     else:
-                #         px_count = px_dict[True]
-                    px_count_lst.append(px_count)
+                    unique_px_count = np.unique(bw_img, return_counts=True)
+                    px_dict = dict(zip(list(unique_px_count[0]), list(unique_px_count[1])))
+                    if len(px_dict) == 1:
+                        px_count = 0
+                    else:
+                        px_count = px_dict[True]
+                        px_count_lst.append(px_count)
                 self.image_selected_df['pixel_count'] = px_count_lst
-                circle_px_count = px_count_lst[self.outlier_idx]
-                area_ar = (np.array(px_count_lst)/circle_px_count)*circle_area
-                self.image_selected_df['area'] = area_ar
-                
-                break
-        
-            except IndexError:
-                print('Updating circle classification for image: '+ str(self.image_dir))
-        
+                print("Circle could not be found: "+str(self.image_dir))
             else:
-                print("No circle was found to estimate beetle size")
+                try:
+                    self.outlier_idx = np.argsort(self.corr_coef_sum)[i]
+                    self.outlier_val = np.sort(self.corr_coef_sum)[i]
+                    self.outlier_col_image = self.col_image_lst[self.outlier_idx]
+                    self.outlier_inv_bw_image = self.inv_bw_image_lst[self.outlier_idx]
+                    self.outlier_bw_image = np.invert(self.outlier_inv_bw_image)
+                    # update metadata dataframe
+                    self.image_selected_df['circle_class'] = 'non_circle'
+                    self.image_selected_df.loc[self.outlier_idx, 'circle_class'] = 'circle'
+                    outlier_inv_bw_image = np.invert(self.outlier_bw_image)
+                    # remove the border touching blobs of all b&w images
+                    clean_inv_bw_image_lst = []
+                    for inv_bw_image in self.inv_bw_image_lst:
+                        # bw_image = np.invert(inv_bw_image)
+                        clean_inv_bw_image = clear_border(inv_bw_image)
+                        clean_inv_bw_image_lst.append(clean_inv_bw_image)
+                    # default is the image detected with detect_outlier
+                    # change outlier_bw_image if this is not the ball bearing
+                    edges = canny(self.outlier_bw_image, sigma=canny_sigma)
+                    # Detect radius
+                    max_r = int((max(outlier_inv_bw_image.shape)/2) + (self.image_edge_buffer/2)) # max radius
+                    min_r = int((max_r-self.image_edge_buffer) - (self.image_edge_buffer/2)) # min radius
+                    hough_radii = np.arange(min_r, max_r, 10)
+                    hough_res = hough_circle(edges, hough_radii)
+                    # Select the most prominent circle
+                    accums, cx, cy, radii = hough_circle_peaks(hough_res, hough_radii, total_num_peaks=1)
+                    circy, circx = disk((cy[0], cx[0]), radii[0])
+                    # change the outlier image to fill in the circle
+                    outlier_inv_bw_image[circy, circx] = True # this index error occurs when the outlier object circle does not fit into the image
+
+                    self.outlier_inv_bw_image = clear_border(outlier_inv_bw_image)
+                    clean_inv_bw_image_lst[self.outlier_idx] = self.outlier_inv_bw_image
+                    self.clean_inv_bw_image_lst = clean_inv_bw_image_lst
+                    # get the area of the ball bearing based on the known radius
+                    circle_area = np.pi*(known_radius**2)
+                    px_count_lst = []
+                    for bw_img in clean_inv_bw_image_lst:
+                        px_count = np.unique(bw_img, return_counts=True)[1][1] # this index error occurs when the outlier object touches the edge of the image (forces recalculation of outlier)
+                    # for bw_img in clean_inv_bw_image_lst:
+                    #     unique_px_count = np.unique(bw_img, return_counts=True)
+                    #     px_dict = dict(zip(list(unique_px_count[0]), list(unique_px_count[1])))
+                    #     if len(px_dict) == 1:
+                    #         px_count = 0
+                    #     else:
+                    #         px_count = px_dict[True]
+                        px_count_lst.append(px_count)
+                    self.image_selected_df['pixel_count'] = px_count_lst
+                    circle_px_count = px_count_lst[self.outlier_idx]
+                    area_ar = (np.array(px_count_lst)/circle_px_count)*circle_area
+                    self.image_selected_df['area'] = area_ar
+
+                    break
+
+                except IndexError:
+                    print('Updating circle classification for image: '+ str(self.image_dir))
+
+                else:
+                    print("No circle was found to estimate beetle size")
+                
+# add a section at line 219 that labels all area as 0 and all circle_class as non_circle when the least outlying object is considered.
