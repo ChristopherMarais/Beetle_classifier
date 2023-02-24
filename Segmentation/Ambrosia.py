@@ -218,7 +218,7 @@ class pre_process_image:
                 self.outlier_bw_image = None
                 # update metadata dataframe
                 self.image_selected_df['circle_class'] = 'non_circle'
-                self.image_selected_df['area'] = 0
+                self.image_selected_df['real_area'] = 0
                 clean_inv_bw_image_lst = []
                 for inv_bw_image in self.inv_bw_image_lst:
                     # bw_image = np.invert(inv_bw_image)
@@ -278,7 +278,7 @@ class pre_process_image:
                     self.image_selected_df['pixel_count'] = px_count_lst
                     circle_px_count = px_count_lst[self.outlier_idx]
                     area_ar = (np.array(px_count_lst)/circle_px_count)*circle_area
-                    self.image_selected_df['area'] = area_ar
+                    self.image_selected_df['real_area'] = area_ar
 
                     break
 
