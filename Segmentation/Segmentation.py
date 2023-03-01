@@ -5,7 +5,7 @@ import pandas as pd
 from Ambrosia import pre_process_image
 from skimage import io
 
-def segmentation(folder_dir, output_dir)
+def segmentation(folder_dir, output_dir):
     try:
         metadata_df = pd.read_csv(output_dir+"segmented_images_metadata.csv", index_col="Unnamed: 0")
     except:
