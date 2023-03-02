@@ -54,10 +54,10 @@ def segmentation(folder_dir, output_dir):
                         # add info to table
                         seg_img_df = pre_process.image_selected_df
                         seg_img_df['composite_image_path'] = file
-                        seg_img_df['species'] = label[2]
-                        seg_img_df['vial'] = label[3]
-                        seg_img_df['subset'] = label[4]
-                        seg_img_df['composite_image_number'] = label[5]
+                        seg_img_df['species'] = label[-4]
+                        seg_img_df['vial'] = label[-3]
+                        seg_img_df['subset'] = label[-2]
+                        seg_img_df['composite_image_number'] = label[-1]
                         seg_img_df['segmented_image_name'] = seg_img_df['species']+"_"+seg_img_df['vial']+"_"+seg_img_df['subset']+"_"+seg_img_df['composite_image_number']+"_"+seg_img_df.index.astype(str)
                         metadata_df = pd.concat([metadata_df, seg_img_df])
                     except:
