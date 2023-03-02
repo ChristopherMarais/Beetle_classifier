@@ -7,7 +7,7 @@ from skimage import io
 
 def segmentation(folder_dir, output_dir):
     try:
-        metadata_df = pd.read_csv(output_dir+"segmented_images_metadata.csv", index_col="Unnamed: 0")
+        metadata_df = pd.read_csv(output_dir+"segmented_images_metadata.csv", index_col="Unnamed: 0",low_memory=False)
     except:
         metadata_df = pd.DataFrame(columns=['centroid-0', 
                                             'centroid-1', 
