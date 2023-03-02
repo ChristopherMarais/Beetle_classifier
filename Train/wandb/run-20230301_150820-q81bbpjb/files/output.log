@@ -1,0 +1,52 @@
+GPU available: True (cuda), used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+  | Name     | Type               | Params
+------------------------------------------------
+0 | layer_1  | Linear             | 100 K
+1 | layer_2  | Linear             | 33.0 K
+2 | layer_3  | Linear             | 2.6 K
+3 | accuracy | MulticlassAccuracy | 0
+------------------------------------------------
+136 K     Trainable params
+0         Non-trainable params
+136 K     Total params
+0.544     Total estimated model params size (MB)
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
+GPU available: True (cuda), used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+  | Name     | Type               | Params
+------------------------------------------------
+0 | layer_1  | Conv2d             | 30
+1 | layer_2  | Conv2d             | 168
+2 | layer_3  | Conv2d             | 660
+3 | pool     | MaxPool2d          | 0
+4 | layer_5  | Linear             | 30.0 M
+5 | layer_6  | Linear             | 100 K
+6 | layer_7  | Linear             | 5.0 K
+7 | layer_8  | Linear             | 510
+8 | layer_9  | Linear             | 110
+9 | accuracy | MulticlassAccuracy | 0
+------------------------------------------------
+30.1 M    Trainable params
+0         Non-trainable params
+30.1 M    Total params
+120.431   Total estimated model params size (MB)
+torch.Size([10, 30000])
+torch.Size([10, 30000])
+torch.Size([10, 30000])
+torch.Size([10, 30000])
+torch.Size([10, 30000])
+torch.Size([10, 30000])
+torch.Size([10, 30000])
+`Trainer.fit` stopped: `max_epochs=3` reached.
+torch.Size([10, 30000])
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       Test metric             DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+        test_acc            0.20000000298023224
+        test_loss           2.8520259857177734
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
