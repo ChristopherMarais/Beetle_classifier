@@ -1,0 +1,43 @@
+2023-03-02 21:33:23,047 INFO    MainThread:10580 [wandb_setup.py:_flush():68] Configure stats pid to 10580
+2023-03-02 21:33:23,047 INFO    MainThread:10580 [wandb_setup.py:_flush():68] Loading settings from C:\Users\GCM\.config\wandb\settings
+2023-03-02 21:33:23,047 INFO    MainThread:10580 [wandb_setup.py:_flush():68] Loading settings from E:\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\settings
+2023-03-02 21:33:23,047 INFO    MainThread:10580 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-03-02 21:33:23,047 INFO    MainThread:10580 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-03-02 21:33:23,048 INFO    MainThread:10580 [wandb_init.py:_log_setup():492] Logging user logs to .\wandb\run-20230302_213323-wyiovytf\logs\debug.log
+2023-03-02 21:33:23,048 INFO    MainThread:10580 [wandb_init.py:_log_setup():493] Logging internal logs to .\wandb\run-20230302_213323-wyiovytf\logs\debug-internal.log
+2023-03-02 21:33:23,048 INFO    MainThread:10580 [wandb_init.py:_jupyter_setup():438] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000019410FC9B70>
+2023-03-02 21:33:23,049 INFO    MainThread:10580 [wandb_init.py:init():532] calling init triggers
+2023-03-02 21:33:23,049 INFO    MainThread:10580 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {}
+2023-03-02 21:33:23,049 INFO    MainThread:10580 [wandb_init.py:init():588] starting backend
+2023-03-02 21:33:23,049 INFO    MainThread:10580 [wandb_init.py:init():592] setting up manager
+2023-03-02 21:33:23,063 INFO    MainThread:10580 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-03-02 21:33:23,067 INFO    MainThread:10580 [wandb_init.py:init():599] backend started and connected
+2023-03-02 21:33:23,075 INFO    MainThread:10580 [wandb_run.py:_label_probe_notebook():1203] probe notebook
+2023-03-02 21:33:23,078 INFO    MainThread:10580 [wandb_run.py:_label_probe_notebook():1213] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-03-02 21:33:23,078 INFO    MainThread:10580 [wandb_init.py:init():687] updated telemetry
+2023-03-02 21:33:23,366 INFO    MainThread:10580 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-03-02 21:33:24,023 INFO    MainThread:10580 [wandb_run.py:_on_init():2134] communicating current version
+2023-03-02 21:33:24,175 INFO    MainThread:10580 [wandb_run.py:_on_init():2143] got version response 
+2023-03-02 21:33:24,175 INFO    MainThread:10580 [wandb_init.py:init():775] starting run threads in backend
+2023-03-02 21:33:24,917 INFO    MainThread:10580 [wandb_run.py:_console_start():2114] atexit reg
+2023-03-02 21:33:24,918 INFO    MainThread:10580 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-03-02 21:33:24,918 INFO    MainThread:10580 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-03-02 21:33:24,918 INFO    MainThread:10580 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-03-02 21:33:24,920 INFO    MainThread:10580 [wandb_init.py:init():817] run started, returning control to user process
+2023-03-02 21:33:25,431 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb None None {'n_classes': 10, 'acc_task': 'multiclass', 'lr': 0.001}
+2023-03-02 21:33:30,556 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-02 21:33:32,731 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-02 21:33:37,518 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-02 21:33:39,209 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-02 21:33:41,052 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb None None {'n_classes': 10, 'acc_task': 'multiclass', 'lr': 0.001}
+2023-03-02 21:33:41,160 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'test_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'test_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-02 21:33:42,478 INFO    MainThread:10580 [wandb_run.py:_finish():1854] finishing run christopher-marais/computer_vision_test_single/wyiovytf
+2023-03-02 21:33:42,544 INFO    MainThread:10580 [jupyter.py:save_history():478] saving 12 cells to _session_history.ipynb
+2023-03-02 21:33:42,545 INFO    MainThread:10580 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'session_history') code\_session_history.ipynb None
+2023-03-02 21:33:42,556 INFO    MainThread:10580 [jupyter.py:_save_ipynb():390] looking for notebook: GIT_REPOS/LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb
+2023-03-02 21:33:42,557 INFO    MainThread:10580 [wandb_init.py:_jupyter_teardown():420] cleaning up jupyter logic
+2023-03-02 21:33:42,557 INFO    MainThread:10580 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 0
+2023-03-02 21:33:42,557 INFO    MainThread:10580 [wandb_run.py:_restore():2066] restore
+2023-03-02 21:33:42,557 INFO    MainThread:10580 [wandb_run.py:_restore():2072] restore done
+2023-03-02 21:34:45,650 WARNING MsgRouterThr:10580 [router.py:message_loop():77] message_loop has been closed

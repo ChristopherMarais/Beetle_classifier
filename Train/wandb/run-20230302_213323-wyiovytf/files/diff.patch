@@ -1,0 +1,1110 @@
+diff --git a/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb b/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb
+index ced9a67..9a23400 100644
+--- a/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb
+@@ -6,11 +6,11 @@
+    "id": "c7b471f1-f5fa-4eb1-b9ae-2d67ed8838df",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:16.271323Z",
+-     "iopub.status.busy": "2023-03-01T20:56:16.271323Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.861826Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.860831Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:16.271323Z"
++     "iopub.execute_input": "2023-03-03T01:56:20.325255Z",
++     "iopub.status.busy": "2023-03-03T01:56:20.324254Z",
++     "iopub.status.idle": "2023-03-03T01:56:29.435389Z",
++     "shell.execute_reply": "2023-03-03T01:56:29.434386Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:20.325255Z"
+     },
+     "tags": []
+    },
+@@ -65,11 +65,11 @@
+    "id": "289e69f9-9a23-4f33-94af-a8950f9e1818",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.862838Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.862838Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.876388Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.876388Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.862838Z"
++     "iopub.execute_input": "2023-03-03T01:56:29.436887Z",
++     "iopub.status.busy": "2023-03-03T01:56:29.436388Z",
++     "iopub.status.idle": "2023-03-03T01:56:29.450886Z",
++     "shell.execute_reply": "2023-03-03T01:56:29.449887Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:29.436887Z"
+     },
+     "tags": []
+    },
+@@ -101,11 +101,11 @@
+    "id": "5fc60314-d2bb-4767-9cef-219da9f1955d",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.879932Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.879932Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.893218Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.891688Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.879932Z"
++     "iopub.execute_input": "2023-03-03T01:56:29.453889Z",
++     "iopub.status.busy": "2023-03-03T01:56:29.453387Z",
++     "iopub.status.idle": "2023-03-03T01:56:29.759190Z",
++     "shell.execute_reply": "2023-03-03T01:56:29.758689Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:29.453889Z"
+     },
+     "tags": []
+    },
+@@ -138,11 +138,11 @@
+    "id": "01c28e3c-850d-48b6-8db9-3a8804e0c9ae",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.895234Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.894231Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.908832Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.907873Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.895234Z"
++     "iopub.execute_input": "2023-03-03T01:56:29.760689Z",
++     "iopub.status.busy": "2023-03-03T01:56:29.760189Z",
++     "iopub.status.idle": "2023-03-03T01:56:30.067445Z",
++     "shell.execute_reply": "2023-03-03T01:56:30.066448Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:29.760689Z"
+     },
+     "tags": []
+    },
+@@ -205,11 +205,11 @@
+    "id": "8b9e722b-cda4-4956-a0c1-8eb31023f765",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.909835Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.909835Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.924555Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.923617Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.909835Z"
++     "iopub.execute_input": "2023-03-03T01:56:30.068947Z",
++     "iopub.status.busy": "2023-03-03T01:56:30.068445Z",
++     "iopub.status.idle": "2023-03-03T01:56:30.469163Z",
++     "shell.execute_reply": "2023-03-03T01:56:30.468166Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:30.068947Z"
+     },
+     "tags": []
+    },
+@@ -276,11 +276,11 @@
+    "id": "9dbe4b19-9805-40b4-a513-ea35715a0c64",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.926555Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.926555Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.940645Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.939643Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.926555Z"
++     "iopub.execute_input": "2023-03-03T01:56:30.470662Z",
++     "iopub.status.busy": "2023-03-03T01:56:30.470163Z",
++     "iopub.status.idle": "2023-03-03T01:56:31.194220Z",
++     "shell.execute_reply": "2023-03-03T01:56:31.193718Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:30.470662Z"
+     },
+     "tags": []
+    },
+@@ -312,11 +312,11 @@
+    "id": "7539d3a5-ca4f-4ba3-a462-05875d4b9a90",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.942648Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.942648Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.957018Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.955693Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.942648Z"
++     "iopub.execute_input": "2023-03-03T01:56:31.195718Z",
++     "iopub.status.busy": "2023-03-03T01:56:31.195718Z",
++     "iopub.status.idle": "2023-03-03T01:56:31.596544Z",
++     "shell.execute_reply": "2023-03-03T01:56:31.596042Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:31.195718Z"
+     },
+     "tags": []
+    },
+@@ -356,11 +356,11 @@
+    "id": "40361447-e7c3-47f2-9e04-a9058b596861",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.959403Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.959403Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.988223Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.987711Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.959403Z"
++     "iopub.execute_input": "2023-03-03T01:56:31.598043Z",
++     "iopub.status.busy": "2023-03-03T01:56:31.597543Z",
++     "iopub.status.idle": "2023-03-03T01:56:32.013751Z",
++     "shell.execute_reply": "2023-03-03T01:56:32.013251Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:31.598043Z"
+     },
+     "tags": []
+    },
+@@ -451,11 +451,11 @@
+    "id": "deb34aed-792a-4022-a878-f8d6c4ffa97c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.989234Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.989234Z",
+-     "iopub.status.idle": "2023-03-01T20:56:21.019858Z",
+-     "shell.execute_reply": "2023-03-01T20:56:21.018856Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.989234Z"
++     "iopub.execute_input": "2023-03-03T01:56:32.015251Z",
++     "iopub.status.busy": "2023-03-03T01:56:32.014751Z",
++     "iopub.status.idle": "2023-03-03T01:56:32.338158Z",
++     "shell.execute_reply": "2023-03-03T01:56:32.337159Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:32.015251Z"
+     },
+     "tags": []
+    },
+@@ -523,6 +523,13 @@
+     "        return loss\n",
+     "\n",
+     "    def validation_step(self,batch,batch_idx):\n",
++    "#         preds, loss, acc = self._get_preds_loss_accuracy(batch)\n",
++    "\n",
++    "#         # Log loss and metric\n",
++    "#         self.log('val_loss', loss)\n",
++    "#         self.log('val_accuracy', acc)\n",
++    "        \n",
++    "        \n",
+     "        x,y = batch\n",
+     "        y_pred = self(x)\n",
+     "        loss = F.cross_entropy(y_pred,y)\n",
+@@ -535,7 +542,7 @@
+     "        wandb.log({\"val_conf_mat\" : wandb.plot.confusion_matrix(probs=self.cpu_pred,\n",
+     "                        y_true=self.cpu_y, preds=None,\n",
+     "                        class_names=self.class_names)})\n",
+-    "        return loss\n",
++    "        return y_pred\n",
+     "\n",
+     "    def test_step(self,batch,batch_idx):\n",
+     "        x,y = batch\n",
+@@ -567,11 +574,11 @@
+    "id": "e2170c95-2962-43ec-a457-31dfec8a23d2",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:21.023110Z",
+-     "iopub.status.busy": "2023-03-01T20:56:21.022116Z",
+-     "iopub.status.idle": "2023-03-01T20:56:21.035162Z",
+-     "shell.execute_reply": "2023-03-01T20:56:21.034159Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:21.023110Z"
++     "iopub.execute_input": "2023-03-03T01:56:32.339659Z",
++     "iopub.status.busy": "2023-03-03T01:56:32.339158Z",
++     "iopub.status.idle": "2023-03-03T01:56:33.078155Z",
++     "shell.execute_reply": "2023-03-03T01:56:33.077654Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:32.339659Z"
+     },
+     "tags": []
+    },
+@@ -588,11 +595,11 @@
+    "id": "188ce4ef-e6b7-4320-8e5d-ceeb616bf7d1",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:21.037696Z",
+-     "iopub.status.busy": "2023-03-01T20:56:21.036175Z",
+-     "iopub.status.idle": "2023-03-01T20:56:21.050772Z",
+-     "shell.execute_reply": "2023-03-01T20:56:21.049776Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:21.037696Z"
++     "iopub.execute_input": "2023-03-03T01:56:33.079656Z",
++     "iopub.status.busy": "2023-03-03T01:56:33.079156Z",
++     "iopub.status.idle": "2023-03-03T01:56:33.495175Z",
++     "shell.execute_reply": "2023-03-03T01:56:33.494673Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:33.079656Z"
+     },
+     "tags": []
+    },
+@@ -633,11 +640,11 @@
+    "id": "762279ca-26d9-4310-992f-b6f8912da7fe",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:21.054045Z",
+-     "iopub.status.busy": "2023-03-01T20:56:21.054045Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.581762Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.580856Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:21.054045Z"
++     "iopub.execute_input": "2023-03-03T01:56:33.498672Z",
++     "iopub.status.busy": "2023-03-03T01:56:33.498672Z",
++     "iopub.status.idle": "2023-03-03T01:56:50.347516Z",
++     "shell.execute_reply": "2023-03-03T01:56:50.344015Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:33.498672Z"
+     },
+     "tags": []
+    },
+@@ -664,7 +671,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Run data is saved locally in <code>.\\wandb\\run-20230301_155623-r20dbs67</code>"
++       "Run data is saved locally in <code>.\\wandb\\run-20230302_205638-htlhzkne</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -676,7 +683,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/r20dbs67' target=\"_blank\">tough-meadow-4</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/htlhzkne' target=\"_blank\">misty-darkness-5</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -700,7 +707,7 @@
+     {
+      "data": {
+       "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/r20dbs67' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/r20dbs67</a>"
++       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/htlhzkne' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/htlhzkne</a>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -741,7 +748,7 @@
+     {
+      "data": {
+       "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "a55cd26ad321421b80f30fb5a2bc2460",
++       "model_id": "8617453a48aa4c45818b2aea4ac5130f",
+        "version_major": 2,
+        "version_minor": 0
+       },
+@@ -756,9 +763,9 @@
+      "name": "stderr",
+      "output_type": "stream",
+      "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
+       "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+       "  rank_zero_warn(\n"
+      ]
+     },
+@@ -777,19 +784,19 @@
+       "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+       "\u001b[1;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+       "Cell \u001b[1;32mIn[12], line 21\u001b[0m\n\u001b[0;32m     10\u001b[0m model \u001b[38;5;241m=\u001b[39m YogaModel(n_classes\u001b[38;5;241m=\u001b[39mnum_of_classes)\n\u001b[0;32m     13\u001b[0m trainer \u001b[38;5;241m=\u001b[39m Trainer(\n\u001b[0;32m     14\u001b[0m     accelerator\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mgpu\u001b[39m\u001b[38;5;124m'\u001b[39m, \n\u001b[0;32m     15\u001b[0m     devices\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m1\u001b[39m, \u001b[38;5;66;03m# use all GPU's (-1)\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m     18\u001b[0m     max_epochs\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m3\u001b[39m            \u001b[38;5;66;03m# number of epochs\u001b[39;00m\n\u001b[0;32m     19\u001b[0m     )\n\u001b[1;32m---> 21\u001b[0m \u001b[43mtrainer\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mfit\u001b[49m\u001b[43m(\u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdata\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m     23\u001b[0m trainer\u001b[38;5;241m.\u001b[39mtest(model, datamodule\u001b[38;5;241m=\u001b[39mdata)\n\u001b[0;32m     25\u001b[0m wandb\u001b[38;5;241m.\u001b[39mfinish()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:608\u001b[0m, in \u001b[0;36mTrainer.fit\u001b[1;34m(self, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path)\u001b[0m\n\u001b[0;32m    606\u001b[0m model \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_maybe_unwrap_optimized(model)\n\u001b[0;32m    607\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstrategy\u001b[38;5;241m.\u001b[39m_lightning_module \u001b[38;5;241m=\u001b[39m model\n\u001b[1;32m--> 608\u001b[0m \u001b[43mcall\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_call_and_handle_interrupt\u001b[49m\u001b[43m(\u001b[49m\n\u001b[0;32m    609\u001b[0m \u001b[43m    \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_fit_impl\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mtrain_dataloaders\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mval_dataloaders\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdatamodule\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mckpt_path\u001b[49m\n\u001b[0;32m    610\u001b[0m \u001b[43m\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\call.py:38\u001b[0m, in \u001b[0;36m_call_and_handle_interrupt\u001b[1;34m(trainer, trainer_fn, *args, **kwargs)\u001b[0m\n\u001b[0;32m     36\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m trainer\u001b[38;5;241m.\u001b[39mstrategy\u001b[38;5;241m.\u001b[39mlauncher\u001b[38;5;241m.\u001b[39mlaunch(trainer_fn, \u001b[38;5;241m*\u001b[39margs, trainer\u001b[38;5;241m=\u001b[39mtrainer, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m     37\u001b[0m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m---> 38\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m trainer_fn(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m     40\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m _TunerExitException:\n\u001b[0;32m     41\u001b[0m     trainer\u001b[38;5;241m.\u001b[39m_call_teardown_hook()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:650\u001b[0m, in \u001b[0;36mTrainer._fit_impl\u001b[1;34m(self, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path)\u001b[0m\n\u001b[0;32m    643\u001b[0m ckpt_path \u001b[38;5;241m=\u001b[39m ckpt_path \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mresume_from_checkpoint\n\u001b[0;32m    644\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_ckpt_path \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39m_set_ckpt_path(\n\u001b[0;32m    645\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate\u001b[38;5;241m.\u001b[39mfn,\n\u001b[0;32m    646\u001b[0m     ckpt_path,  \u001b[38;5;66;03m# type: ignore[arg-type]\u001b[39;00m\n\u001b[0;32m    647\u001b[0m     model_provided\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mTrue\u001b[39;00m,\n\u001b[0;32m    648\u001b[0m     model_connected\u001b[38;5;241m=\u001b[39m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlightning_module \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m,\n\u001b[0;32m    649\u001b[0m )\n\u001b[1;32m--> 650\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run\u001b[49m\u001b[43m(\u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mckpt_path\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mckpt_path\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    652\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate\u001b[38;5;241m.\u001b[39mstopped\n\u001b[0;32m    653\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtraining \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1112\u001b[0m, in \u001b[0;36mTrainer._run\u001b[1;34m(self, model, ckpt_path)\u001b[0m\n\u001b[0;32m   1108\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39mrestore_training_state()\n\u001b[0;32m   1110\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39mresume_end()\n\u001b[1;32m-> 1112\u001b[0m results \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_stage\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1114\u001b[0m log\u001b[38;5;241m.\u001b[39mdetail(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;132;01m{\u001b[39;00m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__class__\u001b[39m\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__name__\u001b[39m\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m: trainer tearing down\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m   1115\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_teardown()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1191\u001b[0m, in \u001b[0;36mTrainer._run_stage\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1189\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mpredicting:\n\u001b[0;32m   1190\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_run_predict()\n\u001b[1;32m-> 1191\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_train\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1204\u001b[0m, in \u001b[0;36mTrainer._run_train\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1201\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_pre_training_routine()\n\u001b[0;32m   1203\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m isolate_rng():\n\u001b[1;32m-> 1204\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_sanity_check\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1206\u001b[0m \u001b[38;5;66;03m# enable train mode\u001b[39;00m\n\u001b[0;32m   1207\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmodel \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1276\u001b[0m, in \u001b[0;36mTrainer._run_sanity_check\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1274\u001b[0m \u001b[38;5;66;03m# run eval step\u001b[39;00m\n\u001b[0;32m   1275\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m torch\u001b[38;5;241m.\u001b[39mno_grad():\n\u001b[1;32m-> 1276\u001b[0m     \u001b[43mval_loop\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mrun\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1278\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_call_callback_hooks(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_sanity_check_end\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m   1280\u001b[0m \u001b[38;5;66;03m# reset logger connector\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\loop.py:199\u001b[0m, in \u001b[0;36mLoop.run\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    197\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m    198\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_start(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39madvance(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_end()\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_restarting \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\dataloader\\evaluation_loop.py:152\u001b[0m, in \u001b[0;36mEvaluationLoop.advance\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    150\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mnum_dataloaders \u001b[38;5;241m>\u001b[39m \u001b[38;5;241m1\u001b[39m:\n\u001b[0;32m    151\u001b[0m     kwargs[\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mdataloader_idx\u001b[39m\u001b[38;5;124m\"\u001b[39m] \u001b[38;5;241m=\u001b[39m dataloader_idx\n\u001b[1;32m--> 152\u001b[0m dl_outputs \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mepoch_loop\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mrun\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_data_fetcher\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdl_max_batches\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    154\u001b[0m \u001b[38;5;66;03m# store batch level output per dataloader\u001b[39;00m\n\u001b[0;32m    155\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_outputs\u001b[38;5;241m.\u001b[39mappend(dl_outputs)\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\loop.py:199\u001b[0m, in \u001b[0;36mLoop.run\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    197\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m    198\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_start(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39madvance(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_end()\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_restarting \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\epoch\\evaluation_epoch_loop.py:143\u001b[0m, in \u001b[0;36mEvaluationEpochLoop.advance\u001b[1;34m(self, data_fetcher, dl_max_batches, kwargs)\u001b[0m\n\u001b[0;32m    140\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mbatch_progress\u001b[38;5;241m.\u001b[39mincrement_processed()\n\u001b[0;32m    142\u001b[0m \u001b[38;5;66;03m# track loss history\u001b[39;00m\n\u001b[1;32m--> 143\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_on_evaluation_batch_end(output, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    145\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mbatch_progress\u001b[38;5;241m.\u001b[39mincrement_completed()\n\u001b[0;32m    147\u001b[0m \u001b[38;5;66;03m# log batch metrics\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\epoch\\evaluation_epoch_loop.py:275\u001b[0m, in \u001b[0;36mEvaluationEpochLoop._on_evaluation_batch_end\u001b[1;34m(self, output, **kwargs)\u001b[0m\n\u001b[0;32m    273\u001b[0m kwargs\u001b[38;5;241m.\u001b[39msetdefault(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mdataloader_idx\u001b[39m\u001b[38;5;124m\"\u001b[39m, \u001b[38;5;241m0\u001b[39m)  \u001b[38;5;66;03m# TODO: the argument should be keyword for these\u001b[39;00m\n\u001b[0;32m    274\u001b[0m hook_name \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_test_batch_end\u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39mtesting \u001b[38;5;28;01melse\u001b[39;00m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_validation_batch_end\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m--> 275\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mtrainer\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_call_callback_hooks\u001b[49m\u001b[43m(\u001b[49m\u001b[43mhook_name\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43moutput\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mvalues\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    276\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39m_call_lightning_module_hook(hook_name, output, \u001b[38;5;241m*\u001b[39mkwargs\u001b[38;5;241m.\u001b[39mvalues())\n\u001b[0;32m    278\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39m_logger_connector\u001b[38;5;241m.\u001b[39mon_batch_end()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1394\u001b[0m, in \u001b[0;36mTrainer._call_callback_hooks\u001b[1;34m(self, hook_name, *args, **kwargs)\u001b[0m\n\u001b[0;32m   1392\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m callable(fn):\n\u001b[0;32m   1393\u001b[0m         \u001b[38;5;28;01mwith\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mprofiler\u001b[38;5;241m.\u001b[39mprofile(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m[Callback]\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mcallback\u001b[38;5;241m.\u001b[39mstate_key\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m.\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mhook_name\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m\"\u001b[39m):\n\u001b[1;32m-> 1394\u001b[0m             fn(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlightning_module, \u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1396\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m pl_module:\n\u001b[0;32m   1397\u001b[0m     \u001b[38;5;66;03m# restore current_fx when nested context\u001b[39;00m\n\u001b[0;32m   1398\u001b[0m     pl_module\u001b[38;5;241m.\u001b[39m_current_fx_name \u001b[38;5;241m=\u001b[39m prev_fx_name\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:608\u001b[0m, in \u001b[0;36mTrainer.fit\u001b[1;34m(self, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path)\u001b[0m\n\u001b[0;32m    606\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mTypeError\u001b[39;00m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m`Trainer.fit()` requires a `LightningModule`, got: \u001b[39m\u001b[38;5;132;01m{\u001b[39;00mmodel\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__class__\u001b[39m\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__qualname__\u001b[39m\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m    607\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstrategy\u001b[38;5;241m.\u001b[39m_lightning_module \u001b[38;5;241m=\u001b[39m model\n\u001b[1;32m--> 608\u001b[0m \u001b[43mcall\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_call_and_handle_interrupt\u001b[49m\u001b[43m(\u001b[49m\n\u001b[0;32m    609\u001b[0m \u001b[43m    \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_fit_impl\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mtrain_dataloaders\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mval_dataloaders\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdatamodule\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mckpt_path\u001b[49m\n\u001b[0;32m    610\u001b[0m \u001b[43m\u001b[49m\u001b[43m)\u001b[49m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\call.py:38\u001b[0m, in \u001b[0;36m_call_and_handle_interrupt\u001b[1;34m(trainer, trainer_fn, *args, **kwargs)\u001b[0m\n\u001b[0;32m     36\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m trainer\u001b[38;5;241m.\u001b[39mstrategy\u001b[38;5;241m.\u001b[39mlauncher\u001b[38;5;241m.\u001b[39mlaunch(trainer_fn, \u001b[38;5;241m*\u001b[39margs, trainer\u001b[38;5;241m=\u001b[39mtrainer, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m     37\u001b[0m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m---> 38\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m trainer_fn(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m     40\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m _TunerExitException:\n\u001b[0;32m     41\u001b[0m     trainer\u001b[38;5;241m.\u001b[39m_call_teardown_hook()\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:650\u001b[0m, in \u001b[0;36mTrainer._fit_impl\u001b[1;34m(self, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path)\u001b[0m\n\u001b[0;32m    643\u001b[0m ckpt_path \u001b[38;5;241m=\u001b[39m ckpt_path \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mresume_from_checkpoint\n\u001b[0;32m    644\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_ckpt_path \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39m_set_ckpt_path(\n\u001b[0;32m    645\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate\u001b[38;5;241m.\u001b[39mfn,\n\u001b[0;32m    646\u001b[0m     ckpt_path,  \u001b[38;5;66;03m# type: ignore[arg-type]\u001b[39;00m\n\u001b[0;32m    647\u001b[0m     model_provided\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mTrue\u001b[39;00m,\n\u001b[0;32m    648\u001b[0m     model_connected\u001b[38;5;241m=\u001b[39m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlightning_module \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m,\n\u001b[0;32m    649\u001b[0m )\n\u001b[1;32m--> 650\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run\u001b[49m\u001b[43m(\u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mckpt_path\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mckpt_path\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    652\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate\u001b[38;5;241m.\u001b[39mstopped\n\u001b[0;32m    653\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtraining \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1103\u001b[0m, in \u001b[0;36mTrainer._run\u001b[1;34m(self, model, ckpt_path)\u001b[0m\n\u001b[0;32m   1099\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39mrestore_training_state()\n\u001b[0;32m   1101\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39mresume_end()\n\u001b[1;32m-> 1103\u001b[0m results \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_stage\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1105\u001b[0m log\u001b[38;5;241m.\u001b[39mdetail(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;132;01m{\u001b[39;00m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__class__\u001b[39m\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__name__\u001b[39m\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m: trainer tearing down\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m   1106\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_teardown()\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1182\u001b[0m, in \u001b[0;36mTrainer._run_stage\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1180\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mpredicting:\n\u001b[0;32m   1181\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_run_predict()\n\u001b[1;32m-> 1182\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_train\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1195\u001b[0m, in \u001b[0;36mTrainer._run_train\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_pre_training_routine()\n\u001b[0;32m   1194\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m isolate_rng():\n\u001b[1;32m-> 1195\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_sanity_check\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1197\u001b[0m \u001b[38;5;66;03m# enable train mode\u001b[39;00m\n\u001b[0;32m   1198\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmodel \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1267\u001b[0m, in \u001b[0;36mTrainer._run_sanity_check\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1265\u001b[0m \u001b[38;5;66;03m# run eval step\u001b[39;00m\n\u001b[0;32m   1266\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m torch\u001b[38;5;241m.\u001b[39mno_grad():\n\u001b[1;32m-> 1267\u001b[0m     \u001b[43mval_loop\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mrun\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1269\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_call_callback_hooks(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_sanity_check_end\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m   1271\u001b[0m \u001b[38;5;66;03m# reset logger connector\u001b[39;00m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\loop.py:199\u001b[0m, in \u001b[0;36mLoop.run\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    197\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m    198\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_start(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39madvance(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_end()\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_restarting \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\dataloader\\evaluation_loop.py:152\u001b[0m, in \u001b[0;36mEvaluationLoop.advance\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    150\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mnum_dataloaders \u001b[38;5;241m>\u001b[39m \u001b[38;5;241m1\u001b[39m:\n\u001b[0;32m    151\u001b[0m     kwargs[\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mdataloader_idx\u001b[39m\u001b[38;5;124m\"\u001b[39m] \u001b[38;5;241m=\u001b[39m dataloader_idx\n\u001b[1;32m--> 152\u001b[0m dl_outputs \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mepoch_loop\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mrun\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_data_fetcher\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdl_max_batches\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    154\u001b[0m \u001b[38;5;66;03m# store batch level output per dataloader\u001b[39;00m\n\u001b[0;32m    155\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_outputs\u001b[38;5;241m.\u001b[39mappend(dl_outputs)\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\loop.py:199\u001b[0m, in \u001b[0;36mLoop.run\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    197\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m    198\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_start(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39madvance(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_end()\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_restarting \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\epoch\\evaluation_epoch_loop.py:143\u001b[0m, in \u001b[0;36mEvaluationEpochLoop.advance\u001b[1;34m(self, data_fetcher, dl_max_batches, kwargs)\u001b[0m\n\u001b[0;32m    140\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mbatch_progress\u001b[38;5;241m.\u001b[39mincrement_processed()\n\u001b[0;32m    142\u001b[0m \u001b[38;5;66;03m# track loss history\u001b[39;00m\n\u001b[1;32m--> 143\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_on_evaluation_batch_end(output, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    145\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mbatch_progress\u001b[38;5;241m.\u001b[39mincrement_completed()\n\u001b[0;32m    147\u001b[0m \u001b[38;5;66;03m# log batch metrics\u001b[39;00m\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\epoch\\evaluation_epoch_loop.py:275\u001b[0m, in \u001b[0;36mEvaluationEpochLoop._on_evaluation_batch_end\u001b[1;34m(self, output, **kwargs)\u001b[0m\n\u001b[0;32m    273\u001b[0m kwargs\u001b[38;5;241m.\u001b[39msetdefault(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mdataloader_idx\u001b[39m\u001b[38;5;124m\"\u001b[39m, \u001b[38;5;241m0\u001b[39m)  \u001b[38;5;66;03m# TODO: the argument should be keyword for these\u001b[39;00m\n\u001b[0;32m    274\u001b[0m hook_name \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_test_batch_end\u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39mtesting \u001b[38;5;28;01melse\u001b[39;00m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_validation_batch_end\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m--> 275\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mtrainer\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_call_callback_hooks\u001b[49m\u001b[43m(\u001b[49m\u001b[43mhook_name\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43moutput\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mvalues\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    276\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39m_call_lightning_module_hook(hook_name, output, \u001b[38;5;241m*\u001b[39mkwargs\u001b[38;5;241m.\u001b[39mvalues())\n\u001b[0;32m    278\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39m_logger_connector\u001b[38;5;241m.\u001b[39mon_batch_end()\n",
++      "File \u001b[1;32m~\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1385\u001b[0m, in \u001b[0;36mTrainer._call_callback_hooks\u001b[1;34m(self, hook_name, *args, **kwargs)\u001b[0m\n\u001b[0;32m   1383\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m callable(fn):\n\u001b[0;32m   1384\u001b[0m         \u001b[38;5;28;01mwith\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mprofiler\u001b[38;5;241m.\u001b[39mprofile(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m[Callback]\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mcallback\u001b[38;5;241m.\u001b[39mstate_key\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m.\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mhook_name\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m\"\u001b[39m):\n\u001b[1;32m-> 1385\u001b[0m             fn(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlightning_module, \u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1387\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m pl_module:\n\u001b[0;32m   1388\u001b[0m     \u001b[38;5;66;03m# restore current_fx when nested context\u001b[39;00m\n\u001b[0;32m   1389\u001b[0m     pl_module\u001b[38;5;241m.\u001b[39m_current_fx_name \u001b[38;5;241m=\u001b[39m prev_fx_name\n",
+       "Cell \u001b[1;32mIn[11], line 17\u001b[0m, in \u001b[0;36mLogPredictionsCallback.on_validation_batch_end\u001b[1;34m(self, trainer, pl_module, outputs, batch, batch_idx, dataloader_idx)\u001b[0m\n\u001b[0;32m     15\u001b[0m x, y \u001b[38;5;241m=\u001b[39m batch\n\u001b[0;32m     16\u001b[0m images \u001b[38;5;241m=\u001b[39m [img \u001b[38;5;28;01mfor\u001b[39;00m img \u001b[38;5;129;01min\u001b[39;00m x[:n]]\n\u001b[1;32m---> 17\u001b[0m captions \u001b[38;5;241m=\u001b[39m [\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mGround Truth: \u001b[39m\u001b[38;5;132;01m{\u001b[39;00my_i\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m - Prediction: \u001b[39m\u001b[38;5;132;01m{\u001b[39;00my_pred\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m \u001b[38;5;28;01mfor\u001b[39;00m y_i, y_pred \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mzip\u001b[39m(y[:n], \u001b[43moutputs\u001b[49m\u001b[43m[\u001b[49m\u001b[43m:\u001b[49m\u001b[43mn\u001b[49m\u001b[43m]\u001b[49m)]\n\u001b[0;32m     19\u001b[0m \u001b[38;5;66;03m# Option 1: log images with `WandbLogger.log_image`\u001b[39;00m\n\u001b[0;32m     20\u001b[0m wandb_logger\u001b[38;5;241m.\u001b[39mlog_image(key\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124msample_images\u001b[39m\u001b[38;5;124m'\u001b[39m, images\u001b[38;5;241m=\u001b[39mimages, caption\u001b[38;5;241m=\u001b[39mcaptions)\n",
+       "\u001b[1;31mIndexError\u001b[0m: Dimension specified as 0 but tensor has no dimensions"
+      ]
+@@ -829,10 +836,10 @@
+    "id": "3b58022d-6961-41b0-a4e1-60bbc1c09791",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.583762Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.584765Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.583762Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.583762Z"
++     "iopub.status.busy": "2023-03-03T01:56:50.348017Z",
++     "iopub.status.idle": "2023-03-03T01:56:50.348516Z",
++     "shell.execute_reply": "2023-03-03T01:56:50.348516Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:50.348516Z"
+     },
+     "tags": []
+    },
+@@ -855,10 +862,10 @@
+    "id": "ebde1018-ddfa-43f2-b9c6-f2c1d4b19736",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.585969Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.586972Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.586972Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.586972Z"
++     "iopub.status.busy": "2023-03-03T01:56:50.350015Z",
++     "iopub.status.idle": "2023-03-03T01:56:50.350516Z",
++     "shell.execute_reply": "2023-03-03T01:56:50.350516Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:50.350516Z"
+     },
+     "tags": []
+    },
+@@ -901,10 +908,10 @@
+    "id": "91aeb8a0-9ffd-4439-808c-2951d1f74b36",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.589019Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.589019Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.589019Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.589019Z"
++     "iopub.status.busy": "2023-03-03T01:56:50.352516Z",
++     "iopub.status.idle": "2023-03-03T01:56:50.353016Z",
++     "shell.execute_reply": "2023-03-03T01:56:50.353016Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:50.353016Z"
+     },
+     "tags": []
+    },
+@@ -944,10 +951,10 @@
+    "id": "869b0393-21cf-4fba-8efd-7678a852b697",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.591016Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.592018Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.592018Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.592018Z"
++     "iopub.status.busy": "2023-03-03T01:56:50.354016Z",
++     "iopub.status.idle": "2023-03-03T01:56:50.355017Z",
++     "shell.execute_reply": "2023-03-03T01:56:50.354515Z",
++     "shell.execute_reply.started": "2023-03-03T01:56:50.354515Z"
+     },
+     "tags": []
+    },
+diff --git a/Train/PyLi_wanb_sweep_CoatNet.ipynb b/Train/PyLi_wanb_sweep_CoatNet.ipynb
+index ced9a67..0421164 100644
+--- a/Train/PyLi_wanb_sweep_CoatNet.ipynb
++++ b/Train/PyLi_wanb_sweep_CoatNet.ipynb
+@@ -6,11 +6,11 @@
+    "id": "c7b471f1-f5fa-4eb1-b9ae-2d67ed8838df",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:16.271323Z",
+-     "iopub.status.busy": "2023-03-01T20:56:16.271323Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.861826Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.860831Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:16.271323Z"
++     "iopub.execute_input": "2023-03-03T02:28:28.409048Z",
++     "iopub.status.busy": "2023-03-03T02:28:28.408046Z",
++     "iopub.status.idle": "2023-03-03T02:28:33.589524Z",
++     "shell.execute_reply": "2023-03-03T02:28:33.587522Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:28.409048Z"
+     },
+     "tags": []
+    },
+@@ -65,11 +65,11 @@
+    "id": "289e69f9-9a23-4f33-94af-a8950f9e1818",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.862838Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.862838Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.876388Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.876388Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.862838Z"
++     "iopub.execute_input": "2023-03-03T02:28:33.592520Z",
++     "iopub.status.busy": "2023-03-03T02:28:33.592020Z",
++     "iopub.status.idle": "2023-03-03T02:28:33.619518Z",
++     "shell.execute_reply": "2023-03-03T02:28:33.618519Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:33.592520Z"
+     },
+     "tags": []
+    },
+@@ -101,11 +101,11 @@
+    "id": "5fc60314-d2bb-4767-9cef-219da9f1955d",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.879932Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.879932Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.893218Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.891688Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.879932Z"
++     "iopub.execute_input": "2023-03-03T02:28:33.624022Z",
++     "iopub.status.busy": "2023-03-03T02:28:33.623021Z",
++     "iopub.status.idle": "2023-03-03T02:28:33.758546Z",
++     "shell.execute_reply": "2023-03-03T02:28:33.757545Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:33.623522Z"
+     },
+     "tags": []
+    },
+@@ -138,11 +138,11 @@
+    "id": "01c28e3c-850d-48b6-8db9-3a8804e0c9ae",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.895234Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.894231Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.908832Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.907873Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.895234Z"
++     "iopub.execute_input": "2023-03-03T02:28:33.761049Z",
++     "iopub.status.busy": "2023-03-03T02:28:33.760046Z",
++     "iopub.status.idle": "2023-03-03T02:28:33.913680Z",
++     "shell.execute_reply": "2023-03-03T02:28:33.912680Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:33.761049Z"
+     },
+     "tags": []
+    },
+@@ -205,11 +205,11 @@
+    "id": "8b9e722b-cda4-4956-a0c1-8eb31023f765",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.909835Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.909835Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.924555Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.923617Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.909835Z"
++     "iopub.execute_input": "2023-03-03T02:28:33.915682Z",
++     "iopub.status.busy": "2023-03-03T02:28:33.915180Z",
++     "iopub.status.idle": "2023-03-03T02:28:34.053066Z",
++     "shell.execute_reply": "2023-03-03T02:28:34.052066Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:33.915682Z"
+     },
+     "tags": []
+    },
+@@ -276,11 +276,11 @@
+    "id": "9dbe4b19-9805-40b4-a513-ea35715a0c64",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.926555Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.926555Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.940645Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.939643Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.926555Z"
++     "iopub.execute_input": "2023-03-03T02:28:34.055068Z",
++     "iopub.status.busy": "2023-03-03T02:28:34.054569Z",
++     "iopub.status.idle": "2023-03-03T02:28:34.207922Z",
++     "shell.execute_reply": "2023-03-03T02:28:34.206920Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:34.055068Z"
+     },
+     "tags": []
+    },
+@@ -312,11 +312,11 @@
+    "id": "7539d3a5-ca4f-4ba3-a462-05875d4b9a90",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.942648Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.942648Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.957018Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.955693Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.942648Z"
++     "iopub.execute_input": "2023-03-03T02:28:34.209923Z",
++     "iopub.status.busy": "2023-03-03T02:28:34.209423Z",
++     "iopub.status.idle": "2023-03-03T02:28:34.408557Z",
++     "shell.execute_reply": "2023-03-03T02:28:34.407556Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:34.209923Z"
+     },
+     "tags": []
+    },
+@@ -356,11 +356,11 @@
+    "id": "40361447-e7c3-47f2-9e04-a9058b596861",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.959403Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.959403Z",
+-     "iopub.status.idle": "2023-03-01T20:56:20.988223Z",
+-     "shell.execute_reply": "2023-03-01T20:56:20.987711Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.959403Z"
++     "iopub.execute_input": "2023-03-03T02:28:34.410557Z",
++     "iopub.status.busy": "2023-03-03T02:28:34.410056Z",
++     "iopub.status.idle": "2023-03-03T02:28:34.563134Z",
++     "shell.execute_reply": "2023-03-03T02:28:34.562135Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:34.410557Z"
+     },
+     "tags": []
+    },
+@@ -451,11 +451,11 @@
+    "id": "deb34aed-792a-4022-a878-f8d6c4ffa97c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:20.989234Z",
+-     "iopub.status.busy": "2023-03-01T20:56:20.989234Z",
+-     "iopub.status.idle": "2023-03-01T20:56:21.019858Z",
+-     "shell.execute_reply": "2023-03-01T20:56:21.018856Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:20.989234Z"
++     "iopub.execute_input": "2023-03-03T02:28:34.565636Z",
++     "iopub.status.busy": "2023-03-03T02:28:34.564635Z",
++     "iopub.status.idle": "2023-03-03T02:28:34.718002Z",
++     "shell.execute_reply": "2023-03-03T02:28:34.717003Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:34.565636Z"
+     },
+     "tags": []
+    },
+@@ -523,6 +523,13 @@
+     "        return loss\n",
+     "\n",
+     "    def validation_step(self,batch,batch_idx):\n",
++    "#         preds, loss, acc = self._get_preds_loss_accuracy(batch)\n",
++    "\n",
++    "#         # Log loss and metric\n",
++    "#         self.log('val_loss', loss)\n",
++    "#         self.log('val_accuracy', acc)\n",
++    "        \n",
++    "        \n",
+     "        x,y = batch\n",
+     "        y_pred = self(x)\n",
+     "        loss = F.cross_entropy(y_pred,y)\n",
+@@ -535,7 +542,7 @@
+     "        wandb.log({\"val_conf_mat\" : wandb.plot.confusion_matrix(probs=self.cpu_pred,\n",
+     "                        y_true=self.cpu_y, preds=None,\n",
+     "                        class_names=self.class_names)})\n",
+-    "        return loss\n",
++    "        return y_pred\n",
+     "\n",
+     "    def test_step(self,batch,batch_idx):\n",
+     "        x,y = batch\n",
+@@ -567,11 +574,11 @@
+    "id": "e2170c95-2962-43ec-a457-31dfec8a23d2",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:21.023110Z",
+-     "iopub.status.busy": "2023-03-01T20:56:21.022116Z",
+-     "iopub.status.idle": "2023-03-01T20:56:21.035162Z",
+-     "shell.execute_reply": "2023-03-01T20:56:21.034159Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:21.023110Z"
++     "iopub.execute_input": "2023-03-03T02:28:34.720002Z",
++     "iopub.status.busy": "2023-03-03T02:28:34.719502Z",
++     "iopub.status.idle": "2023-03-03T02:28:34.919559Z",
++     "shell.execute_reply": "2023-03-03T02:28:34.918059Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:34.720002Z"
+     },
+     "tags": []
+    },
+@@ -588,11 +595,11 @@
+    "id": "188ce4ef-e6b7-4320-8e5d-ceeb616bf7d1",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:21.037696Z",
+-     "iopub.status.busy": "2023-03-01T20:56:21.036175Z",
+-     "iopub.status.idle": "2023-03-01T20:56:21.050772Z",
+-     "shell.execute_reply": "2023-03-01T20:56:21.049776Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:21.037696Z"
++     "iopub.execute_input": "2023-03-03T02:28:34.921560Z",
++     "iopub.status.busy": "2023-03-03T02:28:34.921058Z",
++     "iopub.status.idle": "2023-03-03T02:28:35.274353Z",
++     "shell.execute_reply": "2023-03-03T02:28:35.273352Z",
++     "shell.execute_reply.started": "2023-03-03T02:28:34.921560Z"
+     },
+     "tags": []
+    },
+@@ -629,15 +636,12 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 12,
++   "execution_count": null,
+    "id": "762279ca-26d9-4310-992f-b6f8912da7fe",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-01T20:56:21.054045Z",
+-     "iopub.status.busy": "2023-03-01T20:56:21.054045Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.581762Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.580856Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:21.054045Z"
++     "iopub.execute_input": "2023-03-03T02:28:35.278354Z",
++     "iopub.status.busy": "2023-03-03T02:28:35.278354Z"
+     },
+     "tags": []
+    },
+@@ -664,7 +668,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Run data is saved locally in <code>.\\wandb\\run-20230301_155623-r20dbs67</code>"
++       "Run data is saved locally in <code>.\\wandb\\run-20230302_212838-7gydvdmr</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -676,7 +680,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/r20dbs67' target=\"_blank\">tough-meadow-4</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/7gydvdmr' target=\"_blank\">helpful-glitter-6</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -700,7 +704,7 @@
+     {
+      "data": {
+       "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/r20dbs67' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/r20dbs67</a>"
++       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/7gydvdmr' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/7gydvdmr</a>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -741,7 +745,7 @@
+     {
+      "data": {
+       "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "a55cd26ad321421b80f30fb5a2bc2460",
++       "model_id": "",
+        "version_major": 2,
+        "version_minor": 0
+       },
+@@ -756,9 +760,9 @@
+      "name": "stderr",
+      "output_type": "stream",
+      "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
+       "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+       "  rank_zero_warn(\n"
+      ]
+     },
+@@ -770,29 +774,151 @@
+      ]
+     },
+     {
+-     "ename": "IndexError",
+-     "evalue": "Dimension specified as 0 but tensor has no dimensions",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+-      "\u001b[1;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+-      "Cell \u001b[1;32mIn[12], line 21\u001b[0m\n\u001b[0;32m     10\u001b[0m model \u001b[38;5;241m=\u001b[39m YogaModel(n_classes\u001b[38;5;241m=\u001b[39mnum_of_classes)\n\u001b[0;32m     13\u001b[0m trainer \u001b[38;5;241m=\u001b[39m Trainer(\n\u001b[0;32m     14\u001b[0m     accelerator\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mgpu\u001b[39m\u001b[38;5;124m'\u001b[39m, \n\u001b[0;32m     15\u001b[0m     devices\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m1\u001b[39m, \u001b[38;5;66;03m# use all GPU's (-1)\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m     18\u001b[0m     max_epochs\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m3\u001b[39m            \u001b[38;5;66;03m# number of epochs\u001b[39;00m\n\u001b[0;32m     19\u001b[0m     )\n\u001b[1;32m---> 21\u001b[0m \u001b[43mtrainer\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mfit\u001b[49m\u001b[43m(\u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdata\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m     23\u001b[0m trainer\u001b[38;5;241m.\u001b[39mtest(model, datamodule\u001b[38;5;241m=\u001b[39mdata)\n\u001b[0;32m     25\u001b[0m wandb\u001b[38;5;241m.\u001b[39mfinish()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:608\u001b[0m, in \u001b[0;36mTrainer.fit\u001b[1;34m(self, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path)\u001b[0m\n\u001b[0;32m    606\u001b[0m model \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_maybe_unwrap_optimized(model)\n\u001b[0;32m    607\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstrategy\u001b[38;5;241m.\u001b[39m_lightning_module \u001b[38;5;241m=\u001b[39m model\n\u001b[1;32m--> 608\u001b[0m \u001b[43mcall\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_call_and_handle_interrupt\u001b[49m\u001b[43m(\u001b[49m\n\u001b[0;32m    609\u001b[0m \u001b[43m    \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_fit_impl\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mtrain_dataloaders\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mval_dataloaders\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdatamodule\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mckpt_path\u001b[49m\n\u001b[0;32m    610\u001b[0m \u001b[43m\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\call.py:38\u001b[0m, in \u001b[0;36m_call_and_handle_interrupt\u001b[1;34m(trainer, trainer_fn, *args, **kwargs)\u001b[0m\n\u001b[0;32m     36\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m trainer\u001b[38;5;241m.\u001b[39mstrategy\u001b[38;5;241m.\u001b[39mlauncher\u001b[38;5;241m.\u001b[39mlaunch(trainer_fn, \u001b[38;5;241m*\u001b[39margs, trainer\u001b[38;5;241m=\u001b[39mtrainer, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m     37\u001b[0m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m---> 38\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m trainer_fn(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m     40\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m _TunerExitException:\n\u001b[0;32m     41\u001b[0m     trainer\u001b[38;5;241m.\u001b[39m_call_teardown_hook()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:650\u001b[0m, in \u001b[0;36mTrainer._fit_impl\u001b[1;34m(self, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path)\u001b[0m\n\u001b[0;32m    643\u001b[0m ckpt_path \u001b[38;5;241m=\u001b[39m ckpt_path \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mresume_from_checkpoint\n\u001b[0;32m    644\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_ckpt_path \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39m_set_ckpt_path(\n\u001b[0;32m    645\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate\u001b[38;5;241m.\u001b[39mfn,\n\u001b[0;32m    646\u001b[0m     ckpt_path,  \u001b[38;5;66;03m# type: ignore[arg-type]\u001b[39;00m\n\u001b[0;32m    647\u001b[0m     model_provided\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mTrue\u001b[39;00m,\n\u001b[0;32m    648\u001b[0m     model_connected\u001b[38;5;241m=\u001b[39m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlightning_module \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m,\n\u001b[0;32m    649\u001b[0m )\n\u001b[1;32m--> 650\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run\u001b[49m\u001b[43m(\u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mckpt_path\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mckpt_path\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    652\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate\u001b[38;5;241m.\u001b[39mstopped\n\u001b[0;32m    653\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtraining \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1112\u001b[0m, in \u001b[0;36mTrainer._run\u001b[1;34m(self, model, ckpt_path)\u001b[0m\n\u001b[0;32m   1108\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39mrestore_training_state()\n\u001b[0;32m   1110\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_checkpoint_connector\u001b[38;5;241m.\u001b[39mresume_end()\n\u001b[1;32m-> 1112\u001b[0m results \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_stage\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1114\u001b[0m log\u001b[38;5;241m.\u001b[39mdetail(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;132;01m{\u001b[39;00m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__class__\u001b[39m\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__name__\u001b[39m\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m: trainer tearing down\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m   1115\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_teardown()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1191\u001b[0m, in \u001b[0;36mTrainer._run_stage\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1189\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mpredicting:\n\u001b[0;32m   1190\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_run_predict()\n\u001b[1;32m-> 1191\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_train\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1204\u001b[0m, in \u001b[0;36mTrainer._run_train\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1201\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_pre_training_routine()\n\u001b[0;32m   1203\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m isolate_rng():\n\u001b[1;32m-> 1204\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_run_sanity_check\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1206\u001b[0m \u001b[38;5;66;03m# enable train mode\u001b[39;00m\n\u001b[0;32m   1207\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmodel \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1276\u001b[0m, in \u001b[0;36mTrainer._run_sanity_check\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1274\u001b[0m \u001b[38;5;66;03m# run eval step\u001b[39;00m\n\u001b[0;32m   1275\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m torch\u001b[38;5;241m.\u001b[39mno_grad():\n\u001b[1;32m-> 1276\u001b[0m     \u001b[43mval_loop\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mrun\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1278\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_call_callback_hooks(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_sanity_check_end\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m   1280\u001b[0m \u001b[38;5;66;03m# reset logger connector\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\loop.py:199\u001b[0m, in \u001b[0;36mLoop.run\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    197\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m    198\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_start(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39madvance(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_end()\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_restarting \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\dataloader\\evaluation_loop.py:152\u001b[0m, in \u001b[0;36mEvaluationLoop.advance\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    150\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mnum_dataloaders \u001b[38;5;241m>\u001b[39m \u001b[38;5;241m1\u001b[39m:\n\u001b[0;32m    151\u001b[0m     kwargs[\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mdataloader_idx\u001b[39m\u001b[38;5;124m\"\u001b[39m] \u001b[38;5;241m=\u001b[39m dataloader_idx\n\u001b[1;32m--> 152\u001b[0m dl_outputs \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mepoch_loop\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mrun\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_data_fetcher\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdl_max_batches\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    154\u001b[0m \u001b[38;5;66;03m# store batch level output per dataloader\u001b[39;00m\n\u001b[0;32m    155\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_outputs\u001b[38;5;241m.\u001b[39mappend(dl_outputs)\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\loop.py:199\u001b[0m, in \u001b[0;36mLoop.run\u001b[1;34m(self, *args, **kwargs)\u001b[0m\n\u001b[0;32m    197\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m    198\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_start(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39madvance(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mon_advance_end()\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_restarting \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mFalse\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\epoch\\evaluation_epoch_loop.py:143\u001b[0m, in \u001b[0;36mEvaluationEpochLoop.advance\u001b[1;34m(self, data_fetcher, dl_max_batches, kwargs)\u001b[0m\n\u001b[0;32m    140\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mbatch_progress\u001b[38;5;241m.\u001b[39mincrement_processed()\n\u001b[0;32m    142\u001b[0m \u001b[38;5;66;03m# track loss history\u001b[39;00m\n\u001b[1;32m--> 143\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_on_evaluation_batch_end(output, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    145\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mbatch_progress\u001b[38;5;241m.\u001b[39mincrement_completed()\n\u001b[0;32m    147\u001b[0m \u001b[38;5;66;03m# log batch metrics\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\loops\\epoch\\evaluation_epoch_loop.py:275\u001b[0m, in \u001b[0;36mEvaluationEpochLoop._on_evaluation_batch_end\u001b[1;34m(self, output, **kwargs)\u001b[0m\n\u001b[0;32m    273\u001b[0m kwargs\u001b[38;5;241m.\u001b[39msetdefault(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mdataloader_idx\u001b[39m\u001b[38;5;124m\"\u001b[39m, \u001b[38;5;241m0\u001b[39m)  \u001b[38;5;66;03m# TODO: the argument should be keyword for these\u001b[39;00m\n\u001b[0;32m    274\u001b[0m hook_name \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_test_batch_end\u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39mtesting \u001b[38;5;28;01melse\u001b[39;00m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mon_validation_batch_end\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m--> 275\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mtrainer\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_call_callback_hooks\u001b[49m\u001b[43m(\u001b[49m\u001b[43mhook_name\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43moutput\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mvalues\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    276\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39m_call_lightning_module_hook(hook_name, output, \u001b[38;5;241m*\u001b[39mkwargs\u001b[38;5;241m.\u001b[39mvalues())\n\u001b[0;32m    278\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mtrainer\u001b[38;5;241m.\u001b[39m_logger_connector\u001b[38;5;241m.\u001b[39mon_batch_end()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1394\u001b[0m, in \u001b[0;36mTrainer._call_callback_hooks\u001b[1;34m(self, hook_name, *args, **kwargs)\u001b[0m\n\u001b[0;32m   1392\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m callable(fn):\n\u001b[0;32m   1393\u001b[0m         \u001b[38;5;28;01mwith\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mprofiler\u001b[38;5;241m.\u001b[39mprofile(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m[Callback]\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mcallback\u001b[38;5;241m.\u001b[39mstate_key\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m.\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mhook_name\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m\"\u001b[39m):\n\u001b[1;32m-> 1394\u001b[0m             fn(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlightning_module, \u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1396\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m pl_module:\n\u001b[0;32m   1397\u001b[0m     \u001b[38;5;66;03m# restore current_fx when nested context\u001b[39;00m\n\u001b[0;32m   1398\u001b[0m     pl_module\u001b[38;5;241m.\u001b[39m_current_fx_name \u001b[38;5;241m=\u001b[39m prev_fx_name\n",
+-      "Cell \u001b[1;32mIn[11], line 17\u001b[0m, in \u001b[0;36mLogPredictionsCallback.on_validation_batch_end\u001b[1;34m(self, trainer, pl_module, outputs, batch, batch_idx, dataloader_idx)\u001b[0m\n\u001b[0;32m     15\u001b[0m x, y \u001b[38;5;241m=\u001b[39m batch\n\u001b[0;32m     16\u001b[0m images \u001b[38;5;241m=\u001b[39m [img \u001b[38;5;28;01mfor\u001b[39;00m img \u001b[38;5;129;01min\u001b[39;00m x[:n]]\n\u001b[1;32m---> 17\u001b[0m captions \u001b[38;5;241m=\u001b[39m [\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mGround Truth: \u001b[39m\u001b[38;5;132;01m{\u001b[39;00my_i\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m - Prediction: \u001b[39m\u001b[38;5;132;01m{\u001b[39;00my_pred\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m \u001b[38;5;28;01mfor\u001b[39;00m y_i, y_pred \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mzip\u001b[39m(y[:n], \u001b[43moutputs\u001b[49m\u001b[43m[\u001b[49m\u001b[43m:\u001b[49m\u001b[43mn\u001b[49m\u001b[43m]\u001b[49m)]\n\u001b[0;32m     19\u001b[0m \u001b[38;5;66;03m# Option 1: log images with `WandbLogger.log_image`\u001b[39;00m\n\u001b[0;32m     20\u001b[0m wandb_logger\u001b[38;5;241m.\u001b[39mlog_image(key\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124msample_images\u001b[39m\u001b[38;5;124m'\u001b[39m, images\u001b[38;5;241m=\u001b[39mimages, caption\u001b[38;5;241m=\u001b[39mcaptions)\n",
+-      "\u001b[1;31mIndexError\u001b[0m: Dimension specified as 0 but tensor has no dimensions"
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
++      "  rank_zero_warn(\n",
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1600: PossibleUserWarning: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.\n",
++      "  rank_zero_warn(\n"
++     ]
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "40ccb2ce31c44c73b2aa27a9e3325db7",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "Training: 0it [00:00, ?it/s]"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "torch.Size([10, 30000])\n"
++     ]
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "Validation: 0it [00:00, ?it/s]"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "torch.Size([10, 30000])\n",
++      "torch.Size([10, 30000])\n"
++     ]
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "Validation: 0it [00:00, ?it/s]"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "torch.Size([10, 30000])\n",
++      "torch.Size([10, 30000])\n"
++     ]
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "Validation: 0it [00:00, ?it/s]"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "torch.Size([10, 30000])\n"
++     ]
++    },
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "`Trainer.fit` stopped: `max_epochs=3` reached.\n",
++      "LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]\n",
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
++      "  rank_zero_warn(\n",
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, test_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
++      "  rank_zero_warn(\n"
++     ]
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "058770f0aa9b4f0cab00d594090cc730",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "Testing: 0it [00:00, ?it/s]"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "torch.Size([10, 30000])\n",
++      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
++      "       Test metric             DataLoader 0\n",
++      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
++      "        test_acc            0.10000000149011612\n",
++      "        test_loss           2.7820067405700684\n",
++      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n"
+      ]
++    },
++    {
++     "data": {
++      "text/html": [
++       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
+     }
+    ],
+    "source": [
+@@ -828,12 +954,6 @@
+    "execution_count": null,
+    "id": "3b58022d-6961-41b0-a4e1-60bbc1c09791",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.583762Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.584765Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.583762Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.583762Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -854,12 +974,6 @@
+    "execution_count": null,
+    "id": "ebde1018-ddfa-43f2-b9c6-f2c1d4b19736",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.585969Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.586972Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.586972Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.586972Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -900,12 +1014,6 @@
+    "execution_count": null,
+    "id": "91aeb8a0-9ffd-4439-808c-2951d1f74b36",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.589019Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.589019Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.589019Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.589019Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -943,12 +1051,6 @@
+    "execution_count": null,
+    "id": "869b0393-21cf-4fba-8efd-7678a852b697",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-01T20:56:29.591016Z",
+-     "iopub.status.idle": "2023-03-01T20:56:29.592018Z",
+-     "shell.execute_reply": "2023-03-01T20:56:29.592018Z",
+-     "shell.execute_reply.started": "2023-03-01T20:56:29.592018Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+diff --git a/Train/wandb/debug-cli.GCM.log b/Train/wandb/debug-cli.GCM.log
+index db5ddbf..3d0f781 100644
+--- a/Train/wandb/debug-cli.GCM.log
++++ b/Train/wandb/debug-cli.GCM.log
+@@ -1,111 +1,115 @@
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:53 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:53 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:29:53 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:17 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:17 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:05 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:05 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:05 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
+-2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:52 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:53 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:53 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:29:53 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:16 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:17 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:17 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:30:41 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:05 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:05 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:05 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 15:31:30 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:10:46 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:09 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:11:35 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:01 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:27 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-02-28 23:12:55 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-02 21:28:06 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-02 21:28:11 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-02 21:28:50 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-02 21:28:56 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
