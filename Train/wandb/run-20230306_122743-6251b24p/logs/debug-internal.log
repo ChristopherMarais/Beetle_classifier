@@ -1,0 +1,500 @@
+2023-03-06 12:27:43,906 INFO    StreamThr :12008 [internal.py:wandb_internal():87] W&B internal server running at pid: 12008, started at: 2023-03-06 12:27:43.905912
+2023-03-06 12:27:43,907 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: status
+2023-03-06 12:27:43,918 INFO    WriterThread:12008 [datastore.py:open_for_write():85] open: .\wandb\run-20230306_122743-6251b24p\run-6251b24p.wandb
+2023-03-06 12:27:43,919 DEBUG   SenderThread:12008 [sender.py:send():336] send: header
+2023-03-06 12:27:44,241 DEBUG   SenderThread:12008 [sender.py:send():336] send: run
+2023-03-06 12:27:44,244 INFO    SenderThread:12008 [sender.py:_maybe_setup_resume():723] checking resume status for None/computer_vision_test_single/6251b24p
+2023-03-06 12:27:46,409 INFO    SenderThread:12008 [dir_watcher.py:__init__():216] watching files in: .\wandb\run-20230306_122743-6251b24p\files
+2023-03-06 12:27:46,410 INFO    SenderThread:12008 [sender.py:_start_run_threads():1067] run started: 6251b24p with start time 1678123663.903914
+2023-03-06 12:27:46,410 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:27:46,410 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:27:46,413 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: check_version
+2023-03-06 12:27:46,413 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: check_version
+2023-03-06 12:27:46,633 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: run_start
+2023-03-06 12:27:46,663 DEBUG   HandlerThread:12008 [system_info.py:__init__():31] System info init
+2023-03-06 12:27:46,663 DEBUG   HandlerThread:12008 [system_info.py:__init__():46] System info init done
+2023-03-06 12:27:46,664 INFO    HandlerThread:12008 [system_monitor.py:start():151] Starting system monitor
+2023-03-06 12:27:46,664 INFO    SystemMonitor:12008 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-06 12:27:46,664 INFO    HandlerThread:12008 [system_monitor.py:probe():172] Collecting system info
+2023-03-06 12:27:46,671 INFO    SystemMonitor:12008 [interfaces.py:start():168] Started cpu
+2023-03-06 12:27:46,672 INFO    SystemMonitor:12008 [interfaces.py:start():168] Started disk
+2023-03-06 12:27:46,672 INFO    SystemMonitor:12008 [interfaces.py:start():168] Started gpu
+2023-03-06 12:27:46,672 INFO    SystemMonitor:12008 [interfaces.py:start():168] Started memory
+2023-03-06 12:27:46,685 INFO    SystemMonitor:12008 [interfaces.py:start():168] Started network
+2023-03-06 12:27:46,698 DEBUG   HandlerThread:12008 [system_info.py:probe():195] Probing system
+2023-03-06 12:27:46,699 DEBUG   HandlerThread:12008 [system_info.py:_probe_git():180] Probing git
+2023-03-06 12:27:46,787 DEBUG   HandlerThread:12008 [system_info.py:_probe_git():188] Probing git done
+2023-03-06 12:27:46,787 DEBUG   HandlerThread:12008 [system_info.py:probe():241] Probing system done
+2023-03-06 12:27:46,787 DEBUG   HandlerThread:12008 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-03-06T17:27:46.698430', 'startedAt': '2023-03-06T17:27:43.876912', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'GIT_REPOS/LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb', 'root': 'E:/GIT_REPOS/LAB/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': 'a0e9c91287d22aca13e0000babad369d16f2fa1a'}, 'email': 'u13033663@tuks.co.za', 'host': 'GCM', 'username': 'GCM', 'executable': 'C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3800.0, 'min': 0.0, 'max': 3800.0}, 'cpu_freq_per_core': [{'current': 3800.0, 'min': 0.0, 'max': 3800.0}], 'disk': {'total': 447.11425399780273, 'used': 379.05133056640625}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.87503433227539}}
+2023-03-06 12:27:46,787 INFO    HandlerThread:12008 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-06 12:27:46,787 INFO    HandlerThread:12008 [system_monitor.py:probe():185] Publishing system info
+2023-03-06 12:27:46,787 DEBUG   HandlerThread:12008 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-06 12:27:46,788 DEBUG   HandlerThread:12008 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-06 12:27:46,788 DEBUG   HandlerThread:12008 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-06 12:27:46,792 ERROR   HandlerThread:12008 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-03-06 12:27:46,795 DEBUG   HandlerThread:12008 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-06 12:27:46,795 DEBUG   HandlerThread:12008 [system_info.py:_save_code():89] Saving code
+2023-03-06 12:27:46,795 WARNING HandlerThread:12008 [system_info.py:_save_code():91] unable to save code -- program entry not found
+2023-03-06 12:27:46,795 DEBUG   HandlerThread:12008 [system_info.py:_save_patches():127] Saving git patches
+2023-03-06 12:27:47,088 DEBUG   HandlerThread:12008 [system_info.py:_save_patches():169] Saving git patches done
+2023-03-06 12:27:47,090 INFO    HandlerThread:12008 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-06 12:27:47,096 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:47,096 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-06 12:27:47,097 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file diff.patch with policy now
+2023-03-06 12:27:47,114 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-06 12:27:47,114 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: stop_status
+2023-03-06 12:27:47,256 DEBUG   SenderThread:12008 [sender.py:send():336] send: telemetry
+2023-03-06 12:27:47,256 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:47,256 DEBUG   SenderThread:12008 [sender.py:send():336] send: telemetry
+2023-03-06 12:27:47,256 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:47,257 WARNING SenderThread:12008 [sender.py:send_metric():1272] Seen metric with glob (shouldn't happen)
+2023-03-06 12:27:47,422 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\requirements.txt
+2023-03-06 12:27:47,423 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\diff.patch
+2023-03-06 12:27:47,423 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\conda-environment.yaml
+2023-03-06 12:27:47,423 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\output.log
+2023-03-06 12:27:47,424 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\wandb-metadata.json
+2023-03-06 12:27:47,424 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\wandb-summary.json
+2023-03-06 12:27:47,668 DEBUG   SenderThread:12008 [sender.py:send():336] send: config
+2023-03-06 12:27:47,804 INFO    wandb-upload_1:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\44pj98jv-diff.patch
+2023-03-06 12:27:47,850 INFO    wandb-upload_0:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\9h5c2bzx-wandb-metadata.json
+2023-03-06 12:27:49,430 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\output.log
+2023-03-06 12:27:49,659 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: status_report
+2023-03-06 12:27:51,438 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\output.log
+2023-03-06 12:27:54,676 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: status_report
+2023-03-06 12:27:55,412 DEBUG   SenderThread:12008 [sender.py:send():336] send: config
+2023-03-06 12:27:55,623 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:27:55,624 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: log_artifact
+2023-03-06 12:27:55,971 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:27:56,130 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:27:56,381 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:27:56,401 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:27:56,455 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_21a7e3bb20a1b49af192.png
+2023-03-06 12:27:56,455 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_f695b1fecfa50f52d6a1.png
+2023-03-06 12:27:56,456 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_3da12062102606418a6d.png
+2023-03-06 12:27:56,456 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_dc3c1b1f704963363dd3.png
+2023-03-06 12:27:56,456 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_827e4e519cf3ab577fb8.png
+2023-03-06 12:27:56,456 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_a1cb13a09a227efe7f6f.png
+2023-03-06 12:27:56,457 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_9db7096b06b24172498e.png
+2023-03-06 12:27:56,457 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_0_4d934345d20324a25095.table.json
+2023-03-06 12:27:56,457 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_4c122dfc978425330808.png
+2023-03-06 12:27:56,457 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_5fc7d3bfcf17267b2284.png
+2023-03-06 12:27:56,458 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_2_27db05d45d67d1de0b0b.table.json
+2023-03-06 12:27:56,458 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_1_82b0ec1e696ee041a149.png
+2023-03-06 12:27:56,458 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media
+2023-03-06 12:27:56,458 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:27:56,459 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:27:57,088 INFO    wandb-upload_1:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpwe6wat18
+2023-03-06 12:27:57,460 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\output.log
+2023-03-06 12:27:57,577 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:27:57,598 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:27:57,735 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:27:58,013 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:27:58,033 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:27:58,039 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:27:58,139 INFO    SenderThread:12008 [sender.py:send_request_log_artifact():1381] logged artifact run-6251b24p-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzkwMDk0MTA2', 'digest': '1fe87b48ec959537379ece28b2cb1dca', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU1OTkwODcw', 'latestArtifact': None}, 'version': 'latest'}
+2023-03-06 12:27:58,139 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,140 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_0_4d934345d20324a25095.table.json with policy now
+2023-03-06 12:27:58,140 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,141 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,141 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,141 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,141 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,141 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,141 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,142 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,142 DEBUG   SenderThread:12008 [sender.py:send():336] send: history
+2023-03-06 12:27:58,142 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:27:58,143 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:27:58,143 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,143 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_dc3c1b1f704963363dd3.png with policy now
+2023-03-06 12:27:58,143 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,144 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_a1cb13a09a227efe7f6f.png with policy now
+2023-03-06 12:27:58,144 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,144 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_4c122dfc978425330808.png with policy now
+2023-03-06 12:27:58,148 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,148 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_f695b1fecfa50f52d6a1.png with policy now
+2023-03-06 12:27:58,149 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,149 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_82b0ec1e696ee041a149.png with policy now
+2023-03-06 12:27:58,150 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,150 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_827e4e519cf3ab577fb8.png with policy now
+2023-03-06 12:27:58,151 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,151 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_9db7096b06b24172498e.png with policy now
+2023-03-06 12:27:58,152 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,155 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_21a7e3bb20a1b49af192.png with policy now
+2023-03-06 12:27:58,156 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,156 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_5fc7d3bfcf17267b2284.png with policy now
+2023-03-06 12:27:58,157 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:27:58,157 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_1_3da12062102606418a6d.png with policy now
+2023-03-06 12:27:58,157 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,158 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,158 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,158 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,158 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,158 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,159 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:27:58,159 DEBUG   SenderThread:12008 [sender.py:send():336] send: history
+2023-03-06 12:27:58,159 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:27:58,163 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:27:58,164 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: log_artifact
+2023-03-06 12:27:58,480 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\wandb-summary.json
+2023-03-06 12:27:58,480 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_3_c07c8e9a389ee6173e0b.table.json
+2023-03-06 12:27:58,480 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_9db21f4651944359e99e.png
+2023-03-06 12:27:58,481 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_3d03e751a7e741b4248a.png
+2023-03-06 12:27:58,481 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_174056a903d964f2b8a2.png
+2023-03-06 12:27:58,481 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_5ceae37943daa29c0279.png
+2023-03-06 12:27:58,481 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_5_d41c5e0ca93d5c589c32.table.json
+2023-03-06 12:27:58,482 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_e9de6e439947b1873eea.png
+2023-03-06 12:27:58,482 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_b0253fcbccdd089b008b.png
+2023-03-06 12:27:58,482 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_3538fdd9e87e7c0820f9.png
+2023-03-06 12:27:58,482 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_f73aabad58b48c5d9382.png
+2023-03-06 12:27:58,483 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_13757efb855b06d9bde1.png
+2023-03-06 12:27:58,483 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_4_52efbcb4e2b1d46b31be.png
+2023-03-06 12:27:58,483 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:27:58,483 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:27:58,872 INFO    wandb-upload_1:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\3pfer6zr-media/images/sample_images_1_dc3c1b1f704963363dd3.png
+2023-03-06 12:27:59,020 INFO    wandb-upload_0:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\sc0ofyq9-media/table/val_conf_mat_table_0_4d934345d20324a25095.table.json
+2023-03-06 12:27:59,133 INFO    wandb-upload_7:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\8wcfvojv-media/images/sample_images_1_9db7096b06b24172498e.png
+2023-03-06 12:27:59,138 INFO    wandb-upload_4:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\lphor4ze-media/images/sample_images_1_f695b1fecfa50f52d6a1.png
+2023-03-06 12:27:59,204 INFO    wandb-upload_3:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\me5m841r-media/images/sample_images_1_4c122dfc978425330808.png
+2023-03-06 12:27:59,212 INFO    wandb-upload_10:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\qi8u6tdu-media/images/sample_images_1_3da12062102606418a6d.png
+2023-03-06 12:27:59,432 INFO    wandb-upload_8:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\jnwjdedh-media/images/sample_images_1_21a7e3bb20a1b49af192.png
+2023-03-06 12:27:59,510 INFO    wandb-upload_9:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\v88jfqo0-media/images/sample_images_1_5fc7d3bfcf17267b2284.png
+2023-03-06 12:27:59,641 INFO    wandb-upload_2:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\ydyrxdic-media/images/sample_images_1_a1cb13a09a227efe7f6f.png
+2023-03-06 12:27:59,664 INFO    wandb-upload_5:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\qngrnozf-media/images/sample_images_1_82b0ec1e696ee041a149.png
+2023-03-06 12:27:59,768 INFO    wandb-upload_16:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpjdbz59fy
+2023-03-06 12:27:59,786 INFO    wandb-upload_6:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\nkvk2ozb-media/images/sample_images_1_827e4e519cf3ab577fb8.png
+2023-03-06 12:27:59,793 INFO    wandb-upload_19:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpl8h7l669
+2023-03-06 12:27:59,822 INFO    wandb-upload_18:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp2oe9har3
+2023-03-06 12:27:59,848 INFO    wandb-upload_0:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpyepbxvob
+2023-03-06 12:27:59,878 INFO    wandb-upload_12:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmphxy2gddv
+2023-03-06 12:27:59,904 INFO    wandb-upload_11:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmptpg6xu6s
+2023-03-06 12:27:59,958 INFO    wandb-upload_1:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp41f0lptj
+2023-03-06 12:27:59,958 INFO    wandb-upload_14:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpmhd4ni9y
+2023-03-06 12:27:59,985 INFO    wandb-upload_15:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmplbu1q80v
+2023-03-06 12:28:00,011 INFO    wandb-upload_17:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp95piq3xy
+2023-03-06 12:28:00,040 INFO    wandb-upload_13:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpqtc4pswk
+2023-03-06 12:28:00,938 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:01,169 INFO    SenderThread:12008 [sender.py:send_request_log_artifact():1381] logged artifact run-6251b24p-sample_table - {'id': 'QXJ0aWZhY3Q6MzkwMDk0MTQw', 'digest': 'bd436317410b68e4a3f25aa5cfebccce', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU1OTkwODc0', 'latestArtifact': None}, 'version': 'latest'}
+2023-03-06 12:28:01,169 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:01,169 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: status_report
+2023-03-06 12:28:01,169 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\table\sample_table_2_27db05d45d67d1de0b0b.table.json with policy now
+2023-03-06 12:28:01,170 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,171 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,171 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,171 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,171 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,171 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,171 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,172 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:01,172 DEBUG   SenderThread:12008 [sender.py:send():336] send: history
+2023-03-06 12:28:01,172 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:28:01,172 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:28:01,173 DEBUG   SenderThread:12008 [sender.py:send():336] send: config
+2023-03-06 12:28:01,173 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: log_artifact
+2023-03-06 12:28:01,497 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\wandb-summary.json
+2023-03-06 12:28:01,841 INFO    wandb-upload_7:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\b3p5vkng-media/table/sample_table_2_27db05d45d67d1de0b0b.table.json
+2023-03-06 12:28:01,997 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:02,019 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:02,132 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:02,132 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:02,175 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:02,431 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:02,450 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:02,455 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:02,502 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_6416ae43e599e38f6121.png
+2023-03-06 12:28:02,503 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_00b3ddc3f92a1dba3bff.png
+2023-03-06 12:28:02,504 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_7_7b7ff340427b694b6c91.table.json
+2023-03-06 12:28:02,504 INFO    wandb-upload_3:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpi0tvneyi
+2023-03-06 12:28:02,504 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_827e4e519cf3ab577fb8.png
+2023-03-06 12:28:02,504 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_4ece3895d4040605e0c9.png
+2023-03-06 12:28:02,505 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_054eb3d3cd24f103c775.png
+2023-03-06 12:28:02,505 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_529b2a8aee64b6076763.png
+2023-03-06 12:28:02,505 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_361522ba2a8dc52b438e.png
+2023-03-06 12:28:02,506 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_90ab00e63a62dee532e7.png
+2023-03-06 12:28:02,506 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_681a59b48d97e9e2a7c4.png
+2023-03-06 12:28:02,506 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_8_72ab9800bac216d9f0a6.png
+2023-03-06 12:28:02,507 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_9_3121b9cd9d23a21b5cba.table.json
+2023-03-06 12:28:02,507 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:02,507 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:03,454 INFO    SenderThread:12008 [sender.py:send_request_log_artifact():1381] logged artifact run-6251b24p-val_conf_mat_table - {'id': 'QXJ0aWZhY3Q6MzkwMDk0MjE1', 'digest': 'c0098be59c5f6a499791d2b6f778d7d3', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU1OTkwODcw', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzkwMDk0MTA2', 'versionIndex': 0}}, 'version': 'latest'}
+2023-03-06 12:28:03,454 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,454 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\table\val_conf_mat_table_3_c07c8e9a389ee6173e0b.table.json with policy now
+2023-03-06 12:28:03,455 DEBUG   SenderThread:12008 [sender.py:send():336] send: history
+2023-03-06 12:28:03,455 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:28:03,456 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:28:03,456 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,456 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_174056a903d964f2b8a2.png with policy now
+2023-03-06 12:28:03,456 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,457 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_e9de6e439947b1873eea.png with policy now
+2023-03-06 12:28:03,457 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,457 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_f73aabad58b48c5d9382.png with policy now
+2023-03-06 12:28:03,458 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,458 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_13757efb855b06d9bde1.png with policy now
+2023-03-06 12:28:03,458 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,458 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_52efbcb4e2b1d46b31be.png with policy now
+2023-03-06 12:28:03,459 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,459 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_9db21f4651944359e99e.png with policy now
+2023-03-06 12:28:03,463 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,463 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_5ceae37943daa29c0279.png with policy now
+2023-03-06 12:28:03,463 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,464 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_3538fdd9e87e7c0820f9.png with policy now
+2023-03-06 12:28:03,464 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,464 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_3d03e751a7e741b4248a.png with policy now
+2023-03-06 12:28:03,465 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:03,465 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\images\sample_images_4_b0253fcbccdd089b008b.png with policy now
+2023-03-06 12:28:03,468 DEBUG   SenderThread:12008 [sender.py:send():336] send: history
+2023-03-06 12:28:03,469 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:28:03,469 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:28:03,470 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: log_artifact
+2023-03-06 12:28:03,506 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\output.log
+2023-03-06 12:28:03,507 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\wandb-summary.json
+2023-03-06 12:28:03,713 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:03,736 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:03,922 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:04,073 INFO    wandb-upload_2:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\z16skzf3-media/images/sample_images_4_174056a903d964f2b8a2.png
+2023-03-06 12:28:04,187 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:04,207 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:04,212 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:04,223 INFO    wandb-upload_19:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\tr16a02r-media/images/sample_images_4_f73aabad58b48c5d9382.png
+2023-03-06 12:28:04,232 INFO    wandb-upload_17:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\86s6rxne-media/images/sample_images_4_5ceae37943daa29c0279.png
+2023-03-06 12:28:04,232 INFO    wandb-upload_0:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\6shbl0au-media/images/sample_images_4_13757efb855b06d9bde1.png
+2023-03-06 12:28:04,289 INFO    wandb-upload_11:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\ms4m1jk9-media/images/sample_images_4_52efbcb4e2b1d46b31be.png
+2023-03-06 12:28:04,372 INFO    wandb-upload_9:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\4rv32kb9-media/images/sample_images_4_b0253fcbccdd089b008b.png
+2023-03-06 12:28:04,397 INFO    wandb-upload_16:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\5z7mouci-media/images/sample_images_4_e9de6e439947b1873eea.png
+2023-03-06 12:28:04,467 INFO    wandb-upload_8:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\hzk3fgaq-media/table/val_conf_mat_table_3_c07c8e9a389ee6173e0b.table.json
+2023-03-06 12:28:04,489 INFO    wandb-upload_7:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\fqeu2u8x-media/images/sample_images_4_3d03e751a7e741b4248a.png
+2023-03-06 12:28:04,489 INFO    wandb-upload_4:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\kamqltoz-media/images/sample_images_4_3538fdd9e87e7c0820f9.png
+2023-03-06 12:28:04,506 INFO    wandb-upload_14:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\vcz0ew7t-media/images/sample_images_4_9db21f4651944359e99e.png
+2023-03-06 12:28:04,512 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_a0e8091603f7055f72e4.png
+2023-03-06 12:28:04,513 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_1afecc8a641318fbcdd8.png
+2023-03-06 12:28:04,513 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_13_896e5b24bbb3c2afeb7c.table.json
+2023-03-06 12:28:04,513 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_c1943f287e05e549678f.png
+2023-03-06 12:28:04,513 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_470d143385a91eb90595.png
+2023-03-06 12:28:04,514 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_d18abfe1463aa59b55d6.png
+2023-03-06 12:28:04,514 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_c21a57937898d41dce9f.png
+2023-03-06 12:28:04,514 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_cae18ce731a66b79304f.png
+2023-03-06 12:28:04,514 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_9e7930ca7d6804bb421a.png
+2023-03-06 12:28:04,515 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_11_5fc229c53c60324067e3.table.json
+2023-03-06 12:28:04,515 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_3f7716eaf01786a85132.png
+2023-03-06 12:28:04,515 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_12_685c501e832ac9ae9ed6.png
+2023-03-06 12:28:04,515 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:04,516 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:04,799 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:04,818 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:04,967 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:05,261 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:05,281 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:05,287 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:05,329 INFO    wandb-upload_15:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp4gahb15x
+2023-03-06 12:28:05,329 INFO    wandb-upload_5:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpn4lrqxw5
+2023-03-06 12:28:05,363 INFO    wandb-upload_6:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp57g3i6v4
+2023-03-06 12:28:05,392 INFO    wandb-upload_13:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpl35mbptu
+2023-03-06 12:28:05,423 INFO    wandb-upload_18:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpvzfqvgvs
+2023-03-06 12:28:05,423 INFO    wandb-upload_3:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpn9j8jm2t
+2023-03-06 12:28:05,452 INFO    wandb-upload_19:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpq0paouey
+2023-03-06 12:28:05,484 INFO    wandb-upload_2:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp1iv7go92
+2023-03-06 12:28:05,484 INFO    wandb-upload_12:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmpw9wg_2z0
+2023-03-06 12:28:05,484 INFO    wandb-upload_1:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmptbb10o6j
+2023-03-06 12:28:05,484 INFO    wandb-upload_10:12008 [upload_job.py:push():96] Uploaded file C:\Users\GCM\AppData\Local\wandb\wandb\artifacts\staging\tmp0yp0gtnf
+2023-03-06 12:28:05,519 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_d7a6aafaf74cd32b0350.png
+2023-03-06 12:28:05,519 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_78179c4f19803d9ea2ad.png
+2023-03-06 12:28:05,519 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_17_04b1ae6972de5dc99f11.table.json
+2023-03-06 12:28:05,520 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_42fecc996626347f81dd.png
+2023-03-06 12:28:05,520 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_f70b6ddd7e516ef38b85.png
+2023-03-06 12:28:05,520 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_8c72b12b6ef960016d46.png
+2023-03-06 12:28:05,520 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_db9d8eef3abc2e0a8f29.png
+2023-03-06 12:28:05,520 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_90ecff9d64e08abafc13.png
+2023-03-06 12:28:05,521 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_f6b84ca9b08b0c82eaac.png
+2023-03-06 12:28:05,521 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_15_4d934345d20324a25095.table.json
+2023-03-06 12:28:05,521 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_26573563620c35b18ddc.png
+2023-03-06 12:28:05,521 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_16_a1b1e65cf8d3a16139cd.png
+2023-03-06 12:28:05,522 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:05,522 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:05,998 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:06,019 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:06,154 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:06,396 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:06,416 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:06,421 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:06,452 INFO    SenderThread:12008 [sender.py:send_request_log_artifact():1381] logged artifact run-6251b24p-sample_table - {'id': 'QXJ0aWZhY3Q6MzkwMDk0Mjg0', 'digest': 'a723942ae694731331c613e0add74d48', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU1OTkwODc0', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzkwMDk0MTQw', 'versionIndex': 0}}, 'version': 'latest'}
+2023-03-06 12:28:06,452 DEBUG   SenderThread:12008 [sender.py:send():336] send: files
+2023-03-06 12:28:06,453 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: status_report
+2023-03-06 12:28:06,453 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file media\table\sample_table_5_d41c5e0ca93d5c589c32.table.json with policy now
+2023-03-06 12:28:06,454 DEBUG   SenderThread:12008 [sender.py:send():336] send: history
+2023-03-06 12:28:06,454 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:28:06,456 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:28:06,456 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:06,456 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:06,456 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:06,457 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:06,457 DEBUG   SenderThread:12008 [sender.py:send():336] send: metric
+2023-03-06 12:28:06,457 DEBUG   SenderThread:12008 [sender.py:send():336] send: history
+2023-03-06 12:28:06,457 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: summary_record
+2023-03-06 12:28:06,458 INFO    SenderThread:12008 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-06 12:28:06,458 DEBUG   SenderThread:12008 [sender.py:send_request():363] send_request: log_artifact
+2023-03-06 12:28:06,526 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\wandb-summary.json
+2023-03-06 12:28:06,526 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_724e5fd7ee04bc98f57d.png
+2023-03-06 12:28:06,526 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_f15e7d5184aa60a3f1c7.png
+2023-03-06 12:28:06,526 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_c9c6a4e464a624293cb0.png
+2023-03-06 12:28:06,527 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_19_0763520efff3d3168b02.table.json
+2023-03-06 12:28:06,527 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_b77081430135a6f1fcd7.png
+2023-03-06 12:28:06,527 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_47d0679302cfc5c2fdac.png
+2023-03-06 12:28:06,527 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_69013affe2dc18251418.png
+2023-03-06 12:28:06,528 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_f8a9558e22cd5229ad28.png
+2023-03-06 12:28:06,528 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_03f5f493bec10ec58449.png
+2023-03-06 12:28:06,528 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_21_9aaf825b4c32fd374b8e.table.json
+2023-03-06 12:28:06,528 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_a4b94cd6fddb708c2dbf.png
+2023-03-06 12:28:06,529 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_20_9db7096b06b24172498e.png
+2023-03-06 12:28:06,529 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:06,529 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:06,864 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:06,880 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:07,012 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:07,156 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:07,242 INFO    wandb-upload_17:12008 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpbrn9wobcwandb\te48l1fe-media/table/sample_table_5_d41c5e0ca93d5c589c32.table.json
+2023-03-06 12:28:07,273 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:07,293 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:07,298 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:07,531 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_23_0763520efff3d3168b02.table.json
+2023-03-06 12:28:07,531 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_c1ef1c7f5cfc50ecf801.png
+2023-03-06 12:28:07,531 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_22a48bcffff9fea91f02.png
+2023-03-06 12:28:07,532 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_724e5fd7ee04bc98f57d.png
+2023-03-06 12:28:07,532 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_57be1661668c81f1e89c.png
+2023-03-06 12:28:07,532 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_25_354943abac4455b118d4.table.json
+2023-03-06 12:28:07,532 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_d8e50343977d29854534.png
+2023-03-06 12:28:07,533 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_704d11562176d930f114.png
+2023-03-06 12:28:07,533 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_4f3f0aba131fe932c54c.png
+2023-03-06 12:28:07,533 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_48d816bda21aeb6e485a.png
+2023-03-06 12:28:07,533 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_cce8e45b4b0d363ad09f.png
+2023-03-06 12:28:07,534 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_24_78d2466e89ca48db18ae.png
+2023-03-06 12:28:07,534 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:07,534 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:08,155 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:08,176 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:08,314 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:08,551 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_e69a6594df9fdfcb0a50.png
+2023-03-06 12:28:08,551 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_eb36d42f2dd242c8bbd9.png
+2023-03-06 12:28:08,551 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_9de5515de3497dd2d663.png
+2023-03-06 12:28:08,552 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_5ceae37943daa29c0279.png
+2023-03-06 12:28:08,552 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_c239c9fe02cf6b112187.png
+2023-03-06 12:28:08,552 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_bdc5f27a578b7578f43f.png
+2023-03-06 12:28:08,552 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_27_176995f546fd458489c2.table.json
+2023-03-06 12:28:08,552 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_78777948ccfd26e4b8d5.png
+2023-03-06 12:28:08,553 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_329a35d5796fd2aafa16.png
+2023-03-06 12:28:08,553 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_5131b8605eb7b5249ac5.png
+2023-03-06 12:28:08,553 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_28_0aff540b483e53a25005.png
+2023-03-06 12:28:08,553 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:08,554 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:08,686 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:08,708 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:08,713 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:09,367 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:09,384 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:09,559 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:09,571 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_31_176995f546fd458489c2.table.json
+2023-03-06 12:28:09,571 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_cfe2b381407e4b86aaa8.png
+2023-03-06 12:28:09,571 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_cdc9ae5320e0dd7d310c.png
+2023-03-06 12:28:09,572 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_6f282ac720543c1fc328.png
+2023-03-06 12:28:09,572 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_e8d75c42b5c6dbf1a62e.png
+2023-03-06 12:28:09,572 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_a638e31d3ccd4f0b4349.png
+2023-03-06 12:28:09,572 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_361522ba2a8dc52b438e.png
+2023-03-06 12:28:09,573 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_41659321b313a94a2181.png
+2023-03-06 12:28:09,573 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_29_490b93e7fc34b9ca9206.table.json
+2023-03-06 12:28:09,573 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_4710a163c1480f4dd37b.png
+2023-03-06 12:28:09,573 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_94683443adf4a5ad1c0e.png
+2023-03-06 12:28:09,574 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_32_5e47d95839ce88e3d2ba.png
+2023-03-06 12:28:09,574 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:09,574 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:09,990 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:10,013 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:10,019 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:10,850 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:10,871 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:11,007 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:11,426 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:11,447 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:11,453 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:11,581 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_6cb85b9ee431d320b3ec.png
+2023-03-06 12:28:11,581 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_3f7716eaf01786a85132.png
+2023-03-06 12:28:11,581 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_b3067317527da668cca9.png
+2023-03-06 12:28:11,582 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_20f9df5385b365018aea.png
+2023-03-06 12:28:11,582 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_dc3c1b1f704963363dd3.png
+2023-03-06 12:28:11,582 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_33_9f6723a2bafadc3c8f46.table.json
+2023-03-06 12:28:11,582 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_d13a88cff0ae5ac58258.png
+2023-03-06 12:28:11,583 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_81abad1af3725362e1c5.png
+2023-03-06 12:28:11,583 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_37_7491fb9889789995c970.table.json
+2023-03-06 12:28:11,583 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_3a8dfe26219949c0cca4.png
+2023-03-06 12:28:11,583 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_35_abd3f644c5972042d4b9.table.json
+2023-03-06 12:28:11,584 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_5a48bc25e467e0fd2f41.png
+2023-03-06 12:28:11,584 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_36_e93443b9ce1713e21581.png
+2023-03-06 12:28:11,584 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:11,584 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:12,179 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:12,194 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:12,211 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:12,348 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:12,792 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:12,812 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:12,818 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:13,592 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_41659321b313a94a2181.png
+2023-03-06 12:28:13,593 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\sample_table_41_164dce8caa658533d069.table.json
+2023-03-06 12:28:13,593 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_5821b49b4f43497bbc20.png
+2023-03-06 12:28:13,593 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_ef9108632eeffebf100d.png
+2023-03-06 12:28:13,593 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_a1003fbb1f127b0f96de.png
+2023-03-06 12:28:13,594 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_ca87cfffc310c892345f.png
+2023-03-06 12:28:13,594 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_2eb64e597114e370a156.png
+2023-03-06 12:28:13,594 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_4b22f6f4e98f9c5b2af5.png
+2023-03-06 12:28:13,594 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_0b6fb1192b4e45606d72.png
+2023-03-06 12:28:13,595 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\val_conf_mat_table_39_abd3f644c5972042d4b9.table.json
+2023-03-06 12:28:13,595 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_31e3dd346ddd3cb8d41a.png
+2023-03-06 12:28:13,595 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\images\sample_images_40_97328fac33991ce406b0.png
+2023-03-06 12:28:13,595 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:13,596 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\images
+2023-03-06 12:28:13,768 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: log_artifact
+2023-03-06 12:28:13,786 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:13,790 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-06 12:28:15,053 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-06 12:28:15,613 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\code\_session_history.ipynb
+2023-03-06 12:28:15,613 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\media\table\test_conf_mat_table_43_abd3f644c5972042d4b9.table.json
+2023-03-06 12:28:15,613 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230306_122743-6251b24p\files\media\table
+2023-03-06 12:28:15,614 INFO    Thread-17 :12008 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230306_122743-6251b24p\files\code
+2023-03-06 12:28:20,068 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:25,082 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:30,095 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:35,111 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:40,128 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:45,144 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:46,686 DEBUG   SystemMonitor:12008 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-06 12:28:50,159 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:28:55,186 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:00,200 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:05,216 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:10,229 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:15,255 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:20,282 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:25,310 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:30,327 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:35,342 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:40,356 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:45,379 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:50,391 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:29:55,401 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:00,411 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:05,421 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:10,434 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:15,447 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:20,460 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:25,472 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:30,482 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:35,494 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 12:30:40,516 DEBUG   HandlerThread:12008 [handler.py:handle_request():144] handle_request: keepalive
