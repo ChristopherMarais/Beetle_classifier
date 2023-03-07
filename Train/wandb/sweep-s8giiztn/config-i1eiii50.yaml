@@ -1,8 +1,0 @@
-wandb_version: 1
-
-lr:
-  value: 0.0007356466329571601
-n_layer_1:
-  value: 128
-n_layer_2:
-  value: 32
