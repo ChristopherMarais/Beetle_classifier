@@ -52,3 +52,4 @@ config: {}
 2023-03-07 16:26:52,548 INFO    MainThread:17432 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 0
 2023-03-07 16:26:52,549 INFO    MainThread:17432 [wandb_run.py:_restore():2066] restore
 2023-03-07 16:26:52,550 INFO    MainThread:17432 [wandb_run.py:_restore():2072] restore done
+2023-03-07 16:44:42,140 WARNING MsgRouterThr:17432 [router.py:message_loop():77] message_loop has been closed

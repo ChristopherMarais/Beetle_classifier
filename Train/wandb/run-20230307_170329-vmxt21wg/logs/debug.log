@@ -1,0 +1,60 @@
+2023-03-07 17:03:29,718 INFO    MainThread:17192 [wandb_setup.py:_flush():68] Configure stats pid to 17192
+2023-03-07 17:03:29,719 INFO    MainThread:17192 [wandb_setup.py:_flush():68] Loading settings from C:\Users\gcmar\.config\wandb\settings
+2023-03-07 17:03:29,719 INFO    MainThread:17192 [wandb_setup.py:_flush():68] Loading settings from C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\settings
+2023-03-07 17:03:29,719 INFO    MainThread:17192 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-03-07 17:03:29,719 INFO    MainThread:17192 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-03-07 17:03:29,719 INFO    MainThread:17192 [wandb_init.py:_log_setup():492] Logging user logs to .\wandb\run-20230307_170329-vmxt21wg\logs\debug.log
+2023-03-07 17:03:29,719 INFO    MainThread:17192 [wandb_init.py:_log_setup():493] Logging internal logs to .\wandb\run-20230307_170329-vmxt21wg\logs\debug-internal.log
+2023-03-07 17:03:29,720 INFO    MainThread:17192 [wandb_init.py:_jupyter_setup():438] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000017BF64A2A40>
+2023-03-07 17:03:29,720 INFO    MainThread:17192 [wandb_init.py:init():532] calling init triggers
+2023-03-07 17:03:29,720 INFO    MainThread:17192 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {}
+2023-03-07 17:03:29,720 INFO    MainThread:17192 [wandb_init.py:init():588] starting backend
+2023-03-07 17:03:29,720 INFO    MainThread:17192 [wandb_init.py:init():592] setting up manager
+2023-03-07 17:03:29,731 INFO    MainThread:17192 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-03-07 17:03:29,735 INFO    MainThread:17192 [wandb_init.py:init():599] backend started and connected
+2023-03-07 17:03:29,741 INFO    MainThread:17192 [wandb_run.py:_label_probe_notebook():1203] probe notebook
+2023-03-07 17:03:29,742 INFO    MainThread:17192 [wandb_run.py:_label_probe_notebook():1213] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-03-07 17:03:29,742 INFO    MainThread:17192 [wandb_init.py:init():687] updated telemetry
+2023-03-07 17:03:30,023 INFO    MainThread:17192 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-03-07 17:03:30,682 INFO    MainThread:17192 [wandb_run.py:_on_init():2134] communicating current version
+2023-03-07 17:03:34,251 INFO    MainThread:17192 [wandb_run.py:_on_init():2143] got version response upgrade_message: "wandb version 0.13.11 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-03-07 17:03:34,251 INFO    MainThread:17192 [wandb_init.py:init():775] starting run threads in backend
+2023-03-07 17:03:35,767 INFO    MainThread:17192 [wandb_run.py:_console_start():2114] atexit reg
+2023-03-07 17:03:35,767 INFO    MainThread:17192 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-03-07 17:03:35,767 INFO    MainThread:17192 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-03-07 17:03:35,767 INFO    MainThread:17192 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-03-07 17:03:35,768 INFO    MainThread:17192 [wandb_init.py:init():817] run started, returning control to user process
+2023-03-07 17:03:35,929 INFO    MainThread:17192 [jupyter.py:_save_ipynb():390] looking for notebook: LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb
+2023-03-07 17:03:35,930 INFO    MainThread:17192 [wandb_init.py:_pause_backend():403] pausing backend
+2023-03-07 17:03:35,948 INFO    MainThread:17192 [wandb_init.py:_resume_backend():408] resuming backend
+2023-03-07 17:03:36,086 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb None None {'n_classes': 10, 'acc_task': 'multiclass', 'lr': 0.001}
+2023-03-07 17:03:38,662 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-07 17:03:39,978 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-07 17:03:41,342 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-07 17:03:42,826 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-07 17:03:46,000 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-07 17:03:47,497 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'val_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'val_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-07 17:03:50,254 INFO    MainThread:17192 [jupyter.py:_save_ipynb():390] looking for notebook: LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb
+2023-03-07 17:03:50,254 INFO    MainThread:17192 [wandb_init.py:_pause_backend():403] pausing backend
+2023-03-07 17:03:50,274 INFO    MainThread:17192 [wandb_init.py:_resume_backend():408] resuming backend
+2023-03-07 17:03:50,487 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb None None {'n_classes': 10, 'acc_task': 'multiclass', 'lr': 0.001}
+2023-03-07 17:03:50,568 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'visualize', 'test_conf_mat') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': ''}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'test_conf_mat_table'}], 'fields': []}]}]}}} None
+2023-03-07 17:03:51,813 INFO    MainThread:17192 [jupyter.py:_save_ipynb():390] looking for notebook: LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb
+2023-03-07 17:03:51,814 INFO    MainThread:17192 [wandb_init.py:_pause_backend():403] pausing backend
+2023-03-07 17:03:51,819 INFO    MainThread:17192 [wandb_init.py:_resume_backend():408] resuming backend
+2023-03-07 17:03:51,825 INFO    MainThread:17192 [jupyter.py:_save_ipynb():390] looking for notebook: LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb
+2023-03-07 17:03:51,826 INFO    MainThread:17192 [wandb_init.py:_pause_backend():403] pausing backend
+2023-03-07 17:03:51,838 INFO    MainThread:17192 [wandb_init.py:_resume_backend():408] resuming backend
+2023-03-07 17:03:51,841 INFO    MainThread:17192 [wandb_run.py:_finish():1854] finishing run christopher-marais/computer_vision_test_single/vmxt21wg
+2023-03-07 17:03:51,913 INFO    MainThread:17192 [jupyter.py:save_history():478] saving 12 cells to _session_history.ipynb
+2023-03-07 17:03:51,914 INFO    MainThread:17192 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'session_history') code\_session_history.ipynb None
+2023-03-07 17:03:51,924 INFO    MainThread:17192 [jupyter.py:_save_ipynb():390] looking for notebook: LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb
+2023-03-07 17:03:51,924 INFO    MainThread:17192 [wandb_init.py:_jupyter_teardown():420] cleaning up jupyter logic
+2023-03-07 17:03:51,924 INFO    MainThread:17192 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 0
+2023-03-07 17:03:51,924 INFO    MainThread:17192 [wandb_run.py:_restore():2066] restore
+2023-03-07 17:03:51,925 INFO    MainThread:17192 [wandb_run.py:_restore():2072] restore done
+2023-03-07 17:09:29,781 INFO    MainThread:17192 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-03-07 17:09:29,782 INFO    MainThread:17192 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-03-07 17:09:29,788 INFO    MainThread:17192 [wandb_run.py:_footer_sync_info():3398] logging synced files
