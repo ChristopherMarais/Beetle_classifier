@@ -1,0 +1,1946 @@
+diff --git a/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb b/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb
+index c26c173..127e7c8 100644
+--- a/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/PyLi_wanb_sweep_CoatNet-checkpoint.ipynb
+@@ -6,11 +6,11 @@
+    "id": "c7b471f1-f5fa-4eb1-b9ae-2d67ed8838df",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:22.030584Z",
+-     "iopub.status.busy": "2023-03-07T22:03:22.030584Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.622644Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.621641Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:22.030584Z"
++     "iopub.execute_input": "2023-03-08T17:09:13.337823Z",
++     "iopub.status.busy": "2023-03-08T17:09:13.335822Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.893116Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.892103Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:13.337823Z"
+     },
+     "tags": []
+    },
+@@ -74,11 +74,11 @@
+    "id": "01c28e3c-850d-48b6-8db9-3a8804e0c9ae",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.624157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.624157Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.653165Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.652159Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.624157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.894115Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.894115Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.925105Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.924098Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.894115Z"
+     },
+     "tags": []
+    },
+@@ -141,11 +141,11 @@
+    "id": "8b9e722b-cda4-4956-a0c1-8eb31023f765",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.657157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.656158Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.669160Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.668157Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.657157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.928104Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.928104Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.941190Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.940189Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.928104Z"
+     },
+     "tags": []
+    },
+@@ -189,11 +189,11 @@
+    "id": "9dbe4b19-9805-40b4-a513-ea35715a0c64",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.671157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.671157Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.685163Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.684158Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.671157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.943192Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.942191Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.956194Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.955190Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.943192Z"
+     },
+     "tags": []
+    },
+@@ -225,11 +225,11 @@
+    "id": "7539d3a5-ca4f-4ba3-a462-05875d4b9a90",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.688158Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.687160Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.701158Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.700157Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.688158Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.957191Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.957191Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.972191Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.971190Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.957191Z"
+     },
+     "tags": []
+    },
+@@ -255,37 +255,6 @@
+     "        return DataLoader(self.test,batch_size = 64,shuffle = True)#False, num_workers = cpu_count)"
+    ]
+   },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 16,
+-   "id": "5d7b93d9-0811-448a-82a5-718013f9a057",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-07T22:32:38.883139Z",
+-     "iopub.status.busy": "2023-03-07T22:32:38.882146Z",
+-     "iopub.status.idle": "2023-03-07T22:32:38.906351Z",
+-     "shell.execute_reply": "2023-03-07T22:32:38.905366Z",
+-     "shell.execute_reply.started": "2023-03-07T22:32:38.883139Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [
+-    {
+-     "ename": "TypeError",
+-     "evalue": "'DataModule' object is not iterable",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+-      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+-      "Cell \u001b[1;32mIn[16], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[38;5;28;43mlist\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mdata\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "\u001b[1;31mTypeError\u001b[0m: 'DataModule' object is not iterable"
+-     ]
+-    }
+-   ],
+-   "source": [
+-    "list(data)"
+-   ]
+-  },
+   {
+    "cell_type": "markdown",
+    "id": "8c0e41f1-2dd9-481f-ae64-3bf0f7e1bbee",
+@@ -308,11 +277,11 @@
+    "id": "deb34aed-792a-4022-a878-f8d6c4ffa97c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.703157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.702158Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.731681Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.730681Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.703157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.973191Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.973191Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.003193Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.002189Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.973191Z"
+     },
+     "tags": []
+    },
+@@ -433,15 +402,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": 7,
+    "id": "1816bdd2-4846-4dee-a595-190697564b38",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.703157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.702158Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.731681Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.730681Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.703157Z"
++     "iopub.execute_input": "2023-03-08T17:09:18.004189Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.004189Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.035754Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.033750Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.004189Z"
+     },
+     "tags": []
+    },
+@@ -561,106 +530,114 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 8,
+    "id": "f87009dd-3c3a-409c-ada8-3f991d17d0c1",
+-   "metadata": {},
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-08T17:09:18.036749Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.036749Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.050773Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.049759Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.036749Z"
++    }
++   },
+    "outputs": [],
+    "source": [
+-    "class MyModel(pl.LightningModule):\n",
+-    "    def __init__(self, input_shape, n_classes=10, lr=2e-4, transfer=False):\n",
+-    "        super().__init__()\n",
++    "# class MyModel(pl.LightningModule):\n",
++    "#     def __init__(self, input_shape, n_classes=10, lr=2e-4, transfer=False):\n",
++    "#         super().__init__()\n",
+     "        \n",
+-    "        # log hyperparameters\n",
+-    "        self.save_hyperparameters()\n",
+-    "        self.learning_rate = lr\n",
+-    "        self.dim = input_shape\n",
+-    "        self.num_classes = num_classes\n",
++    "#         # log hyperparameters\n",
++    "#         self.save_hyperparameters()\n",
++    "#         self.learning_rate = lr\n",
++    "#         self.dim = input_shape\n",
++    "#         self.num_classes = num_classes\n",
+     "        \n",
+-    "        # transfer learning if pretrained=True\n",
+-    "        self.feature_extractor = models.resnet18(pretrained=transfer)\n",
++    "#         # transfer learning if pretrained=True\n",
++    "#         self.feature_extractor = models.resnet18(pretrained=transfer)\n",
+     "\n",
+-    "        if transfer:\n",
+-    "            # layers are frozen by using eval()\n",
+-    "            self.feature_extractor.eval()\n",
+-    "            # freeze params\n",
+-    "            for param in self.feature_extractor.parameters():\n",
+-    "                param.requires_grad = False\n",
++    "#         if transfer:\n",
++    "#             # layers are frozen by using eval()\n",
++    "#             self.feature_extractor.eval()\n",
++    "#             # freeze params\n",
++    "#             for param in self.feature_extractor.parameters():\n",
++    "#                 param.requires_grad = False\n",
+     "        \n",
+-    "        n_sizes = self._get_conv_output(input_shape)\n",
++    "#         n_sizes = self._get_conv_output(input_shape)\n",
+     "\n",
+-    "        self.classifier = nn.Linear(n_sizes, num_classes)\n",
++    "#         self.classifier = nn.Linear(n_sizes, num_classes)\n",
+     "\n",
+-    "        self.criterion = nn.CrossEntropyLoss()\n",
+-    "        self.accuracy = Accuracy()\n",
++    "#         self.criterion = nn.CrossEntropyLoss()\n",
++    "#         self.accuracy = Accuracy()\n",
+     "  \n",
+-    "    # returns the size of the output tensor going into the Linear layer from the conv block.\n",
+-    "    def _get_conv_output(self, shape):\n",
+-    "        batch_size = 1\n",
+-    "        tmp_input = torch.autograd.Variable(torch.rand(batch_size, *shape))\n",
++    "#     # returns the size of the output tensor going into the Linear layer from the conv block.\n",
++    "#     def _get_conv_output(self, shape):\n",
++    "#         batch_size = 1\n",
++    "#         tmp_input = torch.autograd.Variable(torch.rand(batch_size, *shape))\n",
+     "\n",
+-    "        output_feat = self._forward_features(tmp_input) \n",
+-    "        n_size = output_feat.data.view(batch_size, -1).size(1)\n",
+-    "        return n_size\n",
++    "#         output_feat = self._forward_features(tmp_input) \n",
++    "#         n_size = output_feat.data.view(batch_size, -1).size(1)\n",
++    "#         return n_size\n",
+     "        \n",
+-    "    # returns the feature tensor from the conv block\n",
+-    "    def _forward_features(self, x):\n",
+-    "        x = self.feature_extractor(x)\n",
+-    "        return x\n",
++    "#     # returns the feature tensor from the conv block\n",
++    "#     def _forward_features(self, x):\n",
++    "#         x = self.feature_extractor(x)\n",
++    "#         return x\n",
+     "    \n",
+-    "    # will be used during inference\n",
+-    "    def forward(self, x):\n",
+-    "        x = self._forward_features(x)\n",
+-    "        x = x.view(x.size(0), -1)\n",
+-    "        x = self.classifier(x)\n",
++    "#     # will be used during inference\n",
++    "#     def forward(self, x):\n",
++    "#         x = self._forward_features(x)\n",
++    "#         x = x.view(x.size(0), -1)\n",
++    "#         x = self.classifier(x)\n",
+     "\n",
+-    "        return x\n",
++    "#         return x\n",
+     "    \n",
+-    "    def training_step(self, batch):\n",
+-    "        batch, gt = batch[0], batch[1]\n",
+-    "        out = self.forward(batch)\n",
+-    "        loss = self.criterion(out, gt)\n",
++    "#     def training_step(self, batch):\n",
++    "#         batch, gt = batch[0], batch[1]\n",
++    "#         out = self.forward(batch)\n",
++    "#         loss = self.criterion(out, gt)\n",
+     "\n",
+-    "        acc = self.accuracy(out, gt)\n",
++    "#         acc = self.accuracy(out, gt)\n",
+     "\n",
+-    "        self.log(\"train/loss\", loss)\n",
+-    "        self.log(\"train/acc\", acc)\n",
++    "#         self.log(\"train/loss\", loss)\n",
++    "#         self.log(\"train/acc\", acc)\n",
+     "\n",
+-    "        return loss\n",
++    "#         return loss\n",
+     "    \n",
+-    "    def validation_step(self, batch, batch_idx):\n",
+-    "        batch, gt = batch[0], batch[1]\n",
+-    "        out = self.forward(batch)\n",
+-    "        loss = self.criterion(out, gt)\n",
++    "#     def validation_step(self, batch, batch_idx):\n",
++    "#         batch, gt = batch[0], batch[1]\n",
++    "#         out = self.forward(batch)\n",
++    "#         loss = self.criterion(out, gt)\n",
+     "\n",
+-    "        self.log(\"val/loss\", loss)\n",
++    "#         self.log(\"val/loss\", loss)\n",
+     "\n",
+-    "        acc = self.accuracy(out, gt)\n",
+-    "        self.log(\"val/acc\", acc)\n",
++    "#         acc = self.accuracy(out, gt)\n",
++    "#         self.log(\"val/acc\", acc)\n",
+     "\n",
+-    "        return loss\n",
++    "#         return loss\n",
+     "    \n",
+-    "    def test_step(self, batch, batch_idx):\n",
+-    "        batch, gt = batch[0], batch[1]\n",
+-    "        out = self.forward(batch)\n",
+-    "        loss = self.criterion(out, gt)\n",
++    "#     def test_step(self, batch, batch_idx):\n",
++    "#         batch, gt = batch[0], batch[1]\n",
++    "#         out = self.forward(batch)\n",
++    "#         loss = self.criterion(out, gt)\n",
+     "        \n",
+-    "        return {\"loss\": loss, \"outputs\": out, \"gt\": gt}\n",
++    "#         return {\"loss\": loss, \"outputs\": out, \"gt\": gt}\n",
+     "    \n",
+-    "    def test_epoch_end(self, outputs):\n",
+-    "        loss = torch.stack([x['loss'] for x in outputs]).mean()\n",
+-    "        output = torch.cat([x['outputs'] for x in outputs], dim=0)\n",
++    "#     def test_epoch_end(self, outputs):\n",
++    "#         loss = torch.stack([x['loss'] for x in outputs]).mean()\n",
++    "#         output = torch.cat([x['outputs'] for x in outputs], dim=0)\n",
+     "        \n",
+-    "        gts = torch.cat([x['gt'] for x in outputs], dim=0)\n",
++    "#         gts = torch.cat([x['gt'] for x in outputs], dim=0)\n",
+     "        \n",
+-    "        self.log(\"test/loss\", loss)\n",
+-    "        acc = self.accuracy(output, gts)\n",
+-    "        self.log(\"test/acc\", acc)\n",
++    "#         self.log(\"test/loss\", loss)\n",
++    "#         acc = self.accuracy(output, gts)\n",
++    "#         self.log(\"test/acc\", acc)\n",
+     "        \n",
+-    "        self.test_gts = gts\n",
+-    "        self.test_output = output\n",
++    "#         self.test_gts = gts\n",
++    "#         self.test_output = output\n",
+     "    \n",
+-    "    def configure_optimizers(self):\n",
+-    "        return torch.optim.Adam(self.parameters(), lr=self.learning_rate)"
++    "#     def configure_optimizers(self):\n",
++    "#         return torch.optim.Adam(self.parameters(), lr=self.learning_rate)"
+    ]
+   },
+   {
+@@ -673,15 +650,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": 9,
+    "id": "188ce4ef-e6b7-4320-8e5d-ceeb616bf7d1",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.733681Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.732681Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.747686Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.746681Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.733681Z"
++     "iopub.execute_input": "2023-03-08T17:09:18.052748Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.051755Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.066751Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.065744Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.052748Z"
+     },
+     "tags": []
+    },
+@@ -718,15 +695,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 8,
++   "execution_count": 10,
+    "id": "762279ca-26d9-4310-992f-b6f8912da7fe",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.748681Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.748681Z",
+-     "iopub.status.idle": "2023-03-07T22:03:35.946156Z",
+-     "shell.execute_reply": "2023-03-07T22:03:35.945160Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.748681Z"
++     "iopub.execute_input": "2023-03-08T17:09:18.068748Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.068748Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.638173Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.636165Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.068748Z"
+     },
+     "tags": []
+    },
+@@ -766,7 +743,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Run data is saved locally in <code>.\\wandb\\run-20230307_170329-vmxt21wg</code>"
++       "Run data is saved locally in <code>.\\wandb\\run-20230308_120921-w2axcpnv</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -778,7 +755,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg' target=\"_blank\">earnest-salad-39</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/w2axcpnv' target=\"_blank\">graceful-fog-42</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -802,7 +779,7 @@
+     {
+      "data": {
+       "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg</a>"
++       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/w2axcpnv' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/w2axcpnv</a>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -812,13 +789,14 @@
+      "output_type": "display_data"
+     },
+     {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "GPU available: True (cuda), used: True\n",
+-      "TPU available: False, using: 0 TPU cores\n",
+-      "IPU available: False, using: 0 IPUs\n",
+-      "HPU available: False, using: 0 HPUs\n"
++     "ename": "TypeError",
++     "evalue": "MyModel.__init__() missing 1 required positional argument: 'classes_lst'",
++     "output_type": "error",
++     "traceback": [
++      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
++      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
++      "Cell \u001b[1;32mIn[10], line 10\u001b[0m\n\u001b[0;32m      7\u001b[0m data \u001b[38;5;241m=\u001b[39m DataModule()\n\u001b[0;32m      9\u001b[0m \u001b[38;5;66;03m# setup model - choose different hyperparameters per experiment\u001b[39;00m\n\u001b[1;32m---> 10\u001b[0m model \u001b[38;5;241m=\u001b[39m \u001b[43mMyModel\u001b[49m\u001b[43m(\u001b[49m\u001b[43mn_classes\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mnum_of_classes\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minput_shape\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m3\u001b[39;49m\u001b[43m,\u001b[49m\u001b[38;5;241;43m224\u001b[39;49m\u001b[43m,\u001b[49m\u001b[38;5;241;43m224\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m     13\u001b[0m trainer \u001b[38;5;241m=\u001b[39m Trainer(\n\u001b[0;32m     14\u001b[0m     accelerator\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mgpu\u001b[39m\u001b[38;5;124m'\u001b[39m, \n\u001b[0;32m     15\u001b[0m     devices\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m1\u001b[39m, \u001b[38;5;66;03m# use all GPU's (-1)\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m     18\u001b[0m     max_epochs\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m5\u001b[39m            \u001b[38;5;66;03m# number of epochs\u001b[39;00m\n\u001b[0;32m     19\u001b[0m     )\n",
++      "\u001b[1;31mTypeError\u001b[0m: MyModel.__init__() missing 1 required positional argument: 'classes_lst'"
+      ]
+     }
+    ],
+@@ -832,7 +810,7 @@
+     "data = DataModule()\n",
+     "\n",
+     "# setup model - choose different hyperparameters per experiment\n",
+-    "model = MyModel(n_classes=num_of_classes)\n",
++    "model = MyModel(classes_lst=classes_lst, n_classes=num_of_classes, input_shape=(3,224,224))\n",
+     "\n",
+     "\n",
+     "trainer = Trainer(\n",
+@@ -846,431 +824,79 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 9,
++   "execution_count": null,
+    "id": "05c5995d-f9be-4377-bfc0-ea1298711b12",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:35.947162Z",
+-     "iopub.status.busy": "2023-03-07T22:03:35.947162Z",
+-     "iopub.status.idle": "2023-03-07T22:03:50.271163Z",
+-     "shell.execute_reply": "2023-03-07T22:03:50.270161Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:35.947162Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.638173Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.639685Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.638173Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.638173Z"
+     }
+    },
+-   "outputs": [
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]\n",
+-      "\n",
+-      "   | Name     | Type               | Params\n",
+-      "-------------------------------------------------\n",
+-      "0  | layer_1  | Conv2d             | 30    \n",
+-      "1  | layer_2  | Conv2d             | 168   \n",
+-      "2  | layer_3  | Conv2d             | 660   \n",
+-      "3  | pool     | MaxPool2d          | 0     \n",
+-      "4  | layer_5  | Linear             | 30.0 M\n",
+-      "5  | layer_6  | Linear             | 100 K \n",
+-      "6  | layer_7  | Linear             | 5.0 K \n",
+-      "7  | layer_8  | Linear             | 510   \n",
+-      "8  | layer_9  | Linear             | 110   \n",
+-      "9  | accuracy | MulticlassAccuracy | 0     \n",
+-      "10 | loss     | CrossEntropyLoss   | 0     \n",
+-      "-------------------------------------------------\n",
+-      "30.1 M    Trainable params\n",
+-      "0         Non-trainable params\n",
+-      "30.1 M    Total params\n",
+-      "120.431   Total estimated model params size (MB)\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Sanity Checking: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
+-      "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+-      "  rank_zero_warn(\n"
+-     ]
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+-      "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1609: PossibleUserWarning: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.\n",
+-      "  rank_zero_warn(\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "e30388e000f34a35a3d17c54a02ae356",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Training: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "`Trainer.fit` stopped: `max_epochs=5` reached.\n"
+-     ]
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "trainer.fit(model, data)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 10,
++   "execution_count": null,
+    "id": "28625e66-e2a3-4a91-acce-e2948485412b",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:50.273163Z",
+-     "iopub.status.busy": "2023-03-07T22:03:50.272168Z",
+-     "iopub.status.idle": "2023-03-07T22:03:51.817127Z",
+-     "shell.execute_reply": "2023-03-07T22:03:51.817127Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:50.273163Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.640700Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.641702Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.640700Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.640700Z"
+     }
+    },
+-   "outputs": [
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
+-      "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, test_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+-      "  rank_zero_warn(\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "a49ac6f8c77848c78e23507ac79cb49f",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Testing: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
+-      "       Test metric             DataLoader 0\n",
+-      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
+-      "        test_acc            0.10000000149011612\n",
+-      "        test_loss            2.639571189880371\n",
+-      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "[{'test_loss': 2.639571189880371, 'test_acc': 0.10000000149011612}]"
+-      ]
+-     },
+-     "execution_count": 10,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "trainer.test(model, datamodule=data)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 11,
++   "execution_count": null,
+    "id": "378d95e1-4e29-4c7f-bd8c-eaa16677a063",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:51.819129Z",
+-     "iopub.status.busy": "2023-03-07T22:03:51.818134Z",
+-     "iopub.status.idle": "2023-03-07T22:03:51.834143Z",
+-     "shell.execute_reply": "2023-03-07T22:03:51.833139Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:51.819129Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.642702Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.643698Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.643698Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.643698Z"
+     },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "<button onClick=\"this.nextSibling.style.display='block';this.style.display='none';\">Display W&B run</button><iframe src='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg?jupyter=true' style='border:none;width:100%;height:420px;display:none;'></iframe>"
+-      ],
+-      "text/plain": [
+-       "<wandb.sdk.wandb_run.Run at 0x17bf64ef8e0>"
+-      ]
+-     },
+-     "execution_count": 11,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "wandb_logger.experiment"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 12,
++   "execution_count": null,
+    "id": "91967e96-f127-4758-b427-c996a9fcb4dc",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:51.837139Z",
+-     "iopub.status.busy": "2023-03-07T22:03:51.837139Z",
+-     "iopub.status.idle": "2023-03-07T22:09:29.796772Z",
+-     "shell.execute_reply": "2023-03-07T22:09:29.795771Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:51.837139Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.645700Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.646698Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.646698Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.646698Z"
+     }
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "<style>\n",
+-       "    table.wandb td:nth-child(1) { padding: 0 10px; text-align: left ; width: auto;} td:nth-child(2) {text-align: left ; width: 100%}\n",
+-       "    .wandb-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; width: 100% }\n",
+-       "    .wandb-col { display: flex; flex-direction: column; flex-basis: 100%; flex: 1; padding: 10px; }\n",
+-       "    </style>\n",
+-       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>▁▂▄▅▇█</td></tr><tr><td>test_acc</td><td>▁</td></tr><tr><td>test_loss</td><td>▁</td></tr><tr><td>trainer/global_step</td><td>▁▁▂▂▄▄▅▅▇▇█</td></tr><tr><td>val_acc</td><td>▁▁▁▁▁</td></tr><tr><td>val_accuracy_alt</td><td>▁▁▁▁▁</td></tr><tr><td>val_loss</td><td>▇█▂▂▁</td></tr><tr><td>val_loss_alt</td><td>▇█▂▂▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>5</td></tr><tr><td>test_acc</td><td>0.1</td></tr><tr><td>test_loss</td><td>2.63957</td></tr><tr><td>trainer/global_step</td><td>5</td></tr><tr><td>val_acc</td><td>0.1</td></tr><tr><td>val_accuracy_alt</td><td>0.1</td></tr><tr><td>val_loss</td><td>2.63782</td></tr><tr><td>val_loss_alt</td><td>2.63782</td></tr></table><br/></div></div>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run <strong style=\"color:#cdcd00\">earnest-salad-39</strong> at: <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg</a><br/>Synced 6 W&B file(s), 7 media file(s), 8 artifact file(s) and 1 other file(s)"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Find logs at: <code>.\\wandb\\run-20230307_170329-vmxt21wg\\logs</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "# wandb_logger.experiment.finish()"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 13,
++   "execution_count": null,
+    "id": "f04c136e-5986-4628-88b7-38a8b433f654",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-07T22:09:29.797770Z",
+-     "iopub.status.busy": "2023-03-07T22:09:29.797770Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.002804Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.001798Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:29.797770Z"
+-    }
+-   },
+-   "outputs": [
+-    {
+-     "ename": "NameError",
+-     "evalue": "name 'models' is not defined",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+-      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+-      "Cell \u001b[1;32mIn[13], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[43mmodels\u001b[49m\u001b[38;5;241m.\u001b[39mresnet18(pretrained\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mTrue\u001b[39;00m)\n",
+-      "\u001b[1;31mNameError\u001b[0m: name 'models' is not defined"
+-     ]
+-    }
+-   ],
++   "metadata": {},
++   "outputs": [],
+    "source": []
+   },
+   {
+@@ -1279,10 +905,10 @@
+    "id": "3b58022d-6961-41b0-a4e1-60bbc1c09791",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.003799Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.004801Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.004801Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.004801Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.647703Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.648697Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.648697Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.648697Z"
+     },
+     "tags": []
+    },
+@@ -1305,10 +931,10 @@
+    "id": "ebde1018-ddfa-43f2-b9c6-f2c1d4b19736",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.006798Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.007799Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.007799Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.007799Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.651708Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.652703Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.651708Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.651708Z"
+     },
+     "tags": []
+    },
+@@ -1351,10 +977,10 @@
+    "id": "91aeb8a0-9ffd-4439-808c-2951d1f74b36",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.009798Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.010799Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.009798Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.009798Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.655701Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.657703Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.656705Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.656705Z"
+     },
+     "tags": []
+    },
+@@ -1394,10 +1020,10 @@
+    "id": "869b0393-21cf-4fba-8efd-7678a852b697",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.012807Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.012807Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.012807Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.012807Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.660706Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.661705Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.661705Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.661705Z"
+     },
+     "tags": []
+    },
+diff --git a/Train/PyLi_wanb_sweep_CoatNet.ipynb b/Train/PyLi_wanb_sweep_CoatNet.ipynb
+index c26c173..127e7c8 100644
+--- a/Train/PyLi_wanb_sweep_CoatNet.ipynb
++++ b/Train/PyLi_wanb_sweep_CoatNet.ipynb
+@@ -6,11 +6,11 @@
+    "id": "c7b471f1-f5fa-4eb1-b9ae-2d67ed8838df",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:22.030584Z",
+-     "iopub.status.busy": "2023-03-07T22:03:22.030584Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.622644Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.621641Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:22.030584Z"
++     "iopub.execute_input": "2023-03-08T17:09:13.337823Z",
++     "iopub.status.busy": "2023-03-08T17:09:13.335822Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.893116Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.892103Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:13.337823Z"
+     },
+     "tags": []
+    },
+@@ -74,11 +74,11 @@
+    "id": "01c28e3c-850d-48b6-8db9-3a8804e0c9ae",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.624157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.624157Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.653165Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.652159Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.624157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.894115Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.894115Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.925105Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.924098Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.894115Z"
+     },
+     "tags": []
+    },
+@@ -141,11 +141,11 @@
+    "id": "8b9e722b-cda4-4956-a0c1-8eb31023f765",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.657157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.656158Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.669160Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.668157Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.657157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.928104Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.928104Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.941190Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.940189Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.928104Z"
+     },
+     "tags": []
+    },
+@@ -189,11 +189,11 @@
+    "id": "9dbe4b19-9805-40b4-a513-ea35715a0c64",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.671157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.671157Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.685163Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.684158Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.671157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.943192Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.942191Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.956194Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.955190Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.943192Z"
+     },
+     "tags": []
+    },
+@@ -225,11 +225,11 @@
+    "id": "7539d3a5-ca4f-4ba3-a462-05875d4b9a90",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.688158Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.687160Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.701158Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.700157Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.688158Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.957191Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.957191Z",
++     "iopub.status.idle": "2023-03-08T17:09:17.972191Z",
++     "shell.execute_reply": "2023-03-08T17:09:17.971190Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.957191Z"
+     },
+     "tags": []
+    },
+@@ -255,37 +255,6 @@
+     "        return DataLoader(self.test,batch_size = 64,shuffle = True)#False, num_workers = cpu_count)"
+    ]
+   },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 16,
+-   "id": "5d7b93d9-0811-448a-82a5-718013f9a057",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-07T22:32:38.883139Z",
+-     "iopub.status.busy": "2023-03-07T22:32:38.882146Z",
+-     "iopub.status.idle": "2023-03-07T22:32:38.906351Z",
+-     "shell.execute_reply": "2023-03-07T22:32:38.905366Z",
+-     "shell.execute_reply.started": "2023-03-07T22:32:38.883139Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [
+-    {
+-     "ename": "TypeError",
+-     "evalue": "'DataModule' object is not iterable",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+-      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+-      "Cell \u001b[1;32mIn[16], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[38;5;28;43mlist\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mdata\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "\u001b[1;31mTypeError\u001b[0m: 'DataModule' object is not iterable"
+-     ]
+-    }
+-   ],
+-   "source": [
+-    "list(data)"
+-   ]
+-  },
+   {
+    "cell_type": "markdown",
+    "id": "8c0e41f1-2dd9-481f-ae64-3bf0f7e1bbee",
+@@ -308,11 +277,11 @@
+    "id": "deb34aed-792a-4022-a878-f8d6c4ffa97c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.703157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.702158Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.731681Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.730681Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.703157Z"
++     "iopub.execute_input": "2023-03-08T17:09:17.973191Z",
++     "iopub.status.busy": "2023-03-08T17:09:17.973191Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.003193Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.002189Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:17.973191Z"
+     },
+     "tags": []
+    },
+@@ -433,15 +402,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": 7,
+    "id": "1816bdd2-4846-4dee-a595-190697564b38",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.703157Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.702158Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.731681Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.730681Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.703157Z"
++     "iopub.execute_input": "2023-03-08T17:09:18.004189Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.004189Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.035754Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.033750Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.004189Z"
+     },
+     "tags": []
+    },
+@@ -561,106 +530,114 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 8,
+    "id": "f87009dd-3c3a-409c-ada8-3f991d17d0c1",
+-   "metadata": {},
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-08T17:09:18.036749Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.036749Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.050773Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.049759Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.036749Z"
++    }
++   },
+    "outputs": [],
+    "source": [
+-    "class MyModel(pl.LightningModule):\n",
+-    "    def __init__(self, input_shape, n_classes=10, lr=2e-4, transfer=False):\n",
+-    "        super().__init__()\n",
++    "# class MyModel(pl.LightningModule):\n",
++    "#     def __init__(self, input_shape, n_classes=10, lr=2e-4, transfer=False):\n",
++    "#         super().__init__()\n",
+     "        \n",
+-    "        # log hyperparameters\n",
+-    "        self.save_hyperparameters()\n",
+-    "        self.learning_rate = lr\n",
+-    "        self.dim = input_shape\n",
+-    "        self.num_classes = num_classes\n",
++    "#         # log hyperparameters\n",
++    "#         self.save_hyperparameters()\n",
++    "#         self.learning_rate = lr\n",
++    "#         self.dim = input_shape\n",
++    "#         self.num_classes = num_classes\n",
+     "        \n",
+-    "        # transfer learning if pretrained=True\n",
+-    "        self.feature_extractor = models.resnet18(pretrained=transfer)\n",
++    "#         # transfer learning if pretrained=True\n",
++    "#         self.feature_extractor = models.resnet18(pretrained=transfer)\n",
+     "\n",
+-    "        if transfer:\n",
+-    "            # layers are frozen by using eval()\n",
+-    "            self.feature_extractor.eval()\n",
+-    "            # freeze params\n",
+-    "            for param in self.feature_extractor.parameters():\n",
+-    "                param.requires_grad = False\n",
++    "#         if transfer:\n",
++    "#             # layers are frozen by using eval()\n",
++    "#             self.feature_extractor.eval()\n",
++    "#             # freeze params\n",
++    "#             for param in self.feature_extractor.parameters():\n",
++    "#                 param.requires_grad = False\n",
+     "        \n",
+-    "        n_sizes = self._get_conv_output(input_shape)\n",
++    "#         n_sizes = self._get_conv_output(input_shape)\n",
+     "\n",
+-    "        self.classifier = nn.Linear(n_sizes, num_classes)\n",
++    "#         self.classifier = nn.Linear(n_sizes, num_classes)\n",
+     "\n",
+-    "        self.criterion = nn.CrossEntropyLoss()\n",
+-    "        self.accuracy = Accuracy()\n",
++    "#         self.criterion = nn.CrossEntropyLoss()\n",
++    "#         self.accuracy = Accuracy()\n",
+     "  \n",
+-    "    # returns the size of the output tensor going into the Linear layer from the conv block.\n",
+-    "    def _get_conv_output(self, shape):\n",
+-    "        batch_size = 1\n",
+-    "        tmp_input = torch.autograd.Variable(torch.rand(batch_size, *shape))\n",
++    "#     # returns the size of the output tensor going into the Linear layer from the conv block.\n",
++    "#     def _get_conv_output(self, shape):\n",
++    "#         batch_size = 1\n",
++    "#         tmp_input = torch.autograd.Variable(torch.rand(batch_size, *shape))\n",
+     "\n",
+-    "        output_feat = self._forward_features(tmp_input) \n",
+-    "        n_size = output_feat.data.view(batch_size, -1).size(1)\n",
+-    "        return n_size\n",
++    "#         output_feat = self._forward_features(tmp_input) \n",
++    "#         n_size = output_feat.data.view(batch_size, -1).size(1)\n",
++    "#         return n_size\n",
+     "        \n",
+-    "    # returns the feature tensor from the conv block\n",
+-    "    def _forward_features(self, x):\n",
+-    "        x = self.feature_extractor(x)\n",
+-    "        return x\n",
++    "#     # returns the feature tensor from the conv block\n",
++    "#     def _forward_features(self, x):\n",
++    "#         x = self.feature_extractor(x)\n",
++    "#         return x\n",
+     "    \n",
+-    "    # will be used during inference\n",
+-    "    def forward(self, x):\n",
+-    "        x = self._forward_features(x)\n",
+-    "        x = x.view(x.size(0), -1)\n",
+-    "        x = self.classifier(x)\n",
++    "#     # will be used during inference\n",
++    "#     def forward(self, x):\n",
++    "#         x = self._forward_features(x)\n",
++    "#         x = x.view(x.size(0), -1)\n",
++    "#         x = self.classifier(x)\n",
+     "\n",
+-    "        return x\n",
++    "#         return x\n",
+     "    \n",
+-    "    def training_step(self, batch):\n",
+-    "        batch, gt = batch[0], batch[1]\n",
+-    "        out = self.forward(batch)\n",
+-    "        loss = self.criterion(out, gt)\n",
++    "#     def training_step(self, batch):\n",
++    "#         batch, gt = batch[0], batch[1]\n",
++    "#         out = self.forward(batch)\n",
++    "#         loss = self.criterion(out, gt)\n",
+     "\n",
+-    "        acc = self.accuracy(out, gt)\n",
++    "#         acc = self.accuracy(out, gt)\n",
+     "\n",
+-    "        self.log(\"train/loss\", loss)\n",
+-    "        self.log(\"train/acc\", acc)\n",
++    "#         self.log(\"train/loss\", loss)\n",
++    "#         self.log(\"train/acc\", acc)\n",
+     "\n",
+-    "        return loss\n",
++    "#         return loss\n",
+     "    \n",
+-    "    def validation_step(self, batch, batch_idx):\n",
+-    "        batch, gt = batch[0], batch[1]\n",
+-    "        out = self.forward(batch)\n",
+-    "        loss = self.criterion(out, gt)\n",
++    "#     def validation_step(self, batch, batch_idx):\n",
++    "#         batch, gt = batch[0], batch[1]\n",
++    "#         out = self.forward(batch)\n",
++    "#         loss = self.criterion(out, gt)\n",
+     "\n",
+-    "        self.log(\"val/loss\", loss)\n",
++    "#         self.log(\"val/loss\", loss)\n",
+     "\n",
+-    "        acc = self.accuracy(out, gt)\n",
+-    "        self.log(\"val/acc\", acc)\n",
++    "#         acc = self.accuracy(out, gt)\n",
++    "#         self.log(\"val/acc\", acc)\n",
+     "\n",
+-    "        return loss\n",
++    "#         return loss\n",
+     "    \n",
+-    "    def test_step(self, batch, batch_idx):\n",
+-    "        batch, gt = batch[0], batch[1]\n",
+-    "        out = self.forward(batch)\n",
+-    "        loss = self.criterion(out, gt)\n",
++    "#     def test_step(self, batch, batch_idx):\n",
++    "#         batch, gt = batch[0], batch[1]\n",
++    "#         out = self.forward(batch)\n",
++    "#         loss = self.criterion(out, gt)\n",
+     "        \n",
+-    "        return {\"loss\": loss, \"outputs\": out, \"gt\": gt}\n",
++    "#         return {\"loss\": loss, \"outputs\": out, \"gt\": gt}\n",
+     "    \n",
+-    "    def test_epoch_end(self, outputs):\n",
+-    "        loss = torch.stack([x['loss'] for x in outputs]).mean()\n",
+-    "        output = torch.cat([x['outputs'] for x in outputs], dim=0)\n",
++    "#     def test_epoch_end(self, outputs):\n",
++    "#         loss = torch.stack([x['loss'] for x in outputs]).mean()\n",
++    "#         output = torch.cat([x['outputs'] for x in outputs], dim=0)\n",
+     "        \n",
+-    "        gts = torch.cat([x['gt'] for x in outputs], dim=0)\n",
++    "#         gts = torch.cat([x['gt'] for x in outputs], dim=0)\n",
+     "        \n",
+-    "        self.log(\"test/loss\", loss)\n",
+-    "        acc = self.accuracy(output, gts)\n",
+-    "        self.log(\"test/acc\", acc)\n",
++    "#         self.log(\"test/loss\", loss)\n",
++    "#         acc = self.accuracy(output, gts)\n",
++    "#         self.log(\"test/acc\", acc)\n",
+     "        \n",
+-    "        self.test_gts = gts\n",
+-    "        self.test_output = output\n",
++    "#         self.test_gts = gts\n",
++    "#         self.test_output = output\n",
+     "    \n",
+-    "    def configure_optimizers(self):\n",
+-    "        return torch.optim.Adam(self.parameters(), lr=self.learning_rate)"
++    "#     def configure_optimizers(self):\n",
++    "#         return torch.optim.Adam(self.parameters(), lr=self.learning_rate)"
+    ]
+   },
+   {
+@@ -673,15 +650,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": 9,
+    "id": "188ce4ef-e6b7-4320-8e5d-ceeb616bf7d1",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.733681Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.732681Z",
+-     "iopub.status.idle": "2023-03-07T22:03:26.747686Z",
+-     "shell.execute_reply": "2023-03-07T22:03:26.746681Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.733681Z"
++     "iopub.execute_input": "2023-03-08T17:09:18.052748Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.051755Z",
++     "iopub.status.idle": "2023-03-08T17:09:18.066751Z",
++     "shell.execute_reply": "2023-03-08T17:09:18.065744Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.052748Z"
+     },
+     "tags": []
+    },
+@@ -718,15 +695,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 8,
++   "execution_count": 10,
+    "id": "762279ca-26d9-4310-992f-b6f8912da7fe",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:26.748681Z",
+-     "iopub.status.busy": "2023-03-07T22:03:26.748681Z",
+-     "iopub.status.idle": "2023-03-07T22:03:35.946156Z",
+-     "shell.execute_reply": "2023-03-07T22:03:35.945160Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:26.748681Z"
++     "iopub.execute_input": "2023-03-08T17:09:18.068748Z",
++     "iopub.status.busy": "2023-03-08T17:09:18.068748Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.638173Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.636165Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:18.068748Z"
+     },
+     "tags": []
+    },
+@@ -766,7 +743,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Run data is saved locally in <code>.\\wandb\\run-20230307_170329-vmxt21wg</code>"
++       "Run data is saved locally in <code>.\\wandb\\run-20230308_120921-w2axcpnv</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -778,7 +755,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg' target=\"_blank\">earnest-salad-39</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/w2axcpnv' target=\"_blank\">graceful-fog-42</a></strong> to <a href='https://wandb.ai/christopher-marais/computer_vision_test_single' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -802,7 +779,7 @@
+     {
+      "data": {
+       "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg</a>"
++       " View run at <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/w2axcpnv' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/w2axcpnv</a>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -812,13 +789,14 @@
+      "output_type": "display_data"
+     },
+     {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "GPU available: True (cuda), used: True\n",
+-      "TPU available: False, using: 0 TPU cores\n",
+-      "IPU available: False, using: 0 IPUs\n",
+-      "HPU available: False, using: 0 HPUs\n"
++     "ename": "TypeError",
++     "evalue": "MyModel.__init__() missing 1 required positional argument: 'classes_lst'",
++     "output_type": "error",
++     "traceback": [
++      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
++      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
++      "Cell \u001b[1;32mIn[10], line 10\u001b[0m\n\u001b[0;32m      7\u001b[0m data \u001b[38;5;241m=\u001b[39m DataModule()\n\u001b[0;32m      9\u001b[0m \u001b[38;5;66;03m# setup model - choose different hyperparameters per experiment\u001b[39;00m\n\u001b[1;32m---> 10\u001b[0m model \u001b[38;5;241m=\u001b[39m \u001b[43mMyModel\u001b[49m\u001b[43m(\u001b[49m\u001b[43mn_classes\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mnum_of_classes\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minput_shape\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m3\u001b[39;49m\u001b[43m,\u001b[49m\u001b[38;5;241;43m224\u001b[39;49m\u001b[43m,\u001b[49m\u001b[38;5;241;43m224\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m     13\u001b[0m trainer \u001b[38;5;241m=\u001b[39m Trainer(\n\u001b[0;32m     14\u001b[0m     accelerator\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mgpu\u001b[39m\u001b[38;5;124m'\u001b[39m, \n\u001b[0;32m     15\u001b[0m     devices\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m1\u001b[39m, \u001b[38;5;66;03m# use all GPU's (-1)\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m     18\u001b[0m     max_epochs\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m5\u001b[39m            \u001b[38;5;66;03m# number of epochs\u001b[39;00m\n\u001b[0;32m     19\u001b[0m     )\n",
++      "\u001b[1;31mTypeError\u001b[0m: MyModel.__init__() missing 1 required positional argument: 'classes_lst'"
+      ]
+     }
+    ],
+@@ -832,7 +810,7 @@
+     "data = DataModule()\n",
+     "\n",
+     "# setup model - choose different hyperparameters per experiment\n",
+-    "model = MyModel(n_classes=num_of_classes)\n",
++    "model = MyModel(classes_lst=classes_lst, n_classes=num_of_classes, input_shape=(3,224,224))\n",
+     "\n",
+     "\n",
+     "trainer = Trainer(\n",
+@@ -846,431 +824,79 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 9,
++   "execution_count": null,
+    "id": "05c5995d-f9be-4377-bfc0-ea1298711b12",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:35.947162Z",
+-     "iopub.status.busy": "2023-03-07T22:03:35.947162Z",
+-     "iopub.status.idle": "2023-03-07T22:03:50.271163Z",
+-     "shell.execute_reply": "2023-03-07T22:03:50.270161Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:35.947162Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.638173Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.639685Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.638173Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.638173Z"
+     }
+    },
+-   "outputs": [
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]\n",
+-      "\n",
+-      "   | Name     | Type               | Params\n",
+-      "-------------------------------------------------\n",
+-      "0  | layer_1  | Conv2d             | 30    \n",
+-      "1  | layer_2  | Conv2d             | 168   \n",
+-      "2  | layer_3  | Conv2d             | 660   \n",
+-      "3  | pool     | MaxPool2d          | 0     \n",
+-      "4  | layer_5  | Linear             | 30.0 M\n",
+-      "5  | layer_6  | Linear             | 100 K \n",
+-      "6  | layer_7  | Linear             | 5.0 K \n",
+-      "7  | layer_8  | Linear             | 510   \n",
+-      "8  | layer_9  | Linear             | 110   \n",
+-      "9  | accuracy | MulticlassAccuracy | 0     \n",
+-      "10 | loss     | CrossEntropyLoss   | 0     \n",
+-      "-------------------------------------------------\n",
+-      "30.1 M    Trainable params\n",
+-      "0         Non-trainable params\n",
+-      "30.1 M    Total params\n",
+-      "120.431   Total estimated model params size (MB)\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Sanity Checking: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
+-      "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+-      "  rank_zero_warn(\n"
+-     ]
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+-      "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py:1609: PossibleUserWarning: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.\n",
+-      "  rank_zero_warn(\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "e30388e000f34a35a3d17c54a02ae356",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Training: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Validation: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "torch.Size([10, 30000])\n"
+-     ]
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "`Trainer.fit` stopped: `max_epochs=5` reached.\n"
+-     ]
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "trainer.fit(model, data)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 10,
++   "execution_count": null,
+    "id": "28625e66-e2a3-4a91-acce-e2948485412b",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:50.273163Z",
+-     "iopub.status.busy": "2023-03-07T22:03:50.272168Z",
+-     "iopub.status.idle": "2023-03-07T22:03:51.817127Z",
+-     "shell.execute_reply": "2023-03-07T22:03:51.817127Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:50.273163Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.640700Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.641702Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.640700Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.640700Z"
+     }
+    },
+-   "outputs": [
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:488: PossibleUserWarning: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.\n",
+-      "  rank_zero_warn(\n",
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\pytorch_lightning\\trainer\\connectors\\data_connector.py:224: PossibleUserWarning: The dataloader, test_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.\n",
+-      "  rank_zero_warn(\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "a49ac6f8c77848c78e23507ac79cb49f",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "Testing: 0it [00:00, ?it/s]"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "torch.Size([10, 30000])\n",
+-      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
+-      "       Test metric             DataLoader 0\n",
+-      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
+-      "        test_acc            0.10000000149011612\n",
+-      "        test_loss            2.639571189880371\n",
+-      "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "[{'test_loss': 2.639571189880371, 'test_acc': 0.10000000149011612}]"
+-      ]
+-     },
+-     "execution_count": 10,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "trainer.test(model, datamodule=data)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 11,
++   "execution_count": null,
+    "id": "378d95e1-4e29-4c7f-bd8c-eaa16677a063",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:51.819129Z",
+-     "iopub.status.busy": "2023-03-07T22:03:51.818134Z",
+-     "iopub.status.idle": "2023-03-07T22:03:51.834143Z",
+-     "shell.execute_reply": "2023-03-07T22:03:51.833139Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:51.819129Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.642702Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.643698Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.643698Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.643698Z"
+     },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "<button onClick=\"this.nextSibling.style.display='block';this.style.display='none';\">Display W&B run</button><iframe src='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg?jupyter=true' style='border:none;width:100%;height:420px;display:none;'></iframe>"
+-      ],
+-      "text/plain": [
+-       "<wandb.sdk.wandb_run.Run at 0x17bf64ef8e0>"
+-      ]
+-     },
+-     "execution_count": 11,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "wandb_logger.experiment"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 12,
++   "execution_count": null,
+    "id": "91967e96-f127-4758-b427-c996a9fcb4dc",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-07T22:03:51.837139Z",
+-     "iopub.status.busy": "2023-03-07T22:03:51.837139Z",
+-     "iopub.status.idle": "2023-03-07T22:09:29.796772Z",
+-     "shell.execute_reply": "2023-03-07T22:09:29.795771Z",
+-     "shell.execute_reply.started": "2023-03-07T22:03:51.837139Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.645700Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.646698Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.646698Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.646698Z"
+     }
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "<style>\n",
+-       "    table.wandb td:nth-child(1) { padding: 0 10px; text-align: left ; width: auto;} td:nth-child(2) {text-align: left ; width: 100%}\n",
+-       "    .wandb-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; width: 100% }\n",
+-       "    .wandb-col { display: flex; flex-direction: column; flex-basis: 100%; flex: 1; padding: 10px; }\n",
+-       "    </style>\n",
+-       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>▁▂▄▅▇█</td></tr><tr><td>test_acc</td><td>▁</td></tr><tr><td>test_loss</td><td>▁</td></tr><tr><td>trainer/global_step</td><td>▁▁▂▂▄▄▅▅▇▇█</td></tr><tr><td>val_acc</td><td>▁▁▁▁▁</td></tr><tr><td>val_accuracy_alt</td><td>▁▁▁▁▁</td></tr><tr><td>val_loss</td><td>▇█▂▂▁</td></tr><tr><td>val_loss_alt</td><td>▇█▂▂▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>5</td></tr><tr><td>test_acc</td><td>0.1</td></tr><tr><td>test_loss</td><td>2.63957</td></tr><tr><td>trainer/global_step</td><td>5</td></tr><tr><td>val_acc</td><td>0.1</td></tr><tr><td>val_accuracy_alt</td><td>0.1</td></tr><tr><td>val_loss</td><td>2.63782</td></tr><tr><td>val_loss_alt</td><td>2.63782</td></tr></table><br/></div></div>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run <strong style=\"color:#cdcd00\">earnest-salad-39</strong> at: <a href='https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg' target=\"_blank\">https://wandb.ai/christopher-marais/computer_vision_test_single/runs/vmxt21wg</a><br/>Synced 6 W&B file(s), 7 media file(s), 8 artifact file(s) and 1 other file(s)"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Find logs at: <code>.\\wandb\\run-20230307_170329-vmxt21wg\\logs</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "# wandb_logger.experiment.finish()"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 13,
++   "execution_count": null,
+    "id": "f04c136e-5986-4628-88b7-38a8b433f654",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-07T22:09:29.797770Z",
+-     "iopub.status.busy": "2023-03-07T22:09:29.797770Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.002804Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.001798Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:29.797770Z"
+-    }
+-   },
+-   "outputs": [
+-    {
+-     "ename": "NameError",
+-     "evalue": "name 'models' is not defined",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+-      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+-      "Cell \u001b[1;32mIn[13], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[43mmodels\u001b[49m\u001b[38;5;241m.\u001b[39mresnet18(pretrained\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mTrue\u001b[39;00m)\n",
+-      "\u001b[1;31mNameError\u001b[0m: name 'models' is not defined"
+-     ]
+-    }
+-   ],
++   "metadata": {},
++   "outputs": [],
+    "source": []
+   },
+   {
+@@ -1279,10 +905,10 @@
+    "id": "3b58022d-6961-41b0-a4e1-60bbc1c09791",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.003799Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.004801Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.004801Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.004801Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.647703Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.648697Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.648697Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.648697Z"
+     },
+     "tags": []
+    },
+@@ -1305,10 +931,10 @@
+    "id": "ebde1018-ddfa-43f2-b9c6-f2c1d4b19736",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.006798Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.007799Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.007799Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.007799Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.651708Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.652703Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.651708Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.651708Z"
+     },
+     "tags": []
+    },
+@@ -1351,10 +977,10 @@
+    "id": "91aeb8a0-9ffd-4439-808c-2951d1f74b36",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.009798Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.010799Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.009798Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.009798Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.655701Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.657703Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.656705Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.656705Z"
+     },
+     "tags": []
+    },
+@@ -1394,10 +1020,10 @@
+    "id": "869b0393-21cf-4fba-8efd-7678a852b697",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-07T22:09:30.012807Z",
+-     "iopub.status.idle": "2023-03-07T22:09:30.012807Z",
+-     "shell.execute_reply": "2023-03-07T22:09:30.012807Z",
+-     "shell.execute_reply.started": "2023-03-07T22:09:30.012807Z"
++     "iopub.status.busy": "2023-03-08T17:09:23.660706Z",
++     "iopub.status.idle": "2023-03-08T17:09:23.661705Z",
++     "shell.execute_reply": "2023-03-08T17:09:23.661705Z",
++     "shell.execute_reply.started": "2023-03-08T17:09:23.661705Z"
+     },
+     "tags": []
+    },
