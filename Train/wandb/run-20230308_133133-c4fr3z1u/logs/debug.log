@@ -30,3 +30,4 @@ config: {}
 2023-03-08 13:31:34,502 INFO    MainThread:16584 [wandb_init.py:_pause_backend():403] pausing backend
 2023-03-08 13:31:34,524 INFO    MainThread:16584 [wandb_init.py:_resume_backend():408] resuming backend
 2023-03-08 13:47:17,222 INFO    MainThread:16584 [wandb_run.py:_config_callback():1250] config_cb None None {'input_shape': [3, 300, 300], 'num_classes': 196, 'learning_rate': 0.0002, 'transfer': True, 'acc_task': 'multiclass'}
+2023-03-08 13:51:57,281 WARNING MsgRouterThr:16584 [router.py:message_loop():77] message_loop has been closed

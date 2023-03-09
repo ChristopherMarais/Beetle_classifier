@@ -31,3 +31,4 @@ config: {}
 2023-03-08 12:59:10,228 INFO    MainThread:12244 [wandb_init.py:_resume_backend():408] resuming backend
 2023-03-08 12:59:13,738 INFO    MainThread:12244 [jupyter.py:_save_ipynb():390] looking for notebook: LAB/Beetle_classifier/Train/PyLi_wanb_sweep_CoatNet.ipynb
 2023-03-08 12:59:13,739 INFO    MainThread:12244 [wandb_init.py:_pause_backend():403] pausing backend
+2023-03-08 15:39:31,043 WARNING MsgRouterThr:12244 [router.py:message_loop():77] message_loop has been closed

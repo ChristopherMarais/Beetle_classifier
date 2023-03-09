@@ -1,0 +1,202 @@
+2023-03-08 14:12:11,817 INFO    StreamThr :3712 [internal.py:wandb_internal():87] W&B internal server running at pid: 3712, started at: 2023-03-08 14:12:11.816776
+2023-03-08 14:12:11,820 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status
+2023-03-08 14:12:11,821 INFO    WriterThread:3712 [datastore.py:open_for_write():85] open: .\wandb\run-20230308_141211-9g4lrcdz\run-9g4lrcdz.wandb
+2023-03-08 14:12:11,825 DEBUG   SenderThread:3712 [sender.py:send():336] send: header
+2023-03-08 14:12:11,835 DEBUG   SenderThread:3712 [sender.py:send():336] send: run
+2023-03-08 14:12:11,837 INFO    SenderThread:3712 [sender.py:_maybe_setup_resume():723] checking resume status for None/TransferLearning/9g4lrcdz
+2023-03-08 14:12:12,228 INFO    SenderThread:3712 [dir_watcher.py:__init__():216] watching files in: .\wandb\run-20230308_141211-9g4lrcdz\files
+2023-03-08 14:12:12,229 INFO    SenderThread:3712 [sender.py:_start_run_threads():1067] run started: 9g4lrcdz with start time 1678302731.758246
+2023-03-08 14:12:12,229 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: summary_record
+2023-03-08 14:12:12,230 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-08 14:12:12,233 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: check_version
+2023-03-08 14:12:12,234 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: check_version
+2023-03-08 14:12:12,351 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: run_start
+2023-03-08 14:12:12,370 DEBUG   HandlerThread:3712 [system_info.py:__init__():31] System info init
+2023-03-08 14:12:12,370 DEBUG   HandlerThread:3712 [system_info.py:__init__():46] System info init done
+2023-03-08 14:12:12,370 INFO    HandlerThread:3712 [system_monitor.py:start():151] Starting system monitor
+2023-03-08 14:12:12,370 INFO    SystemMonitor:3712 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-08 14:12:12,371 INFO    HandlerThread:3712 [system_monitor.py:probe():172] Collecting system info
+2023-03-08 14:12:12,378 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started cpu
+2023-03-08 14:12:12,379 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started disk
+2023-03-08 14:12:12,379 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started gpu
+2023-03-08 14:12:12,380 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started memory
+2023-03-08 14:12:12,385 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started network
+2023-03-08 14:12:12,394 DEBUG   HandlerThread:3712 [system_info.py:probe():195] Probing system
+2023-03-08 14:12:12,395 DEBUG   HandlerThread:3712 [system_info.py:_probe_git():180] Probing git
+2023-03-08 14:12:12,407 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:12,482 DEBUG   HandlerThread:3712 [system_info.py:_probe_git():188] Probing git done
+2023-03-08 14:12:12,482 DEBUG   HandlerThread:3712 [system_info.py:probe():241] Probing system done
+2023-03-08 14:12:12,482 DEBUG   HandlerThread:3712 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-03-08T19:12:12.394961', 'startedAt': '2023-03-08T19:12:11.737192', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'LAB/Beetle_classifier/Train/Transfer_Learning_Using_PyTorch_Lightning.ipynb', 'root': 'C:/Users/gcmar/Desktop/GIT_REPOS/LAB/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': '36b4aed59d754383dcfe1b3380c8a44ac39791a8'}, 'email': '53177842+ChristopherMarais@users.noreply.github.com', 'host': 'LAPTOP-GCM', 'username': 'gcmar', 'executable': 'C:\\Users\\gcmar\\.conda\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3000.0, 'min': 0.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 3000.0, 'min': 0.0, 'max': 3000.0}], 'disk': {'total': 1870.6523399353027, 'used': 1615.8284759521484}, 'gpu': 'NVIDIA GeForce RTX 2060 with Max-Q Design', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2060 with Max-Q Design', 'memory_total': 6442450944}], 'memory': {'total': 39.41948699951172}}
+2023-03-08 14:12:12,482 INFO    HandlerThread:3712 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-08 14:12:12,482 INFO    HandlerThread:3712 [system_monitor.py:probe():185] Publishing system info
+2023-03-08 14:12:12,482 DEBUG   HandlerThread:3712 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-08 14:12:12,484 DEBUG   HandlerThread:3712 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-08 14:12:12,484 DEBUG   HandlerThread:3712 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-08 14:12:12,487 ERROR   HandlerThread:3712 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-03-08 14:12:12,502 DEBUG   HandlerThread:3712 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-08 14:12:12,502 DEBUG   HandlerThread:3712 [system_info.py:_save_code():89] Saving code
+2023-03-08 14:12:12,502 WARNING HandlerThread:3712 [system_info.py:_save_code():91] unable to save code -- program entry not found
+2023-03-08 14:12:12,502 DEBUG   HandlerThread:3712 [system_info.py:_save_patches():127] Saving git patches
+2023-03-08 14:12:12,767 DEBUG   HandlerThread:3712 [system_info.py:_save_patches():169] Saving git patches done
+2023-03-08 14:12:12,769 INFO    HandlerThread:3712 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-08 14:12:12,775 DEBUG   SenderThread:3712 [sender.py:send():336] send: files
+2023-03-08 14:12:12,775 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-08 14:12:12,776 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file diff.patch with policy now
+2023-03-08 14:12:12,795 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-08 14:12:12,796 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: stop_status
+2023-03-08 14:12:12,853 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: pause
+2023-03-08 14:12:12,854 INFO    HandlerThread:3712 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-03-08 14:12:12,854 INFO    HandlerThread:3712 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-08 14:12:12,854 DEBUG   SystemMonitor:3712 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-08 14:12:12,854 DEBUG   SystemMonitor:3712 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-08 14:12:12,865 DEBUG   SystemMonitor:3712 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-08 14:12:12,877 INFO    HandlerThread:3712 [interfaces.py:finish():175] Joined cpu
+2023-03-08 14:12:12,878 INFO    HandlerThread:3712 [interfaces.py:finish():175] Joined disk
+2023-03-08 14:12:12,916 INFO    HandlerThread:3712 [interfaces.py:finish():175] Joined gpu
+2023-03-08 14:12:12,917 INFO    HandlerThread:3712 [interfaces.py:finish():175] Joined memory
+2023-03-08 14:12:12,917 INFO    HandlerThread:3712 [interfaces.py:finish():175] Joined network
+2023-03-08 14:12:12,917 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: resume
+2023-03-08 14:12:12,917 INFO    HandlerThread:3712 [handler.py:handle_request_resume():708] starting system metrics thread or process
+2023-03-08 14:12:12,918 INFO    HandlerThread:3712 [system_monitor.py:start():151] Starting system monitor
+2023-03-08 14:12:12,918 INFO    SystemMonitor:3712 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-08 14:12:12,932 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started cpu
+2023-03-08 14:12:12,934 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started disk
+2023-03-08 14:12:12,936 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started gpu
+2023-03-08 14:12:12,937 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started memory
+2023-03-08 14:12:12,955 INFO    SystemMonitor:3712 [interfaces.py:start():168] Started network
+2023-03-08 14:12:12,959 DEBUG   SenderThread:3712 [sender.py:send():336] send: telemetry
+2023-03-08 14:12:12,960 DEBUG   SenderThread:3712 [sender.py:send():336] send: metric
+2023-03-08 14:12:12,961 DEBUG   SenderThread:3712 [sender.py:send():336] send: telemetry
+2023-03-08 14:12:12,961 DEBUG   SenderThread:3712 [sender.py:send():336] send: metric
+2023-03-08 14:12:12,962 WARNING SenderThread:3712 [sender.py:send_metric():1272] Seen metric with glob (shouldn't happen)
+2023-03-08 14:12:12,965 DEBUG   SenderThread:3712 [sender.py:send():336] send: stats
+2023-03-08 14:12:12,965 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:13,244 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230308_141211-9g4lrcdz\files\diff.patch
+2023-03-08 14:12:13,244 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230308_141211-9g4lrcdz\files\wandb-summary.json
+2023-03-08 14:12:13,244 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230308_141211-9g4lrcdz\files\requirements.txt
+2023-03-08 14:12:13,245 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230308_141211-9g4lrcdz\files\wandb-metadata.json
+2023-03-08 14:12:13,245 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230308_141211-9g4lrcdz\files\conda-environment.yaml
+2023-03-08 14:12:13,245 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_created():275] file/dir created: .\wandb\run-20230308_141211-9g4lrcdz\files\output.log
+2023-03-08 14:12:13,324 INFO    wandb-upload_0:3712 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\AppData\Local\Temp\tmp77ag4_ynwandb\ivm8eegs-wandb-metadata.json
+2023-03-08 14:12:14,248 DEBUG   SenderThread:3712 [sender.py:send():336] send: config
+2023-03-08 14:12:14,986 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:15,265 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\output.log
+2023-03-08 14:12:17,004 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:17,288 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\output.log
+2023-03-08 14:12:17,558 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:19,019 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:20,271 ERROR   wandb-upload_1:3712 [internal_api.py:execute():245] 502 response executing GraphQL.
+2023-03-08 14:12:20,271 ERROR   wandb-upload_1:3712 [internal_api.py:execute():246] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2023-03-08 14:12:21,048 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:22,023 INFO    wandb-upload_1:3712 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\AppData\Local\Temp\tmp77ag4_ynwandb\j5x3xkoj-diff.patch
+2023-03-08 14:12:23,070 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:23,342 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\output.log
+2023-03-08 14:12:23,533 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:25,085 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:27,100 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:27,804 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:27,804 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:28,573 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:29,116 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:31,129 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:32,845 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:33,155 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:33,614 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:33,756 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-08 14:12:33,759 DEBUG   SenderThread:3712 [sender.py:send():336] send: metric
+2023-03-08 14:12:33,760 DEBUG   SenderThread:3712 [sender.py:send():336] send: metric
+2023-03-08 14:12:33,760 DEBUG   SenderThread:3712 [sender.py:send():336] send: metric
+2023-03-08 14:12:33,760 DEBUG   SenderThread:3712 [sender.py:send():336] send: history
+2023-03-08 14:12:33,760 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: summary_record
+2023-03-08 14:12:33,763 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-08 14:12:34,436 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\wandb-summary.json
+2023-03-08 14:12:35,164 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:37,184 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:37,894 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:38,809 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:39,206 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:41,224 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:42,721 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-08 14:12:42,723 DEBUG   SenderThread:3712 [sender.py:send():336] send: history
+2023-03-08 14:12:42,723 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: summary_record
+2023-03-08 14:12:42,724 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-08 14:12:42,951 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:43,318 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:43,518 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\wandb-summary.json
+2023-03-08 14:12:44,757 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:45,338 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:45,539 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\config.yaml
+2023-03-08 14:12:47,345 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:48,005 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:49,360 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:49,950 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:51,380 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:51,941 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-08 14:12:51,943 DEBUG   SenderThread:3712 [sender.py:send():336] send: history
+2023-03-08 14:12:51,943 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: summary_record
+2023-03-08 14:12:51,945 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-08 14:12:52,601 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\wandb-summary.json
+2023-03-08 14:12:53,046 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:53,396 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:54,956 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:12:55,421 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:57,437 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:58,072 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:12:59,460 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:12:59,992 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:13:00,829 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-08 14:13:00,831 DEBUG   SenderThread:3712 [sender.py:send():336] send: history
+2023-03-08 14:13:00,831 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: summary_record
+2023-03-08 14:13:00,833 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-08 14:13:01,477 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:01,673 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\wandb-summary.json
+2023-03-08 14:13:03,112 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:13:03,498 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:05,518 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:05,891 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:13:07,530 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:08,155 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:13:09,552 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:10,931 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:13:11,572 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:12,972 DEBUG   SystemMonitor:3712 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-08 14:13:12,974 DEBUG   SenderThread:3712 [sender.py:send():336] send: stats
+2023-03-08 14:13:13,196 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:13:13,671 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:14,784 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-08 14:13:14,787 DEBUG   SenderThread:3712 [sender.py:send():336] send: metric
+2023-03-08 14:13:14,787 DEBUG   SenderThread:3712 [sender.py:send():336] send: metric
+2023-03-08 14:13:14,788 DEBUG   SenderThread:3712 [sender.py:send():336] send: history
+2023-03-08 14:13:14,788 DEBUG   SenderThread:3712 [sender.py:send_request():363] send_request: summary_record
+2023-03-08 14:13:14,790 INFO    SenderThread:3712 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-08 14:13:14,791 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\wandb-summary.json
+2023-03-08 14:13:15,681 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:16,818 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:13:17,695 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:17,832 INFO    Thread-17 :3712 [dir_watcher.py:_on_file_modified():292] file/dir modified: .\wandb\run-20230308_141211-9g4lrcdz\files\config.yaml
+2023-03-08 14:13:18,244 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:13:19,713 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:21,722 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-08 14:13:22,078 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: status_report
+2023-03-08 14:13:23,294 DEBUG   HandlerThread:3712 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-08 14:13:23,742 ERROR   gpu       :3712 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
