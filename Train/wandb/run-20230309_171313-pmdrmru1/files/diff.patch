@@ -1,0 +1,918 @@
+diff --git a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+index 1b0f378..19096a0 100644
+--- a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+@@ -2,15 +2,12 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 1,
++   "execution_count": null,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:42.768645Z",
+-     "iopub.status.busy": "2023-03-09T21:57:42.767648Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.556844Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.554860Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:42.768645Z"
++     "iopub.execute_input": "2023-03-09T22:13:02.131725Z",
++     "iopub.status.busy": "2023-03-09T22:13:02.131725Z"
+     },
+     "tags": []
+    },
+@@ -27,46 +24,21 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": null,
+    "id": "5a8980b5-f22c-4e50-bb9f-8ade0c9583cc",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.557851Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.557851Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.571852Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.570861Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.557851Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/plain": [
+-       "'2.7.11'"
+-      ]
+-     },
+-     "execution_count": 2,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "fastai.__version__"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": null,
+    "id": "af673a5e-c94b-4ff2-ad5a-af508a10ca18",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.574851Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.573841Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.587852Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.586836Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.574851Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -88,78 +60,22 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
++   "execution_count": null,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.590846Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.589845Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.603842Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.602841Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.590846Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/plain": [
+-       "['maxvit_base_tf_224.in1k',\n",
+-       " 'maxvit_base_tf_384.in1k',\n",
+-       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
+-       " 'maxvit_base_tf_512.in1k',\n",
+-       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
+-       " 'maxvit_large_tf_224.in1k',\n",
+-       " 'maxvit_large_tf_384.in1k',\n",
+-       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
+-       " 'maxvit_large_tf_512.in1k',\n",
+-       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
+-       " 'maxvit_nano_rw_256.sw_in1k',\n",
+-       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
+-       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
+-       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
+-       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
+-       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
+-       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
+-       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
+-       " 'maxvit_small_tf_224.in1k',\n",
+-       " 'maxvit_small_tf_384.in1k',\n",
+-       " 'maxvit_small_tf_512.in1k',\n",
+-       " 'maxvit_tiny_rw_224.sw_in1k',\n",
+-       " 'maxvit_tiny_tf_224.in1k',\n",
+-       " 'maxvit_tiny_tf_384.in1k',\n",
+-       " 'maxvit_tiny_tf_512.in1k',\n",
+-       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
+-       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
+-       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
+-       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
+-       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
+-       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
+-       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
+-       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+-      ]
+-     },
+-     "execution_count": 4,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "timm.list_models('*max*', pretrained=True)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": null,
+    "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.604837Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.604837Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.651566Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.650352Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.604837Z"
+-    }
++    "tags": []
+    },
+    "outputs": [],
+    "source": [
+@@ -181,273 +97,19 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.653077Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.652572Z",
+-     "iopub.status.idle": "2023-03-09T21:58:23.526809Z",
+-     "shell.execute_reply": "2023-03-09T21:58:23.525800Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.653077Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33mchristopher-marais\u001b[0m. Use \u001b[1m`wandb login --relogin`\u001b[0m to force relogin\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "wandb version 0.13.11 is available!  To upgrade, please run:\n",
+-       " $ pip install wandb --upgrade"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Tracking run with wandb version 0.13.10"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Run data is saved locally in <code>C:\\Users\\gcmar\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\wandb\\run-20230309_165753-oynmonok</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok' target=\"_blank\">driven-armadillo-6</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View project at <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT</a>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok</a>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\\cb\\pytorch_1000000000000\\work\\aten\\src\\ATen\\native\\TensorShape.cpp:3191.)\n",
+-      "  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='0' class='' max='1' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      0.00% [0/1 00:00&lt;?]\n",
+-       "    </div>\n",
+-       "    \n",
+-       "<table border=\"1\" class=\"dataframe\">\n",
+-       "  <thead>\n",
+-       "    <tr style=\"text-align: left;\">\n",
+-       "      <th>epoch</th>\n",
+-       "      <th>train_loss</th>\n",
+-       "      <th>valid_loss</th>\n",
+-       "      <th>error_rate</th>\n",
+-       "      <th>time</th>\n",
+-       "    </tr>\n",
+-       "  </thead>\n",
+-       "  <tbody>\n",
+-       "  </tbody>\n",
+-       "</table><p>\n",
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='0' class='' max='92' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      0.00% [0/92 00:00&lt;?]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Waiting for W&B process to finish... <strong style=\"color:red\">(failed 1).</strong> Press Ctrl-C to abort syncing."
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "af616b5107c44862a407069377cb0f7c",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "VBox(children=(Label(value='2.306 MB of 11.590 MB uploaded (0.000 MB deduped)\\r'), FloatProgress(value=0.19897…"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run <strong style=\"color:#cdcd00\">driven-armadillo-6</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok</a><br/>Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 2 other file(s)"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Find logs at: <code>.\\wandb\\run-20230309_165753-oynmonok\\logs</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "ename": "OutOfMemoryError",
+-     "evalue": "CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 6.00 GiB total capacity; 5.20 GiB already allocated; 0 bytes free; 5.30 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+-      "\u001b[1;31mOutOfMemoryError\u001b[0m                          Traceback (most recent call last)",
+-      "Cell \u001b[1;32mIn[6], line 20\u001b[0m\n\u001b[0;32m     15\u001b[0m         learn \u001b[38;5;241m=\u001b[39m vision_learner(dls, config\u001b[38;5;241m.\u001b[39mmodel_name, metrics\u001b[38;5;241m=\u001b[39merror_rate, \n\u001b[0;32m     16\u001b[0m                                cbs\u001b[38;5;241m=\u001b[39mcbs, pretrained\u001b[38;5;241m=\u001b[39mconfig\u001b[38;5;241m.\u001b[39mpretrained)\n\u001b[0;32m     17\u001b[0m         learn\u001b[38;5;241m.\u001b[39mfine_tune(config\u001b[38;5;241m.\u001b[39mepochs)\n\u001b[1;32m---> 20\u001b[0m \u001b[43mtrain\u001b[49m\u001b[43m(\u001b[49m\u001b[43mconfig\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "Cell \u001b[1;32mIn[6], line 17\u001b[0m, in \u001b[0;36mtrain\u001b[1;34m(config)\u001b[0m\n\u001b[0;32m     14\u001b[0m cbs \u001b[38;5;241m=\u001b[39m [MixedPrecision(), WandbCallback(log_preds\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mFalse\u001b[39;00m)]\n\u001b[0;32m     15\u001b[0m learn \u001b[38;5;241m=\u001b[39m vision_learner(dls, config\u001b[38;5;241m.\u001b[39mmodel_name, metrics\u001b[38;5;241m=\u001b[39merror_rate, \n\u001b[0;32m     16\u001b[0m                        cbs\u001b[38;5;241m=\u001b[39mcbs, pretrained\u001b[38;5;241m=\u001b[39mconfig\u001b[38;5;241m.\u001b[39mpretrained)\n\u001b[1;32m---> 17\u001b[0m \u001b[43mlearn\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mfine_tune\u001b[49m\u001b[43m(\u001b[49m\u001b[43mconfig\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mepochs\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\callback\\schedule.py:165\u001b[0m, in \u001b[0;36mfine_tune\u001b[1;34m(self, epochs, base_lr, freeze_epochs, lr_mult, pct_start, div, **kwargs)\u001b[0m\n\u001b[0;32m    163\u001b[0m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mFine tune with `Learner.freeze` for `freeze_epochs`, then with `Learner.unfreeze` for `epochs`, using discriminative LR.\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[0;32m    164\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mfreeze()\n\u001b[1;32m--> 165\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mfit_one_cycle(freeze_epochs, \u001b[38;5;28mslice\u001b[39m(base_lr), pct_start\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m0.99\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    166\u001b[0m base_lr \u001b[38;5;241m/\u001b[39m\u001b[38;5;241m=\u001b[39m \u001b[38;5;241m2\u001b[39m\n\u001b[0;32m    167\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39munfreeze()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\callback\\schedule.py:119\u001b[0m, in \u001b[0;36mfit_one_cycle\u001b[1;34m(self, n_epoch, lr_max, div, div_final, pct_start, wd, moms, cbs, reset_opt, start_epoch)\u001b[0m\n\u001b[0;32m    116\u001b[0m lr_max \u001b[38;5;241m=\u001b[39m np\u001b[38;5;241m.\u001b[39marray([h[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mlr\u001b[39m\u001b[38;5;124m'\u001b[39m] \u001b[38;5;28;01mfor\u001b[39;00m h \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mopt\u001b[38;5;241m.\u001b[39mhypers])\n\u001b[0;32m    117\u001b[0m scheds \u001b[38;5;241m=\u001b[39m {\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mlr\u001b[39m\u001b[38;5;124m'\u001b[39m: combined_cos(pct_start, lr_max\u001b[38;5;241m/\u001b[39mdiv, lr_max, lr_max\u001b[38;5;241m/\u001b[39mdiv_final),\n\u001b[0;32m    118\u001b[0m           \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mmom\u001b[39m\u001b[38;5;124m'\u001b[39m: combined_cos(pct_start, \u001b[38;5;241m*\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmoms \u001b[38;5;28;01mif\u001b[39;00m moms \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m \u001b[38;5;28;01melse\u001b[39;00m moms))}\n\u001b[1;32m--> 119\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mfit\u001b[49m\u001b[43m(\u001b[49m\u001b[43mn_epoch\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mcbs\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mParamScheduler\u001b[49m\u001b[43m(\u001b[49m\u001b[43mscheds\u001b[49m\u001b[43m)\u001b[49m\u001b[38;5;241;43m+\u001b[39;49m\u001b[43mL\u001b[49m\u001b[43m(\u001b[49m\u001b[43mcbs\u001b[49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mreset_opt\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mreset_opt\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mwd\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mwd\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mstart_epoch\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mstart_epoch\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:264\u001b[0m, in \u001b[0;36mLearner.fit\u001b[1;34m(self, n_epoch, lr, wd, cbs, reset_opt, start_epoch)\u001b[0m\n\u001b[0;32m    262\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mopt\u001b[38;5;241m.\u001b[39mset_hypers(lr\u001b[38;5;241m=\u001b[39m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlr \u001b[38;5;28;01mif\u001b[39;00m lr \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m \u001b[38;5;28;01melse\u001b[39;00m lr)\n\u001b[0;32m    263\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mn_epoch \u001b[38;5;241m=\u001b[39m n_epoch\n\u001b[1;32m--> 264\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_fit\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mfit\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelFitException\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_end_cleanup\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:253\u001b[0m, in \u001b[0;36mLearner._do_fit\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    251\u001b[0m \u001b[38;5;28;01mfor\u001b[39;00m epoch \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mrange\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mn_epoch):\n\u001b[0;32m    252\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mepoch\u001b[38;5;241m=\u001b[39mepoch\n\u001b[1;32m--> 253\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_epoch\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mepoch\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelEpochException\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:247\u001b[0m, in \u001b[0;36mLearner._do_epoch\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    246\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_do_epoch\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[1;32m--> 247\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_epoch_train\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    248\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_do_epoch_validate()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:239\u001b[0m, in \u001b[0;36mLearner._do_epoch_train\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    237\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_do_epoch_train\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[0;32m    238\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdl \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdls\u001b[38;5;241m.\u001b[39mtrain\n\u001b[1;32m--> 239\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mall_batches\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mtrain\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelTrainException\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:205\u001b[0m, in \u001b[0;36mLearner.all_batches\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    203\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mall_batches\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[0;32m    204\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mn_iter \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mlen\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdl)\n\u001b[1;32m--> 205\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m o \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28menumerate\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdl): \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mone_batch\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mo\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:235\u001b[0m, in \u001b[0;36mLearner.one_batch\u001b[1;34m(self, i, b)\u001b[0m\n\u001b[0;32m    233\u001b[0m b \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_set_device(b)\n\u001b[0;32m    234\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_split(b)\n\u001b[1;32m--> 235\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_one_batch\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mbatch\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelBatchException\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:216\u001b[0m, in \u001b[0;36mLearner._do_one_batch\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    215\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_do_one_batch\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[1;32m--> 216\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mpred \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mmodel\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mxb\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    217\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_pred\u001b[39m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    218\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mlen\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39myb):\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\container.py:204\u001b[0m, in \u001b[0;36mSequential.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    202\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m):\n\u001b[0;32m    203\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m module \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m:\n\u001b[1;32m--> 204\u001b[0m         \u001b[38;5;28minput\u001b[39m \u001b[38;5;241m=\u001b[39m \u001b[43mmodule\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m    205\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28minput\u001b[39m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\vision\\learner.py:177\u001b[0m, in \u001b[0;36mTimmBody.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[1;32m--> 177\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m,x): \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mmodel\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mforward_features\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mneeds_pool \u001b[38;5;28;01melse\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmodel(x)\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:1257\u001b[0m, in \u001b[0;36mMaxxVit.forward_features\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m   1255\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward_features\u001b[39m(\u001b[38;5;28mself\u001b[39m, x):\n\u001b[0;32m   1256\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstem(x)\n\u001b[1;32m-> 1257\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mstages\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1258\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mnorm(x)\n\u001b[0;32m   1259\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m x\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\container.py:204\u001b[0m, in \u001b[0;36mSequential.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    202\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m):\n\u001b[0;32m    203\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m module \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m:\n\u001b[1;32m--> 204\u001b[0m         \u001b[38;5;28minput\u001b[39m \u001b[38;5;241m=\u001b[39m \u001b[43mmodule\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m    205\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28minput\u001b[39m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:1065\u001b[0m, in \u001b[0;36mMaxxVitStage.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m   1063\u001b[0m     x \u001b[38;5;241m=\u001b[39m checkpoint_seq(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mblocks, x)\n\u001b[0;32m   1064\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m-> 1065\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mblocks\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1066\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m x\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\container.py:204\u001b[0m, in \u001b[0;36mSequential.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    202\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m):\n\u001b[0;32m    203\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m module \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m:\n\u001b[1;32m--> 204\u001b[0m         \u001b[38;5;28minput\u001b[39m \u001b[38;5;241m=\u001b[39m \u001b[43mmodule\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m    205\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28minput\u001b[39m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:950\u001b[0m, in \u001b[0;36mMaxxVitBlock.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m    948\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, x):\n\u001b[0;32m    949\u001b[0m     \u001b[38;5;66;03m# NCHW format\u001b[39;00m\n\u001b[1;32m--> 950\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mconv\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    952\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mnchw_attn:\n\u001b[0;32m    953\u001b[0m         x \u001b[38;5;241m=\u001b[39m x\u001b[38;5;241m.\u001b[39mpermute(\u001b[38;5;241m0\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m1\u001b[39m)  \u001b[38;5;66;03m# to NHWC (channels-last)\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:540\u001b[0m, in \u001b[0;36mMbConvBlock.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m    538\u001b[0m \u001b[38;5;66;03m# 1x1 expansion conv & norm-act\u001b[39;00m\n\u001b[0;32m    539\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mconv1_1x1(x)\n\u001b[1;32m--> 540\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mnorm1\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    542\u001b[0m \u001b[38;5;66;03m# depthwise / grouped 3x3 conv w/ SE (or other) channel attention & norm-act\u001b[39;00m\n\u001b[0;32m    543\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mconv2_kxk(x)\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\layers\\norm_act.py:113\u001b[0m, in \u001b[0;36mBatchNormAct2d.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m    101\u001b[0m x \u001b[38;5;241m=\u001b[39m F\u001b[38;5;241m.\u001b[39mbatch_norm(\n\u001b[0;32m    102\u001b[0m     x,\n\u001b[0;32m    103\u001b[0m     \u001b[38;5;66;03m# If buffers are not to be tracked, ensure that they won't be updated\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m    110\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39meps,\n\u001b[0;32m    111\u001b[0m )\n\u001b[0;32m    112\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdrop(x)\n\u001b[1;32m--> 113\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mact\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    114\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m x\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\activation.py:395\u001b[0m, in \u001b[0;36mSiLU.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    394\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m: Tensor) \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m>\u001b[39m Tensor:\n\u001b[1;32m--> 395\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mF\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43msilu\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minplace\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43minplace\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\functional.py:2058\u001b[0m, in \u001b[0;36msilu\u001b[1;34m(input, inplace)\u001b[0m\n\u001b[0;32m   2056\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m handle_torch_function(silu, (\u001b[38;5;28minput\u001b[39m,), \u001b[38;5;28minput\u001b[39m, inplace\u001b[38;5;241m=\u001b[39minplace)\n\u001b[0;32m   2057\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m inplace:\n\u001b[1;32m-> 2058\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mtorch\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_C\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_nn\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43msilu_\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m   2059\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m torch\u001b[38;5;241m.\u001b[39m_C\u001b[38;5;241m.\u001b[39m_nn\u001b[38;5;241m.\u001b[39msilu(\u001b[38;5;28minput\u001b[39m)\n",
+-      "\u001b[1;31mOutOfMemoryError\u001b[0m: CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 6.00 GiB total capacity; 5.20 GiB already allocated; 0 bytes free; 5.30 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF"
+-     ]
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "config = SimpleNamespace(\n",
+     "    batch_size=64,\n",
+     "    img_size=224,\n",
+     "    seed=42,\n",
+     "    pretrained=False,\n",
+-    "    model_name=\"maxvit_tiny_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040\n",
++    "    model_name=\"coatnet_bn_0_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040\n",
+     "    epochs=1)\n",
+     "\n",
+     "\n",
+@@ -469,12 +131,6 @@
+    "execution_count": null,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-09T21:58:23.527798Z",
+-     "iopub.status.idle": "2023-03-09T21:58:23.527798Z",
+-     "shell.execute_reply": "2023-03-09T21:58:23.527798Z",
+-     "shell.execute_reply.started": "2023-03-09T21:58:23.527798Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -498,12 +154,6 @@
+    "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-09T21:58:23.529807Z",
+-     "iopub.status.idle": "2023-03-09T21:58:23.530807Z",
+-     "shell.execute_reply": "2023-03-09T21:58:23.530807Z",
+-     "shell.execute_reply.started": "2023-03-09T21:58:23.530807Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+diff --git a/Train/timm_FastAI_WANDB.ipynb b/Train/timm_FastAI_WANDB.ipynb
+index 1b0f378..19096a0 100644
+--- a/Train/timm_FastAI_WANDB.ipynb
++++ b/Train/timm_FastAI_WANDB.ipynb
+@@ -2,15 +2,12 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 1,
++   "execution_count": null,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:42.768645Z",
+-     "iopub.status.busy": "2023-03-09T21:57:42.767648Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.556844Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.554860Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:42.768645Z"
++     "iopub.execute_input": "2023-03-09T22:13:02.131725Z",
++     "iopub.status.busy": "2023-03-09T22:13:02.131725Z"
+     },
+     "tags": []
+    },
+@@ -27,46 +24,21 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": null,
+    "id": "5a8980b5-f22c-4e50-bb9f-8ade0c9583cc",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.557851Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.557851Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.571852Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.570861Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.557851Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/plain": [
+-       "'2.7.11'"
+-      ]
+-     },
+-     "execution_count": 2,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "fastai.__version__"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": null,
+    "id": "af673a5e-c94b-4ff2-ad5a-af508a10ca18",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.574851Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.573841Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.587852Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.586836Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.574851Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -88,78 +60,22 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
++   "execution_count": null,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.590846Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.589845Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.603842Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.602841Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.590846Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/plain": [
+-       "['maxvit_base_tf_224.in1k',\n",
+-       " 'maxvit_base_tf_384.in1k',\n",
+-       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
+-       " 'maxvit_base_tf_512.in1k',\n",
+-       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
+-       " 'maxvit_large_tf_224.in1k',\n",
+-       " 'maxvit_large_tf_384.in1k',\n",
+-       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
+-       " 'maxvit_large_tf_512.in1k',\n",
+-       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
+-       " 'maxvit_nano_rw_256.sw_in1k',\n",
+-       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
+-       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
+-       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
+-       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
+-       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
+-       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
+-       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
+-       " 'maxvit_small_tf_224.in1k',\n",
+-       " 'maxvit_small_tf_384.in1k',\n",
+-       " 'maxvit_small_tf_512.in1k',\n",
+-       " 'maxvit_tiny_rw_224.sw_in1k',\n",
+-       " 'maxvit_tiny_tf_224.in1k',\n",
+-       " 'maxvit_tiny_tf_384.in1k',\n",
+-       " 'maxvit_tiny_tf_512.in1k',\n",
+-       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
+-       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
+-       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
+-       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
+-       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
+-       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
+-       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
+-       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+-      ]
+-     },
+-     "execution_count": 4,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "timm.list_models('*max*', pretrained=True)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": null,
+    "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.604837Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.604837Z",
+-     "iopub.status.idle": "2023-03-09T21:57:47.651566Z",
+-     "shell.execute_reply": "2023-03-09T21:57:47.650352Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.604837Z"
+-    }
++    "tags": []
+    },
+    "outputs": [],
+    "source": [
+@@ -181,273 +97,19 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-09T21:57:47.653077Z",
+-     "iopub.status.busy": "2023-03-09T21:57:47.652572Z",
+-     "iopub.status.idle": "2023-03-09T21:58:23.526809Z",
+-     "shell.execute_reply": "2023-03-09T21:58:23.525800Z",
+-     "shell.execute_reply.started": "2023-03-09T21:57:47.653077Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33mchristopher-marais\u001b[0m. Use \u001b[1m`wandb login --relogin`\u001b[0m to force relogin\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "wandb version 0.13.11 is available!  To upgrade, please run:\n",
+-       " $ pip install wandb --upgrade"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Tracking run with wandb version 0.13.10"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Run data is saved locally in <code>C:\\Users\\gcmar\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\wandb\\run-20230309_165753-oynmonok</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok' target=\"_blank\">driven-armadillo-6</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View project at <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT</a>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok</a>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "name": "stderr",
+-     "output_type": "stream",
+-     "text": [
+-      "C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\\cb\\pytorch_1000000000000\\work\\aten\\src\\ATen\\native\\TensorShape.cpp:3191.)\n",
+-      "  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n"
+-     ]
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='0' class='' max='1' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      0.00% [0/1 00:00&lt;?]\n",
+-       "    </div>\n",
+-       "    \n",
+-       "<table border=\"1\" class=\"dataframe\">\n",
+-       "  <thead>\n",
+-       "    <tr style=\"text-align: left;\">\n",
+-       "      <th>epoch</th>\n",
+-       "      <th>train_loss</th>\n",
+-       "      <th>valid_loss</th>\n",
+-       "      <th>error_rate</th>\n",
+-       "      <th>time</th>\n",
+-       "    </tr>\n",
+-       "  </thead>\n",
+-       "  <tbody>\n",
+-       "  </tbody>\n",
+-       "</table><p>\n",
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='0' class='' max='92' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      0.00% [0/92 00:00&lt;?]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Waiting for W&B process to finish... <strong style=\"color:red\">(failed 1).</strong> Press Ctrl-C to abort syncing."
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "af616b5107c44862a407069377cb0f7c",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "VBox(children=(Label(value='2.306 MB of 11.590 MB uploaded (0.000 MB deduped)\\r'), FloatProgress(value=0.19897…"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run <strong style=\"color:#cdcd00\">driven-armadillo-6</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/oynmonok</a><br/>Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 2 other file(s)"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Find logs at: <code>.\\wandb\\run-20230309_165753-oynmonok\\logs</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "ename": "OutOfMemoryError",
+-     "evalue": "CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 6.00 GiB total capacity; 5.20 GiB already allocated; 0 bytes free; 5.30 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+-      "\u001b[1;31mOutOfMemoryError\u001b[0m                          Traceback (most recent call last)",
+-      "Cell \u001b[1;32mIn[6], line 20\u001b[0m\n\u001b[0;32m     15\u001b[0m         learn \u001b[38;5;241m=\u001b[39m vision_learner(dls, config\u001b[38;5;241m.\u001b[39mmodel_name, metrics\u001b[38;5;241m=\u001b[39merror_rate, \n\u001b[0;32m     16\u001b[0m                                cbs\u001b[38;5;241m=\u001b[39mcbs, pretrained\u001b[38;5;241m=\u001b[39mconfig\u001b[38;5;241m.\u001b[39mpretrained)\n\u001b[0;32m     17\u001b[0m         learn\u001b[38;5;241m.\u001b[39mfine_tune(config\u001b[38;5;241m.\u001b[39mepochs)\n\u001b[1;32m---> 20\u001b[0m \u001b[43mtrain\u001b[49m\u001b[43m(\u001b[49m\u001b[43mconfig\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "Cell \u001b[1;32mIn[6], line 17\u001b[0m, in \u001b[0;36mtrain\u001b[1;34m(config)\u001b[0m\n\u001b[0;32m     14\u001b[0m cbs \u001b[38;5;241m=\u001b[39m [MixedPrecision(), WandbCallback(log_preds\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mFalse\u001b[39;00m)]\n\u001b[0;32m     15\u001b[0m learn \u001b[38;5;241m=\u001b[39m vision_learner(dls, config\u001b[38;5;241m.\u001b[39mmodel_name, metrics\u001b[38;5;241m=\u001b[39merror_rate, \n\u001b[0;32m     16\u001b[0m                        cbs\u001b[38;5;241m=\u001b[39mcbs, pretrained\u001b[38;5;241m=\u001b[39mconfig\u001b[38;5;241m.\u001b[39mpretrained)\n\u001b[1;32m---> 17\u001b[0m \u001b[43mlearn\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mfine_tune\u001b[49m\u001b[43m(\u001b[49m\u001b[43mconfig\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mepochs\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\callback\\schedule.py:165\u001b[0m, in \u001b[0;36mfine_tune\u001b[1;34m(self, epochs, base_lr, freeze_epochs, lr_mult, pct_start, div, **kwargs)\u001b[0m\n\u001b[0;32m    163\u001b[0m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mFine tune with `Learner.freeze` for `freeze_epochs`, then with `Learner.unfreeze` for `epochs`, using discriminative LR.\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[0;32m    164\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mfreeze()\n\u001b[1;32m--> 165\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mfit_one_cycle(freeze_epochs, \u001b[38;5;28mslice\u001b[39m(base_lr), pct_start\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m0.99\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m    166\u001b[0m base_lr \u001b[38;5;241m/\u001b[39m\u001b[38;5;241m=\u001b[39m \u001b[38;5;241m2\u001b[39m\n\u001b[0;32m    167\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39munfreeze()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\callback\\schedule.py:119\u001b[0m, in \u001b[0;36mfit_one_cycle\u001b[1;34m(self, n_epoch, lr_max, div, div_final, pct_start, wd, moms, cbs, reset_opt, start_epoch)\u001b[0m\n\u001b[0;32m    116\u001b[0m lr_max \u001b[38;5;241m=\u001b[39m np\u001b[38;5;241m.\u001b[39marray([h[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mlr\u001b[39m\u001b[38;5;124m'\u001b[39m] \u001b[38;5;28;01mfor\u001b[39;00m h \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mopt\u001b[38;5;241m.\u001b[39mhypers])\n\u001b[0;32m    117\u001b[0m scheds \u001b[38;5;241m=\u001b[39m {\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mlr\u001b[39m\u001b[38;5;124m'\u001b[39m: combined_cos(pct_start, lr_max\u001b[38;5;241m/\u001b[39mdiv, lr_max, lr_max\u001b[38;5;241m/\u001b[39mdiv_final),\n\u001b[0;32m    118\u001b[0m           \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mmom\u001b[39m\u001b[38;5;124m'\u001b[39m: combined_cos(pct_start, \u001b[38;5;241m*\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmoms \u001b[38;5;28;01mif\u001b[39;00m moms \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m \u001b[38;5;28;01melse\u001b[39;00m moms))}\n\u001b[1;32m--> 119\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mfit\u001b[49m\u001b[43m(\u001b[49m\u001b[43mn_epoch\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mcbs\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mParamScheduler\u001b[49m\u001b[43m(\u001b[49m\u001b[43mscheds\u001b[49m\u001b[43m)\u001b[49m\u001b[38;5;241;43m+\u001b[39;49m\u001b[43mL\u001b[49m\u001b[43m(\u001b[49m\u001b[43mcbs\u001b[49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mreset_opt\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mreset_opt\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mwd\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mwd\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mstart_epoch\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mstart_epoch\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:264\u001b[0m, in \u001b[0;36mLearner.fit\u001b[1;34m(self, n_epoch, lr, wd, cbs, reset_opt, start_epoch)\u001b[0m\n\u001b[0;32m    262\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mopt\u001b[38;5;241m.\u001b[39mset_hypers(lr\u001b[38;5;241m=\u001b[39m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlr \u001b[38;5;28;01mif\u001b[39;00m lr \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m \u001b[38;5;28;01melse\u001b[39;00m lr)\n\u001b[0;32m    263\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mn_epoch \u001b[38;5;241m=\u001b[39m n_epoch\n\u001b[1;32m--> 264\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_fit\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mfit\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelFitException\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_end_cleanup\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:253\u001b[0m, in \u001b[0;36mLearner._do_fit\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    251\u001b[0m \u001b[38;5;28;01mfor\u001b[39;00m epoch \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mrange\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mn_epoch):\n\u001b[0;32m    252\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mepoch\u001b[38;5;241m=\u001b[39mepoch\n\u001b[1;32m--> 253\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_epoch\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mepoch\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelEpochException\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:247\u001b[0m, in \u001b[0;36mLearner._do_epoch\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    246\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_do_epoch\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[1;32m--> 247\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_epoch_train\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    248\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_do_epoch_validate()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:239\u001b[0m, in \u001b[0;36mLearner._do_epoch_train\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    237\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_do_epoch_train\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[0;32m    238\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdl \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdls\u001b[38;5;241m.\u001b[39mtrain\n\u001b[1;32m--> 239\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mall_batches\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mtrain\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelTrainException\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:205\u001b[0m, in \u001b[0;36mLearner.all_batches\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    203\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mall_batches\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[0;32m    204\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mn_iter \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mlen\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdl)\n\u001b[1;32m--> 205\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m o \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28menumerate\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdl): \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mone_batch\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mo\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:235\u001b[0m, in \u001b[0;36mLearner.one_batch\u001b[1;34m(self, i, b)\u001b[0m\n\u001b[0;32m    233\u001b[0m b \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_set_device(b)\n\u001b[0;32m    234\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_split(b)\n\u001b[1;32m--> 235\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_with_events\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_do_one_batch\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mbatch\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mCancelBatchException\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:199\u001b[0m, in \u001b[0;36mLearner._with_events\u001b[1;34m(self, f, event_type, ex, final)\u001b[0m\n\u001b[0;32m    198\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_with_events\u001b[39m(\u001b[38;5;28mself\u001b[39m, f, event_type, ex, final\u001b[38;5;241m=\u001b[39mnoop):\n\u001b[1;32m--> 199\u001b[0m     \u001b[38;5;28;01mtry\u001b[39;00m: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mbefore_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    200\u001b[0m     \u001b[38;5;28;01mexcept\u001b[39;00m ex: \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_cancel_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    201\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mevent_type\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m);  final()\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\learner.py:216\u001b[0m, in \u001b[0;36mLearner._do_one_batch\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m    215\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_do_one_batch\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[1;32m--> 216\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mpred \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mmodel\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mxb\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    217\u001b[0m     \u001b[38;5;28mself\u001b[39m(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mafter_pred\u001b[39m\u001b[38;5;124m'\u001b[39m)\n\u001b[0;32m    218\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mlen\u001b[39m(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39myb):\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\container.py:204\u001b[0m, in \u001b[0;36mSequential.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    202\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m):\n\u001b[0;32m    203\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m module \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m:\n\u001b[1;32m--> 204\u001b[0m         \u001b[38;5;28minput\u001b[39m \u001b[38;5;241m=\u001b[39m \u001b[43mmodule\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m    205\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28minput\u001b[39m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\fastai\\vision\\learner.py:177\u001b[0m, in \u001b[0;36mTimmBody.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[1;32m--> 177\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m,x): \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mmodel\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mforward_features\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mneeds_pool \u001b[38;5;28;01melse\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmodel(x)\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:1257\u001b[0m, in \u001b[0;36mMaxxVit.forward_features\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m   1255\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward_features\u001b[39m(\u001b[38;5;28mself\u001b[39m, x):\n\u001b[0;32m   1256\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstem(x)\n\u001b[1;32m-> 1257\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mstages\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1258\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mnorm(x)\n\u001b[0;32m   1259\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m x\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\container.py:204\u001b[0m, in \u001b[0;36mSequential.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    202\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m):\n\u001b[0;32m    203\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m module \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m:\n\u001b[1;32m--> 204\u001b[0m         \u001b[38;5;28minput\u001b[39m \u001b[38;5;241m=\u001b[39m \u001b[43mmodule\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m    205\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28minput\u001b[39m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:1065\u001b[0m, in \u001b[0;36mMaxxVitStage.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m   1063\u001b[0m     x \u001b[38;5;241m=\u001b[39m checkpoint_seq(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mblocks, x)\n\u001b[0;32m   1064\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m-> 1065\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mblocks\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   1066\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m x\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\container.py:204\u001b[0m, in \u001b[0;36mSequential.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    202\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m):\n\u001b[0;32m    203\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m module \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m:\n\u001b[1;32m--> 204\u001b[0m         \u001b[38;5;28minput\u001b[39m \u001b[38;5;241m=\u001b[39m \u001b[43mmodule\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m    205\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28minput\u001b[39m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:950\u001b[0m, in \u001b[0;36mMaxxVitBlock.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m    948\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, x):\n\u001b[0;32m    949\u001b[0m     \u001b[38;5;66;03m# NCHW format\u001b[39;00m\n\u001b[1;32m--> 950\u001b[0m     x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mconv\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    952\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mnchw_attn:\n\u001b[0;32m    953\u001b[0m         x \u001b[38;5;241m=\u001b[39m x\u001b[38;5;241m.\u001b[39mpermute(\u001b[38;5;241m0\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m1\u001b[39m)  \u001b[38;5;66;03m# to NHWC (channels-last)\u001b[39;00m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\models\\maxxvit.py:540\u001b[0m, in \u001b[0;36mMbConvBlock.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m    538\u001b[0m \u001b[38;5;66;03m# 1x1 expansion conv & norm-act\u001b[39;00m\n\u001b[0;32m    539\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mconv1_1x1(x)\n\u001b[1;32m--> 540\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mnorm1\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    542\u001b[0m \u001b[38;5;66;03m# depthwise / grouped 3x3 conv w/ SE (or other) channel attention & norm-act\u001b[39;00m\n\u001b[0;32m    543\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mconv2_kxk(x)\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\pytorch-image-models\\timm\\layers\\norm_act.py:113\u001b[0m, in \u001b[0;36mBatchNormAct2d.forward\u001b[1;34m(self, x)\u001b[0m\n\u001b[0;32m    101\u001b[0m x \u001b[38;5;241m=\u001b[39m F\u001b[38;5;241m.\u001b[39mbatch_norm(\n\u001b[0;32m    102\u001b[0m     x,\n\u001b[0;32m    103\u001b[0m     \u001b[38;5;66;03m# If buffers are not to be tracked, ensure that they won't be updated\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m    110\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39meps,\n\u001b[0;32m    111\u001b[0m )\n\u001b[0;32m    112\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdrop(x)\n\u001b[1;32m--> 113\u001b[0m x \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mact\u001b[49m\u001b[43m(\u001b[49m\u001b[43mx\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    114\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m x\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\module.py:1194\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[1;34m(self, *input, **kwargs)\u001b[0m\n\u001b[0;32m   1190\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[0;32m   1191\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[0;32m   1192\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[0;32m   1193\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[1;32m-> 1194\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m forward_call(\u001b[38;5;241m*\u001b[39m\u001b[38;5;28minput\u001b[39m, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)\n\u001b[0;32m   1195\u001b[0m \u001b[38;5;66;03m# Do not call functions when jit is used\u001b[39;00m\n\u001b[0;32m   1196\u001b[0m full_backward_hooks, non_full_backward_hooks \u001b[38;5;241m=\u001b[39m [], []\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\modules\\activation.py:395\u001b[0m, in \u001b[0;36mSiLU.forward\u001b[1;34m(self, input)\u001b[0m\n\u001b[0;32m    394\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mforward\u001b[39m(\u001b[38;5;28mself\u001b[39m, \u001b[38;5;28minput\u001b[39m: Tensor) \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m>\u001b[39m Tensor:\n\u001b[1;32m--> 395\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mF\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43msilu\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minplace\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43minplace\u001b[49m\u001b[43m)\u001b[49m\n",
+-      "File \u001b[1;32m~\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\nn\\functional.py:2058\u001b[0m, in \u001b[0;36msilu\u001b[1;34m(input, inplace)\u001b[0m\n\u001b[0;32m   2056\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m handle_torch_function(silu, (\u001b[38;5;28minput\u001b[39m,), \u001b[38;5;28minput\u001b[39m, inplace\u001b[38;5;241m=\u001b[39minplace)\n\u001b[0;32m   2057\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m inplace:\n\u001b[1;32m-> 2058\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mtorch\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_C\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_nn\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43msilu_\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[0;32m   2059\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m torch\u001b[38;5;241m.\u001b[39m_C\u001b[38;5;241m.\u001b[39m_nn\u001b[38;5;241m.\u001b[39msilu(\u001b[38;5;28minput\u001b[39m)\n",
+-      "\u001b[1;31mOutOfMemoryError\u001b[0m: CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 6.00 GiB total capacity; 5.20 GiB already allocated; 0 bytes free; 5.30 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF"
+-     ]
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "config = SimpleNamespace(\n",
+     "    batch_size=64,\n",
+     "    img_size=224,\n",
+     "    seed=42,\n",
+     "    pretrained=False,\n",
+-    "    model_name=\"maxvit_tiny_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040\n",
++    "    model_name=\"coatnet_bn_0_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040\n",
+     "    epochs=1)\n",
+     "\n",
+     "\n",
+@@ -469,12 +131,6 @@
+    "execution_count": null,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-09T21:58:23.527798Z",
+-     "iopub.status.idle": "2023-03-09T21:58:23.527798Z",
+-     "shell.execute_reply": "2023-03-09T21:58:23.527798Z",
+-     "shell.execute_reply.started": "2023-03-09T21:58:23.527798Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -498,12 +154,6 @@
+    "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+-    "execution": {
+-     "iopub.status.busy": "2023-03-09T21:58:23.529807Z",
+-     "iopub.status.idle": "2023-03-09T21:58:23.530807Z",
+-     "shell.execute_reply": "2023-03-09T21:58:23.530807Z",
+-     "shell.execute_reply.started": "2023-03-09T21:58:23.530807Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],

@@ -1,0 +1,207 @@
+2023-03-09 17:13:13,246 INFO    StreamThr :118348 [internal.py:wandb_internal():87] W&B internal server running at pid: 118348, started at: 2023-03-09 17:13:13.245853
+2023-03-09 17:13:13,249 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: status
+2023-03-09 17:13:13,251 INFO    WriterThread:118348 [datastore.py:open_for_write():85] open: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\run-pmdrmru1.wandb
+2023-03-09 17:13:13,254 DEBUG   SenderThread:118348 [sender.py:send():336] send: header
+2023-03-09 17:13:13,295 DEBUG   SenderThread:118348 [sender.py:send():336] send: run
+2023-03-09 17:13:13,799 INFO    SenderThread:118348 [dir_watcher.py:__init__():216] watching files in: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files
+2023-03-09 17:13:13,799 INFO    SenderThread:118348 [sender.py:_start_run_threads():1067] run started: pmdrmru1 with start time 1678399993.242852
+2023-03-09 17:13:13,799 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: summary_record
+2023-03-09 17:13:13,800 INFO    SenderThread:118348 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-09 17:13:13,801 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: check_version
+2023-03-09 17:13:13,801 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: check_version
+2023-03-09 17:13:14,078 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: run_start
+2023-03-09 17:13:14,098 DEBUG   HandlerThread:118348 [system_info.py:__init__():31] System info init
+2023-03-09 17:13:14,098 DEBUG   HandlerThread:118348 [system_info.py:__init__():46] System info init done
+2023-03-09 17:13:14,098 INFO    HandlerThread:118348 [system_monitor.py:start():151] Starting system monitor
+2023-03-09 17:13:14,098 INFO    SystemMonitor:118348 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-09 17:13:14,099 INFO    HandlerThread:118348 [system_monitor.py:probe():172] Collecting system info
+2023-03-09 17:13:14,099 INFO    SystemMonitor:118348 [interfaces.py:start():168] Started cpu
+2023-03-09 17:13:14,128 INFO    SystemMonitor:118348 [interfaces.py:start():168] Started disk
+2023-03-09 17:13:14,129 INFO    SystemMonitor:118348 [interfaces.py:start():168] Started gpu
+2023-03-09 17:13:14,129 INFO    SystemMonitor:118348 [interfaces.py:start():168] Started memory
+2023-03-09 17:13:14,140 INFO    SystemMonitor:118348 [interfaces.py:start():168] Started network
+2023-03-09 17:13:14,145 DEBUG   HandlerThread:118348 [system_info.py:probe():195] Probing system
+2023-03-09 17:13:14,147 DEBUG   HandlerThread:118348 [system_info.py:_probe_git():180] Probing git
+2023-03-09 17:13:14,149 ERROR   gpu       :118348 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-09 17:13:14,226 DEBUG   HandlerThread:118348 [system_info.py:_probe_git():188] Probing git done
+2023-03-09 17:13:14,227 DEBUG   HandlerThread:118348 [system_info.py:probe():241] Probing system done
+2023-03-09 17:13:14,227 DEBUG   HandlerThread:118348 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-03-09T22:13:14.145042', 'startedAt': '2023-03-09T22:13:13.223853', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'LAB/Beetle_classifier/Train/timm_FastAI_WANDB.ipynb', 'root': 'C:/Users/gcmar/Desktop/GIT_REPOS/LAB/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': '7b504c1ee0329b61349a9e5b4d89d32292b59719'}, 'email': '53177842+ChristopherMarais@users.noreply.github.com', 'host': 'LAPTOP-GCM', 'username': 'gcmar', 'executable': 'C:\\Users\\gcmar\\.conda\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3000.0, 'min': 0.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 3000.0, 'min': 0.0, 'max': 3000.0}], 'disk': {'total': 1870.6523399353027, 'used': 1626.4055976867676}, 'gpu': 'NVIDIA GeForce RTX 2060 with Max-Q Design', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2060 with Max-Q Design', 'memory_total': 6442450944}], 'memory': {'total': 39.41948699951172}}
+2023-03-09 17:13:14,227 INFO    HandlerThread:118348 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-09 17:13:14,227 INFO    HandlerThread:118348 [system_monitor.py:probe():185] Publishing system info
+2023-03-09 17:13:14,227 DEBUG   HandlerThread:118348 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-09 17:13:14,228 DEBUG   HandlerThread:118348 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-09 17:13:14,228 DEBUG   HandlerThread:118348 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-09 17:13:14,231 ERROR   HandlerThread:118348 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\gcmar\.conda\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-03-09 17:13:14,232 DEBUG   HandlerThread:118348 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-09 17:13:14,232 DEBUG   HandlerThread:118348 [system_info.py:_save_code():89] Saving code
+2023-03-09 17:13:14,232 WARNING HandlerThread:118348 [system_info.py:_save_code():91] unable to save code -- program entry not found
+2023-03-09 17:13:14,232 DEBUG   HandlerThread:118348 [system_info.py:_save_patches():127] Saving git patches
+2023-03-09 17:13:14,486 DEBUG   HandlerThread:118348 [system_info.py:_save_patches():169] Saving git patches done
+2023-03-09 17:13:14,487 INFO    HandlerThread:118348 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-09 17:13:14,493 DEBUG   SenderThread:118348 [sender.py:send():336] send: files
+2023-03-09 17:13:14,493 INFO    SenderThread:118348 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-09 17:13:14,494 INFO    SenderThread:118348 [sender.py:_save_file():1321] saving file diff.patch with policy now
+2023-03-09 17:13:14,512 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-09 17:13:14,513 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: stop_status
+2023-03-09 17:13:14,680 DEBUG   SenderThread:118348 [sender.py:send():336] send: telemetry
+2023-03-09 17:13:14,807 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\diff.patch
+2023-03-09 17:13:14,808 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\wandb-metadata.json
+2023-03-09 17:13:14,808 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\output.log
+2023-03-09 17:13:14,808 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\wandb-summary.json
+2023-03-09 17:13:14,808 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\conda-environment.yaml
+2023-03-09 17:13:14,809 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\requirements.txt
+2023-03-09 17:13:15,275 INFO    wandb-upload_0:118348 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\AppData\Local\Temp\tmpkkk_d_lfwandb\44nwk3n2-wandb-metadata.json
+2023-03-09 17:13:15,383 INFO    wandb-upload_1:118348 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\AppData\Local\Temp\tmpkkk_d_lfwandb\mhxz5urq-diff.patch
+2023-03-09 17:13:16,180 ERROR   gpu       :118348 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-09 17:13:16,484 DEBUG   SenderThread:118348 [sender.py:send():336] send: config
+2023-03-09 17:13:16,822 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\output.log
+2023-03-09 17:13:18,220 ERROR   gpu       :118348 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-09 17:13:18,502 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: status_report
+2023-03-09 17:13:19,411 DEBUG   SenderThread:118348 [sender.py:send():336] send: telemetry
+2023-03-09 17:13:19,460 DEBUG   SenderThread:118348 [sender.py:send():336] send: config
+2023-03-09 17:13:19,467 DEBUG   SenderThread:118348 [sender.py:send():336] send: exit
+2023-03-09 17:13:19,467 INFO    SenderThread:118348 [sender.py:send_exit():559] handling exit code: 1
+2023-03-09 17:13:19,467 INFO    SenderThread:118348 [sender.py:send_exit():561] handling runtime: 5
+2023-03-09 17:13:19,468 INFO    SenderThread:118348 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-09 17:13:19,468 INFO    SenderThread:118348 [sender.py:send_exit():567] send defer
+2023-03-09 17:13:19,468 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,469 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-09 17:13:19,469 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,469 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-09 17:13:19,469 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 1
+2023-03-09 17:13:19,469 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,469 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-09 17:13:19,470 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,470 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-09 17:13:19,470 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 2
+2023-03-09 17:13:19,470 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,470 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-09 17:13:19,470 INFO    HandlerThread:118348 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-09 17:13:19,471 DEBUG   SystemMonitor:118348 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-09 17:13:19,471 DEBUG   SystemMonitor:118348 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-09 17:13:19,471 DEBUG   SystemMonitor:118348 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-09 17:13:19,504 INFO    HandlerThread:118348 [interfaces.py:finish():175] Joined cpu
+2023-03-09 17:13:19,504 INFO    HandlerThread:118348 [interfaces.py:finish():175] Joined disk
+2023-03-09 17:13:19,631 INFO    HandlerThread:118348 [interfaces.py:finish():175] Joined gpu
+2023-03-09 17:13:19,631 INFO    HandlerThread:118348 [interfaces.py:finish():175] Joined memory
+2023-03-09 17:13:19,632 INFO    HandlerThread:118348 [interfaces.py:finish():175] Joined network
+2023-03-09 17:13:19,632 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,632 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-09 17:13:19,632 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 3
+2023-03-09 17:13:19,632 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,632 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-09 17:13:19,633 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,633 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-09 17:13:19,633 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 4
+2023-03-09 17:13:19,633 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,633 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-09 17:13:19,634 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,634 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-09 17:13:19,634 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 5
+2023-03-09 17:13:19,634 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,634 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-09 17:13:19,634 DEBUG   SenderThread:118348 [sender.py:send():336] send: summary
+2023-03-09 17:13:19,635 INFO    SenderThread:118348 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-09 17:13:19,635 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,635 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-09 17:13:19,635 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 6
+2023-03-09 17:13:19,636 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,636 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-09 17:13:19,636 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,636 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-09 17:13:19,640 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: status_report
+2023-03-09 17:13:19,847 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 7
+2023-03-09 17:13:19,847 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:19,848 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-09 17:13:19,848 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:19,848 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-09 17:13:19,849 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\wandb-summary.json
+2023-03-09 17:13:19,849 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\config.yaml
+2023-03-09 17:13:19,849 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\code\_session_history.ipynb
+2023-03-09 17:13:19,850 INFO    Thread-17 :118348 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\code
+2023-03-09 17:13:20,476 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-09 17:13:20,714 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 8
+2023-03-09 17:13:20,714 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: poll_exit
+2023-03-09 17:13:20,715 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:20,715 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-09 17:13:20,715 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:20,715 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-09 17:13:20,716 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 9
+2023-03-09 17:13:20,716 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:20,716 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-09 17:13:20,716 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:20,716 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-09 17:13:20,716 INFO    SenderThread:118348 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-09 17:13:20,856 INFO    SenderThread:118348 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\output.log
+2023-03-09 17:13:20,856 INFO    SenderThread:118348 [dir_watcher.py:finish():392] scan: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files
+2023-03-09 17:13:20,856 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\conda-environment.yaml conda-environment.yaml
+2023-03-09 17:13:20,857 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\config.yaml config.yaml
+2023-03-09 17:13:20,857 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\diff.patch diff.patch
+2023-03-09 17:13:20,857 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\output.log output.log
+2023-03-09 17:13:20,860 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\requirements.txt requirements.txt
+2023-03-09 17:13:20,864 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\wandb-metadata.json wandb-metadata.json
+2023-03-09 17:13:20,864 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\wandb-summary.json wandb-summary.json
+2023-03-09 17:13:20,869 INFO    SenderThread:118348 [dir_watcher.py:finish():406] scan save: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\code\_session_history.ipynb code\_session_history.ipynb
+2023-03-09 17:13:20,873 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 10
+2023-03-09 17:13:20,874 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:20,874 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-09 17:13:20,875 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:20,875 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-09 17:13:20,875 INFO    SenderThread:118348 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-09 17:13:21,435 INFO    wandb-upload_1:118348 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\output.log
+2023-03-09 17:13:21,461 INFO    wandb-upload_3:118348 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\wandb-summary.json
+2023-03-09 17:13:21,486 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-09 17:13:21,487 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: poll_exit
+2023-03-09 17:13:21,551 INFO    wandb-upload_2:118348 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\requirements.txt
+2023-03-09 17:13:21,827 INFO    wandb-upload_4:118348 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\code\_session_history.ipynb
+2023-03-09 17:13:22,256 INFO    wandb-upload_0:118348 [upload_job.py:push():138] Uploaded file C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\files\config.yaml
+2023-03-09 17:13:22,473 INFO    Thread-16 (_thread_body):118348 [sender.py:transition_state():587] send defer: 11
+2023-03-09 17:13:22,474 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:22,474 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-09 17:13:22,474 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:22,474 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-09 17:13:22,474 INFO    SenderThread:118348 [file_pusher.py:join():167] waiting for file pusher
+2023-03-09 17:13:22,474 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 12
+2023-03-09 17:13:22,475 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:22,475 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-09 17:13:22,475 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:22,475 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-09 17:13:22,490 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-09 17:13:25,260 WARNING FileStreamThread:118348 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: 502 Server Error: Bad Gateway for url: https://api.wandb.ai/files/christopher-marais/PROJECT/pmdrmru1/file_stream. func: <bound method Session.post of <requests.sessions.Session object at 0x0000029230279BD0>>, args: ('https://api.wandb.ai/files/christopher-marais/PROJECT/pmdrmru1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{}']}, 'output.log': {'offset': 0, 'content': ['ERROR 2023-03-09T22:13:16.696095 C:\\Users\\gcmar\\.conda\\envs\\BC_310\\lib\\site-packages\\torch\\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\\cb\\pytorch_1000000000000\\work\\aten\\src\\ATen\\native\\TensorShape.cpp:3191.)\n', 'ERROR 2023-03-09T22:13:16.696095   return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n']}}, 'dropped': 0}}
+2023-03-09 17:13:27,520 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-09 17:13:28,689 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 13
+2023-03-09 17:13:28,690 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: poll_exit
+2023-03-09 17:13:28,690 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:28,691 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-09 17:13:28,691 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: status_report
+2023-03-09 17:13:28,691 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:28,691 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-09 17:13:28,691 INFO    SenderThread:118348 [sender.py:transition_state():587] send defer: 14
+2023-03-09 17:13:28,691 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: defer
+2023-03-09 17:13:28,691 INFO    HandlerThread:118348 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-09 17:13:28,692 DEBUG   SenderThread:118348 [sender.py:send():336] send: final
+2023-03-09 17:13:28,692 DEBUG   SenderThread:118348 [sender.py:send():336] send: footer
+2023-03-09 17:13:28,692 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: defer
+2023-03-09 17:13:28,692 INFO    SenderThread:118348 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-09 17:13:28,694 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-09 17:13:28,695 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: poll_exit
+2023-03-09 17:13:28,695 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: server_info
+2023-03-09 17:13:28,696 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-09 17:13:28,696 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-09 17:13:28,696 DEBUG   SenderThread:118348 [sender.py:send_request():363] send_request: server_info
+2023-03-09 17:13:29,912 DEBUG   HandlerThread:118348 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-09 17:13:29,913 INFO    HandlerThread:118348 [handler.py:finish():841] shutting down handler
+2023-03-09 17:13:30,717 INFO    WriterThread:118348 [datastore.py:close():299] close: C:\Users\gcmar\Desktop\GIT_REPOS\LAB\Beetle_classifier\Train\wandb\run-20230309_171313-pmdrmru1\run-pmdrmru1.wandb
+2023-03-09 17:13:30,923 INFO    SenderThread:118348 [sender.py:finish():1493] shutting down sender
+2023-03-09 17:13:30,923 INFO    SenderThread:118348 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-09 17:13:30,923 INFO    SenderThread:118348 [file_pusher.py:join():167] waiting for file pusher
