@@ -61,7 +61,7 @@ def segmentation(folder_dir, output_dir):
                         seg_img_df['segmented_image_name'] = seg_img_df['species']+"_"+seg_img_df['vial']+"_"+seg_img_df['subset']+"_"+seg_img_df['composite_image_number']+"_"+seg_img_df.index.astype(str)
                         metadata_df = pd.concat([metadata_df, seg_img_df])
                     except:
-                        print(file) # this will print the file htat results in an error
+                        print(file) # this will print the file that results in an error
 
                     # save images
                     for j in range(len(pre_process.col_image_lst)):
