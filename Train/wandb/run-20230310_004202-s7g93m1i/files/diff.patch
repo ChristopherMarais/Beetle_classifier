@@ -1,0 +1,718 @@
+diff --git a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+index cad312b..39857d4 100644
+--- a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+@@ -6,11 +6,11 @@
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:16.404908Z",
+-     "iopub.status.busy": "2023-03-10T04:15:16.404640Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.159216Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.158217Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:16.404908Z"
++     "iopub.execute_input": "2023-03-10T04:53:16.315907Z",
++     "iopub.status.busy": "2023-03-10T04:53:16.314909Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.229337Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.228335Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:16.315907Z"
+     },
+     "tags": []
+    },
+@@ -25,47 +25,17 @@
+     "from fastai.callback.wandb import WandbCallback"
+    ]
+   },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 2,
+-   "id": "5a8980b5-f22c-4e50-bb9f-8ade0c9583cc",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.160210Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.160210Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.174198Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.173197Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.160210Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/plain": [
+-       "'2.7.11'"
+-      ]
+-     },
+-     "execution_count": 2,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
+-   "source": [
+-    "fastai.__version__"
+-   ]
+-  },
+   {
+    "cell_type": "code",
+    "execution_count": 3,
+    "id": "af673a5e-c94b-4ff2-ad5a-af508a10ca18",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.177201Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.176201Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.189205Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.188195Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.177201Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.247313Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.246313Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.260317Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.259316Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.247313Z"
+     },
+     "tags": []
+    },
+@@ -92,11 +62,11 @@
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.191205Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.190207Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.205198Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.204196Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.191205Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.261315Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.261315Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.276315Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.275314Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.261315Z"
+     },
+     "tags": []
+    },
+@@ -154,11 +124,11 @@
+    "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.206196Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.206196Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.251213Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.250224Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.206196Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.277314Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.277314Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.322891Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.321897Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.277314Z"
+     },
+     "tags": []
+    },
+@@ -182,12 +152,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 6,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.254210Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.253201Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.324904Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.323891Z",
++     "iopub.status.idle": "2023-03-10T05:25:18.982874Z",
++     "shell.execute_reply": "2023-03-10T05:25:18.982874Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.324904Z"
+     },
+     "tags": []
+    },
+@@ -227,7 +200,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Run data is saved locally in <code>C:\\Users\\gcmar\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\wandb\\run-20230309_231526-th4cxlml</code>"
++       "Run data is saved locally in <code>C:\\Users\\gcmar\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\wandb\\run-20230309_235332-ufnj5ajw</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -239,7 +212,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml' target=\"_blank\">radiant-resonance-11</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw' target=\"_blank\">denim-capybara-12</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -263,7 +236,7 @@
+     {
+      "data": {
+       "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml</a>"
++       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw</a>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -323,10 +296,10 @@
+        "  <tbody>\n",
+        "    <tr>\n",
+        "      <td>0</td>\n",
+-       "      <td>4.244578</td>\n",
+-       "      <td>3.696147</td>\n",
+-       "      <td>0.901894</td>\n",
+-       "      <td>03:39</td>\n",
++       "      <td>4.319567</td>\n",
++       "      <td>3.667653</td>\n",
++       "      <td>0.916103</td>\n",
++       "      <td>03:42</td>\n",
+        "    </tr>\n",
+        "  </tbody>\n",
+        "</table>"
+@@ -368,12 +341,6 @@
+     {
+      "data": {
+       "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='1' class='' max='5' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      20.00% [1/5 05:20&lt;21:22]\n",
+-       "    </div>\n",
+-       "    \n",
+        "<table border=\"1\" class=\"dataframe\">\n",
+        "  <thead>\n",
+        "    <tr style=\"text-align: left;\">\n",
+@@ -387,19 +354,108 @@
+        "  <tbody>\n",
+        "    <tr>\n",
+        "      <td>0</td>\n",
+-       "      <td>3.727452</td>\n",
+-       "      <td>3.310565</td>\n",
+-       "      <td>0.893775</td>\n",
+-       "      <td>05:20</td>\n",
++       "      <td>3.772733</td>\n",
++       "      <td>3.312388</td>\n",
++       "      <td>0.875507</td>\n",
++       "      <td>05:32</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>1</td>\n",
++       "      <td>3.605087</td>\n",
++       "      <td>3.229911</td>\n",
++       "      <td>0.863329</td>\n",
++       "      <td>05:32</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>2</td>\n",
++       "      <td>3.425065</td>\n",
++       "      <td>3.062456</td>\n",
++       "      <td>0.839648</td>\n",
++       "      <td>05:32</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>3</td>\n",
++       "      <td>3.208746</td>\n",
++       "      <td>2.955666</td>\n",
++       "      <td>0.817321</td>\n",
++       "      <td>05:31</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>4</td>\n",
++       "      <td>3.072442</td>\n",
++       "      <td>2.927523</td>\n",
++       "      <td>0.811908</td>\n",
++       "      <td>05:32</td>\n",
+        "    </tr>\n",
+        "  </tbody>\n",
+-       "</table><p>\n",
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='187' class='' max='739' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      25.30% [187/739 01:14&lt;03:38 3.6128]\n",
+-       "    </div>\n",
+-       "    "
++       "</table>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "76e1b9af3f3749a59280a50d94eb46c0",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "VBox(children=(Label(value='5.874 MB of 5.874 MB uploaded (2.921 MB deduped)\\r'), FloatProgress(value=1.0, max…"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "<style>\n",
++       "    table.wandb td:nth-child(1) { padding: 0 10px; text-align: left ; width: auto;} td:nth-child(2) {text-align: left ; width: 100%}\n",
++       "    .wandb-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; width: 100% }\n",
++       "    .wandb-col { display: flex; flex-direction: column; flex-basis: 100%; flex: 1; padding: 10px; }\n",
++       "    </style>\n",
++       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███</td></tr><tr><td>eps_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>eps_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>error_rate</td><td>█▅▄▃▁▁</td></tr><tr><td>lr_0</td><td>▁▂▃▅▆▇█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_1</td><td>▁▂▃▅▆▇█▂▂▂▃▃▃▄▄▄▄▅▄▄▄▄▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>mom_0</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>mom_1</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>raw_loss</td><td>▄█▅▆▃▆▅▄▄▅▅▄▄▂▃▃▃▄▄▄▃▂▃▁▃▃▂▃▂▄▂▃▄▃▂▃▂▃▂▂</td></tr><tr><td>sqr_mom_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>sqr_mom_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_loss</td><td>█▇▇▆▆▆▅▄▄▃▄▃▃▄▃▃▃▃▃▃▃▃▂▂▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>train_samples_per_sec</td><td>██▇▇▆▇▆▂▁▂▂▂▂▂▂▁▁▁▂▁▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▂▂▂</td></tr><tr><td>valid_loss</td><td>█▅▄▂▁▁</td></tr><tr><td>wd_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>wd_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>6</td></tr><tr><td>eps_0</td><td>1e-05</td></tr><tr><td>eps_1</td><td>1e-05</td></tr><tr><td>error_rate</td><td>0.81191</td></tr><tr><td>lr_0</td><td>0.0</td></tr><tr><td>lr_1</td><td>0.0</td></tr><tr><td>mom_0</td><td>0.95</td></tr><tr><td>mom_1</td><td>0.95</td></tr><tr><td>raw_loss</td><td>2.15752</td></tr><tr><td>sqr_mom_0</td><td>0.99</td></tr><tr><td>sqr_mom_1</td><td>0.99</td></tr><tr><td>train_loss</td><td>3.07244</td></tr><tr><td>train_samples_per_sec</td><td>22.70981</td></tr><tr><td>valid_loss</td><td>2.92752</td></tr><tr><td>wd_0</td><td>0.01</td></tr><tr><td>wd_1</td><td>0.01</td></tr></table><br/></div></div>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run <strong style=\"color:#cdcd00\">denim-capybara-12</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw</a><br/>Synced 6 W&B file(s), 2 media file(s), 74 artifact file(s) and 1 other file(s)"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Find logs at: <code>.\\wandb\\run-20230309_235332-ufnj5ajw\\logs</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -423,8 +479,8 @@
+     "    \"Train the model using the supplied config\"\n",
+     "    dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
+     "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+-    "        cbs = [MixedPrecision(), WandbCallback(log_preds=False)]\n",
+-    "        learn = vision_learner(dls, config.model_name, metrics=error_rate, \n",
++    "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
++    "        learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy], \n",
+     "                               cbs=cbs, pretrained=config.pretrained)\n",
+     "        learn.fine_tune(config.epochs)\n",
+     "\n",
+@@ -434,9 +490,16 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 7,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-10T05:25:18.984875Z",
++     "iopub.status.busy": "2023-03-10T05:25:18.984875Z",
++     "iopub.status.idle": "2023-03-10T05:25:19.000875Z",
++     "shell.execute_reply": "2023-03-10T05:25:18.998877Z",
++     "shell.execute_reply.started": "2023-03-10T05:25:18.984875Z"
++    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -457,12 +520,30 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 8,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-10T05:25:19.002873Z",
++     "iopub.status.busy": "2023-03-10T05:25:19.002873Z",
++     "iopub.status.idle": "2023-03-10T05:25:19.123148Z",
++     "shell.execute_reply": "2023-03-10T05:25:19.122134Z",
++     "shell.execute_reply.started": "2023-03-10T05:25:19.002873Z"
++    },
+     "tags": []
+    },
+-   "outputs": [],
++   "outputs": [
++    {
++     "data": {
++      "text/plain": [
++       "<fastai.data.core.DataLoaders at 0x1ee3811b070>"
++      ]
++     },
++     "execution_count": 8,
++     "metadata": {},
++     "output_type": "execute_result"
++    }
++   ],
+    "source": [
+     "get_planets()"
+    ]
+diff --git a/Train/timm_FastAI_WANDB.ipynb b/Train/timm_FastAI_WANDB.ipynb
+index 0a33121..39857d4 100644
+--- a/Train/timm_FastAI_WANDB.ipynb
++++ b/Train/timm_FastAI_WANDB.ipynb
+@@ -6,11 +6,11 @@
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:16.404908Z",
+-     "iopub.status.busy": "2023-03-10T04:15:16.404640Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.159216Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.158217Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:16.404908Z"
++     "iopub.execute_input": "2023-03-10T04:53:16.315907Z",
++     "iopub.status.busy": "2023-03-10T04:53:16.314909Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.229337Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.228335Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:16.315907Z"
+     },
+     "tags": []
+    },
+@@ -25,47 +25,17 @@
+     "from fastai.callback.wandb import WandbCallback"
+    ]
+   },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 2,
+-   "id": "5a8980b5-f22c-4e50-bb9f-8ade0c9583cc",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.160210Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.160210Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.174198Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.173197Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.160210Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/plain": [
+-       "'2.7.11'"
+-      ]
+-     },
+-     "execution_count": 2,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
+-   "source": [
+-    "fastai.__version__"
+-   ]
+-  },
+   {
+    "cell_type": "code",
+    "execution_count": 3,
+    "id": "af673a5e-c94b-4ff2-ad5a-af508a10ca18",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.177201Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.176201Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.189205Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.188195Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.177201Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.247313Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.246313Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.260317Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.259316Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.247313Z"
+     },
+     "tags": []
+    },
+@@ -92,11 +62,11 @@
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.191205Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.190207Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.205198Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.204196Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.191205Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.261315Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.261315Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.276315Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.275314Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.261315Z"
+     },
+     "tags": []
+    },
+@@ -154,11 +124,11 @@
+    "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.206196Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.206196Z",
+-     "iopub.status.idle": "2023-03-10T04:15:21.251213Z",
+-     "shell.execute_reply": "2023-03-10T04:15:21.250224Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.206196Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.277314Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.277314Z",
++     "iopub.status.idle": "2023-03-10T04:53:26.322891Z",
++     "shell.execute_reply": "2023-03-10T04:53:26.321897Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.277314Z"
+     },
+     "tags": []
+    },
+@@ -186,11 +156,11 @@
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:15:21.254210Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.253201Z",
+-     "iopub.status.idle": "2023-03-10T04:46:15.434724Z",
+-     "shell.execute_reply": "2023-03-10T04:46:15.434724Z",
+-     "shell.execute_reply.started": "2023-03-10T04:15:21.254210Z"
++     "iopub.execute_input": "2023-03-10T04:53:26.324904Z",
++     "iopub.status.busy": "2023-03-10T04:53:26.323891Z",
++     "iopub.status.idle": "2023-03-10T05:25:18.982874Z",
++     "shell.execute_reply": "2023-03-10T05:25:18.982874Z",
++     "shell.execute_reply.started": "2023-03-10T04:53:26.324904Z"
+     },
+     "tags": []
+    },
+@@ -230,7 +200,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Run data is saved locally in <code>C:\\Users\\gcmar\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\wandb\\run-20230309_231526-th4cxlml</code>"
++       "Run data is saved locally in <code>C:\\Users\\gcmar\\Desktop\\GIT_REPOS\\LAB\\Beetle_classifier\\Train\\wandb\\run-20230309_235332-ufnj5ajw</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -242,7 +212,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml' target=\"_blank\">radiant-resonance-11</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw' target=\"_blank\">denim-capybara-12</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -266,7 +236,7 @@
+     {
+      "data": {
+       "text/html": [
+-       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml</a>"
++       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw</a>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -326,10 +296,10 @@
+        "  <tbody>\n",
+        "    <tr>\n",
+        "      <td>0</td>\n",
+-       "      <td>4.244578</td>\n",
+-       "      <td>3.696147</td>\n",
+-       "      <td>0.901894</td>\n",
+-       "      <td>03:39</td>\n",
++       "      <td>4.319567</td>\n",
++       "      <td>3.667653</td>\n",
++       "      <td>0.916103</td>\n",
++       "      <td>03:42</td>\n",
+        "    </tr>\n",
+        "  </tbody>\n",
+        "</table>"
+@@ -384,38 +354,38 @@
+        "  <tbody>\n",
+        "    <tr>\n",
+        "      <td>0</td>\n",
+-       "      <td>3.727452</td>\n",
+-       "      <td>3.310565</td>\n",
+-       "      <td>0.893775</td>\n",
+-       "      <td>05:20</td>\n",
++       "      <td>3.772733</td>\n",
++       "      <td>3.312388</td>\n",
++       "      <td>0.875507</td>\n",
++       "      <td>05:32</td>\n",
+        "    </tr>\n",
+        "    <tr>\n",
+        "      <td>1</td>\n",
+-       "      <td>3.626814</td>\n",
+-       "      <td>3.233418</td>\n",
+-       "      <td>0.868742</td>\n",
+-       "      <td>05:22</td>\n",
++       "      <td>3.605087</td>\n",
++       "      <td>3.229911</td>\n",
++       "      <td>0.863329</td>\n",
++       "      <td>05:32</td>\n",
+        "    </tr>\n",
+        "    <tr>\n",
+        "      <td>2</td>\n",
+-       "      <td>3.414804</td>\n",
+-       "      <td>3.088444</td>\n",
+-       "      <td>0.851150</td>\n",
+-       "      <td>05:21</td>\n",
++       "      <td>3.425065</td>\n",
++       "      <td>3.062456</td>\n",
++       "      <td>0.839648</td>\n",
++       "      <td>05:32</td>\n",
+        "    </tr>\n",
+        "    <tr>\n",
+        "      <td>3</td>\n",
+-       "      <td>3.128551</td>\n",
+-       "      <td>2.930289</td>\n",
+-       "      <td>0.806495</td>\n",
+-       "      <td>05:23</td>\n",
++       "      <td>3.208746</td>\n",
++       "      <td>2.955666</td>\n",
++       "      <td>0.817321</td>\n",
++       "      <td>05:31</td>\n",
+        "    </tr>\n",
+        "    <tr>\n",
+        "      <td>4</td>\n",
+-       "      <td>3.000273</td>\n",
+-       "      <td>2.947312</td>\n",
+-       "      <td>0.810555</td>\n",
+-       "      <td>05:21</td>\n",
++       "      <td>3.072442</td>\n",
++       "      <td>2.927523</td>\n",
++       "      <td>0.811908</td>\n",
++       "      <td>05:32</td>\n",
+        "    </tr>\n",
+        "  </tbody>\n",
+        "</table>"
+@@ -442,12 +412,12 @@
+     {
+      "data": {
+       "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "71767c6344b642ec8080be1c28f9da5e",
++       "model_id": "76e1b9af3f3749a59280a50d94eb46c0",
+        "version_major": 2,
+        "version_minor": 0
+       },
+       "text/plain": [
+-       "VBox(children=(Label(value='0.117 MB of 0.117 MB uploaded (0.000 MB deduped)\\r'), FloatProgress(value=1.0, max…"
++       "VBox(children=(Label(value='5.874 MB of 5.874 MB uploaded (2.921 MB deduped)\\r'), FloatProgress(value=1.0, max…"
+       ]
+      },
+      "metadata": {},
+@@ -461,7 +431,7 @@
+        "    .wandb-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; width: 100% }\n",
+        "    .wandb-col { display: flex; flex-direction: column; flex-basis: 100%; flex: 1; padding: 10px; }\n",
+        "    </style>\n",
+-       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███</td></tr><tr><td>eps_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>eps_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>error_rate</td><td>█▇▆▄▁▁</td></tr><tr><td>lr_0</td><td>▁▂▃▅▆▇█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_1</td><td>▁▂▃▅▆▇█▂▂▂▃▃▃▄▄▄▄▅▄▄▄▄▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>mom_0</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>mom_1</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>raw_loss</td><td>▇▆█▅█▆▅▄▄▅▄▄▅▄▄▄▃▃▃▄▁▂▃▄▃▄▃▄▃▁▂▄▃▄▃▂▂▃▃▂</td></tr><tr><td>sqr_mom_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>sqr_mom_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_loss</td><td>█▇▇▆▆▅▅▄▄▄▃▃▄▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▁▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>train_samples_per_sec</td><td>▇▅▆█▇▇▇▂▁▂▁▃▂▂▁▂▂▃▂▂▁▁▂▂▂▂▂▂▂▂▂▁▂▂▁▂▁▂▂▂</td></tr><tr><td>valid_loss</td><td>█▄▄▂▁▁</td></tr><tr><td>wd_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>wd_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>6</td></tr><tr><td>eps_0</td><td>1e-05</td></tr><tr><td>eps_1</td><td>1e-05</td></tr><tr><td>error_rate</td><td>0.81055</td></tr><tr><td>lr_0</td><td>0.0</td></tr><tr><td>lr_1</td><td>0.0</td></tr><tr><td>mom_0</td><td>0.95</td></tr><tr><td>mom_1</td><td>0.95</td></tr><tr><td>raw_loss</td><td>2.69172</td></tr><tr><td>sqr_mom_0</td><td>0.99</td></tr><tr><td>sqr_mom_1</td><td>0.99</td></tr><tr><td>train_loss</td><td>3.00027</td></tr><tr><td>train_samples_per_sec</td><td>20.45986</td></tr><tr><td>valid_loss</td><td>2.94731</td></tr><tr><td>wd_0</td><td>0.01</td></tr><tr><td>wd_1</td><td>0.01</td></tr></table><br/></div></div>"
++       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███</td></tr><tr><td>eps_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>eps_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>error_rate</td><td>█▅▄▃▁▁</td></tr><tr><td>lr_0</td><td>▁▂▃▅▆▇█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_1</td><td>▁▂▃▅▆▇█▂▂▂▃▃▃▄▄▄▄▅▄▄▄▄▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>mom_0</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>mom_1</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>raw_loss</td><td>▄█▅▆▃▆▅▄▄▅▅▄▄▂▃▃▃▄▄▄▃▂▃▁▃▃▂▃▂▄▂▃▄▃▂▃▂▃▂▂</td></tr><tr><td>sqr_mom_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>sqr_mom_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_loss</td><td>█▇▇▆▆▆▅▄▄▃▄▃▃▄▃▃▃▃▃▃▃▃▂▂▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>train_samples_per_sec</td><td>██▇▇▆▇▆▂▁▂▂▂▂▂▂▁▁▁▂▁▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▂▂▂</td></tr><tr><td>valid_loss</td><td>█▅▄▂▁▁</td></tr><tr><td>wd_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>wd_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>6</td></tr><tr><td>eps_0</td><td>1e-05</td></tr><tr><td>eps_1</td><td>1e-05</td></tr><tr><td>error_rate</td><td>0.81191</td></tr><tr><td>lr_0</td><td>0.0</td></tr><tr><td>lr_1</td><td>0.0</td></tr><tr><td>mom_0</td><td>0.95</td></tr><tr><td>mom_1</td><td>0.95</td></tr><tr><td>raw_loss</td><td>2.15752</td></tr><tr><td>sqr_mom_0</td><td>0.99</td></tr><tr><td>sqr_mom_1</td><td>0.99</td></tr><tr><td>train_loss</td><td>3.07244</td></tr><tr><td>train_samples_per_sec</td><td>22.70981</td></tr><tr><td>valid_loss</td><td>2.92752</td></tr><tr><td>wd_0</td><td>0.01</td></tr><tr><td>wd_1</td><td>0.01</td></tr></table><br/></div></div>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -473,7 +443,7 @@
+     {
+      "data": {
+       "text/html": [
+-       " View run <strong style=\"color:#cdcd00\">radiant-resonance-11</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml</a><br/>Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)"
++       " View run <strong style=\"color:#cdcd00\">denim-capybara-12</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/ufnj5ajw</a><br/>Synced 6 W&B file(s), 2 media file(s), 74 artifact file(s) and 1 other file(s)"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -485,7 +455,7 @@
+     {
+      "data": {
+       "text/html": [
+-       "Find logs at: <code>.\\wandb\\run-20230309_231526-th4cxlml\\logs</code>"
++       "Find logs at: <code>.\\wandb\\run-20230309_235332-ufnj5ajw\\logs</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -509,8 +479,8 @@
+     "    \"Train the model using the supplied config\"\n",
+     "    dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
+     "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+-    "        cbs = [MixedPrecision(), WandbCallback(log_preds=False)]\n",
+-    "        learn = vision_learner(dls, config.model_name, metrics=error_rate, \n",
++    "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
++    "        learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy], \n",
+     "                               cbs=cbs, pretrained=config.pretrained)\n",
+     "        learn.fine_tune(config.epochs)\n",
+     "\n",
+@@ -524,11 +494,11 @@
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:46:15.436733Z",
+-     "iopub.status.busy": "2023-03-10T04:46:15.435731Z",
+-     "iopub.status.idle": "2023-03-10T04:46:15.451253Z",
+-     "shell.execute_reply": "2023-03-10T04:46:15.450242Z",
+-     "shell.execute_reply.started": "2023-03-10T04:46:15.436733Z"
++     "iopub.execute_input": "2023-03-10T05:25:18.984875Z",
++     "iopub.status.busy": "2023-03-10T05:25:18.984875Z",
++     "iopub.status.idle": "2023-03-10T05:25:19.000875Z",
++     "shell.execute_reply": "2023-03-10T05:25:18.998877Z",
++     "shell.execute_reply.started": "2023-03-10T05:25:18.984875Z"
+     },
+     "tags": []
+    },
+@@ -554,11 +524,11 @@
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-10T04:46:15.453260Z",
+-     "iopub.status.busy": "2023-03-10T04:46:15.452260Z",
+-     "iopub.status.idle": "2023-03-10T04:46:15.546411Z",
+-     "shell.execute_reply": "2023-03-10T04:46:15.545402Z",
+-     "shell.execute_reply.started": "2023-03-10T04:46:15.453260Z"
++     "iopub.execute_input": "2023-03-10T05:25:19.002873Z",
++     "iopub.status.busy": "2023-03-10T05:25:19.002873Z",
++     "iopub.status.idle": "2023-03-10T05:25:19.123148Z",
++     "shell.execute_reply": "2023-03-10T05:25:19.122134Z",
++     "shell.execute_reply.started": "2023-03-10T05:25:19.002873Z"
+     },
+     "tags": []
+    },
+@@ -566,7 +536,7 @@
+     {
+      "data": {
+       "text/plain": [
+-       "<fastai.data.core.DataLoaders at 0x2cd574d5030>"
++       "<fastai.data.core.DataLoaders at 0x1ee3811b070>"
+       ]
+      },
+      "execution_count": 8,
+diff --git a/Train/wandb/debug-cli.gcmar.log b/Train/wandb/debug-cli.gcmar.log
+index e69de29..d48e72c 100644
+--- a/Train/wandb/debug-cli.gcmar.log
++++ b/Train/wandb/debug-cli.gcmar.log
+@@ -0,0 +1,27 @@
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:20 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10
++2023-03-09 23:57:21 WARNING Connection pool is full, discarding connection: storage.googleapis.com. Connection pool size: 10

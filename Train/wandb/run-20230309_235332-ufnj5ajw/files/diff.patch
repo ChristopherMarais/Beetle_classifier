@@ -1,0 +1,219 @@
+diff --git a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+index cad312b..117f5b6 100644
+--- a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+@@ -182,12 +182,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 6,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+      "iopub.execute_input": "2023-03-10T04:15:21.254210Z",
+-     "iopub.status.busy": "2023-03-10T04:15:21.253201Z"
++     "iopub.status.busy": "2023-03-10T04:15:21.253201Z",
++     "iopub.status.idle": "2023-03-10T04:46:15.434724Z",
++     "shell.execute_reply": "2023-03-10T04:46:15.434724Z",
++     "shell.execute_reply.started": "2023-03-10T04:15:21.254210Z"
+     },
+     "tags": []
+    },
+@@ -368,12 +371,6 @@
+     {
+      "data": {
+       "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='1' class='' max='5' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      20.00% [1/5 05:20&lt;21:22]\n",
+-       "    </div>\n",
+-       "    \n",
+        "<table border=\"1\" class=\"dataframe\">\n",
+        "  <thead>\n",
+        "    <tr style=\"text-align: left;\">\n",
+@@ -392,14 +389,103 @@
+        "      <td>0.893775</td>\n",
+        "      <td>05:20</td>\n",
+        "    </tr>\n",
++       "    <tr>\n",
++       "      <td>1</td>\n",
++       "      <td>3.626814</td>\n",
++       "      <td>3.233418</td>\n",
++       "      <td>0.868742</td>\n",
++       "      <td>05:22</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>2</td>\n",
++       "      <td>3.414804</td>\n",
++       "      <td>3.088444</td>\n",
++       "      <td>0.851150</td>\n",
++       "      <td>05:21</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>3</td>\n",
++       "      <td>3.128551</td>\n",
++       "      <td>2.930289</td>\n",
++       "      <td>0.806495</td>\n",
++       "      <td>05:23</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>4</td>\n",
++       "      <td>3.000273</td>\n",
++       "      <td>2.947312</td>\n",
++       "      <td>0.810555</td>\n",
++       "      <td>05:21</td>\n",
++       "    </tr>\n",
+        "  </tbody>\n",
+-       "</table><p>\n",
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='187' class='' max='739' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      25.30% [187/739 01:14&lt;03:38 3.6128]\n",
+-       "    </div>\n",
+-       "    "
++       "</table>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "71767c6344b642ec8080be1c28f9da5e",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "VBox(children=(Label(value='0.117 MB of 0.117 MB uploaded (0.000 MB deduped)\\r'), FloatProgress(value=1.0, max…"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "<style>\n",
++       "    table.wandb td:nth-child(1) { padding: 0 10px; text-align: left ; width: auto;} td:nth-child(2) {text-align: left ; width: 100%}\n",
++       "    .wandb-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; width: 100% }\n",
++       "    .wandb-col { display: flex; flex-direction: column; flex-basis: 100%; flex: 1; padding: 10px; }\n",
++       "    </style>\n",
++       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███</td></tr><tr><td>eps_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>eps_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>error_rate</td><td>█▇▆▄▁▁</td></tr><tr><td>lr_0</td><td>▁▂▃▅▆▇█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_1</td><td>▁▂▃▅▆▇█▂▂▂▃▃▃▄▄▄▄▅▄▄▄▄▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>mom_0</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>mom_1</td><td>█▇▆▄▃▂▁██▇▆▅▄▃▂▁▁▁▁▁▁▂▂▂▃▃▄▄▄▅▆▆▆▇▇▇████</td></tr><tr><td>raw_loss</td><td>▇▆█▅█▆▅▄▄▅▄▄▅▄▄▄▃▃▃▄▁▂▃▄▃▄▃▄▃▁▂▄▃▄▃▂▂▃▃▂</td></tr><tr><td>sqr_mom_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>sqr_mom_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_loss</td><td>█▇▇▆▆▅▅▄▄▄▃▃▄▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▁▂▂▂▂▁▁▁▁▁▁</td></tr><tr><td>train_samples_per_sec</td><td>▇▅▆█▇▇▇▂▁▂▁▃▂▂▁▂▂▃▂▂▁▁▂▂▂▂▂▂▂▂▂▁▂▂▁▂▁▂▂▂</td></tr><tr><td>valid_loss</td><td>█▄▄▂▁▁</td></tr><tr><td>wd_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>wd_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>epoch</td><td>6</td></tr><tr><td>eps_0</td><td>1e-05</td></tr><tr><td>eps_1</td><td>1e-05</td></tr><tr><td>error_rate</td><td>0.81055</td></tr><tr><td>lr_0</td><td>0.0</td></tr><tr><td>lr_1</td><td>0.0</td></tr><tr><td>mom_0</td><td>0.95</td></tr><tr><td>mom_1</td><td>0.95</td></tr><tr><td>raw_loss</td><td>2.69172</td></tr><tr><td>sqr_mom_0</td><td>0.99</td></tr><tr><td>sqr_mom_1</td><td>0.99</td></tr><tr><td>train_loss</td><td>3.00027</td></tr><tr><td>train_samples_per_sec</td><td>20.45986</td></tr><tr><td>valid_loss</td><td>2.94731</td></tr><tr><td>wd_0</td><td>0.01</td></tr><tr><td>wd_1</td><td>0.01</td></tr></table><br/></div></div>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run <strong style=\"color:#cdcd00\">radiant-resonance-11</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/th4cxlml</a><br/>Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Find logs at: <code>.\\wandb\\run-20230309_231526-th4cxlml\\logs</code>"
+       ],
+       "text/plain": [
+        "<IPython.core.display.HTML object>"
+@@ -423,7 +509,7 @@
+     "    \"Train the model using the supplied config\"\n",
+     "    dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
+     "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+-    "        cbs = [MixedPrecision(), WandbCallback(log_preds=False)]\n",
++    "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
+     "        learn = vision_learner(dls, config.model_name, metrics=error_rate, \n",
+     "                               cbs=cbs, pretrained=config.pretrained)\n",
+     "        learn.fine_tune(config.epochs)\n",
+@@ -434,9 +520,16 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 7,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-10T04:46:15.436733Z",
++     "iopub.status.busy": "2023-03-10T04:46:15.435731Z",
++     "iopub.status.idle": "2023-03-10T04:46:15.451253Z",
++     "shell.execute_reply": "2023-03-10T04:46:15.450242Z",
++     "shell.execute_reply.started": "2023-03-10T04:46:15.436733Z"
++    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -457,12 +550,30 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 8,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-10T04:46:15.453260Z",
++     "iopub.status.busy": "2023-03-10T04:46:15.452260Z",
++     "iopub.status.idle": "2023-03-10T04:46:15.546411Z",
++     "shell.execute_reply": "2023-03-10T04:46:15.545402Z",
++     "shell.execute_reply.started": "2023-03-10T04:46:15.453260Z"
++    },
+     "tags": []
+    },
+-   "outputs": [],
++   "outputs": [
++    {
++     "data": {
++      "text/plain": [
++       "<fastai.data.core.DataLoaders at 0x2cd574d5030>"
++      ]
++     },
++     "execution_count": 8,
++     "metadata": {},
++     "output_type": "execute_result"
++    }
++   ],
+    "source": [
+     "get_planets()"
+    ]
+diff --git a/Train/timm_FastAI_WANDB.ipynb b/Train/timm_FastAI_WANDB.ipynb
+index 0a33121..117f5b6 100644
+--- a/Train/timm_FastAI_WANDB.ipynb
++++ b/Train/timm_FastAI_WANDB.ipynb
+@@ -509,7 +509,7 @@
+     "    \"Train the model using the supplied config\"\n",
+     "    dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
+     "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+-    "        cbs = [MixedPrecision(), WandbCallback(log_preds=False)]\n",
++    "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
+     "        learn = vision_learner(dls, config.model_name, metrics=error_rate, \n",
+     "                               cbs=cbs, pretrained=config.pretrained)\n",
+     "        learn.fine_tune(config.epochs)\n",
