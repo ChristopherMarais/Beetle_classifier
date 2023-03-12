@@ -1,12 +1,19 @@
 import os
 import sys
 import re
-# import pandas as pd
+import pandas as pd
 
-from distributed import Client
-client = Client()
-os.environ["MODIN_ENGINE"] = "dask"
-import modin.pandas as pd
+# # expand script to use modin to be faster?
+# from distributed import Client
+# client = Client()
+# import modin.config as modin_cfg
+# import unidist.config as unidist_cfg
+# # os.environ["MODIN_ENGINE"] = "dask"
+# modin_cfg.Engine.put("dask")
+# import modin.pandas as pd
+
+import warnings
+warnings.filterwarnings(action='once')
 
 from Ambrosia import pre_process_image
 from skimage import io
