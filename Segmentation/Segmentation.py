@@ -40,7 +40,7 @@ def segmentation(folder_dir, output_dir):
                 else:
                     label = re.sub("Beetle_classification_deep_data|Vial_|Subset_|IMG_|.JPG", "", file)
                     label = label.split("\\")
-                # test if iamge has already been processed    
+                # test if image has already been processed    
                 if file not in list(set(metadata_df['composite_image_path'])):
                     try:
                         pre_process = pre_process_image(image_dir = file, manual_thresh_buffer=0.15)
