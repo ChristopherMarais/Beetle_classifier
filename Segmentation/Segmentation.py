@@ -1,7 +1,13 @@
 import os
 import sys
 import re
-import pandas as pd
+# import pandas as pd
+
+from distributed import Client
+client = Client()
+os.environ["MODIN_ENGINE"] = "dask"
+import modin.pandas as pd
+
 from Ambrosia import pre_process_image
 from skimage import io
 
