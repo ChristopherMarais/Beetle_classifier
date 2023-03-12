@@ -12,8 +12,8 @@ import pandas as pd
 # modin_cfg.Engine.put("dask")
 # import modin.pandas as pd
 
-import warnings
-warnings.filterwarnings(action='once')
+# import warnings
+# warnings.filterwarnings(action='once')
 
 from Ambrosia import pre_process_image
 from skimage import io
@@ -86,7 +86,7 @@ def segmentation(folder_dir, output_dir):
 
                 metadata_df = metadata_df.reset_index(drop=True)
                 metadata_df.to_csv(output_dir+"segmented_images_metadata.csv")
-
+    print("--------------------------FINISHED!----------------------------------")
                 
                 
 # apply function
