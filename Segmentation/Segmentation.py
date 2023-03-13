@@ -73,6 +73,8 @@ def segmentation(folder_dir, output_dir):
                         seg_img_df['composite_image_number'] = label[-1]
                         seg_img_df['segmented_image_name'] = seg_img_df['species']+"_"+seg_img_df['vial']+"_"+seg_img_df['subset']+"_"+seg_img_df['composite_image_number']+"_"+seg_img_df.index.astype(str)
                         metadata_df = pd.concat([metadata_df, seg_img_df])
+                        # metadata_df = metadata_df.reset_index(drop=True)
+                        # metadata_df.to_csv(output_dir+"segmented_images_metadata.csv")
                     except:
                         print(file) # this will print the file that results in an error
 
@@ -84,11 +86,11 @@ def segmentation(folder_dir, output_dir):
                 else:
                     print("Already processed image: "+ file)
 
-                metadata_df = metadata_df.reset_index(drop=True)
-                metadata_df.to_csv(output_dir+"segmented_images_metadata.csv")
+    metadata_df = metadata_df.reset_index(drop=True)
+    metadata_df.to_csv(output_dir+"segmented_images_metadata.csv")
     print("--------------------------FINISHED!----------------------------------")
                 
-                
+#######################################################################################                
 # apply function
 # default directories
 f_dir = "Z:\lab records\Christopher_Marais\Beetle_classification_deep_data"
