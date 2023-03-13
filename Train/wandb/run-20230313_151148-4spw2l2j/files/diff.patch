@@ -1,0 +1,875 @@
+diff --git a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+index fe436e9..a0a1aae 100644
+--- a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+@@ -2,15 +2,15 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": 1,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:10.685524Z",
+-     "iopub.status.busy": "2023-03-13T18:00:10.684524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.897026Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.896024Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:10.685024Z"
++     "iopub.execute_input": "2023-03-13T18:47:46.810027Z",
++     "iopub.status.busy": "2023-03-13T18:47:46.809527Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.901525Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.900024Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:46.810027Z"
+     },
+     "tags": []
+    },
+@@ -26,15 +26,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": 2,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:13.899526Z",
+-     "iopub.status.busy": "2023-03-13T18:00:13.899025Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.928523Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.927023Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:13.899526Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.903528Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.903027Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.932025Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.931027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.903528Z"
+     },
+     "tags": []
+    },
+@@ -42,17 +42,42 @@
+     {
+      "data": {
+       "text/plain": [
+-       "['maxvit_nano_rw_256',\n",
+-       " 'maxvit_rmlp_nano_rw_256',\n",
+-       " 'maxvit_rmlp_pico_rw_256',\n",
+-       " 'maxvit_rmlp_small_rw_224',\n",
+-       " 'maxvit_rmlp_tiny_rw_256',\n",
+-       " 'maxvit_tiny_rw_224',\n",
+-       " 'maxxvit_rmlp_nano_rw_256',\n",
+-       " 'maxxvit_rmlp_small_rw_256']"
++       "['maxvit_base_tf_224.in1k',\n",
++       " 'maxvit_base_tf_384.in1k',\n",
++       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_base_tf_512.in1k',\n",
++       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_224.in1k',\n",
++       " 'maxvit_large_tf_384.in1k',\n",
++       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_512.in1k',\n",
++       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
++       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
++       " 'maxvit_small_tf_224.in1k',\n",
++       " 'maxvit_small_tf_384.in1k',\n",
++       " 'maxvit_small_tf_512.in1k',\n",
++       " 'maxvit_tiny_rw_224.sw_in1k',\n",
++       " 'maxvit_tiny_tf_224.in1k',\n",
++       " 'maxvit_tiny_tf_384.in1k',\n",
++       " 'maxvit_tiny_tf_512.in1k',\n",
++       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
++       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+       ]
+      },
+-     "execution_count": 3,
++     "execution_count": 2,
+      "metadata": {},
+      "output_type": "execute_result"
+     }
+@@ -63,32 +88,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
+-   "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:25.689525Z",
+-     "iopub.status.busy": "2023-03-13T18:00:25.689024Z",
+-     "iopub.status.idle": "2023-03-13T18:00:25.708025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:25.707027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:25.689525Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [],
+-   "source": []
+-  },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": 3,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:26.901028Z",
+-     "iopub.status.busy": "2023-03-13T18:00:26.900027Z",
+-     "iopub.status.idle": "2023-03-13T18:00:26.917025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:26.916025Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:26.901028Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.936025Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.935525Z",
++     "iopub.status.idle": "2023-03-13T18:47:54.304526Z",
++     "shell.execute_reply": "2023-03-13T18:47:54.303027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.936025Z"
+     },
+     "tags": []
+    },
+@@ -128,24 +136,186 @@
+    "cell_type": "code",
+    "execution_count": null,
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+-   "metadata": {},
+-   "outputs": [],
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-13T18:47:54.308025Z",
++     "iopub.status.busy": "2023-03-13T18:47:54.307024Z"
++    }
++   },
++   "outputs": [
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33mchristopher-marais\u001b[0m. Use \u001b[1m`wandb login --relogin`\u001b[0m to force relogin\n"
++     ]
++    },
++    {
++     "data": {
++      "text/html": [
++       "wandb version 0.13.11 is available!  To upgrade, please run:\n",
++       " $ pip install wandb --upgrade"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Tracking run with wandb version 0.13.10"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Run data is saved locally in <code>E:\\GIT_REPOS\\Beetle_classifier\\Train\\wandb\\run-20230313_144800-7v23h4c2</code>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/7v23h4c2' target=\"_blank\">decent-wave-17</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View project at <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/7v23h4c2' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/7v23h4c2</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\torch\\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\\cb\\pytorch_1000000000000\\work\\aten\\src\\ATen\\native\\TensorShape.cpp:3191.)\n",
++      "  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n"
++     ]
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "ca93cbf258704643b54d385f109d639e",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "Downloading pytorch_model.bin:   0%|          | 0.00/260M [00:00<?, ?B/s]"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "\n",
++       "    <div>\n",
++       "        <style>\n",
++       "            /* Turns off some styling */\n",
++       "            progress {\n",
++       "                /* gets rid of default border in Firefox and Opera. */\n",
++       "                border: none;\n",
++       "                /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
++       "                background-size: auto;\n",
++       "            }\n",
++       "            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
++       "                background: #F44336;\n",
++       "            }\n",
++       "        </style>\n",
++       "      <progress value='0' class='' max='1' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
++       "      0.00% [0/1 00:00<00:00]\n",
++       "    </div>\n",
++       "    \n",
++       "<table border=\"1\" class=\"dataframe\">\n",
++       "  <thead>\n",
++       "    <tr style=\"text-align: left;\">\n",
++       "      <th>epoch</th>\n",
++       "      <th>train_loss</th>\n",
++       "      <th>valid_loss</th>\n",
++       "      <th>error_rate</th>\n",
++       "      <th>accuracy</th>\n",
++       "      <th>time</th>\n",
++       "    </tr>\n",
++       "  </thead>\n",
++       "  <tbody>\n",
++       "  </tbody>\n",
++       "</table><p>\n",
++       "\n",
++       "    <div>\n",
++       "        <style>\n",
++       "            /* Turns off some styling */\n",
++       "            progress {\n",
++       "                /* gets rid of default border in Firefox and Opera. */\n",
++       "                border: none;\n",
++       "                /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
++       "                background-size: auto;\n",
++       "            }\n",
++       "            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
++       "                background: #F44336;\n",
++       "            }\n",
++       "        </style>\n",
++       "      <progress value='439' class='' max='739' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
++       "      59.40% [439/739 02:29<01:42 0.7209]\n",
++       "    </div>\n",
++       "    "
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    }
++   ],
+    "source": [
+     "train(config=config)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:40.999025Z",
+-     "iopub.status.busy": "2023-03-13T18:00:40.998526Z",
+-     "iopub.status.idle": "2023-03-13T18:00:41.006028Z",
+-     "shell.execute_reply": "2023-03-13T18:00:41.005027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:40.999025Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -183,74 +353,12 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:42.540027Z",
+-     "iopub.status.busy": "2023-03-13T18:00:42.539524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:58.072025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:58.070524Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:42.540027Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='15532032' class='' max='15523994' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      100.05% [15532032/15523994 00:08&lt;00:00]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "<fastai.data.core.DataLoaders at 0x1e80f8d1fc0>"
+-      ]
+-     },
+-     "execution_count": 7,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "train(config=config)"
+    ]
+diff --git a/Train/timm_FastAI_WANDB.ipynb b/Train/timm_FastAI_WANDB.ipynb
+index fe436e9..abfc960 100644
+--- a/Train/timm_FastAI_WANDB.ipynb
++++ b/Train/timm_FastAI_WANDB.ipynb
+@@ -2,15 +2,15 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": 1,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:10.685524Z",
+-     "iopub.status.busy": "2023-03-13T18:00:10.684524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.897026Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.896024Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:10.685024Z"
++     "iopub.execute_input": "2023-03-13T18:47:46.810027Z",
++     "iopub.status.busy": "2023-03-13T18:47:46.809527Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.901525Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.900024Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:46.810027Z"
+     },
+     "tags": []
+    },
+@@ -26,15 +26,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": 2,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:13.899526Z",
+-     "iopub.status.busy": "2023-03-13T18:00:13.899025Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.928523Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.927023Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:13.899526Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.903528Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.903027Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.932025Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.931027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.903528Z"
+     },
+     "tags": []
+    },
+@@ -42,17 +42,42 @@
+     {
+      "data": {
+       "text/plain": [
+-       "['maxvit_nano_rw_256',\n",
+-       " 'maxvit_rmlp_nano_rw_256',\n",
+-       " 'maxvit_rmlp_pico_rw_256',\n",
+-       " 'maxvit_rmlp_small_rw_224',\n",
+-       " 'maxvit_rmlp_tiny_rw_256',\n",
+-       " 'maxvit_tiny_rw_224',\n",
+-       " 'maxxvit_rmlp_nano_rw_256',\n",
+-       " 'maxxvit_rmlp_small_rw_256']"
++       "['maxvit_base_tf_224.in1k',\n",
++       " 'maxvit_base_tf_384.in1k',\n",
++       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_base_tf_512.in1k',\n",
++       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_224.in1k',\n",
++       " 'maxvit_large_tf_384.in1k',\n",
++       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_512.in1k',\n",
++       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
++       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
++       " 'maxvit_small_tf_224.in1k',\n",
++       " 'maxvit_small_tf_384.in1k',\n",
++       " 'maxvit_small_tf_512.in1k',\n",
++       " 'maxvit_tiny_rw_224.sw_in1k',\n",
++       " 'maxvit_tiny_tf_224.in1k',\n",
++       " 'maxvit_tiny_tf_384.in1k',\n",
++       " 'maxvit_tiny_tf_512.in1k',\n",
++       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
++       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+       ]
+      },
+-     "execution_count": 3,
++     "execution_count": 2,
+      "metadata": {},
+      "output_type": "execute_result"
+     }
+@@ -63,32 +88,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
+-   "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:25.689525Z",
+-     "iopub.status.busy": "2023-03-13T18:00:25.689024Z",
+-     "iopub.status.idle": "2023-03-13T18:00:25.708025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:25.707027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:25.689525Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [],
+-   "source": []
+-  },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": 3,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:26.901028Z",
+-     "iopub.status.busy": "2023-03-13T18:00:26.900027Z",
+-     "iopub.status.idle": "2023-03-13T18:00:26.917025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:26.916025Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:26.901028Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.936025Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.935525Z",
++     "iopub.status.idle": "2023-03-13T18:47:54.304526Z",
++     "shell.execute_reply": "2023-03-13T18:47:54.303027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.936025Z"
+     },
+     "tags": []
+    },
+@@ -128,24 +136,235 @@
+    "cell_type": "code",
+    "execution_count": null,
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+-   "metadata": {},
+-   "outputs": [],
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-13T18:47:54.308025Z",
++     "iopub.status.busy": "2023-03-13T18:47:54.307024Z"
++    }
++   },
++   "outputs": [
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33mchristopher-marais\u001b[0m. Use \u001b[1m`wandb login --relogin`\u001b[0m to force relogin\n"
++     ]
++    },
++    {
++     "data": {
++      "text/html": [
++       "wandb version 0.13.11 is available!  To upgrade, please run:\n",
++       " $ pip install wandb --upgrade"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Tracking run with wandb version 0.13.10"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Run data is saved locally in <code>E:\\GIT_REPOS\\Beetle_classifier\\Train\\wandb\\run-20230313_144800-7v23h4c2</code>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/7v23h4c2' target=\"_blank\">decent-wave-17</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View project at <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/7v23h4c2' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/7v23h4c2</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\torch\\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\\cb\\pytorch_1000000000000\\work\\aten\\src\\ATen\\native\\TensorShape.cpp:3191.)\n",
++      "  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n"
++     ]
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "ca93cbf258704643b54d385f109d639e",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "Downloading pytorch_model.bin:   0%|          | 0.00/260M [00:00<?, ?B/s]"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "<table border=\"1\" class=\"dataframe\">\n",
++       "  <thead>\n",
++       "    <tr style=\"text-align: left;\">\n",
++       "      <th>epoch</th>\n",
++       "      <th>train_loss</th>\n",
++       "      <th>valid_loss</th>\n",
++       "      <th>error_rate</th>\n",
++       "      <th>accuracy</th>\n",
++       "      <th>time</th>\n",
++       "    </tr>\n",
++       "  </thead>\n",
++       "  <tbody>\n",
++       "    <tr>\n",
++       "      <td>0</td>\n",
++       "      <td>0.692336</td>\n",
++       "      <td>0.359472</td>\n",
++       "      <td>0.120433</td>\n",
++       "      <td>0.879567</td>\n",
++       "      <td>04:51</td>\n",
++       "    </tr>\n",
++       "  </tbody>\n",
++       "</table>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "\n",
++       "    <div>\n",
++       "        <style>\n",
++       "            /* Turns off some styling */\n",
++       "            progress {\n",
++       "                /* gets rid of default border in Firefox and Opera. */\n",
++       "                border: none;\n",
++       "                /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
++       "                background-size: auto;\n",
++       "            }\n",
++       "            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
++       "                background: #F44336;\n",
++       "            }\n",
++       "        </style>\n",
++       "      <progress value='2' class='' max='3' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
++       "      66.67% [2/3 10:27<05:13]\n",
++       "    </div>\n",
++       "    \n",
++       "<table border=\"1\" class=\"dataframe\">\n",
++       "  <thead>\n",
++       "    <tr style=\"text-align: left;\">\n",
++       "      <th>epoch</th>\n",
++       "      <th>train_loss</th>\n",
++       "      <th>valid_loss</th>\n",
++       "      <th>error_rate</th>\n",
++       "      <th>accuracy</th>\n",
++       "      <th>time</th>\n",
++       "    </tr>\n",
++       "  </thead>\n",
++       "  <tbody>\n",
++       "    <tr>\n",
++       "      <td>0</td>\n",
++       "      <td>0.447946</td>\n",
++       "      <td>0.231729</td>\n",
++       "      <td>0.069012</td>\n",
++       "      <td>0.930988</td>\n",
++       "      <td>05:13</td>\n",
++       "    </tr>\n",
++       "    <tr>\n",
++       "      <td>1</td>\n",
++       "      <td>0.265518</td>\n",
++       "      <td>0.186024</td>\n",
++       "      <td>0.046008</td>\n",
++       "      <td>0.953992</td>\n",
++       "      <td>05:14</td>\n",
++       "    </tr>\n",
++       "  </tbody>\n",
++       "</table><p>\n",
++       "\n",
++       "    <div>\n",
++       "        <style>\n",
++       "            /* Turns off some styling */\n",
++       "            progress {\n",
++       "                /* gets rid of default border in Firefox and Opera. */\n",
++       "                border: none;\n",
++       "                /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
++       "                background-size: auto;\n",
++       "            }\n",
++       "            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
++       "                background: #F44336;\n",
++       "            }\n",
++       "        </style>\n",
++       "      <progress value='5' class='' max='5' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
++       "      100.00% [5/5 00:00<00:00 0.1643]\n",
++       "    </div>\n",
++       "    "
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    }
++   ],
+    "source": [
+     "train(config=config)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:40.999025Z",
+-     "iopub.status.busy": "2023-03-13T18:00:40.998526Z",
+-     "iopub.status.idle": "2023-03-13T18:00:41.006028Z",
+-     "shell.execute_reply": "2023-03-13T18:00:41.005027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:40.999025Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -183,74 +402,12 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:42.540027Z",
+-     "iopub.status.busy": "2023-03-13T18:00:42.539524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:58.072025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:58.070524Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:42.540027Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='15532032' class='' max='15523994' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      100.05% [15532032/15523994 00:08&lt;00:00]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "<fastai.data.core.DataLoaders at 0x1e80f8d1fc0>"
+-      ]
+-     },
+-     "execution_count": 7,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "train(config=config)"
+    ]

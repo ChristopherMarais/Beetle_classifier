@@ -1,0 +1,684 @@
+diff --git a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+index fe436e9..da6c520 100644
+--- a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+@@ -2,15 +2,15 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": 1,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:10.685524Z",
+-     "iopub.status.busy": "2023-03-13T18:00:10.684524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.897026Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.896024Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:10.685024Z"
++     "iopub.execute_input": "2023-03-13T20:01:17.266528Z",
++     "iopub.status.busy": "2023-03-13T20:01:17.266027Z",
++     "iopub.status.idle": "2023-03-13T20:01:23.551026Z",
++     "shell.execute_reply": "2023-03-13T20:01:23.549525Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:17.266528Z"
+     },
+     "tags": []
+    },
+@@ -26,15 +26,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": 2,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:13.899526Z",
+-     "iopub.status.busy": "2023-03-13T18:00:13.899025Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.928523Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.927023Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:13.899526Z"
++     "iopub.execute_input": "2023-03-13T20:01:23.552526Z",
++     "iopub.status.busy": "2023-03-13T20:01:23.552026Z",
++     "iopub.status.idle": "2023-03-13T20:01:23.581526Z",
++     "shell.execute_reply": "2023-03-13T20:01:23.580525Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:23.552526Z"
+     },
+     "tags": []
+    },
+@@ -42,17 +42,42 @@
+     {
+      "data": {
+       "text/plain": [
+-       "['maxvit_nano_rw_256',\n",
+-       " 'maxvit_rmlp_nano_rw_256',\n",
+-       " 'maxvit_rmlp_pico_rw_256',\n",
+-       " 'maxvit_rmlp_small_rw_224',\n",
+-       " 'maxvit_rmlp_tiny_rw_256',\n",
+-       " 'maxvit_tiny_rw_224',\n",
+-       " 'maxxvit_rmlp_nano_rw_256',\n",
+-       " 'maxxvit_rmlp_small_rw_256']"
++       "['maxvit_base_tf_224.in1k',\n",
++       " 'maxvit_base_tf_384.in1k',\n",
++       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_base_tf_512.in1k',\n",
++       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_224.in1k',\n",
++       " 'maxvit_large_tf_384.in1k',\n",
++       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_512.in1k',\n",
++       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
++       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
++       " 'maxvit_small_tf_224.in1k',\n",
++       " 'maxvit_small_tf_384.in1k',\n",
++       " 'maxvit_small_tf_512.in1k',\n",
++       " 'maxvit_tiny_rw_224.sw_in1k',\n",
++       " 'maxvit_tiny_tf_224.in1k',\n",
++       " 'maxvit_tiny_tf_384.in1k',\n",
++       " 'maxvit_tiny_tf_512.in1k',\n",
++       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
++       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+       ]
+      },
+-     "execution_count": 3,
++     "execution_count": 2,
+      "metadata": {},
+      "output_type": "execute_result"
+     }
+@@ -63,88 +88,92 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
+-   "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:25.689525Z",
+-     "iopub.status.busy": "2023-03-13T18:00:25.689024Z",
+-     "iopub.status.idle": "2023-03-13T18:00:25.708025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:25.707027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:25.689525Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [],
+-   "source": []
+-  },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": 3,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:26.901028Z",
+-     "iopub.status.busy": "2023-03-13T18:00:26.900027Z",
+-     "iopub.status.idle": "2023-03-13T18:00:26.917025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:26.916025Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:26.901028Z"
++     "iopub.execute_input": "2023-03-13T20:01:23.584526Z",
++     "iopub.status.busy": "2023-03-13T20:01:23.584026Z",
++     "iopub.status.idle": "2023-03-13T20:01:24.325525Z",
++     "shell.execute_reply": "2023-03-13T20:01:24.324525Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:23.584526Z"
+     },
+     "tags": []
+    },
+    "outputs": [],
+    "source": [
+-    "config = SimpleNamespace(\n",
+-    "    batch_size=8,\n",
+-    "    img_size=224,\n",
+-    "    seed=42,\n",
+-    "    pretrained=True,\n",
+-    "    model_name=\"maxvit_rmlp_small_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040 coatnet_bn_0_rw_224.sw_in1k\n",
+-    "    epochs=3)\n",
++    "# config = SimpleNamespace(\n",
++    "#     batch_size=8,\n",
++    "#     img_size=224,\n",
++    "#     seed=42,\n",
++    "#     pretrained=True,\n",
++    "#     model_name=\"maxvit_rmlp_small_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040 coatnet_bn_0_rw_224.sw_in1k\n",
++    "#     epochs=3)\n",
+     "\n",
+-    "def get_pets(batch_size, img_size, seed):\n",
+-    "    \"The dog breeds pets datasets\"\n",
+-    "    dataset_path = untar_data(URLs.PETS)\n",
+-    "    files = get_image_files(dataset_path/\"images\")\n",
+-    "    dls = ImageDataLoaders.from_name_re(dataset_path, files, \n",
+-    "                                        pat=r'(^[a-zA-Z]+_*[a-zA-Z]+)', \n",
+-    "                                        valid_pct=0.2, \n",
+-    "                                        seed=seed, \n",
+-    "                                        bs=batch_size,\n",
+-    "                                        item_tfms=Resize(img_size)) \n",
+-    "    return dls\n",
++    "# def get_pets(batch_size, img_size, seed):\n",
++    "#     \"The dog breeds pets datasets\"\n",
++    "#     dataset_path = untar_data(URLs.PETS)\n",
++    "#     files = get_image_files(dataset_path/\"images\")\n",
++    "#     dls = ImageDataLoaders.from_name_re(dataset_path, files, \n",
++    "#                                         pat=r'(^[a-zA-Z]+_*[a-zA-Z]+)', \n",
++    "#                                         valid_pct=0.2, \n",
++    "#                                         seed=seed, \n",
++    "#                                         bs=batch_size,\n",
++    "#                                         item_tfms=Resize(img_size)) \n",
++    "#     return dls\n",
+     "\n",
+-    "def train(config):\n",
+-    "    \"Train the model using the supplied config\"\n",
+-    "    dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
+-    "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+-    "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
+-    "        learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy], \n",
+-    "                               cbs=cbs, pretrained=config.pretrained)\n",
+-    "        learn.fine_tune(config.epochs)"
++    "# def train(config):\n",
++    "#     \"Train the model using the supplied config\"\n",
++    "#     dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
++    "#     with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
++    "#         cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
++    "#         learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy], \n",
++    "#                                cbs=cbs, pretrained=config.pretrained)\n",
++    "#         learn.fine_tune(config.epochs)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 4,
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+-   "metadata": {},
+-   "outputs": [],
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-13T20:01:24.327525Z",
++     "iopub.status.busy": "2023-03-13T20:01:24.327025Z",
++     "iopub.status.idle": "2023-03-13T20:01:26.185526Z",
++     "shell.execute_reply": "2023-03-13T20:01:26.184025Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:24.327525Z"
++    },
++    "tags": []
++   },
++   "outputs": [
++    {
++     "ename": "NameError",
++     "evalue": "name 'train' is not defined",
++     "output_type": "error",
++     "traceback": [
++      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
++      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
++      "Cell \u001b[1;32mIn[4], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[43mtrain\u001b[49m(config\u001b[38;5;241m=\u001b[39mconfig)\n",
++      "\u001b[1;31mNameError\u001b[0m: name 'train' is not defined"
++     ]
++    }
++   ],
+    "source": [
+-    "train(config=config)"
++    "# train(config=config)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": 5,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:40.999025Z",
+-     "iopub.status.busy": "2023-03-13T18:00:40.998526Z",
+-     "iopub.status.idle": "2023-03-13T18:00:41.006028Z",
+-     "shell.execute_reply": "2023-03-13T18:00:41.005027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:40.999025Z"
++     "iopub.execute_input": "2023-03-13T20:01:53.950024Z",
++     "iopub.status.busy": "2023-03-13T20:01:53.949524Z",
++     "iopub.status.idle": "2023-03-13T20:01:53.960524Z",
++     "shell.execute_reply": "2023-03-13T20:01:53.959524Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:53.950024Z"
+     },
+     "tags": []
+    },
+@@ -183,77 +212,27 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:42.540027Z",
+-     "iopub.status.busy": "2023-03-13T18:00:42.539524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:58.072025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:58.070524Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:42.540027Z"
++     "iopub.execute_input": "2023-03-13T20:01:54.087024Z",
++     "iopub.status.busy": "2023-03-13T20:01:54.086523Z"
+     },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='15532032' class='' max='15523994' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      100.05% [15532032/15523994 00:08&lt;00:00]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "<fastai.data.core.DataLoaders at 0x1e80f8d1fc0>"
+-      ]
+-     },
+-     "execution_count": 7,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "train(config=config)"
+    ]
++  },
++  {
++   "cell_type": "code",
++   "execution_count": null,
++   "id": "7476519a-b383-46ce-ab55-165f509e0a86",
++   "metadata": {},
++   "outputs": [],
++   "source": []
+   }
+  ],
+  "metadata": {
+diff --git a/Train/timm_FastAI_WANDB.ipynb b/Train/timm_FastAI_WANDB.ipynb
+index fe436e9..da6c520 100644
+--- a/Train/timm_FastAI_WANDB.ipynb
++++ b/Train/timm_FastAI_WANDB.ipynb
+@@ -2,15 +2,15 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": 1,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:10.685524Z",
+-     "iopub.status.busy": "2023-03-13T18:00:10.684524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.897026Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.896024Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:10.685024Z"
++     "iopub.execute_input": "2023-03-13T20:01:17.266528Z",
++     "iopub.status.busy": "2023-03-13T20:01:17.266027Z",
++     "iopub.status.idle": "2023-03-13T20:01:23.551026Z",
++     "shell.execute_reply": "2023-03-13T20:01:23.549525Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:17.266528Z"
+     },
+     "tags": []
+    },
+@@ -26,15 +26,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": 2,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:13.899526Z",
+-     "iopub.status.busy": "2023-03-13T18:00:13.899025Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.928523Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.927023Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:13.899526Z"
++     "iopub.execute_input": "2023-03-13T20:01:23.552526Z",
++     "iopub.status.busy": "2023-03-13T20:01:23.552026Z",
++     "iopub.status.idle": "2023-03-13T20:01:23.581526Z",
++     "shell.execute_reply": "2023-03-13T20:01:23.580525Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:23.552526Z"
+     },
+     "tags": []
+    },
+@@ -42,17 +42,42 @@
+     {
+      "data": {
+       "text/plain": [
+-       "['maxvit_nano_rw_256',\n",
+-       " 'maxvit_rmlp_nano_rw_256',\n",
+-       " 'maxvit_rmlp_pico_rw_256',\n",
+-       " 'maxvit_rmlp_small_rw_224',\n",
+-       " 'maxvit_rmlp_tiny_rw_256',\n",
+-       " 'maxvit_tiny_rw_224',\n",
+-       " 'maxxvit_rmlp_nano_rw_256',\n",
+-       " 'maxxvit_rmlp_small_rw_256']"
++       "['maxvit_base_tf_224.in1k',\n",
++       " 'maxvit_base_tf_384.in1k',\n",
++       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_base_tf_512.in1k',\n",
++       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_224.in1k',\n",
++       " 'maxvit_large_tf_384.in1k',\n",
++       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_512.in1k',\n",
++       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
++       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
++       " 'maxvit_small_tf_224.in1k',\n",
++       " 'maxvit_small_tf_384.in1k',\n",
++       " 'maxvit_small_tf_512.in1k',\n",
++       " 'maxvit_tiny_rw_224.sw_in1k',\n",
++       " 'maxvit_tiny_tf_224.in1k',\n",
++       " 'maxvit_tiny_tf_384.in1k',\n",
++       " 'maxvit_tiny_tf_512.in1k',\n",
++       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
++       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+       ]
+      },
+-     "execution_count": 3,
++     "execution_count": 2,
+      "metadata": {},
+      "output_type": "execute_result"
+     }
+@@ -63,88 +88,92 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
+-   "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:25.689525Z",
+-     "iopub.status.busy": "2023-03-13T18:00:25.689024Z",
+-     "iopub.status.idle": "2023-03-13T18:00:25.708025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:25.707027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:25.689525Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [],
+-   "source": []
+-  },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": 3,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:26.901028Z",
+-     "iopub.status.busy": "2023-03-13T18:00:26.900027Z",
+-     "iopub.status.idle": "2023-03-13T18:00:26.917025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:26.916025Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:26.901028Z"
++     "iopub.execute_input": "2023-03-13T20:01:23.584526Z",
++     "iopub.status.busy": "2023-03-13T20:01:23.584026Z",
++     "iopub.status.idle": "2023-03-13T20:01:24.325525Z",
++     "shell.execute_reply": "2023-03-13T20:01:24.324525Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:23.584526Z"
+     },
+     "tags": []
+    },
+    "outputs": [],
+    "source": [
+-    "config = SimpleNamespace(\n",
+-    "    batch_size=8,\n",
+-    "    img_size=224,\n",
+-    "    seed=42,\n",
+-    "    pretrained=True,\n",
+-    "    model_name=\"maxvit_rmlp_small_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040 coatnet_bn_0_rw_224.sw_in1k\n",
+-    "    epochs=3)\n",
++    "# config = SimpleNamespace(\n",
++    "#     batch_size=8,\n",
++    "#     img_size=224,\n",
++    "#     seed=42,\n",
++    "#     pretrained=True,\n",
++    "#     model_name=\"maxvit_rmlp_small_rw_224.sw_in1k\", # try with maxvit_nano_rw_256.sw_in1k # regnetx_040 coatnet_bn_0_rw_224.sw_in1k\n",
++    "#     epochs=3)\n",
+     "\n",
+-    "def get_pets(batch_size, img_size, seed):\n",
+-    "    \"The dog breeds pets datasets\"\n",
+-    "    dataset_path = untar_data(URLs.PETS)\n",
+-    "    files = get_image_files(dataset_path/\"images\")\n",
+-    "    dls = ImageDataLoaders.from_name_re(dataset_path, files, \n",
+-    "                                        pat=r'(^[a-zA-Z]+_*[a-zA-Z]+)', \n",
+-    "                                        valid_pct=0.2, \n",
+-    "                                        seed=seed, \n",
+-    "                                        bs=batch_size,\n",
+-    "                                        item_tfms=Resize(img_size)) \n",
+-    "    return dls\n",
++    "# def get_pets(batch_size, img_size, seed):\n",
++    "#     \"The dog breeds pets datasets\"\n",
++    "#     dataset_path = untar_data(URLs.PETS)\n",
++    "#     files = get_image_files(dataset_path/\"images\")\n",
++    "#     dls = ImageDataLoaders.from_name_re(dataset_path, files, \n",
++    "#                                         pat=r'(^[a-zA-Z]+_*[a-zA-Z]+)', \n",
++    "#                                         valid_pct=0.2, \n",
++    "#                                         seed=seed, \n",
++    "#                                         bs=batch_size,\n",
++    "#                                         item_tfms=Resize(img_size)) \n",
++    "#     return dls\n",
+     "\n",
+-    "def train(config):\n",
+-    "    \"Train the model using the supplied config\"\n",
+-    "    dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
+-    "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+-    "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
+-    "        learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy], \n",
+-    "                               cbs=cbs, pretrained=config.pretrained)\n",
+-    "        learn.fine_tune(config.epochs)"
++    "# def train(config):\n",
++    "#     \"Train the model using the supplied config\"\n",
++    "#     dls = get_pets(config.batch_size, config.img_size, config.seed)\n",
++    "#     with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
++    "#         cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
++    "#         learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy], \n",
++    "#                                cbs=cbs, pretrained=config.pretrained)\n",
++    "#         learn.fine_tune(config.epochs)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 4,
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+-   "metadata": {},
+-   "outputs": [],
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-13T20:01:24.327525Z",
++     "iopub.status.busy": "2023-03-13T20:01:24.327025Z",
++     "iopub.status.idle": "2023-03-13T20:01:26.185526Z",
++     "shell.execute_reply": "2023-03-13T20:01:26.184025Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:24.327525Z"
++    },
++    "tags": []
++   },
++   "outputs": [
++    {
++     "ename": "NameError",
++     "evalue": "name 'train' is not defined",
++     "output_type": "error",
++     "traceback": [
++      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
++      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
++      "Cell \u001b[1;32mIn[4], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[43mtrain\u001b[49m(config\u001b[38;5;241m=\u001b[39mconfig)\n",
++      "\u001b[1;31mNameError\u001b[0m: name 'train' is not defined"
++     ]
++    }
++   ],
+    "source": [
+-    "train(config=config)"
++    "# train(config=config)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": 5,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:40.999025Z",
+-     "iopub.status.busy": "2023-03-13T18:00:40.998526Z",
+-     "iopub.status.idle": "2023-03-13T18:00:41.006028Z",
+-     "shell.execute_reply": "2023-03-13T18:00:41.005027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:40.999025Z"
++     "iopub.execute_input": "2023-03-13T20:01:53.950024Z",
++     "iopub.status.busy": "2023-03-13T20:01:53.949524Z",
++     "iopub.status.idle": "2023-03-13T20:01:53.960524Z",
++     "shell.execute_reply": "2023-03-13T20:01:53.959524Z",
++     "shell.execute_reply.started": "2023-03-13T20:01:53.950024Z"
+     },
+     "tags": []
+    },
+@@ -183,77 +212,27 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:42.540027Z",
+-     "iopub.status.busy": "2023-03-13T18:00:42.539524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:58.072025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:58.070524Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:42.540027Z"
++     "iopub.execute_input": "2023-03-13T20:01:54.087024Z",
++     "iopub.status.busy": "2023-03-13T20:01:54.086523Z"
+     },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='15532032' class='' max='15523994' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      100.05% [15532032/15523994 00:08&lt;00:00]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "<fastai.data.core.DataLoaders at 0x1e80f8d1fc0>"
+-      ]
+-     },
+-     "execution_count": 7,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "train(config=config)"
+    ]
++  },
++  {
++   "cell_type": "code",
++   "execution_count": null,
++   "id": "7476519a-b383-46ce-ab55-165f509e0a86",
++   "metadata": {},
++   "outputs": [],
++   "source": []
+   }
+  ],
+  "metadata": {

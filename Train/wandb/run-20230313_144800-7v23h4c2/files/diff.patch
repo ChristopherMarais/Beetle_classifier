@@ -1,0 +1,496 @@
+diff --git a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+index fe436e9..8986f1f 100644
+--- a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+@@ -2,15 +2,15 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": 1,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:10.685524Z",
+-     "iopub.status.busy": "2023-03-13T18:00:10.684524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.897026Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.896024Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:10.685024Z"
++     "iopub.execute_input": "2023-03-13T18:47:46.810027Z",
++     "iopub.status.busy": "2023-03-13T18:47:46.809527Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.901525Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.900024Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:46.810027Z"
+     },
+     "tags": []
+    },
+@@ -26,15 +26,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": 2,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:13.899526Z",
+-     "iopub.status.busy": "2023-03-13T18:00:13.899025Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.928523Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.927023Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:13.899526Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.903528Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.903027Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.932025Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.931027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.903528Z"
+     },
+     "tags": []
+    },
+@@ -42,17 +42,42 @@
+     {
+      "data": {
+       "text/plain": [
+-       "['maxvit_nano_rw_256',\n",
+-       " 'maxvit_rmlp_nano_rw_256',\n",
+-       " 'maxvit_rmlp_pico_rw_256',\n",
+-       " 'maxvit_rmlp_small_rw_224',\n",
+-       " 'maxvit_rmlp_tiny_rw_256',\n",
+-       " 'maxvit_tiny_rw_224',\n",
+-       " 'maxxvit_rmlp_nano_rw_256',\n",
+-       " 'maxxvit_rmlp_small_rw_256']"
++       "['maxvit_base_tf_224.in1k',\n",
++       " 'maxvit_base_tf_384.in1k',\n",
++       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_base_tf_512.in1k',\n",
++       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_224.in1k',\n",
++       " 'maxvit_large_tf_384.in1k',\n",
++       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_512.in1k',\n",
++       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
++       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
++       " 'maxvit_small_tf_224.in1k',\n",
++       " 'maxvit_small_tf_384.in1k',\n",
++       " 'maxvit_small_tf_512.in1k',\n",
++       " 'maxvit_tiny_rw_224.sw_in1k',\n",
++       " 'maxvit_tiny_tf_224.in1k',\n",
++       " 'maxvit_tiny_tf_384.in1k',\n",
++       " 'maxvit_tiny_tf_512.in1k',\n",
++       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
++       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+       ]
+      },
+-     "execution_count": 3,
++     "execution_count": 2,
+      "metadata": {},
+      "output_type": "execute_result"
+     }
+@@ -63,32 +88,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
+-   "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:25.689525Z",
+-     "iopub.status.busy": "2023-03-13T18:00:25.689024Z",
+-     "iopub.status.idle": "2023-03-13T18:00:25.708025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:25.707027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:25.689525Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [],
+-   "source": []
+-  },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": 3,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:26.901028Z",
+-     "iopub.status.busy": "2023-03-13T18:00:26.900027Z",
+-     "iopub.status.idle": "2023-03-13T18:00:26.917025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:26.916025Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:26.901028Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.936025Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.935525Z",
++     "iopub.status.idle": "2023-03-13T18:47:54.304526Z",
++     "shell.execute_reply": "2023-03-13T18:47:54.303027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.936025Z"
+     },
+     "tags": []
+    },
+@@ -128,7 +136,12 @@
+    "cell_type": "code",
+    "execution_count": null,
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+-   "metadata": {},
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-13T18:47:54.308025Z",
++     "iopub.status.busy": "2023-03-13T18:47:54.307024Z"
++    }
++   },
+    "outputs": [],
+    "source": [
+     "train(config=config)"
+@@ -136,16 +149,9 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:40.999025Z",
+-     "iopub.status.busy": "2023-03-13T18:00:40.998526Z",
+-     "iopub.status.idle": "2023-03-13T18:00:41.006028Z",
+-     "shell.execute_reply": "2023-03-13T18:00:41.005027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:40.999025Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -183,74 +189,12 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:42.540027Z",
+-     "iopub.status.busy": "2023-03-13T18:00:42.539524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:58.072025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:58.070524Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:42.540027Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='15532032' class='' max='15523994' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      100.05% [15532032/15523994 00:08&lt;00:00]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "<fastai.data.core.DataLoaders at 0x1e80f8d1fc0>"
+-      ]
+-     },
+-     "execution_count": 7,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "train(config=config)"
+    ]
+diff --git a/Train/timm_FastAI_WANDB.ipynb b/Train/timm_FastAI_WANDB.ipynb
+index fe436e9..8986f1f 100644
+--- a/Train/timm_FastAI_WANDB.ipynb
++++ b/Train/timm_FastAI_WANDB.ipynb
+@@ -2,15 +2,15 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": 1,
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:10.685524Z",
+-     "iopub.status.busy": "2023-03-13T18:00:10.684524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.897026Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.896024Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:10.685024Z"
++     "iopub.execute_input": "2023-03-13T18:47:46.810027Z",
++     "iopub.status.busy": "2023-03-13T18:47:46.809527Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.901525Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.900024Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:46.810027Z"
+     },
+     "tags": []
+    },
+@@ -26,15 +26,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 3,
++   "execution_count": 2,
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:13.899526Z",
+-     "iopub.status.busy": "2023-03-13T18:00:13.899025Z",
+-     "iopub.status.idle": "2023-03-13T18:00:13.928523Z",
+-     "shell.execute_reply": "2023-03-13T18:00:13.927023Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:13.899526Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.903528Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.903027Z",
++     "iopub.status.idle": "2023-03-13T18:47:53.932025Z",
++     "shell.execute_reply": "2023-03-13T18:47:53.931027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.903528Z"
+     },
+     "tags": []
+    },
+@@ -42,17 +42,42 @@
+     {
+      "data": {
+       "text/plain": [
+-       "['maxvit_nano_rw_256',\n",
+-       " 'maxvit_rmlp_nano_rw_256',\n",
+-       " 'maxvit_rmlp_pico_rw_256',\n",
+-       " 'maxvit_rmlp_small_rw_224',\n",
+-       " 'maxvit_rmlp_tiny_rw_256',\n",
+-       " 'maxvit_tiny_rw_224',\n",
+-       " 'maxxvit_rmlp_nano_rw_256',\n",
+-       " 'maxxvit_rmlp_small_rw_256']"
++       "['maxvit_base_tf_224.in1k',\n",
++       " 'maxvit_base_tf_384.in1k',\n",
++       " 'maxvit_base_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_base_tf_512.in1k',\n",
++       " 'maxvit_base_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_224.in1k',\n",
++       " 'maxvit_large_tf_384.in1k',\n",
++       " 'maxvit_large_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_large_tf_512.in1k',\n",
++       " 'maxvit_large_tf_512.in21k_ft_in1k',\n",
++       " 'maxvit_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxvit_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_base_rw_384.sw_in12k_ft_in1k',\n",
++       " 'maxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_pico_rw_256.sw_in1k',\n",
++       " 'maxvit_rmlp_small_rw_224.sw_in1k',\n",
++       " 'maxvit_rmlp_tiny_rw_256.sw_in1k',\n",
++       " 'maxvit_small_tf_224.in1k',\n",
++       " 'maxvit_small_tf_384.in1k',\n",
++       " 'maxvit_small_tf_512.in1k',\n",
++       " 'maxvit_tiny_rw_224.sw_in1k',\n",
++       " 'maxvit_tiny_tf_224.in1k',\n",
++       " 'maxvit_tiny_tf_384.in1k',\n",
++       " 'maxvit_tiny_tf_512.in1k',\n",
++       " 'maxvit_xlarge_tf_384.in21k_ft_in1k',\n",
++       " 'maxvit_xlarge_tf_512.in21k_ft_in1k',\n",
++       " 'maxxvit_rmlp_nano_rw_256.sw_in1k',\n",
++       " 'maxxvit_rmlp_small_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_nano_rw_256.sw_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k',\n",
++       " 'maxxvitv2_rmlp_base_rw_224.sw_in12k_ft_in1k',\n",
++       " 'maxxvitv2_rmlp_base_rw_384.sw_in12k_ft_in1k']"
+       ]
+      },
+-     "execution_count": 3,
++     "execution_count": 2,
+      "metadata": {},
+      "output_type": "execute_result"
+     }
+@@ -63,32 +88,15 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 4,
+-   "id": "fd1e36e7-6131-4ad7-a7cc-3e825b391108",
+-   "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:25.689525Z",
+-     "iopub.status.busy": "2023-03-13T18:00:25.689024Z",
+-     "iopub.status.idle": "2023-03-13T18:00:25.708025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:25.707027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:25.689525Z"
+-    },
+-    "tags": []
+-   },
+-   "outputs": [],
+-   "source": []
+-  },
+-  {
+-   "cell_type": "code",
+-   "execution_count": 5,
++   "execution_count": 3,
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:26.901028Z",
+-     "iopub.status.busy": "2023-03-13T18:00:26.900027Z",
+-     "iopub.status.idle": "2023-03-13T18:00:26.917025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:26.916025Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:26.901028Z"
++     "iopub.execute_input": "2023-03-13T18:47:53.936025Z",
++     "iopub.status.busy": "2023-03-13T18:47:53.935525Z",
++     "iopub.status.idle": "2023-03-13T18:47:54.304526Z",
++     "shell.execute_reply": "2023-03-13T18:47:54.303027Z",
++     "shell.execute_reply.started": "2023-03-13T18:47:53.936025Z"
+     },
+     "tags": []
+    },
+@@ -128,7 +136,12 @@
+    "cell_type": "code",
+    "execution_count": null,
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+-   "metadata": {},
++   "metadata": {
++    "execution": {
++     "iopub.execute_input": "2023-03-13T18:47:54.308025Z",
++     "iopub.status.busy": "2023-03-13T18:47:54.307024Z"
++    }
++   },
+    "outputs": [],
+    "source": [
+     "train(config=config)"
+@@ -136,16 +149,9 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:40.999025Z",
+-     "iopub.status.busy": "2023-03-13T18:00:40.998526Z",
+-     "iopub.status.idle": "2023-03-13T18:00:41.006028Z",
+-     "shell.execute_reply": "2023-03-13T18:00:41.005027Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:40.999025Z"
+-    },
+     "tags": []
+    },
+    "outputs": [],
+@@ -183,74 +189,12 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": null,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+-    "execution": {
+-     "iopub.execute_input": "2023-03-13T18:00:42.540027Z",
+-     "iopub.status.busy": "2023-03-13T18:00:42.539524Z",
+-     "iopub.status.idle": "2023-03-13T18:00:58.072025Z",
+-     "shell.execute_reply": "2023-03-13T18:00:58.070524Z",
+-     "shell.execute_reply.started": "2023-03-13T18:00:42.540027Z"
+-    },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "<style>\n",
+-       "    /* Turns off some styling */\n",
+-       "    progress {\n",
+-       "        /* gets rid of default border in Firefox and Opera. */\n",
+-       "        border: none;\n",
+-       "        /* Needs to be in here for Safari polyfill so background images work as expected. */\n",
+-       "        background-size: auto;\n",
+-       "    }\n",
+-       "    progress:not([value]), progress:not([value])::-webkit-progress-bar {\n",
+-       "        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);\n",
+-       "    }\n",
+-       "    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {\n",
+-       "        background: #F44336;\n",
+-       "    }\n",
+-       "</style>\n"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "\n",
+-       "    <div>\n",
+-       "      <progress value='15532032' class='' max='15523994' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+-       "      100.05% [15532032/15523994 00:08&lt;00:00]\n",
+-       "    </div>\n",
+-       "    "
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/plain": [
+-       "<fastai.data.core.DataLoaders at 0x1e80f8d1fc0>"
+-      ]
+-     },
+-     "execution_count": 7,
+-     "metadata": {},
+-     "output_type": "execute_result"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "train(config=config)"
+    ]

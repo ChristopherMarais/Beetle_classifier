@@ -1,0 +1,40 @@
+2023-03-13 16:29:38,571 INFO    MainThread:14436 [wandb_setup.py:_flush():68] Configure stats pid to 14436
+2023-03-13 16:29:38,571 INFO    MainThread:14436 [wandb_setup.py:_flush():68] Loading settings from C:\Users\GCM\.config\wandb\settings
+2023-03-13 16:29:38,571 INFO    MainThread:14436 [wandb_setup.py:_flush():68] Loading settings from E:\GIT_REPOS\Beetle_classifier\Train\wandb\settings
+2023-03-13 16:29:38,571 INFO    MainThread:14436 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-03-13 16:29:38,571 INFO    MainThread:14436 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-03-13 16:29:38,572 INFO    MainThread:14436 [wandb_init.py:_log_setup():492] Logging user logs to E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_162938-xw6kcli3\logs\debug.log
+2023-03-13 16:29:38,572 INFO    MainThread:14436 [wandb_init.py:_log_setup():493] Logging internal logs to E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_162938-xw6kcli3\logs\debug-internal.log
+2023-03-13 16:29:38,573 INFO    MainThread:14436 [wandb_init.py:_jupyter_setup():438] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000028FB1EDFBE0>
+2023-03-13 16:29:38,573 INFO    MainThread:14436 [wandb_init.py:init():532] calling init triggers
+2023-03-13 16:29:38,573 INFO    MainThread:14436 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'batch_size': 2, 'img_size': 224, 'seed': 42, 'pretrained': True, 'model_name': 'maxvit_rmlp_small_rw_224.sw_in1k', 'epochs': 3}
+2023-03-13 16:29:38,573 INFO    MainThread:14436 [wandb_init.py:init():588] starting backend
+2023-03-13 16:29:38,574 INFO    MainThread:14436 [wandb_init.py:init():592] setting up manager
+2023-03-13 16:29:38,589 INFO    MainThread:14436 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-03-13 16:29:38,592 INFO    MainThread:14436 [wandb_init.py:init():599] backend started and connected
+2023-03-13 16:29:38,601 INFO    MainThread:14436 [wandb_run.py:_label_probe_notebook():1203] probe notebook
+2023-03-13 16:29:38,602 INFO    MainThread:14436 [wandb_run.py:_label_probe_notebook():1213] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-03-13 16:29:38,602 INFO    MainThread:14436 [wandb_init.py:init():687] updated telemetry
+2023-03-13 16:29:38,663 INFO    MainThread:14436 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-03-13 16:29:39,206 INFO    MainThread:14436 [wandb_run.py:_on_init():2134] communicating current version
+2023-03-13 16:29:39,379 INFO    MainThread:14436 [wandb_run.py:_on_init():2143] got version response upgrade_message: "wandb version 0.13.11 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-03-13 16:29:39,379 INFO    MainThread:14436 [wandb_init.py:init():775] starting run threads in backend
+2023-03-13 16:29:39,866 INFO    MainThread:14436 [wandb_run.py:_console_start():2114] atexit reg
+2023-03-13 16:29:39,866 INFO    MainThread:14436 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-03-13 16:29:39,866 INFO    MainThread:14436 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-03-13 16:29:39,866 INFO    MainThread:14436 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-03-13 16:29:39,867 INFO    MainThread:14436 [wandb_init.py:init():817] run started, returning control to user process
+2023-03-13 16:29:42,235 INFO    MainThread:14436 [wandb_run.py:_config_callback():1250] config_cb None None {'Learner': {'loss_func': {'axis': -1, 'flatten': True, 'floatify': True, 'is_2d': False, '_name': 'FlattenedLoss of BCEWithLogitsLoss()'}, 'opt_func': 'fastai.optimizer.Adam', 'lr': 0.001, 'splitter': 'fastai.vision.learner.default_split', 'metrics': ['fastai.metrics.error_rate', 'fastai.metrics.accuracy_multi'], 'path': 'C:\\Users\\GCM\\.fastai\\data\\planet_sample', 'model_dir': 'models', 'wd': None, 'wd_bn_bias': False, 'train_bn': True, 'moms': [0.95, 0.85, 0.95], 'default_cbs': True, 'arch': 'maxvit_rmlp_small_rw_224.sw_in1k', 'normalize': True, 'n_out': 17, 'pretrained': True, '_name': '<fastai.learner.Learner object at 0x0000028DF0E19210>'}, 'TrainEvalCallback': True, 'Recorder': {'add_time': True, 'train_metrics': False, 'valid_metrics': True}, 'CastToTensor': True, 'ProgressCallback': True, 'MixedPrecision': True, 'WandbCallback': {'log': 'all', 'log_preds': True, 'log_preds_every_epoch': False, 'log_model': False, 'model_name': None, 'log_dataset': False, 'dataset_name': None, 'valid_dl': None, 'n_preds': 36, 'seed': 12345, 'reorder': True}, 'ParamScheduler': True, 'n_inp': 1, 'input 1 dim 1': 2, 'input 1 dim 2': 3, 'input 1 dim 3': 224, 'input 1 dim 4': 224, 'batch size': 2, 'batch per epoch': 400, 'model parameters': 64925276, 'device': 'cuda', 'frozen': True, 'frozen idx': 1, 'dataset.tfms': "[Pipeline: ColReader -- {'cols': 0, 'pref': 'C:\\\\Users\\\\GCM\\\\.fastai\\\\data\\\\planet_sample\\\\train\\\\', 'suff': '.jpg', 'label_delim': None} -> PILBase.create, Pipeline: ColReader -- {'cols': 1, 'pref': '', 'suff': '', 'label_delim': ' '} -> MultiCategorize -- {'vocab': None, 'sort': True, 'add_na': False} -> OneHotEncode -- {'c': None}]", 'dls.after_item': "Pipeline: Resize -- {'size': (224, 224), 'method': 'crop', 'pad_mode': 'reflection', 'resamples': (<Resampling.BILINEAR: 2>, <Resampling.NEAREST: 0>), 'p': 1.0} -> ToTensor", 'dls.before_batch': 'Pipeline: ', 'dls.after_batch': "Pipeline: IntToFloatTensor -- {'div': 255.0, 'div_mask': 1} -> Normalize -- {'mean': tensor([[[[0.5000]],\n\n         [[0.5000]],\n\n         [[0.5000]]]], device='cuda:0'), 'std': tensor([[[[0.5000]],\n\n         [[0.5000]],\n\n         [[0.5000]]]], device='cuda:0'), 'axes': (0, 2, 3)}"}
+2023-03-13 16:30:53,302 INFO    MainThread:14436 [wandb_run.py:_finish():1854] finishing run christopher-marais/PROJECT/xw6kcli3
+2023-03-13 16:30:53,681 INFO    MainThread:14436 [jupyter.py:save_history():478] saving 8 cells to _session_history.ipynb
+2023-03-13 16:30:53,695 INFO    MainThread:14436 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'session_history') code\_session_history.ipynb None
+2023-03-13 16:30:53,868 INFO    MainThread:14436 [jupyter.py:_save_ipynb():390] looking for notebook: GIT_REPOS/Beetle_classifier/Train/timm_FastAI_WANDB.ipynb
+2023-03-13 16:30:53,868 INFO    MainThread:14436 [wandb_init.py:_jupyter_teardown():420] cleaning up jupyter logic
+2023-03-13 16:30:53,868 INFO    MainThread:14436 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 1
+2023-03-13 16:30:53,869 INFO    MainThread:14436 [wandb_run.py:_restore():2066] restore
+2023-03-13 16:30:53,869 INFO    MainThread:14436 [wandb_run.py:_restore():2072] restore done
+2023-03-13 16:30:59,878 INFO    MainThread:14436 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-03-13 16:30:59,881 INFO    MainThread:14436 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-03-13 16:30:59,889 INFO    MainThread:14436 [wandb_run.py:_footer_sync_info():3398] logging synced files

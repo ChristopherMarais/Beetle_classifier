@@ -1,0 +1,738 @@
+2023-03-13 16:01:59,896 INFO    StreamThr :28000 [internal.py:wandb_internal():87] W&B internal server running at pid: 28000, started at: 2023-03-13 16:01:59.895526
+2023-03-13 16:01:59,963 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status
+2023-03-13 16:01:59,964 INFO    WriterThread:28000 [datastore.py:open_for_write():85] open: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\run-t79livga.wandb
+2023-03-13 16:01:59,968 DEBUG   SenderThread:28000 [sender.py:send():336] send: header
+2023-03-13 16:01:59,985 DEBUG   SenderThread:28000 [sender.py:send():336] send: run
+2023-03-13 16:02:01,874 INFO    SenderThread:28000 [dir_watcher.py:__init__():216] watching files in: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files
+2023-03-13 16:02:01,874 INFO    SenderThread:28000 [sender.py:_start_run_threads():1067] run started: t79livga with start time 1678737719.891026
+2023-03-13 16:02:01,874 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:01,875 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:01,881 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: check_version
+2023-03-13 16:02:01,882 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: check_version
+2023-03-13 16:02:02,890 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:03,170 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: run_start
+2023-03-13 16:02:03,198 DEBUG   HandlerThread:28000 [system_info.py:__init__():31] System info init
+2023-03-13 16:02:03,198 DEBUG   HandlerThread:28000 [system_info.py:__init__():46] System info init done
+2023-03-13 16:02:03,198 INFO    HandlerThread:28000 [system_monitor.py:start():151] Starting system monitor
+2023-03-13 16:02:03,198 INFO    SystemMonitor:28000 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-13 16:02:03,199 INFO    HandlerThread:28000 [system_monitor.py:probe():172] Collecting system info
+2023-03-13 16:02:03,206 INFO    SystemMonitor:28000 [interfaces.py:start():168] Started cpu
+2023-03-13 16:02:03,206 INFO    SystemMonitor:28000 [interfaces.py:start():168] Started disk
+2023-03-13 16:02:03,206 INFO    SystemMonitor:28000 [interfaces.py:start():168] Started gpu
+2023-03-13 16:02:03,207 INFO    SystemMonitor:28000 [interfaces.py:start():168] Started memory
+2023-03-13 16:02:03,215 INFO    SystemMonitor:28000 [interfaces.py:start():168] Started network
+2023-03-13 16:02:03,228 DEBUG   HandlerThread:28000 [system_info.py:probe():195] Probing system
+2023-03-13 16:02:03,230 DEBUG   HandlerThread:28000 [system_info.py:_probe_git():180] Probing git
+2023-03-13 16:02:03,333 DEBUG   HandlerThread:28000 [system_info.py:_probe_git():188] Probing git done
+2023-03-13 16:02:03,333 DEBUG   HandlerThread:28000 [system_info.py:probe():241] Probing system done
+2023-03-13 16:02:03,333 DEBUG   HandlerThread:28000 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-03-13T20:02:03.228528', 'startedAt': '2023-03-13T20:01:59.866527', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'GIT_REPOS/Beetle_classifier/Train/timm_FastAI_WANDB.ipynb', 'root': 'E:/GIT_REPOS/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': 'ec8c7abc67f7a22f9b63f9766cd8c9c6ca6f4403'}, 'email': 'u13033663@tuks.co.za', 'host': 'GCM', 'username': 'GCM', 'executable': 'C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3800.0, 'min': 0.0, 'max': 3800.0}, 'cpu_freq_per_core': [{'current': 3800.0, 'min': 0.0, 'max': 3800.0}], 'disk': {'total': 447.11425399780273, 'used': 337.3230400085449}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.87503433227539}}
+2023-03-13 16:02:03,334 INFO    HandlerThread:28000 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-13 16:02:03,334 INFO    HandlerThread:28000 [system_monitor.py:probe():185] Publishing system info
+2023-03-13 16:02:03,334 DEBUG   HandlerThread:28000 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-13 16:02:03,335 DEBUG   HandlerThread:28000 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-13 16:02:03,335 DEBUG   HandlerThread:28000 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-13 16:02:03,339 ERROR   HandlerThread:28000 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-03-13 16:02:03,341 DEBUG   HandlerThread:28000 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-13 16:02:03,341 DEBUG   HandlerThread:28000 [system_info.py:_save_code():89] Saving code
+2023-03-13 16:02:03,341 WARNING HandlerThread:28000 [system_info.py:_save_code():91] unable to save code -- program entry not found
+2023-03-13 16:02:03,341 DEBUG   HandlerThread:28000 [system_info.py:_save_patches():127] Saving git patches
+2023-03-13 16:02:03,644 DEBUG   HandlerThread:28000 [system_info.py:_save_patches():169] Saving git patches done
+2023-03-13 16:02:03,646 INFO    HandlerThread:28000 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-13 16:02:03,652 DEBUG   SenderThread:28000 [sender.py:send():336] send: files
+2023-03-13 16:02:03,652 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-13 16:02:03,652 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file diff.patch with policy now
+2023-03-13 16:02:03,670 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-13 16:02:03,671 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: stop_status
+2023-03-13 16:02:03,895 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\conda-environment.yaml
+2023-03-13 16:02:03,896 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-metadata.json
+2023-03-13 16:02:03,896 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\diff.patch
+2023-03-13 16:02:03,897 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\requirements.txt
+2023-03-13 16:02:03,969 DEBUG   SenderThread:28000 [sender.py:send():336] send: telemetry
+2023-03-13 16:02:04,790 INFO    wandb-upload_1:28000 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmph1ser7fpwandb\x3opjcud-diff.patch
+2023-03-13 16:02:04,903 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\output.log
+2023-03-13 16:02:04,980 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status_report
+2023-03-13 16:02:06,383 DEBUG   SenderThread:28000 [sender.py:send():336] send: config
+2023-03-13 16:02:06,384 DEBUG   SenderThread:28000 [sender.py:send():336] send: telemetry
+2023-03-13 16:02:06,918 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\output.log
+2023-03-13 16:02:07,667 INFO    wandb-upload_0:28000 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmph1ser7fpwandb\95nph0ss-wandb-metadata.json
+2023-03-13 16:02:10,165 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,165 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,359 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,363 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,364 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:10,365 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:10,366 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status_report
+2023-03-13 16:02:10,367 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:10,556 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,558 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,559 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:10,559 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:10,560 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:10,800 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,802 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:10,803 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:10,804 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:10,804 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:10,948 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:10,998 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,000 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,000 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:11,001 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:11,001 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:11,233 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,235 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,236 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:11,237 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:11,237 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:11,462 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,465 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,466 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:11,466 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:11,467 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:11,689 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,691 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,692 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:11,693 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:11,694 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:11,905 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,907 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:11,908 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:11,908 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:11,909 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:11,956 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:12,128 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,130 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,131 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:12,131 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:12,132 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:12,355 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,357 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,359 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:12,359 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:12,360 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:12,595 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,597 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,599 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:12,599 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:12,601 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:12,819 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,821 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:12,822 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:12,822 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:12,823 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:12,963 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:13,044 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,046 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,047 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:13,047 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:13,048 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:13,280 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,283 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,284 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:13,284 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:13,285 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:13,522 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,524 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,526 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:13,526 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:13,527 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:13,726 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,728 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,729 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:13,730 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:13,730 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:13,963 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,965 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:13,967 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:13,967 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:13,968 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:13,971 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:14,193 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,196 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,197 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:14,197 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:14,198 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:14,419 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,422 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,423 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:14,424 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:14,425 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:14,647 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,649 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,650 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:14,651 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:14,653 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:14,872 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,874 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:14,875 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:14,875 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:14,876 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:14,978 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:15,089 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,091 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,092 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:15,093 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:15,094 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:15,339 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,343 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,343 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:15,343 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:15,344 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:15,563 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,567 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,568 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:15,568 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:15,569 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status_report
+2023-03-13 16:02:15,569 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:15,820 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,822 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:15,823 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:15,824 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:15,825 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:15,986 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:16,044 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,046 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,047 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:16,048 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:16,049 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:16,290 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,292 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,294 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:16,294 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:16,295 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:16,538 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,539 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,541 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:16,541 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:16,542 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:16,789 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,791 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:16,792 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:16,792 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:16,794 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:16,993 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:17,026 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,028 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,030 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:17,030 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:17,031 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:17,269 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,272 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,273 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:17,274 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:17,275 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:17,516 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,518 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,519 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:17,520 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:17,521 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:17,761 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,763 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,764 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:17,764 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:17,765 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:17,977 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,979 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:17,980 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:17,981 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:17,981 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:18,000 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:18,189 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,191 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,193 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:18,193 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:18,194 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:18,416 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,418 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,418 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:18,419 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:18,420 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:18,638 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,640 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,641 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:18,642 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:18,642 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:18,683 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-13 16:02:18,683 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-13 16:02:18,858 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,861 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:18,862 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:18,862 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:18,864 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:19,008 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:19,081 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,083 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,084 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:19,084 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:19,085 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:19,296 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,299 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,300 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:19,301 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:19,301 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:19,529 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,530 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,531 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:19,531 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:19,532 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:19,752 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,754 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,755 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:19,756 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:19,757 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:19,972 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,975 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:19,975 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:19,976 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:19,978 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:20,016 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:20,217 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,220 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,221 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:20,221 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:20,222 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:20,459 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,462 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,463 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:20,464 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:20,465 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:20,679 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,681 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,682 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:20,683 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:20,683 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status_report
+2023-03-13 16:02:20,684 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:20,920 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,923 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:20,924 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:20,925 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:20,927 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:21,023 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:21,149 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,152 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,153 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:21,153 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:21,154 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:21,366 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,368 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,369 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:21,369 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:21,370 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:21,600 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,602 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,603 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:21,603 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:21,604 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:21,820 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,822 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:21,823 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:21,823 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:21,824 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:22,031 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:22,039 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,042 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,043 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:22,044 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:22,045 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:22,269 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,272 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,273 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:22,274 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:22,275 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:22,492 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,494 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,495 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:22,495 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:22,496 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:22,741 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,744 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,745 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:22,745 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:22,746 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:22,959 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,961 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:22,962 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:22,962 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:22,965 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:23,038 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:23,228 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,230 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,231 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:23,232 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:23,233 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:23,492 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,494 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,495 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:23,496 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:23,497 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:23,720 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-13 16:02:23,733 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,735 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,736 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:23,736 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:23,737 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:23,967 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,971 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:23,972 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:23,973 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:23,973 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:24,046 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:24,217 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,221 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,222 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:24,223 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:24,224 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:24,473 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,476 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,477 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:24,478 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:24,479 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:24,713 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,715 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,716 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:24,716 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:24,717 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:24,949 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,951 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:24,954 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:24,955 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:24,956 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:25,053 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:25,188 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,191 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,192 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:25,192 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:25,194 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:25,433 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,435 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,436 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:25,437 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:25,438 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:25,664 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,667 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,668 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:25,669 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:25,669 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:25,916 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,919 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:25,921 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:25,921 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:25,921 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status_report
+2023-03-13 16:02:25,922 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:26,060 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:26,144 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,146 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,148 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:26,148 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:26,149 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:26,394 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,397 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,398 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:26,398 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:26,399 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:26,643 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,646 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,647 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:26,648 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:26,649 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:26,892 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,894 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:26,895 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:26,896 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:26,897 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:27,068 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:27,119 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,121 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,123 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:27,123 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:27,124 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:27,372 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,374 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,375 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:27,376 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:27,377 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:27,635 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,637 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,637 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:27,638 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:27,638 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:27,875 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,878 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:27,879 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:27,880 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:27,881 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:28,075 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:28,116 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,118 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,119 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:28,120 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:28,121 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:28,368 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,371 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,371 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:28,372 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:28,372 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:28,608 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,610 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,611 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:28,612 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:28,613 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:28,757 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-13 16:02:28,845 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,847 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:28,849 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:28,849 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:28,850 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:29,078 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,081 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,082 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:29,082 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:29,084 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:29,084 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:29,314 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,317 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,318 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:29,318 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:29,319 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:29,549 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,552 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,553 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:29,553 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:29,555 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:29,769 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,771 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:29,772 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:29,773 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:29,774 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:30,000 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,003 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,003 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:30,004 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:30,004 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:30,091 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:30,218 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,220 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,221 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:30,222 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:30,223 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:30,447 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,449 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,450 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:30,451 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:30,452 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:30,672 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,675 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,676 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:30,676 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:30,677 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:30,895 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,897 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:30,899 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:30,899 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:30,900 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:31,098 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:31,139 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,141 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,142 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:31,148 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status_report
+2023-03-13 16:02:31,370 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:31,371 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:31,381 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,383 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,384 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:31,385 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:31,385 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:31,611 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,613 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,614 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:31,615 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:31,617 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:31,840 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,842 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:31,843 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:31,844 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:31,845 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:32,068 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,071 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,072 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:32,072 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:32,073 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:32,105 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\config.yaml
+2023-03-13 16:02:32,106 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:32,298 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,301 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,302 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:32,302 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:32,303 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:32,525 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,528 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,529 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:32,529 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:32,530 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:32,765 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,766 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,767 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:32,768 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:32,769 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:32,997 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:32,999 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:33,000 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:33,000 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:33,001 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:33,113 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:33,227 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:33,229 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-13 16:02:33,230 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:33,230 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:33,231 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:33,347 DEBUG   SenderThread:28000 [sender.py:send():336] send: telemetry
+2023-03-13 16:02:33,539 DEBUG   SenderThread:28000 [sender.py:send():336] send: config
+2023-03-13 16:02:33,585 DEBUG   SenderThread:28000 [sender.py:send():336] send: exit
+2023-03-13 16:02:33,585 INFO    SenderThread:28000 [sender.py:send_exit():559] handling exit code: 1
+2023-03-13 16:02:33,585 INFO    SenderThread:28000 [sender.py:send_exit():561] handling runtime: 30
+2023-03-13 16:02:33,586 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:33,586 INFO    SenderThread:28000 [sender.py:send_exit():567] send defer
+2023-03-13 16:02:33,587 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,587 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-13 16:02:33,587 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,587 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-13 16:02:33,587 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 1
+2023-03-13 16:02:33,587 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,587 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-13 16:02:33,588 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,588 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-13 16:02:33,588 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 2
+2023-03-13 16:02:33,588 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,588 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-13 16:02:33,588 INFO    HandlerThread:28000 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-13 16:02:33,589 DEBUG   SystemMonitor:28000 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-13 16:02:33,598 DEBUG   SystemMonitor:28000 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-13 16:02:33,598 DEBUG   SystemMonitor:28000 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-13 16:02:33,598 INFO    HandlerThread:28000 [interfaces.py:finish():175] Joined cpu
+2023-03-13 16:02:33,599 INFO    HandlerThread:28000 [interfaces.py:finish():175] Joined disk
+2023-03-13 16:02:33,656 INFO    HandlerThread:28000 [interfaces.py:finish():175] Joined gpu
+2023-03-13 16:02:33,656 INFO    HandlerThread:28000 [interfaces.py:finish():175] Joined memory
+2023-03-13 16:02:33,656 INFO    HandlerThread:28000 [interfaces.py:finish():175] Joined network
+2023-03-13 16:02:33,657 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,657 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-13 16:02:33,657 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 3
+2023-03-13 16:02:33,657 DEBUG   SenderThread:28000 [sender.py:send():336] send: stats
+2023-03-13 16:02:33,657 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,658 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-13 16:02:33,661 DEBUG   SenderThread:28000 [sender.py:send():336] send: history
+2023-03-13 16:02:33,661 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: summary_record
+2023-03-13 16:02:33,662 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:33,662 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,662 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-13 16:02:33,662 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 4
+2023-03-13 16:02:33,662 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,662 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-13 16:02:33,663 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,663 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-13 16:02:33,663 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 5
+2023-03-13 16:02:33,663 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,663 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-13 16:02:33,664 DEBUG   SenderThread:28000 [sender.py:send():336] send: summary
+2023-03-13 16:02:33,665 INFO    SenderThread:28000 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-13 16:02:33,665 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,665 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-13 16:02:33,665 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 6
+2023-03-13 16:02:33,665 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,665 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-13 16:02:33,666 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,666 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-13 16:02:33,671 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: status_report
+2023-03-13 16:02:33,911 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 7
+2023-03-13 16:02:33,911 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:33,911 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-13 16:02:33,912 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:33,912 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-13 16:02:34,120 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\config.yaml
+2023-03-13 16:02:34,121 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:34,121 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\code\_session_history.ipynb
+2023-03-13 16:02:34,121 INFO    Thread-17 :28000 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\code
+2023-03-13 16:02:34,182 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 8
+2023-03-13 16:02:34,183 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:34,183 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-13 16:02:34,183 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:34,183 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-13 16:02:34,183 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 9
+2023-03-13 16:02:34,184 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:34,184 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-13 16:02:34,184 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:34,184 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-13 16:02:34,184 INFO    SenderThread:28000 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-13 16:02:34,601 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-13 16:02:35,128 INFO    SenderThread:28000 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\output.log
+2023-03-13 16:02:35,129 INFO    SenderThread:28000 [dir_watcher.py:finish():392] scan: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files
+2023-03-13 16:02:35,129 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\conda-environment.yaml conda-environment.yaml
+2023-03-13 16:02:35,129 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\config.yaml config.yaml
+2023-03-13 16:02:35,130 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\diff.patch diff.patch
+2023-03-13 16:02:35,130 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\output.log output.log
+2023-03-13 16:02:35,133 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\requirements.txt requirements.txt
+2023-03-13 16:02:35,138 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-metadata.json wandb-metadata.json
+2023-03-13 16:02:35,138 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json wandb-summary.json
+2023-03-13 16:02:35,143 INFO    SenderThread:28000 [dir_watcher.py:finish():406] scan save: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\code\_session_history.ipynb code\_session_history.ipynb
+2023-03-13 16:02:35,147 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 10
+2023-03-13 16:02:35,148 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: poll_exit
+2023-03-13 16:02:35,148 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:35,149 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-13 16:02:35,153 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:35,153 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-13 16:02:35,153 INFO    SenderThread:28000 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-13 16:02:35,609 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-13 16:02:35,609 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: poll_exit
+2023-03-13 16:02:35,839 INFO    wandb-upload_1:28000 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\config.yaml
+2023-03-13 16:02:35,900 INFO    wandb-upload_2:28000 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\requirements.txt
+2023-03-13 16:02:36,111 INFO    wandb-upload_0:28000 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\output.log
+2023-03-13 16:02:36,117 INFO    wandb-upload_3:28000 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\wandb-summary.json
+2023-03-13 16:02:36,616 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-13 16:02:36,616 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: poll_exit
+2023-03-13 16:02:37,418 INFO    wandb-upload_4:28000 [upload_job.py:push():138] Uploaded file E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\files\code\_session_history.ipynb
+2023-03-13 16:02:37,623 INFO    Thread-16 (_thread_body):28000 [sender.py:transition_state():587] send defer: 11
+2023-03-13 16:02:37,624 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:37,624 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-13 16:02:37,624 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-13 16:02:37,624 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:37,625 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-13 16:02:37,625 INFO    SenderThread:28000 [file_pusher.py:join():167] waiting for file pusher
+2023-03-13 16:02:37,625 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 12
+2023-03-13 16:02:37,625 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: poll_exit
+2023-03-13 16:02:37,625 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:37,626 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-13 16:02:37,626 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:37,627 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-13 16:02:37,747 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 13
+2023-03-13 16:02:37,747 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:37,748 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-13 16:02:37,748 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:37,748 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-13 16:02:37,748 INFO    SenderThread:28000 [sender.py:transition_state():587] send defer: 14
+2023-03-13 16:02:37,749 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: defer
+2023-03-13 16:02:37,749 DEBUG   SenderThread:28000 [sender.py:send():336] send: final
+2023-03-13 16:02:37,749 INFO    HandlerThread:28000 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-13 16:02:37,749 DEBUG   SenderThread:28000 [sender.py:send():336] send: footer
+2023-03-13 16:02:37,749 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: defer
+2023-03-13 16:02:37,749 INFO    SenderThread:28000 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-13 16:02:37,751 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-13 16:02:37,751 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: poll_exit
+2023-03-13 16:02:37,751 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: server_info
+2023-03-13 16:02:37,752 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-13 16:02:37,753 DEBUG   SenderThread:28000 [sender.py:send_request():363] send_request: server_info
+2023-03-13 16:02:37,753 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-13 16:02:38,646 DEBUG   HandlerThread:28000 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-13 16:02:38,646 INFO    HandlerThread:28000 [handler.py:finish():841] shutting down handler
+2023-03-13 16:02:38,754 INFO    WriterThread:28000 [datastore.py:close():299] close: E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230313_160159-t79livga\run-t79livga.wandb
+2023-03-13 16:02:39,653 INFO    SenderThread:28000 [sender.py:finish():1493] shutting down sender
+2023-03-13 16:02:39,653 INFO    SenderThread:28000 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-13 16:02:39,654 INFO    SenderThread:28000 [file_pusher.py:join():167] waiting for file pusher
