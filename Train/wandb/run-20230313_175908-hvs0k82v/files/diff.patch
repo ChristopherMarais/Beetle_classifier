@@ -1,0 +1,612 @@
+diff --git a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+index 9ff240b..1e89aca 100644
+--- a/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
++++ b/Train/.ipynb_checkpoints/timm_FastAI_WANDB-checkpoint.ipynb
+@@ -6,11 +6,11 @@
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:43.560530Z",
+-     "iopub.status.busy": "2023-03-13T20:37:43.560027Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.773524Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.772525Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:43.560530Z"
++     "iopub.execute_input": "2023-03-13T20:42:30.684026Z",
++     "iopub.status.busy": "2023-03-13T20:42:30.683026Z",
++     "iopub.status.idle": "2023-03-13T20:42:36.585526Z",
++     "shell.execute_reply": "2023-03-13T20:42:36.584524Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:30.683526Z"
+     },
+     "tags": []
+    },
+@@ -30,11 +30,11 @@
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.775526Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.775026Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.805025Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.803524Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.775526Z"
++     "iopub.execute_input": "2023-03-13T20:42:36.588524Z",
++     "iopub.status.busy": "2023-03-13T20:42:36.587526Z",
++     "iopub.status.idle": "2023-03-13T20:42:36.616525Z",
++     "shell.execute_reply": "2023-03-13T20:42:36.615525Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:36.588524Z"
+     },
+     "tags": []
+    },
+@@ -92,11 +92,11 @@
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.808527Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.808027Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.851525Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.850024Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.808527Z"
++     "iopub.execute_input": "2023-03-13T20:42:36.620027Z",
++     "iopub.status.busy": "2023-03-13T20:42:36.619526Z",
++     "iopub.status.idle": "2023-03-13T20:42:37.050525Z",
++     "shell.execute_reply": "2023-03-13T20:42:37.049524Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:36.620027Z"
+     },
+     "tags": []
+    },
+@@ -138,11 +138,11 @@
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.853526Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.853025Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.897525Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.896525Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.853025Z"
++     "iopub.execute_input": "2023-03-13T20:42:37.052526Z",
++     "iopub.status.busy": "2023-03-13T20:42:37.052026Z",
++     "iopub.status.idle": "2023-03-13T20:42:37.376026Z",
++     "shell.execute_reply": "2023-03-13T20:42:37.375024Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:37.052526Z"
+     },
+     "tags": []
+    },
+@@ -157,24 +157,15 @@
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.899026Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.898526Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.960026Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.958526Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.899026Z"
++     "iopub.execute_input": "2023-03-13T20:42:37.379027Z",
++     "iopub.status.busy": "2023-03-13T20:42:37.378027Z",
++     "iopub.status.idle": "2023-03-13T20:42:37.701525Z",
++     "shell.execute_reply": "2023-03-13T20:42:37.700525Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:37.379027Z"
+     },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "ename": "SyntaxError",
+-     "evalue": "'(' was never closed (2198176842.py, line 29)",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;36m  Cell \u001b[1;32mIn[5], line 29\u001b[1;36m\u001b[0m\n\u001b[1;33m    learn.remove_cb(ProgressCallback\u001b[0m\n\u001b[1;37m                   ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m '(' was never closed\n"
+-     ]
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "config = SimpleNamespace(\n",
+     "    batch_size=2,\n",
+@@ -202,26 +193,194 @@
+     "    dls = get_planets(config.batch_size, config.img_size, config.seed)\n",
+     "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+     "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
+-    "        learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy_multi], \n",
++    "        learn = vision_learner(dls, config.model_name, metrics=[accuracy_multi], #error_rate, \n",
+     "                               cbs=cbs, pretrained=config.pretrained)\n",
+-    "        learn.remove_cb(ProgressCallback)\n",
++    "        # learn.remove_cb(ProgressCallback)\n",
+     "        learn.fine_tune(config.epochs)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 6,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-13T20:37:49.961026Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.961526Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.961526Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.961526Z"
++     "iopub.execute_input": "2023-03-13T20:42:37.703527Z",
++     "iopub.status.busy": "2023-03-13T20:42:37.703027Z",
++     "iopub.status.idle": "2023-03-13T20:51:20.207024Z",
++     "shell.execute_reply": "2023-03-13T20:51:20.205524Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:37.703527Z"
+     },
+     "tags": []
+    },
+-   "outputs": [],
++   "outputs": [
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33mchristopher-marais\u001b[0m. Use \u001b[1m`wandb login --relogin`\u001b[0m to force relogin\n"
++     ]
++    },
++    {
++     "data": {
++      "text/html": [
++       "wandb version 0.13.11 is available!  To upgrade, please run:\n",
++       " $ pip install wandb --upgrade"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Tracking run with wandb version 0.13.10"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Run data is saved locally in <code>E:\\GIT_REPOS\\Beetle_classifier\\Train\\wandb\\run-20230313_164242-60xdaht5</code>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5' target=\"_blank\">wise-elevator-26</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View project at <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\torch\\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\\cb\\pytorch_1000000000000\\work\\aten\\src\\ATen\\native\\TensorShape.cpp:3191.)\n",
++      "  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n"
++     ]
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "[0, 0.39308011531829834, 0.25323641300201416, 0.9029418230056763, '01:27']\n",
++      "WandbCallback was not able to get prediction samples -> Object of type MultiCategory is not JSON serializable\n",
++      "[0, 0.273001104593277, 0.2538585364818573, 0.8967652916908264, '02:10']\n",
++      "[1, 0.2558835446834564, 0.222504124045372, 0.9114712476730347, '02:13']\n",
++      "[2, 0.2732014060020447, 0.2212717980146408, 0.9135300517082214, '02:16']\n"
++     ]
++    },
++    {
++     "data": {
++      "text/html": [
++       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "c4e41153906a42f5a32d46d2ad8ec831",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "VBox(children=(Label(value='0.014 MB of 0.014 MB uploaded (0.000 MB deduped)\\r'), FloatProgress(value=1.0, max…"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "<style>\n",
++       "    table.wandb td:nth-child(1) { padding: 0 10px; text-align: left ; width: auto;} td:nth-child(2) {text-align: left ; width: 100%}\n",
++       "    .wandb-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; width: 100% }\n",
++       "    .wandb-col { display: flex; flex-direction: column; flex-basis: 100%; flex: 1; padding: 10px; }\n",
++       "    </style>\n",
++       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>accuracy_multi</td><td>▄▁▇█</td></tr><tr><td>epoch</td><td>▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███</td></tr><tr><td>eps_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>eps_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_0</td><td>▁▂▂▃▄▅▆▇██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_1</td><td>▁▂▂▃▄▅▆▇██▂▂▂▃▃▄▄▄▅▅▅▄▄▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁</td></tr><tr><td>mom_0</td><td>██▇▆▅▄▃▂▁▁██▇▆▅▃▂▁▁▁▁▁▁▂▂▃▃▃▄▅▅▆▆▇▇▇████</td></tr><tr><td>mom_1</td><td>██▇▆▅▄▃▂▁▁██▇▆▅▃▂▁▁▁▁▁▁▂▂▃▃▃▄▅▅▆▆▇▇▇████</td></tr><tr><td>raw_loss</td><td>█▆▇▇▆▇▅▅▃▄▂▄▂▂▂▁▁▅▃▄▃▁▂▁▂▂▅▂▂▂▂▄▃▁▂▁▁▁▂▃</td></tr><tr><td>sqr_mom_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>sqr_mom_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_loss</td><td>███▇▇▇▆▅▄▃▁▂▁▂▂▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_samples_per_sec</td><td>█▅▅▅▅▆▆▆▅▃▂▁▁▁▁▁▂▂▁▂▂▁▁▁▂▂▁▁▁▁▁▁▁▁▁▁▂▁▁▁</td></tr><tr><td>valid_loss</td><td>██▁▁</td></tr><tr><td>wd_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>wd_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>accuracy_multi</td><td>0.91353</td></tr><tr><td>epoch</td><td>4</td></tr><tr><td>eps_0</td><td>1e-05</td></tr><tr><td>eps_1</td><td>1e-05</td></tr><tr><td>lr_0</td><td>0.0</td></tr><tr><td>lr_1</td><td>0.0</td></tr><tr><td>mom_0</td><td>0.95</td></tr><tr><td>mom_1</td><td>0.95</td></tr><tr><td>raw_loss</td><td>0.37474</td></tr><tr><td>sqr_mom_0</td><td>0.99</td></tr><tr><td>sqr_mom_1</td><td>0.99</td></tr><tr><td>train_loss</td><td>0.2732</td></tr><tr><td>train_samples_per_sec</td><td>6.82621</td></tr><tr><td>valid_loss</td><td>0.22127</td></tr><tr><td>wd_0</td><td>0.01</td></tr><tr><td>wd_1</td><td>0.01</td></tr></table><br/></div></div>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run <strong style=\"color:#cdcd00\">wise-elevator-26</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5</a><br/>Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Find logs at: <code>.\\wandb\\run-20230313_164242-60xdaht5\\logs</code>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    }
++   ],
+    "source": [
+     "train(config=config)"
+    ]
+diff --git a/Train/timm_FastAI_WANDB.ipynb b/Train/timm_FastAI_WANDB.ipynb
+index 9ff240b..1e89aca 100644
+--- a/Train/timm_FastAI_WANDB.ipynb
++++ b/Train/timm_FastAI_WANDB.ipynb
+@@ -6,11 +6,11 @@
+    "id": "436f1771-7aa6-45e7-abae-56c8112da143",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:43.560530Z",
+-     "iopub.status.busy": "2023-03-13T20:37:43.560027Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.773524Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.772525Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:43.560530Z"
++     "iopub.execute_input": "2023-03-13T20:42:30.684026Z",
++     "iopub.status.busy": "2023-03-13T20:42:30.683026Z",
++     "iopub.status.idle": "2023-03-13T20:42:36.585526Z",
++     "shell.execute_reply": "2023-03-13T20:42:36.584524Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:30.683526Z"
+     },
+     "tags": []
+    },
+@@ -30,11 +30,11 @@
+    "id": "56818f26-f610-4fe1-89a0-450d6c5e93b0",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.775526Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.775026Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.805025Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.803524Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.775526Z"
++     "iopub.execute_input": "2023-03-13T20:42:36.588524Z",
++     "iopub.status.busy": "2023-03-13T20:42:36.587526Z",
++     "iopub.status.idle": "2023-03-13T20:42:36.616525Z",
++     "shell.execute_reply": "2023-03-13T20:42:36.615525Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:36.588524Z"
+     },
+     "tags": []
+    },
+@@ -92,11 +92,11 @@
+    "id": "28c79cc5-2685-4d40-8b07-7a79e00ade9c",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.808527Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.808027Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.851525Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.850024Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.808527Z"
++     "iopub.execute_input": "2023-03-13T20:42:36.620027Z",
++     "iopub.status.busy": "2023-03-13T20:42:36.619526Z",
++     "iopub.status.idle": "2023-03-13T20:42:37.050525Z",
++     "shell.execute_reply": "2023-03-13T20:42:37.049524Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:36.620027Z"
+     },
+     "tags": []
+    },
+@@ -138,11 +138,11 @@
+    "id": "24f14525-c39b-4974-a497-4f0d78022f96",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.853526Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.853025Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.897525Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.896525Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.853025Z"
++     "iopub.execute_input": "2023-03-13T20:42:37.052526Z",
++     "iopub.status.busy": "2023-03-13T20:42:37.052026Z",
++     "iopub.status.idle": "2023-03-13T20:42:37.376026Z",
++     "shell.execute_reply": "2023-03-13T20:42:37.375024Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:37.052526Z"
+     },
+     "tags": []
+    },
+@@ -157,24 +157,15 @@
+    "id": "450bfc9b-6527-41e0-803b-633e82230dea",
+    "metadata": {
+     "execution": {
+-     "iopub.execute_input": "2023-03-13T20:37:49.899026Z",
+-     "iopub.status.busy": "2023-03-13T20:37:49.898526Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.960026Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.958526Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.899026Z"
++     "iopub.execute_input": "2023-03-13T20:42:37.379027Z",
++     "iopub.status.busy": "2023-03-13T20:42:37.378027Z",
++     "iopub.status.idle": "2023-03-13T20:42:37.701525Z",
++     "shell.execute_reply": "2023-03-13T20:42:37.700525Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:37.379027Z"
+     },
+     "tags": []
+    },
+-   "outputs": [
+-    {
+-     "ename": "SyntaxError",
+-     "evalue": "'(' was never closed (2198176842.py, line 29)",
+-     "output_type": "error",
+-     "traceback": [
+-      "\u001b[1;36m  Cell \u001b[1;32mIn[5], line 29\u001b[1;36m\u001b[0m\n\u001b[1;33m    learn.remove_cb(ProgressCallback\u001b[0m\n\u001b[1;37m                   ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m '(' was never closed\n"
+-     ]
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "config = SimpleNamespace(\n",
+     "    batch_size=2,\n",
+@@ -202,26 +193,194 @@
+     "    dls = get_planets(config.batch_size, config.img_size, config.seed)\n",
+     "    with wandb.init(project=\"PROJECT\", group='ambrosia_symbiosis', job_type='test_training', config=config):\n",
+     "        cbs = [MixedPrecision(), WandbCallback(log='all')]\n",
+-    "        learn = vision_learner(dls, config.model_name, metrics=[error_rate, accuracy_multi], \n",
++    "        learn = vision_learner(dls, config.model_name, metrics=[accuracy_multi], #error_rate, \n",
+     "                               cbs=cbs, pretrained=config.pretrained)\n",
+-    "        learn.remove_cb(ProgressCallback)\n",
++    "        # learn.remove_cb(ProgressCallback)\n",
+     "        learn.fine_tune(config.epochs)"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": null,
++   "execution_count": 6,
+    "id": "dff8becf-8e4b-4b07-911c-d030ab8c12dc",
+    "metadata": {
+     "execution": {
+-     "iopub.status.busy": "2023-03-13T20:37:49.961026Z",
+-     "iopub.status.idle": "2023-03-13T20:37:49.961526Z",
+-     "shell.execute_reply": "2023-03-13T20:37:49.961526Z",
+-     "shell.execute_reply.started": "2023-03-13T20:37:49.961526Z"
++     "iopub.execute_input": "2023-03-13T20:42:37.703527Z",
++     "iopub.status.busy": "2023-03-13T20:42:37.703027Z",
++     "iopub.status.idle": "2023-03-13T20:51:20.207024Z",
++     "shell.execute_reply": "2023-03-13T20:51:20.205524Z",
++     "shell.execute_reply.started": "2023-03-13T20:42:37.703527Z"
+     },
+     "tags": []
+    },
+-   "outputs": [],
++   "outputs": [
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33mchristopher-marais\u001b[0m. Use \u001b[1m`wandb login --relogin`\u001b[0m to force relogin\n"
++     ]
++    },
++    {
++     "data": {
++      "text/html": [
++       "wandb version 0.13.11 is available!  To upgrade, please run:\n",
++       " $ pip install wandb --upgrade"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Tracking run with wandb version 0.13.10"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Run data is saved locally in <code>E:\\GIT_REPOS\\Beetle_classifier\\Train\\wandb\\run-20230313_164242-60xdaht5</code>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Syncing run <strong><a href='https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5' target=\"_blank\">wise-elevator-26</a></strong> to <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">Weights & Biases</a> (<a href='https://wandb.me/run' target=\"_blank\">docs</a>)<br/>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View project at <a href='https://wandb.ai/christopher-marais/PROJECT' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run at <a href='https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5</a>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\lib\\site-packages\\torch\\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\\cb\\pytorch_1000000000000\\work\\aten\\src\\ATen\\native\\TensorShape.cpp:3191.)\n",
++      "  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n"
++     ]
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "[0, 0.39308011531829834, 0.25323641300201416, 0.9029418230056763, '01:27']\n",
++      "WandbCallback was not able to get prediction samples -> Object of type MultiCategory is not JSON serializable\n",
++      "[0, 0.273001104593277, 0.2538585364818573, 0.8967652916908264, '02:10']\n",
++      "[1, 0.2558835446834564, 0.222504124045372, 0.9114712476730347, '02:13']\n",
++      "[2, 0.2732014060020447, 0.2212717980146408, 0.9135300517082214, '02:16']\n"
++     ]
++    },
++    {
++     "data": {
++      "text/html": [
++       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "application/vnd.jupyter.widget-view+json": {
++       "model_id": "c4e41153906a42f5a32d46d2ad8ec831",
++       "version_major": 2,
++       "version_minor": 0
++      },
++      "text/plain": [
++       "VBox(children=(Label(value='0.014 MB of 0.014 MB uploaded (0.000 MB deduped)\\r'), FloatProgress(value=1.0, max…"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "<style>\n",
++       "    table.wandb td:nth-child(1) { padding: 0 10px; text-align: left ; width: auto;} td:nth-child(2) {text-align: left ; width: 100%}\n",
++       "    .wandb-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; width: 100% }\n",
++       "    .wandb-col { display: flex; flex-direction: column; flex-basis: 100%; flex: 1; padding: 10px; }\n",
++       "    </style>\n",
++       "<div class=\"wandb-row\"><div class=\"wandb-col\"><h3>Run history:</h3><br/><table class=\"wandb\"><tr><td>accuracy_multi</td><td>▄▁▇█</td></tr><tr><td>epoch</td><td>▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███</td></tr><tr><td>eps_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>eps_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_0</td><td>▁▂▂▃▄▅▆▇██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>lr_1</td><td>▁▂▂▃▄▅▆▇██▂▂▂▃▃▄▄▄▅▅▅▄▄▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁</td></tr><tr><td>mom_0</td><td>██▇▆▅▄▃▂▁▁██▇▆▅▃▂▁▁▁▁▁▁▂▂▃▃▃▄▅▅▆▆▇▇▇████</td></tr><tr><td>mom_1</td><td>██▇▆▅▄▃▂▁▁██▇▆▅▃▂▁▁▁▁▁▁▂▂▃▃▃▄▅▅▆▆▇▇▇████</td></tr><tr><td>raw_loss</td><td>█▆▇▇▆▇▅▅▃▄▂▄▂▂▂▁▁▅▃▄▃▁▂▁▂▂▅▂▂▂▂▄▃▁▂▁▁▁▂▃</td></tr><tr><td>sqr_mom_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>sqr_mom_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_loss</td><td>███▇▇▇▆▅▄▃▁▂▁▂▂▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>train_samples_per_sec</td><td>█▅▅▅▅▆▆▆▅▃▂▁▁▁▁▁▂▂▁▂▂▁▁▁▂▂▁▁▁▁▁▁▁▁▁▁▂▁▁▁</td></tr><tr><td>valid_loss</td><td>██▁▁</td></tr><tr><td>wd_0</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr><tr><td>wd_1</td><td>▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁</td></tr></table><br/></div><div class=\"wandb-col\"><h3>Run summary:</h3><br/><table class=\"wandb\"><tr><td>accuracy_multi</td><td>0.91353</td></tr><tr><td>epoch</td><td>4</td></tr><tr><td>eps_0</td><td>1e-05</td></tr><tr><td>eps_1</td><td>1e-05</td></tr><tr><td>lr_0</td><td>0.0</td></tr><tr><td>lr_1</td><td>0.0</td></tr><tr><td>mom_0</td><td>0.95</td></tr><tr><td>mom_1</td><td>0.95</td></tr><tr><td>raw_loss</td><td>0.37474</td></tr><tr><td>sqr_mom_0</td><td>0.99</td></tr><tr><td>sqr_mom_1</td><td>0.99</td></tr><tr><td>train_loss</td><td>0.2732</td></tr><tr><td>train_samples_per_sec</td><td>6.82621</td></tr><tr><td>valid_loss</td><td>0.22127</td></tr><tr><td>wd_0</td><td>0.01</td></tr><tr><td>wd_1</td><td>0.01</td></tr></table><br/></div></div>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       " View run <strong style=\"color:#cdcd00\">wise-elevator-26</strong> at: <a href='https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5' target=\"_blank\">https://wandb.ai/christopher-marais/PROJECT/runs/60xdaht5</a><br/>Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    },
++    {
++     "data": {
++      "text/html": [
++       "Find logs at: <code>.\\wandb\\run-20230313_164242-60xdaht5\\logs</code>"
++      ],
++      "text/plain": [
++       "<IPython.core.display.HTML object>"
++      ]
++     },
++     "metadata": {},
++     "output_type": "display_data"
++    }
++   ],
+    "source": [
+     "train(config=config)"
+    ]
