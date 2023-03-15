@@ -1,7 +1,0 @@
-C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\TensorShape.cpp:3191.)
-  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
-[0, 0.39308011531829834, 0.25323641300201416, 0.9029418230056763, '01:27']
-WandbCallback was not able to get prediction samples -> Object of type MultiCategory is not JSON serializable
-[0, 0.273001104593277, 0.2538585364818573, 0.8967652916908264, '02:10']
-[1, 0.2558835446834564, 0.222504124045372, 0.9114712476730347, '02:13']
-[2, 0.2732014060020447, 0.2212717980146408, 0.9135300517082214, '02:16']
