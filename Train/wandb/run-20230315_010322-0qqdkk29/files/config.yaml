@@ -10,7 +10,12 @@ Learner:
     arch: maxvit_rmlp_small_rw_224.sw_in1k
     default_cbs: true
     loss_func:
-      _name: FlattenedLoss of CrossEntropyLoss()
+      _name:
+        _name: FlattenedLoss of CrossEntropyLoss()
+        axis: -1
+        flatten: true
+        floatify: false
+        is_2d: true
       axis: -1
       flatten: true
       floatify: false
@@ -139,10 +144,10 @@ epochs:
   value: 2
 frozen:
   desc: null
-  value: true
+  value: false
 frozen idx:
   desc: null
-  value: 1
+  value: 0
 img_size:
   desc: null
   value: 224
