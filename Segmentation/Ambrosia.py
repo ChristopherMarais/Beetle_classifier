@@ -88,9 +88,14 @@ from scipy.stats import spearmanr
 
 class pre_process_image:
     # initialize image to be segmented from path
-    def __init__(self, image_dir, manual_thresh_buffer=0):
-        self.image_dir = image_dir.replace('\\','/') # full directory path to image
-        self.image = io.imread(image_dir) # read image from directory
+    def __init__(self, image=None, image_dir=None, manual_thresh_buffer=0):
+        if image_dir is not None:
+            self.image_dir = image_dir.replace('\\','/') # full directory path to image
+            self.image = io.imread(image_dir) # read image from directory
+        elif image is not None:
+            self.image = image
+        else:
+            print("No image given to function")
         self.grey_image = rgb2gray(self.image) #convert image to greyscale
         self.bw_image = self.grey_image > threshold_otsu(self.grey_image) + manual_thresh_buffer # binarize image to be black & white
         self.inv_bw_image = np.invert(self.bw_image) # invert black and white image
