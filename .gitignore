@@ -42011,3 +42011,5 @@ Train/DATASET/TEST/0/img_108.jpg
 *.tgz
 *.patch
 *.pkl
+*.pth
+*.pt
