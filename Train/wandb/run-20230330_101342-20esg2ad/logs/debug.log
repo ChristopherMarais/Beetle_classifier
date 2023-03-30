@@ -1,0 +1,30 @@
+2023-03-30 10:13:42,873 INFO    MainThread:71277 [wandb_setup.py:_flush():76] Configure stats pid to 71277
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_setup.py:_flush():76] Loading settings from /home/gmarais/.config/wandb/settings
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_setup.py:_flush():76] Loading settings from /blue/hulcr/gmarais/Beetle_classifier/Train/wandb/settings
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_init.py:_log_setup():506] Logging user logs to /blue/hulcr/gmarais/Beetle_classifier/Train/wandb/run-20230330_101342-20esg2ad/logs/debug.log
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_init.py:_log_setup():507] Logging internal logs to /blue/hulcr/gmarais/Beetle_classifier/Train/wandb/run-20230330_101342-20esg2ad/logs/debug-internal.log
+2023-03-30 10:13:42,874 INFO    MainThread:71277 [wandb_init.py:_jupyter_setup():452] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x2b0d686d2dd0>
+2023-03-30 10:13:42,875 INFO    MainThread:71277 [wandb_init.py:init():546] calling init triggers
+2023-03-30 10:13:42,875 INFO    MainThread:71277 [wandb_init.py:init():552] wandb.init called with sweep_config: {}
+config: {'batch_size': 256, 'epochs': 2, 'img_size': 224, 'seed': 42, 'pretrained': True, 'top_k_losses': 5, 'model_name': 'maxvit_rmlp_small_rw_224.sw_in1k', 'wandb_project': 'Beetle_classifier', 'wandb_group': 'ambrosia_symbiosis', 'job_type': 'training'}
+2023-03-30 10:13:42,875 INFO    MainThread:71277 [wandb_init.py:init():602] starting backend
+2023-03-30 10:13:42,875 INFO    MainThread:71277 [wandb_init.py:init():606] setting up manager
+2023-03-30 10:13:42,877 INFO    MainThread:71277 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-03-30 10:13:42,879 INFO    MainThread:71277 [wandb_init.py:init():613] backend started and connected
+2023-03-30 10:13:42,884 INFO    MainThread:71277 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2023-03-30 10:13:42,884 INFO    MainThread:71277 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-03-30 10:13:42,884 INFO    MainThread:71277 [wandb_init.py:init():701] updated telemetry
+2023-03-30 10:13:42,897 INFO    MainThread:71277 [wandb_init.py:init():741] communicating run to backend with 60.0 second timeout
+2023-03-30 10:13:43,192 INFO    MainThread:71277 [wandb_run.py:_on_init():2133] communicating current version
+2023-03-30 10:13:43,273 INFO    MainThread:71277 [wandb_run.py:_on_init():2142] got version response 
+2023-03-30 10:13:43,273 INFO    MainThread:71277 [wandb_init.py:init():789] starting run threads in backend
+2023-03-30 10:13:43,436 INFO    MainThread:71277 [wandb_run.py:_console_start():2114] atexit reg
+2023-03-30 10:13:43,436 INFO    MainThread:71277 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-03-30 10:13:43,436 INFO    MainThread:71277 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-03-30 10:13:43,436 INFO    MainThread:71277 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-03-30 10:13:43,436 INFO    MainThread:71277 [wandb_init.py:init():831] run started, returning control to user process
+2023-03-30 10:13:50,293 INFO    MainThread:71277 [wandb_run.py:_config_callback():1251] config_cb None None {'Learner': {'loss_func': {'eps': 0.1, 'weight': None, 'reduction': 'mean', '_name': 'FlattenedLoss of LabelSmoothingCrossEntropy()'}, 'opt_func': 'fastai.optimizer.Adam', 'lr': 0.001, 'splitter': 'fastai.vision.learner.default_split', 'metrics': ['fastai.metrics.error_rate', 'fastai.metrics.accuracy', 'fastai.metrics.top_k_accuracy'], 'path': '.', 'model_dir': 'models', 'wd': None, 'wd_bn_bias': False, 'train_bn': True, 'moms': [0.95, 0.85, 0.95], 'default_cbs': True, 'arch': 'maxvit_rmlp_small_rw_224.sw_in1k', 'normalize': True, 'n_out': 10, 'pretrained': True, '_name': '<fastai.learner.Learner object at 0x2b0d695ba3b0>'}, 'TrainEvalCallback': True, 'Recorder': {'add_time': True, 'train_metrics': False, 'valid_metrics': True}, 'CastToTensor': True, 'ProgressCallback': True, 'MixedPrecision': True, 'ShowGraphCallback': True, 'SaveModelCallback': {'fname': 'model', 'every_epoch': False, 'at_end': False, 'with_opt': False}, 'WandbCallback': {'log': 'all', 'log_preds': True, 'log_preds_every_epoch': False, 'log_model': False, 'model_name': None, 'log_dataset': False, 'dataset_name': None, 'valid_dl': None, 'n_preds': 36, 'seed': 12345, 'reorder': True}, 'ParamScheduler': True, 'n_inp': 1, 'input 1 dim 1': 256, 'input 1 dim 2': 3, 'input 1 dim 3': 224, 'input 1 dim 4': 224, 'batch size': 256, 'batch per epoch': 73, 'model parameters': 64921692, 'device': 'cuda', 'frozen': True, 'frozen idx': 1, 'dataset.tfms': "[Pipeline: PILBase.create, Pipeline: parent_label -> Categorize -- {'vocab': None, 'sort': True, 'add_na': False}]", 'dls.after_item': "Pipeline: Resize -- {'size': (224, 224), 'method': 'pad', 'pad_mode': 'zeros', 'resamples': (<Resampling.BILINEAR: 2>, <Resampling.NEAREST: 0>), 'p': 1.0} -> ToTensor", 'dls.before_batch': 'Pipeline: ', 'dls.after_batch': "Pipeline: IntToFloatTensor -- {'div': 255.0, 'div_mask': 1} -> Normalize -- {'mean': tensor([[[[0.5000]],\n\n         [[0.5000]],\n\n         [[0.5000]]]], device='cuda:0'), 'std': tensor([[[[0.5000]],\n\n         [[0.5000]],\n\n         [[0.5000]]]], device='cuda:0'), 'axes': (0, 2, 3)}"}
+2023-03-30 10:13:50,294 INFO    MainThread:71277 [wandb_watch.py:watch():51] Watching
