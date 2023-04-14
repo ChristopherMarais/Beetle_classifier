@@ -1,0 +1,122 @@
+2023-04-13 18:18:01,792 INFO    StreamThr :6692 [internal.py:wandb_internal():87] W&B internal server running at pid: 6692, started at: 2023-04-13 18:18:01.792301
+2023-04-13 18:18:01,794 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status
+2023-04-13 18:18:01,802 INFO    WriterThread:6692 [datastore.py:open_for_write():85] open: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\run-zy2trxrg.wandb
+2023-04-13 18:18:01,803 DEBUG   SenderThread:6692 [sender.py:send():336] send: header
+2023-04-13 18:18:01,854 DEBUG   SenderThread:6692 [sender.py:send():336] send: run
+2023-04-13 18:18:02,506 INFO    SenderThread:6692 [dir_watcher.py:__init__():216] watching files in: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\files
+2023-04-13 18:18:02,506 INFO    SenderThread:6692 [sender.py:_start_run_threads():1067] run started: zy2trxrg with start time 1681424281.789306
+2023-04-13 18:18:02,506 DEBUG   SenderThread:6692 [sender.py:send_request():363] send_request: summary_record
+2023-04-13 18:18:02,507 INFO    SenderThread:6692 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-04-13 18:18:02,511 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: check_version
+2023-04-13 18:18:02,511 DEBUG   SenderThread:6692 [sender.py:send_request():363] send_request: check_version
+2023-04-13 18:18:03,051 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: run_start
+2023-04-13 18:18:03,075 DEBUG   HandlerThread:6692 [system_info.py:__init__():31] System info init
+2023-04-13 18:18:03,075 DEBUG   HandlerThread:6692 [system_info.py:__init__():46] System info init done
+2023-04-13 18:18:03,075 INFO    HandlerThread:6692 [system_monitor.py:start():151] Starting system monitor
+2023-04-13 18:18:03,076 INFO    SystemMonitor:6692 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-04-13 18:18:03,076 INFO    HandlerThread:6692 [system_monitor.py:probe():172] Collecting system info
+2023-04-13 18:18:03,083 INFO    SystemMonitor:6692 [interfaces.py:start():168] Started cpu
+2023-04-13 18:18:03,084 INFO    SystemMonitor:6692 [interfaces.py:start():168] Started disk
+2023-04-13 18:18:03,084 INFO    SystemMonitor:6692 [interfaces.py:start():168] Started gpu
+2023-04-13 18:18:03,085 INFO    SystemMonitor:6692 [interfaces.py:start():168] Started memory
+2023-04-13 18:18:03,096 INFO    SystemMonitor:6692 [interfaces.py:start():168] Started network
+2023-04-13 18:18:03,101 DEBUG   HandlerThread:6692 [system_info.py:probe():195] Probing system
+2023-04-13 18:18:03,104 DEBUG   HandlerThread:6692 [system_info.py:_probe_git():180] Probing git
+2023-04-13 18:18:03,242 DEBUG   HandlerThread:6692 [system_info.py:_probe_git():188] Probing git done
+2023-04-13 18:18:03,242 DEBUG   HandlerThread:6692 [system_info.py:probe():241] Probing system done
+2023-04-13 18:18:03,242 DEBUG   HandlerThread:6692 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.9', 'heartbeatAt': '2023-04-13T22:18:03.102388', 'startedAt': '2023-04-13T22:18:01.766302', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'GIT_REPOS/Beetle_classifier/Data_cleaning/Circle_classification/Train_ball_classifier.ipynb', 'root': 'E:/GIT_REPOS/Beetle_classifier', 'git': {'remote': 'https://github.com/ChristopherMarais/Beetle_classifier.git', 'commit': 'd066ff2d2568e12d1a7058f7a9deae1c1e0eb1b7'}, 'email': 'u13033663@tuks.co.za', 'host': 'GCM', 'username': 'GCM', 'executable': 'C:\\Users\\GCM\\anaconda3\\envs\\BC_310\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3800.0, 'min': 0.0, 'max': 3800.0}, 'cpu_freq_per_core': [{'current': 3800.0, 'min': 0.0, 'max': 3800.0}], 'disk': {'total': 447.11425399780273, 'used': 349.51350021362305}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.87503433227539}}
+2023-04-13 18:18:03,242 INFO    HandlerThread:6692 [system_monitor.py:probe():182] Finished collecting system info
+2023-04-13 18:18:03,242 INFO    HandlerThread:6692 [system_monitor.py:probe():185] Publishing system info
+2023-04-13 18:18:03,243 DEBUG   HandlerThread:6692 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-13 18:18:03,244 DEBUG   HandlerThread:6692 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-13 18:18:03,244 DEBUG   HandlerThread:6692 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-13 18:18:03,248 ERROR   HandlerThread:6692 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\GCM\anaconda3\envs\BC_310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2023-04-13 18:18:03,251 DEBUG   HandlerThread:6692 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-13 18:18:03,251 DEBUG   HandlerThread:6692 [system_info.py:_save_code():89] Saving code
+2023-04-13 18:18:03,251 WARNING HandlerThread:6692 [system_info.py:_save_code():91] unable to save code -- program entry not found
+2023-04-13 18:18:03,251 DEBUG   HandlerThread:6692 [system_info.py:_save_patches():127] Saving git patches
+2023-04-13 18:18:03,517 INFO    Thread-17 :6692 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\files\wandb-summary.json
+2023-04-13 18:18:03,518 INFO    Thread-17 :6692 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\files\conda-environment.yaml
+2023-04-13 18:18:03,518 INFO    Thread-17 :6692 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\files\diff.patch
+2023-04-13 18:18:03,519 INFO    Thread-17 :6692 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\files\requirements.txt
+2023-04-13 18:18:03,519 DEBUG   HandlerThread:6692 [system_info.py:_save_patches():169] Saving git patches done
+2023-04-13 18:18:03,521 INFO    HandlerThread:6692 [system_monitor.py:probe():187] Finished publishing system info
+2023-04-13 18:18:03,526 DEBUG   SenderThread:6692 [sender.py:send():336] send: files
+2023-04-13 18:18:03,526 INFO    SenderThread:6692 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-04-13 18:18:03,527 INFO    SenderThread:6692 [sender.py:_save_file():1321] saving file diff.patch with policy now
+2023-04-13 18:18:03,551 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-13 18:18:03,557 DEBUG   SenderThread:6692 [sender.py:send_request():363] send_request: stop_status
+2023-04-13 18:18:03,772 DEBUG   SenderThread:6692 [sender.py:send():336] send: telemetry
+2023-04-13 18:18:04,236 INFO    wandb-upload_0:6692 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpxf36puulwandb\3j46gt48-wandb-metadata.json
+2023-04-13 18:18:04,522 INFO    Thread-17 :6692 [dir_watcher.py:_on_file_created():275] file/dir created: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\files\wandb-metadata.json
+2023-04-13 18:18:05,946 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: pause
+2023-04-13 18:18:05,946 INFO    HandlerThread:6692 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-04-13 18:18:05,946 INFO    HandlerThread:6692 [system_monitor.py:finish():161] Stopping system monitor
+2023-04-13 18:18:05,946 DEBUG   SystemMonitor:6692 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-04-13 18:18:05,957 DEBUG   SystemMonitor:6692 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-04-13 18:18:05,957 DEBUG   SystemMonitor:6692 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-04-13 18:18:05,958 INFO    HandlerThread:6692 [interfaces.py:finish():175] Joined cpu
+2023-04-13 18:18:05,959 INFO    HandlerThread:6692 [interfaces.py:finish():175] Joined disk
+2023-04-13 18:18:06,040 INFO    HandlerThread:6692 [interfaces.py:finish():175] Joined gpu
+2023-04-13 18:18:06,040 INFO    HandlerThread:6692 [interfaces.py:finish():175] Joined memory
+2023-04-13 18:18:06,040 INFO    HandlerThread:6692 [interfaces.py:finish():175] Joined network
+2023-04-13 18:18:06,041 DEBUG   SenderThread:6692 [sender.py:send():336] send: stats
+2023-04-13 18:18:07,056 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:07,058 INFO    wandb-upload_1:6692 [upload_job.py:push():138] Uploaded file C:\Users\GCM\AppData\Local\Temp\tmpxf36puulwandb\hsga1u6k-diff.patch
+2023-04-13 18:18:12,067 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:17,079 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:18,546 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:18,546 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:22,092 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:23,556 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:27,105 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:28,569 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:32,121 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:32,639 INFO    Thread-17 :6692 [dir_watcher.py:_on_file_modified():292] file/dir modified: E:\GIT_REPOS\Beetle_classifier\Data_cleaning\Circle_classification\wandb\run-20230413_181801-zy2trxrg\files\config.yaml
+2023-04-13 18:18:33,579 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:37,356 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:38,606 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:42,368 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:43,619 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:47,377 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:48,626 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:52,405 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:53,642 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:18:57,420 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:18:58,655 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:02,434 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:03,669 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:07,453 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:08,700 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:12,481 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:13,718 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:17,499 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:18,735 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:22,513 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:23,747 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:27,526 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:28,760 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:32,542 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:33,776 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:37,549 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:38,799 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:42,563 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:43,814 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:47,592 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:48,843 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:52,609 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:53,860 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:19:57,620 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:19:58,872 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-13 18:20:02,635 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 18:20:03,885 DEBUG   HandlerThread:6692 [handler.py:handle_request():144] handle_request: keepalive

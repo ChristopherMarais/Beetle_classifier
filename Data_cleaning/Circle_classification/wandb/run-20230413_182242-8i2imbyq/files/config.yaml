@@ -1,0 +1,60 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.10
+    framework: fastai
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.10.9
+    start_time: 1681424562.427251
+    t:
+      1:
+      - 1
+      - 4
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      3:
+      - 16
+      - 23
+      4: 3.10.9
+      5: 0.13.10
+      8:
+      - 1
+      - 3
+      - 5
+batch_size:
+  desc: null
+  value: 8
+epochs:
+  desc: null
+  value: 5
+img_size:
+  desc: null
+  value: 256
+job_type:
+  desc: null
+  value: training
+model_name:
+  desc: null
+  value: maxvit_nano_rw_256.sw_in1k
+pretrained:
+  desc: null
+  value: true
+seed:
+  desc: null
+  value: 42
+top_k_losses:
+  desc: null
+  value: 5
+wandb_group:
+  desc: null
+  value: ambrosia_symbiosis
+wandb_project:
+  desc: null
+  value: Ball_classifier
