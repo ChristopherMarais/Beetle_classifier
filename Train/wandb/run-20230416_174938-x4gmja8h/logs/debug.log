@@ -1,0 +1,41 @@
+2023-04-16 17:49:38,836 INFO    Thread-6 (_run_job):46749 [wandb_setup.py:_flush():76] Configure stats pid to 46749
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_setup.py:_flush():76] Loading settings from /home/gmarais/.config/wandb/settings
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_setup.py:_flush():76] Loading settings from /blue/hulcr/gmarais/Beetle_classifier/Train/wandb/settings
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'notebook_name': 'Parameter_Optimization_Sweep.ipynb', 'project': 'Ambrosia_Symbiosis', 'entity': 'christopher-marais', 'root_dir': '/blue/hulcr/gmarais/Beetle_classifier/Train', 'sweep_id': 'h6cewgdt', 'run_id': 'x4gmja8h', 'sweep_param_path': '/blue/hulcr/gmarais/Beetle_classifier/Train/wandb/sweep-h6cewgdt/config-x4gmja8h.yaml'}
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_init.py:_log_setup():506] Logging user logs to /blue/hulcr/gmarais/Beetle_classifier/Train/wandb/run-20230416_174938-x4gmja8h/logs/debug.log
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_init.py:_log_setup():507] Logging internal logs to /blue/hulcr/gmarais/Beetle_classifier/Train/wandb/run-20230416_174938-x4gmja8h/logs/debug-internal.log
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_init.py:_jupyter_setup():452] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x2ae849a8a2c0>
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():546] calling init triggers
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():552] wandb.init called with sweep_config: {'batch_size': 256, 'epochs': 5, 'model_name': 'maxvit_rmlp_small_rw_224.sw_in1k', 'pretrained': True}
+config: {}
+2023-04-16 17:49:38,837 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():602] starting backend
+2023-04-16 17:49:38,838 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():606] setting up manager
+2023-04-16 17:49:38,844 INFO    Thread-6 (_run_job):46749 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-16 17:49:38,850 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():613] backend started and connected
+2023-04-16 17:49:38,860 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_config_callback():1251] config_cb None None {'batch_size': 256, 'epochs': 5, 'model_name': 'maxvit_rmlp_small_rw_224.sw_in1k', 'pretrained': True}
+2023-04-16 17:49:38,861 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2023-04-16 17:49:38,861 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-04-16 17:49:38,861 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():701] updated telemetry
+2023-04-16 17:49:38,873 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():741] communicating run to backend with 60.0 second timeout
+2023-04-16 17:49:39,583 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_on_init():2133] communicating current version
+2023-04-16 17:49:39,674 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_on_init():2142] got version response upgrade_message: "wandb version 0.14.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-04-16 17:49:39,674 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():789] starting run threads in backend
+2023-04-16 17:49:41,553 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_console_start():2114] atexit reg
+2023-04-16 17:49:41,553 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-04-16 17:49:41,553 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-04-16 17:49:41,553 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-04-16 17:49:41,554 INFO    Thread-6 (_run_job):46749 [wandb_init.py:init():831] run started, returning control to user process
+2023-04-16 17:49:48,863 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_finish():1854] finishing run christopher-marais/Ambrosia_Symbiosis/x4gmja8h
+2023-04-16 17:49:48,989 INFO    Thread-6 (_run_job):46749 [jupyter.py:save_history():474] saving 4 cells to _session_history.ipynb
+2023-04-16 17:49:48,990 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_config_callback():1251] config_cb ('_wandb', 'session_history') code/_session_history.ipynb None
+2023-04-16 17:49:48,994 INFO    Thread-6 (_run_job):46749 [jupyter.py:_save_ipynb():384] looking for notebook: None
+2023-04-16 17:49:48,994 INFO    Thread-6 (_run_job):46749 [wandb_init.py:_jupyter_teardown():434] cleaning up jupyter logic
+2023-04-16 17:49:48,994 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 1
+2023-04-16 17:49:48,994 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_restore():2066] restore
+2023-04-16 17:49:48,994 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_restore():2072] restore done
+2023-04-16 17:49:53,582 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_footer_history_summary_info():3422] rendering history
+2023-04-16 17:49:53,582 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_footer_history_summary_info():3454] rendering summary
+2023-04-16 17:49:53,586 INFO    Thread-6 (_run_job):46749 [wandb_run.py:_footer_sync_info():3380] logging synced files

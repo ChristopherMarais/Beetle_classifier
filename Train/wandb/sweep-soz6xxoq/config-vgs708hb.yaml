@@ -1,0 +1,10 @@
+wandb_version: 1
+
+batch_size:
+  value: 128
+epochs:
+  value: 5
+model_name:
+  value: maxvit_rmlp_small_rw_224.sw_in1k
+pretrained:
+  value: false

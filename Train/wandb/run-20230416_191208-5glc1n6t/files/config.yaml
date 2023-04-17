@@ -1,0 +1,203 @@
+wandb_version: 1
+
+CastToTensor:
+  desc: null
+  value: true
+Learner:
+  desc: null
+  value:
+    _name: <fastai.learner.Learner object at 0x2b8cf8b4df30>
+    arch: maxvit_rmlp_small_rw_224.sw_in1k
+    default_cbs: true
+    loss_func:
+      _name:
+        _name: LabelSmoothingCrossEntropy()
+        eps: 0.1
+        reduction: mean
+        weight:
+        - 0.6234290599822998
+        - 1.5880335569381714
+        - 2.46276593208313
+        - 0.6430555582046509
+        - 0.6523168683052063
+        - 1.5583395957946777
+        - 1.7479026317596436
+        - 1.24165678024292
+        - 1.3511673212051392
+        - 0.6662935614585876
+        - 1.1912521123886108
+        - 0.8528448343276978
+      eps: 0.1
+      reduction: mean
+      weight:
+      - 0.6234290599822998
+      - 1.5880335569381714
+      - 2.46276593208313
+      - 0.6430555582046509
+      - 0.6523168683052063
+      - 1.5583395957946777
+      - 1.7479026317596436
+      - 1.24165678024292
+      - 1.3511673212051392
+      - 0.6662935614585876
+      - 1.1912521123886108
+      - 0.8528448343276978
+    lr: 0.001
+    metrics:
+    - fastai.metrics.error_rate
+    - fastai.metrics.accuracy
+    - fastai.metrics.top_k_accuracy
+    model_dir: models
+    moms:
+    - 0.95
+    - 0.85
+    - 0.95
+    n_out: 12
+    normalize: true
+    opt_func: fastai.optimizer.Adam
+    path: .
+    pretrained: false
+    splitter: fastai.vision.learner.default_split
+    train_bn: true
+    wd: null
+    wd_bn_bias: false
+MixedPrecision:
+  desc: null
+  value: true
+ParamScheduler:
+  desc: null
+  value: true
+ProgressCallback:
+  desc: null
+  value: true
+Recorder:
+  desc: null
+  value:
+    add_time: true
+    train_metrics: false
+    valid_metrics: true
+SaveModelCallback:
+  desc: null
+  value:
+    at_end: false
+    every_epoch: false
+    fname: model
+    with_opt: false
+ShowGraphCallback:
+  desc: null
+  value: true
+TrainEvalCallback:
+  desc: null
+  value: true
+WandbCallback:
+  desc: null
+  value:
+    dataset_name: null
+    log: all
+    log_dataset: false
+    log_model: false
+    log_preds: true
+    log_preds_every_epoch: false
+    model_name: null
+    n_preds: 36
+    reorder: true
+    seed: 12345
+    valid_dl: null
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.14.0
+    framework: fastai
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.10.9
+    session_history: code/_session_history.ipynb
+    start_time: 1681686728.793248
+    t:
+      1:
+      - 1
+      - 4
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      2:
+      - 1
+      - 4
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      3:
+      - 2
+      - 23
+      - 37
+      4: 3.10.9
+      5: 0.14.0
+      8:
+      - 1
+      - 5
+batch per epoch:
+  desc: null
+  value: 97
+batch size:
+  desc: null
+  value: 256
+batch_size:
+  desc: null
+  value: 256
+dataset.tfms:
+  desc: null
+  value: '[Pipeline: PILBase.create, Pipeline: parent_label -> Categorize -- {''vocab'':
+    None, ''sort'': True, ''add_na'': False}]'
+device:
+  desc: null
+  value: cuda
+dls.after_batch:
+  desc: null
+  value: 'Pipeline: IntToFloatTensor -- {''div'': 255.0, ''div_mask'': 1}'
+dls.after_item:
+  desc: null
+  value: 'Pipeline: Resize -- {''size'': (224, 224), ''method'': ''pad'', ''pad_mode'':
+    ''zeros'', ''resamples'': (<Resampling.BILINEAR: 2>, <Resampling.NEAREST: 0>),
+    ''p'': 1.0} -> ToTensor'
+dls.before_batch:
+  desc: null
+  value: 'Pipeline: '
+epochs:
+  desc: null
+  value: 5
+frozen:
+  desc: null
+  value: false
+frozen idx:
+  desc: null
+  value: 0
+input 1 dim 1:
+  desc: null
+  value: 256
+input 1 dim 2:
+  desc: null
+  value: 3
+input 1 dim 3:
+  desc: null
+  value: 224
+input 1 dim 4:
+  desc: null
+  value: 224
+model parameters:
+  desc: null
+  value: 64922716
+model_name:
+  desc: null
+  value: maxvit_rmlp_small_rw_224.sw_in1k
+n_inp:
+  desc: null
+  value: 1
+pretrained:
+  desc: null
+  value: false

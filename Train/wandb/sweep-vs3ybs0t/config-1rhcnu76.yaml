@@ -1,0 +1,12 @@
+wandb_version: 1
+
+batch_size:
+  value: 32
+epochs:
+  value: 49
+lr:
+  value: 0.0002775944262963546
+model_name:
+  value: resnet50
+pretrained:
+  value: false

@@ -1,0 +1,52 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.14.0
+    framework: fastai
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.10.9
+    session_history: code/_session_history.ipynb
+    start_time: 1681681797.364755
+    t:
+      1:
+      - 1
+      - 4
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      2:
+      - 1
+      - 4
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      3:
+      - 2
+      - 23
+      - 37
+      4: 3.10.9
+      5: 0.14.0
+      8:
+      - 1
+      - 5
+batch_size:
+  desc: null
+  value: 128
+epochs:
+  desc: null
+  value: 3
+model_name:
+  desc: null
+  value: maxvit_rmlp_small_rw_224.sw_in1k
+pretrained:
+  desc: null
+  value: false

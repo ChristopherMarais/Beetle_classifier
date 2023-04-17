@@ -1,0 +1,14 @@
+
+Better model found at epoch 0 with valid_loss value: 1.2742388248443604.
+Better model found at epoch 0 with valid_loss value: 1.0770282745361328.
+Better model found at epoch 1 with valid_loss value: 1.041615605354309.
+Better model found at epoch 2 with valid_loss value: 1.0071176290512085.
+Better model found at epoch 3 with valid_loss value: 0.9869384169578552.
+Better model found at epoch 4 with valid_loss value: 0.9665024280548096.
+Better model found at epoch 5 with valid_loss value: 0.9491353034973145.
+Better model found at epoch 6 with valid_loss value: 0.9478334784507751.
+Better model found at epoch 7 with valid_loss value: 0.9220218658447266.
+Better model found at epoch 8 with valid_loss value: 0.8871210217475891.
+Better model found at epoch 10 with valid_loss value: 0.8553967475891113.
+Better model found at epoch 11 with valid_loss value: 0.854388415813446.
+[34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.
