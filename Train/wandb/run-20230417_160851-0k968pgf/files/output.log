@@ -1,0 +1,8 @@
+C:\Users\GCM\anaconda3\envs\BC_310\lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\TensorShape.cpp:3191.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Better model found at epoch 0 with valid_loss value: 0.7732957601547241.
+Better model found at epoch 0 with valid_loss value: 0.6041046380996704.
+Better model found at epoch 1 with valid_loss value: 0.570296049118042.
+Better model found at epoch 2 with valid_loss value: 0.5642032623291016.
+Better model found at epoch 3 with valid_loss value: 0.5611227750778198.
+Better model found at epoch 4 with valid_loss value: 0.5543615818023682.
