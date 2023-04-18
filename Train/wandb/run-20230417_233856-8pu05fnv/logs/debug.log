@@ -1,0 +1,56 @@
+2023-04-17 23:38:56,722 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Configure stats pid to 15320
+2023-04-17 23:38:56,722 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Loading settings from C:\Users\GCM\.config\wandb\settings
+2023-04-17 23:38:56,722 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Loading settings from E:\GIT_REPOS\Beetle_classifier\Train\wandb\settings
+2023-04-17 23:38:56,722 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-04-17 23:38:56,722 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-04-17 23:38:56,722 INFO    MainThread:15320 [wandb_init.py:_log_setup():492] Logging user logs to E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230417_233856-8pu05fnv\logs\debug.log
+2023-04-17 23:38:56,723 INFO    MainThread:15320 [wandb_init.py:_log_setup():493] Logging internal logs to E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230417_233856-8pu05fnv\logs\debug-internal.log
+2023-04-17 23:38:56,723 INFO    MainThread:15320 [wandb_init.py:_jupyter_setup():438] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000015D1C69E260>
+2023-04-17 23:38:56,723 INFO    MainThread:15320 [wandb_init.py:init():532] calling init triggers
+2023-04-17 23:38:56,723 INFO    MainThread:15320 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'batch_size': 8, 'epochs': 5, 'lr': 0.002, 'img_size': 256, 'seed': 42, 'pretrained': True, 'top_k_losses': 5, 'model_name': 'maxvit_nano_rw_256.sw_in1k', 'wandb_project': 'Beetle_classifier', 'wandb_group': 'ambrosia_symbiosis', 'job_type': 'training'}
+2023-04-17 23:38:56,723 INFO    MainThread:15320 [wandb_init.py:init():588] starting backend
+2023-04-17 23:38:56,723 INFO    MainThread:15320 [wandb_init.py:init():592] setting up manager
+2023-04-17 23:38:56,737 INFO    MainThread:15320 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-04-17 23:38:56,742 INFO    MainThread:15320 [wandb_init.py:init():599] backend started and connected
+2023-04-17 23:38:56,753 INFO    MainThread:15320 [wandb_run.py:_label_probe_notebook():1203] probe notebook
+2023-04-17 23:38:56,757 INFO    MainThread:15320 [wandb_run.py:_label_probe_notebook():1213] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-04-17 23:38:56,757 INFO    MainThread:15320 [wandb_init.py:init():687] updated telemetry
+2023-04-17 23:38:56,818 INFO    MainThread:15320 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-04-17 23:38:57,265 INFO    MainThread:15320 [wandb_run.py:_on_init():2134] communicating current version
+2023-04-17 23:38:57,396 INFO    MainThread:15320 [wandb_run.py:_on_init():2143] got version response upgrade_message: "wandb version 0.14.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-04-17 23:38:57,396 INFO    MainThread:15320 [wandb_init.py:init():775] starting run threads in backend
+2023-04-17 23:38:57,884 INFO    MainThread:15320 [wandb_run.py:_console_start():2114] atexit reg
+2023-04-17 23:38:57,884 INFO    MainThread:15320 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-04-17 23:38:57,884 INFO    MainThread:15320 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-04-17 23:38:57,885 INFO    MainThread:15320 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-04-17 23:38:57,885 INFO    MainThread:15320 [wandb_init.py:init():817] run started, returning control to user process
+2023-04-17 23:38:59,054 INFO    MainThread:15320 [jupyter.py:_save_ipynb():390] looking for notebook: GIT_REPOS/Beetle_classifier/Train/Train.ipynb
+2023-04-17 23:38:59,054 INFO    MainThread:15320 [wandb_init.py:_pause_backend():403] pausing backend
+2023-04-17 23:39:07,842 INFO    MainThread:15320 [wandb_init.py:_resume_backend():408] resuming backend
+2023-04-17 23:39:07,848 INFO    MainThread:15320 [jupyter.py:_save_ipynb():390] looking for notebook: GIT_REPOS/Beetle_classifier/Train/Train.ipynb
+2023-04-17 23:39:07,849 INFO    MainThread:15320 [wandb_init.py:_pause_backend():403] pausing backend
+2023-04-17 23:39:10,399 INFO    MainThread:15320 [wandb_init.py:_resume_backend():408] resuming backend
+2023-04-17 23:39:10,457 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Configure stats pid to 15320
+2023-04-17 23:39:10,458 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Loading settings from C:\Users\GCM\.config\wandb\settings
+2023-04-17 23:39:10,458 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Loading settings from E:\GIT_REPOS\Beetle_classifier\Train\wandb\settings
+2023-04-17 23:39:10,458 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-04-17 23:39:10,458 INFO    MainThread:15320 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-04-17 23:39:10,458 INFO    MainThread:15320 [wandb_init.py:_log_setup():492] Logging user logs to E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230417_233910-6k2oxcmb\logs\debug.log
+2023-04-17 23:39:10,458 INFO    MainThread:15320 [wandb_init.py:_log_setup():493] Logging internal logs to E:\GIT_REPOS\Beetle_classifier\Train\wandb\run-20230417_233910-6k2oxcmb\logs\debug-internal.log
+2023-04-17 23:39:10,459 INFO    MainThread:15320 [wandb_init.py:init():532] calling init triggers
+2023-04-17 23:39:10,459 INFO    MainThread:15320 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'batch_size': 8, 'epochs': 5, 'lr': 0.002, 'img_size': 256, 'seed': 42, 'pretrained': True, 'top_k_losses': 5, 'model_name': 'maxvit_nano_rw_256.sw_in1k', 'wandb_project': 'Beetle_classifier', 'wandb_group': 'ambrosia_symbiosis', 'job_type': 'training'}
+2023-04-17 23:39:10,459 INFO    MainThread:15320 [wandb_init.py:init():554] re-initializing run, found existing run on stack: 8pu05fnv
+2023-04-17 23:39:10,461 INFO    MainThread:15320 [wandb_run.py:_finish():1854] finishing run christopher-marais/Beetle_classifier/8pu05fnv
+2023-04-17 23:39:10,523 INFO    MainThread:15320 [jupyter.py:save_history():478] saving 6 cells to _session_history.ipynb
+2023-04-17 23:39:10,524 INFO    MainThread:15320 [wandb_run.py:_config_callback():1250] config_cb ('_wandb', 'session_history') code\_session_history.ipynb None
+2023-04-17 23:39:10,531 INFO    MainThread:15320 [jupyter.py:_save_ipynb():390] looking for notebook: GIT_REPOS/Beetle_classifier/Train/Train.ipynb
+2023-04-17 23:39:10,531 INFO    MainThread:15320 [wandb_init.py:_jupyter_teardown():420] cleaning up jupyter logic
+2023-04-17 23:39:10,531 INFO    MainThread:15320 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 0
+2023-04-17 23:39:10,531 INFO    MainThread:15320 [wandb_run.py:_restore():2066] restore
+2023-04-17 23:39:10,531 INFO    MainThread:15320 [wandb_run.py:_restore():2072] restore done
+2023-04-17 23:39:13,889 INFO    MainThread:15320 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-04-17 23:39:13,890 INFO    MainThread:15320 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-04-17 23:39:13,894 INFO    MainThread:15320 [wandb_run.py:_footer_sync_info():3398] logging synced files
