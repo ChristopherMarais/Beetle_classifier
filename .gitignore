@@ -42013,3 +42013,5 @@ Train/DATASET/TEST/0/img_108.jpg
 *.pkl
 *.pth
 *.pt
+*.csv
+*.xlsx
